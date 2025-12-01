@@ -1,9 +1,18 @@
 import React from 'react';
 
-export function RankingSparkline({ rank, maxRank = 362, color }) {
-  if (!rank || rank === '—') return <div className="w-24 h-8"></div>;
+type RankingSparklineProps = {
+  rank?: number | string | null;
+  maxRank?: number;
+  color?: string;
+};
 
-  const position = ((maxRank - rank) / (maxRank - 1)) * 100;
+export function RankingSparkline({ rank, maxRank = 362, color = '#000' }: RankingSparklineProps) {
+  if (rank === undefined || rank === null || rank === '—') return <div className="w-24 h-8"></div>;
+
+  const numericRank = typeof rank === 'string' ? Number(rank) : rank;
+  if (!Number.isFinite(numericRank)) return <div className="w-24 h-8"></div>;
+
+  const position = ((maxRank - (numericRank as number)) / (maxRank - 1)) * 100;
 
   return (
     <div className="w-36 h-8 flex items-center relative">

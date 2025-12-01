@@ -1,8 +1,27 @@
 import React from 'react';
 import { Combobox } from '@/components/ui/combobox';
 import { Speedometer } from '@/components/Speedometer';
+import type { Team } from '@/types/team';
 
-export function LandingView({ teams = [], selectedSlug = '', onTeamSelect, lastUpdated, formatRelativeTime, landingGauge, shuffledTeams = [] }) {
+type LandingViewProps = {
+  teams?: Team[];
+  selectedSlug?: string;
+  onTeamSelect: (slug: string) => void;
+  lastUpdated?: number | string | null;
+  formatRelativeTime: (t: number | string) => string;
+  landingGauge: number;
+  shuffledTeams?: Team[];
+};
+
+export function LandingView({
+  teams = [],
+  selectedSlug = '',
+  onTeamSelect,
+  lastUpdated,
+  formatRelativeTime,
+  landingGauge,
+  shuffledTeams = [],
+}: LandingViewProps) {
   return (
     <div className="max-w-screen bg-gray-100 mx-auto px-12 py-16 lg:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-24">
@@ -35,28 +54,28 @@ export function LandingView({ teams = [], selectedSlug = '', onTeamSelect, lastU
         <div className="logo-row logo-row-1 flex gap-8 mb-8">
           {shuffledTeams.slice(0, 25).concat(shuffledTeams.slice(0, 25)).map((team, idx) => (
             <button key={`row1-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
-              <img src={team.logo} alt={team.shortName} className="w-16 h-16 object-contain" />
+              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
         </div>
         <div className="logo-row logo-row-2 flex gap-8 mb-8">
           {shuffledTeams.slice(25, 50).concat(shuffledTeams.slice(25, 50)).map((team, idx) => (
             <button key={`row2-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
-              <img src={team.logo} alt={team.shortName} className="w-16 h-16 object-contain" />
+              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
         </div>
         <div className="logo-row logo-row-3 flex gap-8 mb-8">
           {shuffledTeams.slice(50, 75).concat(shuffledTeams.slice(50, 75)).map((team, idx) => (
             <button key={`row3-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
-              <img src={team.logo} alt={team.shortName} className="w-16 h-16 object-contain" />
+              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
         </div>
         <div className="logo-row logo-row-4 flex gap-8">
           {shuffledTeams.slice(75, 100).concat(shuffledTeams.slice(75, 100)).map((team, idx) => (
             <button key={`row4-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
-              <img src={team.logo} alt={team.shortName} className="w-16 h-16 object-contain" />
+              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
         </div>

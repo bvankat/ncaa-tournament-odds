@@ -1,11 +1,19 @@
 import React from 'react';
 import { Speedometer } from '@/components/Speedometer';
 import { RankingSparkline } from '@/components/RankingSparkline';
+import type { Team } from '@/types/team';
 
-export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTournamentOdds }) {
+type TeamViewProps = {
+  team: Team;
+  lastUpdated?: number | string | null;
+  formatRelativeTime: (t: number | string) => string;
+  calculateTournamentOdds: (rankings: Record<string, number | string | undefined>) => number;
+};
+
+export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTournamentOdds }: TeamViewProps) {
   const primaryColor = team.primaryColor ? `#${team.primaryColor}` : '#000000';
   const secondaryColor = team.secondaryColor ? `#${team.secondaryColor}` : '#ffffff';
-  const tournamentOdds = calculateTournamentOdds(team);
+  const tournamentOdds = calculateTournamentOdds(team as unknown as Record<string, number | string>);
 
   return (
     <div>
@@ -31,6 +39,13 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
                     <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
                   </p>
                 </div>
+              )}
+              {team.logo && (
+                <img
+                  src={team.logo}
+                  alt={team.shortName}
+                  className="w-16 h-16 object-contain mb-3 lg:mb-4"
+                />
               )}
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
                 <h1 className="text-3xl lg:text-5xl font-extrabold mb-0 lg:mb-4 text-balance text-white">

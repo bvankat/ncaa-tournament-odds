@@ -1,10 +1,3 @@
-import { clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
-
-export function cn(...inputs) {
-  return twMerge(clsx(inputs))
-}
-
 export function formatRelativeTime(dateString) {
   if (!dateString) return '';
 
@@ -25,13 +18,13 @@ export function formatRelativeTime(dateString) {
   return `${days} ${days === 1 ? 'day' : 'days'} ago`;
 }
 
-export function findScore(data) {
+export function findScore(data: number | string | null | undefined): number | null {
   if (data === null || data === undefined || data === '') return null;
 
   const rank = typeof data === 'string' ? parseFloat(data) : data;
   if (isNaN(rank)) return null;
 
-  let score;
+  let score: number | null;
 
   if (rank <= 30) {
     score = 99;
@@ -64,13 +57,12 @@ export function findScore(data) {
   return score;
 }
 
-export function calculateTournamentOdds(team) {
+export function calculateTournamentOdds(team: any): number {
   const rankings = [team.bpi, team.sor, team.kpi, team.kenpom, team.torvik, team.wab];
 
-  const scores = rankings.map((ranking) => findScore(ranking)).filter((score) => score !== null);
+  const scores = rankings.map((ranking) => findScore(ranking)).filter((score) => score !== null) as number[];
 
   const totalScore = scores.length > 0 ? Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length) : 0;
 
   return totalScore;
 }
-
