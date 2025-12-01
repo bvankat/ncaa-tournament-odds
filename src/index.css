@@ -1,0 +1,127 @@
+/* Font variables and defaults */
+:root {
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: 'Geist Mono', monospace;
+}
+
+html, body { font-family: var(--font-sans); }
+
+.font-geist { font-family: var(--font-sans); }
+.geist-mono { font-family: var(--font-mono); }
+
+
+.value-display {
+    --p: 20px; /* control the shape (can be percentage) */
+    height: 80px;
+    clip-path: polygon(20% 0,80% 0,100% 80%,50% 100%,0% 80%);
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 250px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 41%, rgba(0, 0, 0, 0.47) 89%);
+  padding: 10px 20px 20px 20px;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.8);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  display: inline-block;
+  text-shadow: 1px 1px 5px rgba(255,255,255,0.7);
+  width: 120px;
+  z-index: 10;
+  text-shadow: 
+    0 0 5px rgba(180, 0, 0, 0.6), /* Inner, brighter glow */
+    0 0 15px rgba(180,0,0,0.4), /* Medium glow */
+    0 0 30px rgba(180,0,0,0.2); /* Wider, softer glow */
+    font-family: 'Geist Mono', monospace;
+    animation: dashboard-pulse 1s infinite alternate; /* Optional: adds a pulsing animation */
+  }
+.value-display.light {
+  color: black;
+  top: 77%;
+  font-size: 32px;
+  width: 70px !important;
+  height: auto !important;
+  background: none !important;
+  clip-path: none !important;
+  padding: 0px 10px 0px 10px;
+  box-shadow: none !important;
+  border-radius: none !important;
+  border-top: none !important;
+  display: inline-block;
+  text-shadow: 1px 1px 5px rgba(255,255,255,0.7);
+  width: 120px;
+  z-index: 10;
+  text-shadow: none !important;
+  font-family: 'Geist Mono', monospace;
+  font-weight: 500;
+   
+  }
+
+/* Logo Scroller Styles */
+#logo-scroller {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-row {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.logo-item {
+  transform: rotateY(20deg) skewY(10deg);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.logo-item:hover {
+  opacity: 1;
+}
+
+/* Row 1 & 3: Scroll left */
+.logo-row-1, .logo-row-3 {
+  animation: scroll-left 60s linear infinite;
+}
+
+/* Row 2 & 4: Scroll right */
+.logo-row-2, .logo-row-4 {
+  animation: scroll-right 60s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Menu slide-in animation */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}

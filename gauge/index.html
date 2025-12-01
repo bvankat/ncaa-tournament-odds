@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebrasketball Odds Machine Gauge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: none;
+            font-family: system-ui, sans-serif;
+background: #790909;
+            background: linear-gradient(0deg, rgba(121, 9, 9, 1) 7%, rgba(255, 0, 0, 1) 100%);     }
+
+        .container {
+            text-align: center;
+        }
+
+        .gauge-wrapper {
+            position: relative;
+            width: 340px;
+            height: 340px;
+            margin: 0 auto 30px;
+        }
+
+        .gauge-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gauge-needle-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            transform-origin: center center;
+            /* Smooth rotations: tuned for small bounces */
+            transition: transform 220ms cubic-bezier(.22,1,.36,1);
+            will-change: transform;
+        }
+
+        .gauge-needle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            transform-origin: center center;
+        }
+
+        .control-section {
+            margin-top: 30px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #ccc;
+            font-size: 14px;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        input[type="range"] {
+            width: 200px;
+            height: 6px;
+            border-radius: 3px;
+            background: #ddd;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-display {
+              --p: 20px; /* control the shape (can be percentage) */
+              height: 80px;
+              clip-path: polygon(20% 0,80% 0,100% 80%,50% 100%,0% 80%);
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 250px;
+            background: #000000;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 41%, rgba(0, 0, 0, 0.47) 89%);
+            padding: 10px 20px 20px 20px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.8);
+            border-radius: 3px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            text-shadow: 1px 1px 5px rgba(255,255,255,0.7);
+            width: 120px;
+            z-index: 10;
+            text-shadow: 
+                0 0 5px rgba(180, 0, 0, 0.6), /* Inner, brighter glow */
+                0 0 15px rgba(180,0,0,0.4), /* Medium glow */
+                0 0 30px rgba(180,0,0,0.2); /* Wider, softer glow */
+              font-family: 'Geist Mono', monospace;
+              animation: dashboard-pulse 1s infinite alternate; /* Optional: adds a pulsing animation */
+            }
+        .value-display.light {
+            color: black;
+            top: 265px;
+            font-size: 26px;
+            width: 70px !important;
+            height: auto !important;
+            background: white;
+            clip-path: none !important;
+            padding: 10px 10px 5px 10px;
+            box-shadow: none !important;
+            border-radius: 10px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
+            text-shadow: 1px 1px 5px rgba(255,255,255,0.7);
+            width: 120px;
+            z-index: 10;
+            text-shadow: none !important;
+            font-family: 'Geist Mono', monospace;
+            font-weight: 600;
+             
+            }
+            
+            @keyframes dashboard-pulse {
+              0% {
+                text-shadow: 
+                  0 0 5px rgba(180, 0, 0, 0.6), 
+                  0 0 15px rgba(180, 0, 0, 0.4), 
+                  0 0 30px rgba(180, 0, 0, 0.2);
+              }
+              100% {
+                text-shadow: 
+                  0 0 8px rgba(180,0,0, 0.8), 
+                  0 0 20px rgba(180,0,0, 0.6), 
+                  0 0 40px rgba(180,0,0, 0.3);
+              }
+            }
+
+        .angle-display {
+            font-size: 12px;
+            color: #ccc;
+            margin: 20px 0;
+            opacity: 0.9;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: black;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #333;
+        }
+
+        .adjustment-panel {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .adjustment-panel h3 {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        .adjustment-slider {
+            margin-bottom: 15px;
+        }
+
+        .adjustment-slider label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #ccc;
+            font-size: 13px;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        .adjustment-slider input[type="range"] {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .adjustment-slider input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ff6b6b;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+        }
+
+        .adjustment-slider input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ff6b6b;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+        }
+
+        .adjustment-value {
+            color: #ff6b6b;
+            font-weight: 600;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+    </style>
+    
+    <!-- Google Fonts - Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">   
+    
+    <!-- Google Fonts - Geist Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">   
+    
+    
+</head>
+<body>
+    <div class="container">
+        
+        <div class="gauge-wrapper">
+            <div class="gauge-background">
+                <object 
+                    class="gauge-background" 
+                    data="svg/light/gauge-dial.svg" 
+                    type="image/svg+xml"
+                    style="pointer-events: none;">
+                </object>
+            </div>
+            <div class="gauge-needle-container">
+                <object 
+                    class="gauge-needle" 
+                    id="needleSvg"
+                    data="svg/light/needle.svg" 
+                    type="image/svg+xml"
+                    style="pointer-events: none;">
+                </object>
+            </div>
+            <div class="value-display light" id="valueDisplay">50</div>
+        </div>
+
+        <div class="control-section">
+            <div class="input-group">
+                <label for="speedSlider">Odds (0-100):</label>
+                <input 
+                    type="range" 
+                    id="speedSlider" 
+                    min="0" 
+                    max="100" 
+                    value="50"
+                    step="1"
+                >
+            </div>
+
+            <div class="angle-display">Needle angle: <span id="angleDisplay">—°</span></div>
+
+            <div class="button-group">
+                <button onclick="setSpeed(0)">Reset (0)</button>
+                <button onclick="setSpeed(50)">Half (50)</button>
+                <button onclick="setSpeed(100)">Max (100)</button>
+                <button onclick="animateSpeed()">Animate</button>
+            </div>
+        </div>
+
+        <div class="adjustment-panel">
+            <h3>Bounce Adjustment</h3>
+
+            <div class="adjustment-slider">
+                <label for="smoothnessSlider">
+                    <span>Smoothness (ms)</span>
+                    <span class="adjustment-value" id="smoothnessValue">500</span>
+                </label>
+                <input 
+                    type="range" 
+                    id="smoothnessSlider" 
+                    min="50" 
+                    max="500" 
+                    value="500"
+                    step="10"
+                >
+            </div>
+
+            <div class="adjustment-slider">
+                <label for="intervalSlider">
+                    <span>Bounce Interval (ms)</span>
+                    <span class="adjustment-value" id="intervalValue">160</span>
+                </label>
+                <input 
+                    type="range" 
+                    id="intervalSlider" 
+                    min="50" 
+                    max="500" 
+                    value="160"
+                    step="10"
+                >
+            </div>
+
+            <div class="adjustment-slider">
+                <label for="amplitudeSlider">
+                    <span>Bounce Amplitude (±)</span>
+                    <span class="adjustment-value" id="amplitudeValue">2</span>
+                </label>
+                <input 
+                    type="range" 
+                    id="amplitudeSlider" 
+                    min="1" 
+                    max="10" 
+                    value="2"
+                    step="1"
+                >
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Configuration
+        const config = {
+            minAngle: -215.2,  // Angle at value 0
+            maxAngle: 34.2,   // Angle at value 100
+            minValue: 0,
+            maxValue: 100
+        };
+
+        // DOM Elements
+        const speedSlider = document.getElementById('speedSlider');
+        const valueDisplay = document.getElementById('valueDisplay');
+        const angleDisplay = document.getElementById('angleDisplay');
+        const needleContainer = document.querySelector('.gauge-needle-container');
+
+        // Adjustment sliders
+        const smoothnessSlider = document.getElementById('smoothnessSlider');
+        const intervalSlider = document.getElementById('intervalSlider');
+        const amplitudeSlider = document.getElementById('amplitudeSlider');
+        const smoothnessValue = document.getElementById('smoothnessValue');
+        const intervalValue = document.getElementById('intervalValue');
+        const amplitudeValue = document.getElementById('amplitudeValue');
+
+        // Smoothness config: change this number to make bounces smoother (ms)
+        // Larger = slower, smoother; smaller = snappier.
+        let bounceSmoothMs = 500;
+        const bounceTimingFn = 'cubic-bezier(.22,1,.36,1)';
+
+        // Apply transition function
+        function applyTransition() {
+            if (needleContainer) {
+                needleContainer.style.transition = `transform ${bounceSmoothMs}ms ${bounceTimingFn}`;
+            }
+        }
+        applyTransition();
+
+        // State: baseValue is the user-selected target; bounce will wiggle around it.
+        let baseValue = parseInt(speedSlider.value, 10) || 50;
+        let isAnimating = false; // pause bounce while explicit animations run
+
+        // Bounce configuration
+        let bounceAmplitude = 2; // +/- value
+        let bounceIntervalMs = 160;
+        let bounceIntervalId = null;
+
+        // Initialize
+        updateNeedle(baseValue);
+        startBounce();
+
+        // Event Listeners
+        speedSlider.addEventListener('input', (e) => {
+            const value = parseInt(e.target.value);
+            baseValue = value;
+            updateNeedle(value);
+        });
+
+        // Functions
+        // updateNeedle(value, skipSlider=false)
+        // - value: number 0..100
+        // - skipSlider: if true, do not modify the slider UI (used by the bounce)
+        function updateNeedle(value, skipSlider = false) {
+            // Clamp value between min and max
+            value = Math.max(config.minValue, Math.min(config.maxValue, value));
+            
+            // Calculate angle
+            const angleRange = config.maxAngle - config.minAngle;
+            const valueRange = config.maxValue - config.minValue;
+            const normalizedValue = (value - config.minValue) / valueRange;
+            const angle = config.minAngle + (normalizedValue * angleRange);
+
+            // Update needle rotation
+            needleContainer.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+
+            // Update value display
+            valueDisplay.textContent = value;
+
+            // Update angle debug display (degrees)
+            if (angleDisplay) {
+                angleDisplay.textContent = `${angle.toFixed(1)}°`;
+            }
+
+            // Log for debugging
+            console.debug('updateNeedle:', { value, angle, skipSlider });
+
+            // Update slider if called externally (skip for bounce)
+            if (!skipSlider) {
+                speedSlider.value = value;
+            }
+        }
+
+        function setSpeed(value) {
+            baseValue = value;
+            speedSlider.value = value;
+            updateNeedle(value);
+        }
+
+        function animateSpeed() {
+            let direction = 1;
+            let currentValue = parseInt(baseValue, 10) || 0;
+            isAnimating = true; // pause bounce while animating
+
+            const interval = setInterval(() => {
+                currentValue += direction * 2;
+
+                if (currentValue >= 100) {
+                    currentValue = 100;
+                    direction = -1;
+                } else if (currentValue <= 0) {
+                    currentValue = 0;
+                    direction = 1;
+                    clearInterval(interval);
+                    isAnimating = false;
+                    return;
+                }
+
+                updateNeedle(currentValue);
+            }, 15);
+        }
+
+        // Bounce timer functions
+        function startBounce() {
+            if (bounceIntervalId) clearInterval(bounceIntervalId);
+
+            bounceIntervalId = setInterval(() => {
+                if (isAnimating) return; // don't bounce while animating
+
+                // Small integer jitter in range [-bounceAmplitude, bounceAmplitude]
+                const jitter = Math.round((Math.random() * (bounceAmplitude * 2)) - bounceAmplitude);
+                const bounced = Math.max(config.minValue, Math.min(config.maxValue, baseValue + jitter));
+                // Update needle but don't move the slider UI
+                updateNeedle(bounced, true);
+            }, bounceIntervalMs);
+        }
+
+        // Adjustment slider event listeners
+        smoothnessSlider.addEventListener('input', (e) => {
+            bounceSmoothMs = parseInt(e.target.value, 10);
+            smoothnessValue.textContent = bounceSmoothMs;
+            applyTransition();
+        });
+
+        intervalSlider.addEventListener('input', (e) => {
+            bounceIntervalMs = parseInt(e.target.value, 10);
+            intervalValue.textContent = bounceIntervalMs;
+            startBounce(); // restart with new interval
+        });
+
+        amplitudeSlider.addEventListener('input', (e) => {
+            bounceAmplitude = parseInt(e.target.value, 10);
+            amplitudeValue.textContent = bounceAmplitude;
+        });
+    </script>
+</body>
+</html>
