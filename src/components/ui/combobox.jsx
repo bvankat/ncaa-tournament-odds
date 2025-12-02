@@ -43,9 +43,16 @@ export function Combobox({ teams, value, onValueChange, placeholder = "Select a 
           aria-expanded={open}
           className="w-full justify-between font-medium px-6 py-6 border border-gray-300 bg-white text-gray-900 rounded-md"
         >
-          {value && selectedTeam
-            ? selectedTeam.displayName
-            : placeholder}
+          {value && selectedTeam ? (
+            <div className="flex items-center gap-2">
+              {selectedTeam.logo && (
+                <img src={selectedTeam.logo} alt={selectedTeam.shortName} className="w-5 h-5 object-contain" />
+              )}
+              <span>{selectedTeam.displayName}</span>
+            </div>
+          ) : (
+            placeholder
+          )}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -85,6 +92,9 @@ export function Combobox({ teams, value, onValueChange, placeholder = "Select a 
                       value === team.slug ? "opacity-100" : "opacity-0"
                     )}
                   />
+                  {team.logo && (
+                    <img src={team.logo} alt={team.shortName} className="w-5 h-5 object-contain mr-2" />
+                  )}
                   {team.displayName}
                 </CommandItem>
               ))}

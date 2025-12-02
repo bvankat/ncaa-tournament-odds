@@ -7,9 +7,10 @@ type FooterProps = {
   teams?: Team[];
   selectedSlug?: string;
   onTeamSelect?: (slug: string) => void;
+  onOpenPalette?: () => void;
 };
 
-export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect }: FooterProps) {
+export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette }: FooterProps) {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -40,12 +41,20 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect }: 
         {/* Column 2: Meta Description */}
         <div>
           <p className="text-sm leading-relaxed text-gray-300">
-            Real-time aggregated NCAA Division I men's basketball efficiency metrics and selection odds combining NET, KenPom, Torvik, BPI, KPI and Strength of Record data.
+            NCAA Division I men's basketball team-sheet metrics and selection odds.
           </p>
         </div>
         {/* Column 3: Team Selector */}
         <div>
-          <h3 className="text-xs uppercase geist-mono tracking-wider text-gray-400 mb-4">Select a team</h3>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-xs uppercase geist-mono tracking-wider text-gray-400">Select a team</h3>
+            <p
+              className="inline-flex items-center gap-2 text-xs font-medium transition-colors"
+            >
+              <span className="opacity-80 hidden lg:inline-flex">Team search</span>
+              <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded border border-white/10 text-[10px] geist-mono">⌘K</span>
+            </p>
+          </div>
           <Combobox
             teams={teams}
             value={selectedSlug}
@@ -55,12 +64,13 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect }: 
         </div>
       </div>
       <div className="border-t border-white/10 px-8 py-4 text-center">
-        <p className="text-xs text-gray-500">
-          Created by{' '}
-          <a href="https://benvankat.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300">
-            Ben Vankat
-          </a>
-        </p>
+          <p className="text-xs text-gray-500 flex flex-row justify-center items-center gap-2">
+            Created by{' '}
+            <a href="https://benvankat.com" target="_blank" rel="noopener noreferrer" className="flex items-center underline hover:text-gray-300">
+              <img src="https://benvankat.com/images/ben-vankat-headshot-2022-square.jpg" className="rounded-full w-6 h-6 mr-2" alt="Ben Vankat" />
+              Ben Vankat 
+            </a>
+          </p>
       </div>
     </footer>
   );

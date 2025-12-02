@@ -24,10 +24,10 @@ export function LandingView({
 }: LandingViewProps) {
   return (
     <div className="max-w-screen bg-gray-100 mx-auto px-12 py-16 lg:py-24">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-48 mb-24">
         <div className="flex flex-col justify-center gap-6 items-center lg:items-start text-center lg:text-left">
           {lastUpdated && (
-            <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-6">
+            <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-2">
               <span className="relative size-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
                 <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
@@ -40,7 +40,7 @@ export function LandingView({
           )}
           <div className="flex flex-col mb-6">
             <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-bold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
-            <p className="text-center lg:text-left text-lg lg:text-xl opacity-70 text-balance">Select a team to view the current rankings and current chances for making the NCAA tournament.</p>
+            <p className="text-center lg:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
           </div>
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team..." />
         </div>

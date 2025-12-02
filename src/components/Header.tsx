@@ -5,9 +5,10 @@ type HeaderProps = {
   onHome: () => void;
   teams: Team[];
   onTeamSelect: (slug: string) => void;
+  onOpenPalette?: () => void;
 };
 
-export function Header({ onHome, teams = [], onTeamSelect }: HeaderProps) {
+export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -21,13 +22,23 @@ export function Header({ onHome, teams = [], onTeamSelect }: HeaderProps) {
           </svg>
           <span className="font-medium geist-mono text-sm tracking-wide">tourneyodds<span className="font-normal">.info</span></span>
         </button>
-        <button onClick={() => setMenuOpen(true)} className="hover:opacity-80 transition-opacity">
-          <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => onOpenPalette && onOpenPalette()}
+            className="hidden sm:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-md hover:bg-white/15 text-xs font-medium transition-colors"
+            title="Open command palette (⌘K)"
+          >
+            <span className="opacity-80">Team search</span>
+            <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded border border-white/10 text-[10px] geist-mono">⌘K</span>
+          </button>
+          <button onClick={() => setMenuOpen(true)} className="hover:opacity-80 transition-opacity">
+            <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {menuOpen && (
