@@ -24,6 +24,27 @@ function App() {
     return shuffled.slice(0, 100);
   }, [allTeams]);
 
+  // Google Analytics SPA page_view tracking helper
+  const trackPageView = (path: string) => {
+    try {
+      // @ts-ignore: gtag is injected via index.html
+      if (typeof gtag === 'function') {
+        // Set current page
+        // @ts-ignore
+        gtag('config', 'G-C80JTF63MK', {
+          page_path: path,
+        });
+        // Explicit page_view event for robustness
+        // @ts-ignore
+        gtag('event', 'page_view', {
+          page_path: path,
+        });
+      }
+    } catch (e) {
+      // no-op
+    }
+  };
+
   useEffect(() => {
     loadData();
 
@@ -33,7 +54,54 @@ function App() {
     if (slugs.length > 0) {
       setSelectedSlugs(slugs);
     }
+
+    // Track initial page load
+    trackPageView(window.location.pathname + window.location.search + window.location.hash);
+
+    // Handle back/forward navigation
+    const onPopState = () => {
+      const currentPath = window.location.pathname;
+      const newSlugs = currentPath.split('/').filter((s) => s);
+      setSelectedSlugs(newSlugs);
+      trackPageView(currentPath + window.location.search + window.location.hash);
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
   }, []);
+
+  // Dynamic document title and meta description
+  useEffect(() => {
+    const isLanding = selectedSlugs.length === 0;
+    if (isLanding) {
+      document.title = 'NCAA Tournament Odds';
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) {
+        meta.setAttribute(
+          'content',
+          "NCAA men's basketball tournament selection odds and current team-sheet metrics for all 360+ Division I teams."
+        );
+      }
+      return;
+    }
+
+    const team = allTeams.find((t) => t.slug === selectedSlugs[0]);
+    if (team) {
+      const title = `${team.displayName} — NCAA Tournament Odds`;
+      document.title = title;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) {
+        const descParts = [
+          `${team.displayName} rankings and odds:`,
+          team.net ? `NET ${team.net}` : null,
+          team.kenpom ? `KenPom ${team.kenpom}` : null,
+          team.torvik ? `Torvik ${team.torvik}` : null,
+          team.bpi ? `BPI ${team.bpi}` : null,
+          team.kpi ? `KPI ${team.kpi}` : null,
+        ].filter(Boolean);
+        meta.setAttribute('content', descParts.join(' · '));
+      }
+    }
+  }, [selectedSlugs, allTeams]);
 
   const loadData = async () => {
     try {
@@ -86,6 +154,7 @@ function App() {
     window.history.pushState({}, '', '/');
     setSelectedSlugs([]);
     window.scrollTo(0, 0);
+    trackPageView('/');
   };
 
   const handleTeamSelect = (slug: string) => {
@@ -94,6 +163,7 @@ function App() {
       window.history.pushState({}, '', newPath);
       setSelectedSlugs([slug]);
       window.scrollTo(0, 0);
+      trackPageView(newPath);
     }
   };
 
