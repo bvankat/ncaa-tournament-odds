@@ -79,37 +79,37 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">NET</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.net} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700">{team.net || '—'}</td>
+                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.net || '—'}</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">BPI</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.bpi} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700">{team.bpi || '—'}</td>
+                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.bpi || '—'}</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">SOR</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.sor} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700">{team.sor || '—'}</td>
+                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.sor || '—'}</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">KPI</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kpi} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700">{team.kpi || '—'}</td>
+                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.kpi || '—'}</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">KenPom</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kenpom} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700">{team.kenpom || '—'}</td>
+                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.kenpom || '—'}</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">Torvik</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.torvik} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700">{team.torvik || '—'}</td>
+                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.torvik || '—'}</td>
                 </tr>
                 <tr className="">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">WAB</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.wab} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700">{team.wab || '—'}</td>
+                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.wab || '—'}</td>
                 </tr>
               </tbody>
             </table>
@@ -186,25 +186,25 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
                 <div className="grid grid-rows-4 gap-4">
                   {team.quad1 && (
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">Quadrant 1</div>
-                      <div className="text-2xl font-bold" style={{ color: primaryColor }}>{team.quad1}</div>
+                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 1</div>
+                      <div className="text-2xl font-bold">{team.quad1}</div>
                     </div>
                   )}
                   {team.quad2 && (
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">Quadrant 2</div>
+                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 2</div>
                       <div className="text-2xl font-bold text-gray-700">{team.quad2}</div>
                     </div>
                   )}
                   {team.quad3 && (
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">Quadrant 3</div>
+                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 3</div>
                       <div className="text-2xl font-bold text-gray-700">{team.quad3}</div>
                     </div>
                   )}
                   {team.quad4 && (
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">Quadrant 4</div>
+                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 4</div>
                       <div className="text-2xl font-bold text-gray-700">{team.quad4}</div>
                     </div>
                   )}
