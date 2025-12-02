@@ -85,6 +85,7 @@ function App() {
   const goHome = () => {
     window.history.pushState({}, '', '/');
     setSelectedSlugs([]);
+    window.scrollTo(0, 0);
   };
 
   const handleTeamSelect = (slug: string) => {
@@ -92,6 +93,7 @@ function App() {
       const newPath = `/${slug}`;
       window.history.pushState({}, '', newPath);
       setSelectedSlugs([slug]);
+      window.scrollTo(0, 0);
     }
   };
 
