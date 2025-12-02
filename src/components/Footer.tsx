@@ -15,7 +15,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Column 1: Logo & Title */}
-        <div>
+        <div className='mb-4'>
           <button onClick={onHome} className="flex items-center gap-2 hover:opacity-80 transition-opacity mb-4">
             <svg
               className="w-5 h-5"
@@ -33,16 +33,17 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
               <path d="M13.45 11.55l2.05 -2.05"></path>
               <path d="M6.4 20a9 9 0 1 1 11.2 0z"></path>
             </svg>
-            <span className="font-medium geist-mono text-sm tracking-wide">
+            <span className="font-medium geist-mono text-md tracking-wide">
               tourneyodds<span className="font-normal">.info</span>
             </span>
           </button>
+          <p className="text-sm leading-relaxed text-gray-400">
+            NCAA Division I men's basketball team-sheet metrics and selection odds.
+          </p>
         </div>
         {/* Column 2: Meta Description */}
         <div>
-          <p className="text-sm leading-relaxed text-gray-300">
-            NCAA Division I men's basketball team-sheet metrics and selection odds.
-          </p>
+          
         </div>
         {/* Column 3: Team Selector */}
         <div>
