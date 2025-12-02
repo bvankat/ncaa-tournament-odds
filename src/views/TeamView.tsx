@@ -25,7 +25,7 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
           color: secondaryColor,
         }}
       >
-        <div className="max-w-screen-lg mx-auto px-12 py-16 lg:py-24">
+        <div className="max-w-screen-xl mx-auto px-12 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-3 px-8 lg:px-12">
             <div className="flex flex-col justify-center gap-4 text-center lg:text-left items-center lg:items-start">
               {lastUpdated && (
@@ -40,18 +40,18 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
                   </p>
                 </div>
               )}
-              {team.logo && (
-                <img
-                  src={team.logo}
-                  alt={team.shortName}
-                  className="w-16 h-16 object-contain mb-3 lg:mb-4"
-                />
-              )}
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
+                  {team.logo && (
+                    <img
+                      src={team.logo}
+                      alt={team.shortName}
+                      className="h-9 w-9 mb-2 object-contain inline-flex"
+                    />
+                  )}
                 <h1 className="text-3xl lg:text-5xl font-extrabold mb-0 lg:mb-4 text-balance text-white">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
-                <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-light" style={{ color: secondaryColor }}>
+                <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal" style={{ color: secondaryColor }}>
                   Tournament chances for {team.shortName} based on its current team-sheet ranks
                 </p>
               </div>
@@ -64,65 +64,95 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
         </div>
       </div>
 
-      <div className="bg-white px-4 py-6lg:px-8 lg:py-12">
-        <div className="max-w-3xl mx-auto px-4 py-12">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b border-gray-300 uppercase">
-                <th className="text-left text-xs py-3 pr-4 font-medium geist-mono text-gray-400">Metric</th>
-                <th className="text-center text-xs py-3 px-4 font-medium geist-mono text-gray-400"></th>
-                <th className="text-right text-xs py-3 pl-4 font-medium geist-mono text-gray-400">Rank</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 pr-4 text-gray-900 font-semibold">NET</td>
-                <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.net} color={primaryColor} /></td>
-                <td className="py-3 pl-4 text-right text-gray-700">{team.net || '—'}</td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 pr-4 text-gray-900 font-semibold">BPI</td>
-                <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.bpi} color={primaryColor} /></td>
-                <td className="py-3 pl-4 text-right text-gray-700">{team.bpi || '—'}</td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 pr-4 text-gray-900 font-semibold">SOR</td>
-                <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.sor} color={primaryColor} /></td>
-                <td className="py-3 pl-4 text-right text-gray-700">{team.sor || '—'}</td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 pr-4 text-gray-900 font-semibold">KPI</td>
-                <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kpi} color={primaryColor} /></td>
-                <td className="py-3 pl-4 text-right text-gray-700">{team.kpi || '—'}</td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 pr-4 text-gray-900 font-semibold">KenPom</td>
-                <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kenpom} color={primaryColor} /></td>
-                <td className="py-3 pl-4 text-right text-gray-700">{team.kenpom || '—'}</td>
-              </tr>
-              <tr className="border-b border-gray-200">
-                <td className="py-3 pr-4 text-gray-900 font-semibold">Torvik</td>
-                <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.torvik} color={primaryColor} /></td>
-                <td className="py-3 pl-4 text-right text-gray-700">{team.torvik || '—'}</td>
-              </tr>
-              <tr className="">
-                <td className="py-3 pr-4 text-gray-900 font-semibold">WAB</td>
-                <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.wab} color={primaryColor} /></td>
-                <td className="py-3 pl-4 text-right text-gray-700">{team.wab || '—'}</td>
-              </tr>
-            </tbody>
-          </table>
+      <div id="ratings" className="bg-white px-6 py-6 lg:px-12 lg:py-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-8 gap-12">
+          <div className="lg:col-span-5">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-gray-300 uppercase">
+                  <th className="text-left text-xs py-3 pr-4 font-medium geist-mono text-gray-400">Metric</th>
+                  <th className="text-center text-xs py-3 px-4 font-medium geist-mono text-gray-400"></th>
+                  <th className="text-right text-xs py-3 pl-4 font-medium geist-mono text-gray-400">Rank</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">NET</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.net} color={primaryColor} /></td>
+                  <td className="py-3 pl-4 text-right text-gray-700">{team.net || '—'}</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">BPI</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.bpi} color={primaryColor} /></td>
+                  <td className="py-3 pl-4 text-right text-gray-700">{team.bpi || '—'}</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">SOR</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.sor} color={primaryColor} /></td>
+                  <td className="py-3 pl-4 text-right text-gray-700">{team.sor || '—'}</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">KPI</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kpi} color={primaryColor} /></td>
+                  <td className="py-3 pl-4 text-right text-gray-700">{team.kpi || '—'}</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">KenPom</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kenpom} color={primaryColor} /></td>
+                  <td className="py-3 pl-4 text-right text-gray-700">{team.kenpom || '—'}</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">Torvik</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.torvik} color={primaryColor} /></td>
+                  <td className="py-3 pl-4 text-right text-gray-700">{team.torvik || '—'}</td>
+                </tr>
+                <tr className="">
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">WAB</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.wab} color={primaryColor} /></td>
+                  <td className="py-3 pl-4 text-right text-gray-700">{team.wab || '—'}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="lg:col-span-2 lg:col-start-7">
+
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+              <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">RECORD</h3>
+              <div className="">
+                {team.record && (
+                  <div>
+                    <div className="text-2xl font-bold text-gray-900">{team.record}</div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+              <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">NEXT GAME</h3>
+              
+            </div>
+            
+          </div>
         </div>
       </div>
 
       {(team.record || team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
-        <div className="bg-gray-50">
-          <div className="max-w-3xl mx-auto px-4 py-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Team Sheet Details</h2>
+        <div id="schedule-details" className="bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 py-12 lg:px-12 lg:py-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Schedule Details</h2>
 
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
+
+          <div className="lg:col-span-5">
+            <table className="w-full">
+             
+            </table>
+          </div>
+
+            <div className="lg:col-span-2 lg:col-start-7">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
               <h3 className="text-sm font-medium geist-mono text-gray-400 uppercase mb-4">Record</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-rows-2 grid-cols-2 gap-4">
                 {team.record && (
                   <div>
                     <div className="text-xs text-gray-500 mb-1">Overall</div>
@@ -153,7 +183,7 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
             {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <h3 className="text-sm font-medium geist-mono text-gray-400 uppercase mb-4">Quadrant Records</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-rows-4 gap-4">
                   {team.quad1 && (
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">Quadrant 1</div>
@@ -182,7 +212,10 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
               </div>
             )}
           </div>
+          </div>
         </div>
+            </div>
+
       )}
     </div>
   );
