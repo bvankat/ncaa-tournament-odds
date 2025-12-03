@@ -143,38 +143,38 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
 
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 border border-gray-200 p-8">
             <table className="w-full">
-             
+             <tr className="text-gray-500 text-center">[ Full schedule coming soon ] </tr>
             </table>
           </div>
 
             <div className="lg:col-span-2 lg:col-start-7">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-              <h3 className="text-sm font-medium geist-mono text-gray-400 uppercase mb-4">Record</h3>
+              <h3 className="text-md font-semibold mb-4">Record</h3>
               <div className="grid grid-rows-2 grid-cols-2 gap-4">
                 {team.record && (
                   <div>
-                    <div className="text-xs text-gray-500 mb-1">Overall</div>
-                    <div className="text-lg font-bold text-gray-900">{team.record}</div>
+                    <div className="text-xs text-gray-500 mb-1">OVERALL</div>
+                    <div className="text-2xl font-semibold text-gray-900">{team.record}</div>
                   </div>
                 )}
                 {team.home && (
                   <div>
-                    <div className="text-xs text-gray-500 mb-1">Home</div>
-                    <div className="text-lg font-semibold text-gray-900">{team.home}</div>
+                    <div className="text-xs text-gray-500 mb-1">HOME</div>
+                    <div className="text-2xl font-semibold text-gray-900">{team.home}</div>
                   </div>
                 )}
                 {team.road && (
                   <div>
-                    <div className="text-xs text-gray-500 mb-1">Away</div>
-                    <div className="text-lg font-semibold text-gray-900">{team.road}</div>
+                    <div className="text-xs text-gray-500 mb-1">AWAY</div>
+                    <div className="text-2xl font-semibold text-gray-900">{team.road}</div>
                   </div>
                 )}
                 {team.neutral && (
                   <div>
-                    <div className="text-xs text-gray-500 mb-1">Neutral</div>
-                    <div className="text-lg font-semibold text-gray-900">{team.neutral}</div>
+                    <div className="text-xs text-gray-500 mb-1">NEUTRAL</div>
+                    <div className="text-2xl font-semibold text-gray-900">{team.neutral}</div>
                   </div>
                 )}
               </div>
@@ -182,8 +182,8 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
 
             {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                <h3 className="text-sm font-medium geist-mono text-gray-400 uppercase mb-4">Quadrant Records</h3>
-                <div className="grid grid-rows-4 gap-4">
+                <h3 className="text-md font-semibold text-gray-00  mb-4">Quadrant Records</h3>
+                <div className="grid grid-rows-2 grid-cols-2 gap-4">
                   {team.quad1 && (
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 1</div>
