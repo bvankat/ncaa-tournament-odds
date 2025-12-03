@@ -25,8 +25,8 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
           color: secondaryColor,
         }}
       >
-        <div className="max-w-screen-xl mx-auto px-12 py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-3 px-8 lg:px-12">
+        <div className="max-w-screen-xl mx-auto px-2 py-8 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-3 lg:px-12">
             <div className="flex flex-col justify-center gap-4 text-center lg:text-left items-center lg:items-start">
               {lastUpdated && (
                 <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-black/10 rounded-full border border-white/15 mb-2 lg:mb-6">
@@ -45,14 +45,14 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
                     <img
                       src={team.logo}
                       alt={team.shortName}
-                      className="h-9 w-9 mb-2 object-contain inline-flex"
+                      className="h-6 w-6 sm:h-9 sm:w-9 mb-2 object-contain inline-flex"
                     />
                   )}
-                <h1 className="text-3xl lg:text-5xl font-extrabold mb-0 lg:mb-4 text-balance text-white">
+                <h1 className="text-3xl lg:text-5xl px-6 lg: px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
-                  Tournament chances for {team.shortName} based on its current team-sheet ranks
+                  NCAA Tournament chances for {team.shortName} based on its current team-sheet ranks
                 </p>
               </div>
             </div>
