@@ -91,7 +91,7 @@ function App() {
       const meta = document.querySelector('meta[name="description"]');
       if (meta) {
         const descParts = [
-          `${team.displayName} rankings and odds:`,
+          `${team.displayName} current team-sheet rankings:`,
           team.net ? `NET ${team.net}` : null,
           team.kenpom ? `KenPom ${team.kenpom}` : null,
           team.torvik ? `Torvik ${team.torvik}` : null,
