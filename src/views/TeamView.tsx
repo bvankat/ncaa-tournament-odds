@@ -18,7 +18,7 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
   return (
     <div>
       <div
-        className="w-full"
+        className="w-full overflow-hidden"
         style={{
           background: `radial-gradient(ellipse at center, ${primaryColor} 50%, rgba(0,0,0,0.9) 120%)`,
           backgroundColor: primaryColor,
@@ -41,13 +41,6 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
                 </div>
               )}
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
-                  {team.logo && (
-                    <img
-                      src={team.logo}
-                      alt={team.shortName}
-                      className="h-6 w-6 sm:h-9 sm:w-9 mb-2 object-contain inline-flex"
-                    />
-                  )}
                 <h1 className="text-3xl lg:text-5xl px-6 lg: px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>

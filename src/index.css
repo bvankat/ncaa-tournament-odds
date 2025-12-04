@@ -62,8 +62,6 @@ html, body { font-family: var(--font-sans); }
   position: relative;
   width: 100%;
   max-height: 400px;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .logo-row {
@@ -73,16 +71,11 @@ html, body { font-family: var(--font-sans); }
 
 .logo-item {
   transform: rotateY(20deg) skewY(10deg);
-  opacity: 0.7;
-  transition: opacity 0.3s ease, transform 0.2s ease;
   background: none;
   border: none;
   padding: 0;
 }
 
-.logo-item:hover {
-  opacity: 1;
-}
 
 /* Row 1 & 3: Scroll left */
 .logo-row-1, .logo-row-3 {
