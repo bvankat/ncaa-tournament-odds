@@ -140,7 +140,7 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
 
       {(team.record || team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
         <div id="schedule-details" className="bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 py-12 lg:px-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-6 py-12 lg:px-12 lg:py-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Schedule Details</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
