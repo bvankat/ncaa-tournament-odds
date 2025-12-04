@@ -59,7 +59,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
       </div>
 
       <div id="ratings" className="bg-white px-6 py-6 lg:px-12 lg:py-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-8 gap-12">
+        <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-8 gap-12">
           <div className="lg:col-span-5">
             <table className="w-full">
               <thead>
@@ -141,10 +141,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
 
       {(team.record || team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
         <div id="schedule-details" className="bg-gray-50">
-          <div className="max-w-7xl mx-auto px-6 py-12 lg:px-12 lg:py-16">
+          <div className="px-6 py-12 lg:px-12 lg:py-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Schedule Details</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-12">
 
           <div id="schedule-table"className="lg:col-span-5">
             {schedule && schedule.schedule && schedule.schedule.length > 0 ? (
@@ -172,9 +172,9 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     // Check if game has been played (scores exist)
                     const hasScores = game.competitors.every(c => c.score !== null && c.score !== undefined);
                     
-                    let dateDisplay: string | JSX.Element = '—';
+                    let dateDisplay: string | React.JSX.Element = '—';
                     let resultDisplay = '—';
-                    let resultClass = 'text-gray-700';
+                    let resultClass = 'text-gray-400 font-light';
                     
                     const gameDate = new Date(game.date);
                     
@@ -194,10 +194,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                       // Determine result
                       if (currentTeamComp?.winner) {
                         resultDisplay = `W ${scoreDisplay}`;
-                        resultClass = 'text-green-700';
+                        resultClass = 'text-green-700 font-medium';
                       } else {
                         resultDisplay = `L ${scoreDisplay}`;
-                        resultClass = 'text-red-700';
+                        resultClass = 'text-red-700 font-medium';
                       }
                     } else {
                       // Game hasn't been played yet - show date and time
@@ -217,7 +217,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                             <span className="text-gray-700">{resultDisplay.split(' ').slice(1).join(' ')}</span>
                           )}
                         </td>
-                        <td className="text-right"><span className={resultClass}>
+                        <td className="text-right">
+                          <span className={resultClass}>
                             {resultDisplay[0]}
                           </span></td>
                       </tr>
@@ -230,40 +231,39 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
             )}
           </div>
 
-            <div className="lg:col-span-2 lg:col-start-7">
+            <div className="lg:col-span-3 lg:col-start-6">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-              <h3 className="text-md font-semibold mb-4">Record</h3>
+              <h3 className="text-md font-semibold mb-4">Record Details</h3>
               <div className="grid grid-rows-2 grid-cols-2 gap-4">
                 {team.record && (
-                  <div>
-                    <div className="text-xs text-gray-500 mb-1">OVERALL</div>
-                    <div className="text-2xl font-semibold text-gray-900">{team.record}</div>
-                  </div>
+                   <div className="text-center p-4 bg-gray-50 rounded-lg">
+                      <div className="text-xs text-gray-500 mb-1 geist-mono">OVERALL</div>
+                      <div className="text-2xl font-bold text-gray-700">{team.record}</div>
+                    </div>
                 )}
                 {team.home && (
-                  <div>
-                    <div className="text-xs text-gray-500 mb-1">HOME</div>
-                    <div className="text-2xl font-semibold text-gray-900">{team.home}</div>
+                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                      <div className="text-xs text-gray-500 mb-1 geist-mono">HOME</div>
+                      <div className="text-2xl font-semibold text-gray-900">{team.home}</div>
                   </div>
                 )}
                 {team.road && (
-                  <div>
-                    <div className="text-xs text-gray-500 mb-1">AWAY</div>
+                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-xs text-gray-500 mb-1 geist-mono">AWAY</div>
                     <div className="text-2xl font-semibold text-gray-900">{team.road}</div>
                   </div>
                 )}
                 {team.neutral && (
-                  <div>
-                    <div className="text-xs text-gray-500 mb-1">NEUTRAL</div>
+                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-xs text-gray-500 mb-1 geist-mono">NEUTRAL</div>
                     <div className="text-2xl font-semibold text-gray-900">{team.neutral}</div>
                   </div>
                 )}
               </div>
-            </div>
-
+            
             {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                <h3 className="text-md font-semibold text-gray-00  mb-4">Quadrant Records</h3>
+              <div className="p-6">
+                <h3 className="text-md font-semibold text-gray-00  mb-4">Quadrants</h3>
                 <div className="grid grid-rows-2 grid-cols-2 gap-4">
                   {team.quad1 && (
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
@@ -292,6 +292,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                 </div>
               </div>
             )}
+            </div>
+
           </div>
           </div>
         </div>
