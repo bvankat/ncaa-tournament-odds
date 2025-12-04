@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2025-12-04T09:21:49.813912",
+  "lastUpdated": "2025-12-04T13:24:57.510065",
   "teams": [
     {
       "slug": "duke-blue-devils",
       "espnId": "150",
       "displayName": "Duke Blue Devils",
       "shortName": "Duke",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/150.png",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
       "primaryColor": "013088",
       "secondaryColor": "ffffff",
       "bpi": 1.0,
@@ -30,8 +30,10 @@
       "nextGame": {
         "home_team": "Michigan St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+        "home_team_id": "127",
         "away_team": "Duke",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+        "away_team_id": "150",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 92.0
@@ -65,8 +67,10 @@
       "nextGame": {
         "home_team": "Kentucky",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+        "home_team_id": "96",
         "away_team": "Gonzaga",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2250.png",
+        "away_team_id": "2250",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 11.0
@@ -98,11 +102,13 @@
       "quad3": "1-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Arkansas",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+        "home_team": "Indiana",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+        "home_team_id": "84",
         "away_team": "Louisville",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
-        "date_time": "Final"
+        "away_team_id": "97",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 188.0
     },
@@ -135,8 +141,10 @@
       "nextGame": {
         "home_team": "Houston",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+        "home_team_id": "248",
         "away_team": "Florida St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+        "away_team_id": "52",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 29.0
@@ -168,11 +176,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Iowa State",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
-        "away_team": "Alcorn St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2016.png",
-        "date_time": "Final"
+        "home_team": "Purdue",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+        "home_team_id": "2509",
+        "away_team": "Iowa State",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+        "away_team_id": "66",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 97.0
     },
@@ -205,8 +215,10 @@
       "nextGame": {
         "home_team": "Arizona",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+        "home_team_id": "12",
         "away_team": "Auburn",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+        "away_team_id": "2",
         "date_time": "12/6 - 10:00 PM EST"
       },
       "nonconsos": 56.0
@@ -240,8 +252,10 @@
       "nextGame": {
         "home_team": "Michigan",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+        "home_team_id": "130",
         "away_team": "Rutgers",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+        "away_team_id": "164",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 3.0
@@ -275,8 +289,10 @@
       "nextGame": {
         "home_team": "UConn",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+        "home_team_id": "41",
         "away_team": "Florida",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+        "away_team_id": "57",
         "date_time": "12/9 - 9:00 PM EST"
       },
       "nonconsos": 10.0
@@ -310,8 +326,10 @@
       "nextGame": {
         "home_team": "Purdue",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+        "home_team_id": "2509",
         "away_team": "Iowa State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+        "away_team_id": "66",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 40.0
@@ -345,8 +363,10 @@
       "nextGame": {
         "home_team": "Tennessee",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+        "home_team_id": "2633",
         "away_team": "Illinois",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+        "away_team_id": "356",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 57.0
@@ -380,8 +400,10 @@
       "nextGame": {
         "home_team": "Kentucky",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+        "home_team_id": "96",
         "away_team": "Gonzaga",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2250.png",
+        "away_team_id": "2250",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 163.0
@@ -415,8 +437,10 @@
       "nextGame": {
         "home_team": "St John's",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2599.png",
+        "home_team_id": "2599",
         "away_team": "Ole Miss",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+        "away_team_id": "145",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 13.0
@@ -450,8 +474,10 @@
       "nextGame": {
         "home_team": "UConn",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+        "home_team_id": "41",
         "away_team": "E Texas A&M",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2837.png",
+        "away_team_id": "2837",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 38.0
@@ -485,9 +511,11 @@
       "nextGame": {
         "home_team": "BYU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
-        "away_team": "CA Baptist",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2856.png",
-        "date_time": "Final"
+        "home_team_id": "252",
+        "away_team": "Clemson",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+        "away_team_id": "228",
+        "date_time": "12/9 - 6:30 PM EST"
       },
       "nonconsos": 17.0
     },
@@ -520,8 +548,10 @@
       "nextGame": {
         "home_team": "Tennessee",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+        "home_team_id": "2633",
         "away_team": "Illinois",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+        "away_team_id": "356",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 88.0
@@ -531,7 +561,7 @@
       "espnId": "333",
       "displayName": "Alabama Crimson Tide",
       "shortName": "Alabama",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/333.png",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
       "primaryColor": "9e1632",
       "secondaryColor": "ffffff",
       "bpi": 16.0,
@@ -555,9 +585,11 @@
       "nextGame": {
         "home_team": "Alabama",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
-        "away_team": "Clemson",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
-        "date_time": "Final"
+        "home_team_id": "333",
+        "away_team": "UTSA",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+        "away_team_id": "2636",
+        "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 1.0
     },
@@ -588,11 +620,13 @@
       "quad3": "2-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Minnesota",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
-        "away_team": "Indiana",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-        "date_time": "Final"
+        "home_team": "Indiana",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+        "home_team_id": "84",
+        "away_team": "Louisville",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+        "away_team_id": "97",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 240.0
     },
@@ -625,9 +659,11 @@
       "nextGame": {
         "home_team": "Vanderbilt",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
-        "away_team": "SMU",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
-        "date_time": "Final"
+        "home_team_id": "238",
+        "away_team": "C Arkansas",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
+        "away_team_id": "2110",
+        "date_time": "12/13 - 6:30 PM EST"
       },
       "nonconsos": 53.0
     },
@@ -658,11 +694,13 @@
       "quad3": "1-0",
       "quad4": "4-0",
       "nextGame": {
-        "home_team": "Auburn",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
-        "away_team": "NC State",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
-        "date_time": "Final"
+        "home_team": "Arizona",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+        "home_team_id": "12",
+        "away_team": "Auburn",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+        "away_team_id": "2",
+        "date_time": "12/6 - 10:00 PM EST"
       },
       "nonconsos": 26.0
     },
@@ -695,8 +733,10 @@
       "nextGame": {
         "home_team": "Kansas",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+        "home_team_id": "2305",
         "away_team": "Missouri",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+        "away_team_id": "142",
         "date_time": "12/7 - 1:00 PM EST"
       },
       "nonconsos": 12.0
@@ -728,11 +768,13 @@
       "quad3": "0-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Alabama",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+        "home_team": "BYU",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+        "home_team_id": "252",
         "away_team": "Clemson",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
-        "date_time": "Final"
+        "away_team_id": "228",
+        "date_time": "12/9 - 6:30 PM EST"
       },
       "nonconsos": 137.0
     },
@@ -763,11 +805,13 @@
       "quad3": "0-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Washington",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
-        "away_team": "UCLA",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-        "date_time": "Final"
+        "home_team": "UCLA",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+        "home_team_id": "26",
+        "away_team": "Oregon",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+        "away_team_id": "2483",
+        "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 282.0
     },
@@ -800,8 +844,10 @@
       "nextGame": {
         "home_team": "Kansas",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+        "home_team_id": "2305",
         "away_team": "Missouri",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+        "away_team_id": "142",
         "date_time": "12/7 - 1:00 PM EST"
       },
       "nonconsos": 341.0
@@ -833,11 +879,13 @@
       "quad3": "1-0",
       "quad4": "2-0",
       "nextGame": {
-        "home_team": "Auburn",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
-        "away_team": "NC State",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
-        "date_time": "Final"
+        "home_team": "NC State",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+        "home_team_id": "152",
+        "away_team": "UNC Asheville",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2427.png",
+        "away_team_id": "2427",
+        "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 19.0
     },
@@ -870,8 +918,10 @@
       "nextGame": {
         "home_team": "South Florida",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+        "home_team_id": "58",
         "away_team": "Utah State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+        "away_team_id": "328",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 217.0
@@ -881,7 +931,7 @@
       "espnId": "127",
       "displayName": "Michigan State Spartans",
       "shortName": "Michigan St",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/127.png",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
       "primaryColor": "18453b",
       "secondaryColor": "ffffff",
       "bpi": 18.0,
@@ -905,8 +955,10 @@
       "nextGame": {
         "home_team": "Michigan St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+        "home_team_id": "127",
         "away_team": "Duke",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+        "away_team_id": "150",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 62.0
@@ -940,9 +992,11 @@
       "nextGame": {
         "home_team": "Wisconsin",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
-        "away_team": "Northwestern",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
-        "date_time": "Final"
+        "home_team_id": "275",
+        "away_team": "Marquette",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/269.png",
+        "away_team_id": "269",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 103.0
     },
@@ -975,8 +1029,10 @@
       "nextGame": {
         "home_team": "Northwestern",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+        "home_team_id": "77",
         "away_team": "Ohio State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+        "away_team_id": "194",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 283.0
@@ -1010,8 +1066,10 @@
       "nextGame": {
         "home_team": "LSU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+        "home_team_id": "99",
         "away_team": "Texas Tech",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+        "away_team_id": "2641",
         "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 45.0
@@ -1045,8 +1103,10 @@
       "nextGame": {
         "home_team": "St John's",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2599.png",
+        "home_team_id": "2599",
         "away_team": "Ole Miss",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+        "away_team_id": "145",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 101.0
@@ -1080,8 +1140,10 @@
       "nextGame": {
         "home_team": "Butler",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
+        "home_team_id": "2086",
         "away_team": "Boise St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+        "away_team_id": "68",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 172.0
@@ -1115,8 +1177,10 @@
       "nextGame": {
         "home_team": "Davidson",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
+        "home_team_id": "2166",
         "away_team": "Saint Mary's",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2608.png",
+        "away_team_id": "2608",
         "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 147.0
@@ -1150,9 +1214,11 @@
       "nextGame": {
         "home_team": "Arkansas",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
-        "away_team": "Louisville",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
-        "date_time": "Final"
+        "home_team_id": "8",
+        "away_team": "Fresno St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+        "away_team_id": "278",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 71.0
     },
@@ -1185,9 +1251,11 @@
       "nextGame": {
         "home_team": "Texas",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
-        "away_team": "Virginia",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
-        "date_time": "Final"
+        "home_team_id": "251",
+        "away_team": "Southern",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2582.png",
+        "away_team_id": "2582",
+        "date_time": "12/8 - 8:00 PM EST"
       },
       "nonconsos": 205.0
     },
@@ -1220,8 +1288,10 @@
       "nextGame": {
         "home_team": "Nebraska",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+        "home_team_id": "158",
         "away_team": "Creighton",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/156.png",
+        "away_team_id": "156",
         "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 198.0
@@ -1255,8 +1325,10 @@
       "nextGame": {
         "home_team": "North Carolina",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+        "home_team_id": "153",
         "away_team": "Georgetown",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png",
+        "away_team_id": "46",
         "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 69.0
@@ -1290,8 +1362,10 @@
       "nextGame": {
         "home_team": "USC",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+        "home_team_id": "30",
         "away_team": "Washington",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+        "away_team_id": "264",
         "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 74.0
@@ -1325,8 +1399,10 @@
       "nextGame": {
         "home_team": "Arizona St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+        "home_team_id": "9",
         "away_team": "Oklahoma",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+        "away_team_id": "201",
         "date_time": "12/6 - 10:00 PM EST"
       },
       "nonconsos": 106.0
@@ -1360,8 +1436,10 @@
       "nextGame": {
         "home_team": "Memphis",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+        "home_team_id": "235",
         "away_team": "Baylor",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+        "away_team_id": "239",
         "date_time": "12/6 - 4:30 PM EST"
       },
       "nonconsos": 44.0
@@ -1395,9 +1473,11 @@
       "nextGame": {
         "home_team": "West Virginia",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
-        "away_team": "Coppin St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2154.png",
-        "date_time": "Final"
+        "home_team_id": "277",
+        "away_team": "Wake Forest",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+        "away_team_id": "154",
+        "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 288.0
     },
@@ -1430,8 +1510,10 @@
       "nextGame": {
         "home_team": "Georgia",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+        "home_team_id": "61",
         "away_team": "Cincinnati",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+        "away_team_id": "2132",
         "date_time": "12/13 - 2:00 PM EST"
       },
       "nonconsos": 255.0
@@ -1463,11 +1545,13 @@
       "quad3": "3-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Boston College",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
-        "away_team": "LSU",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
-        "date_time": "Final/OT"
+        "home_team": "LSU",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+        "home_team_id": "99",
+        "away_team": "Texas Tech",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+        "away_team_id": "2641",
+        "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 317.0
     },
@@ -1500,8 +1584,10 @@
       "nextGame": {
         "home_team": "Miami",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+        "home_team_id": "2390",
         "away_team": "Southern Miss",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+        "away_team_id": "2572",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 90.0
@@ -1535,8 +1621,10 @@
       "nextGame": {
         "home_team": "West Virginia",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+        "home_team_id": "277",
         "away_team": "Wake Forest",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+        "away_team_id": "154",
         "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 80.0
@@ -1570,8 +1658,10 @@
       "nextGame": {
         "home_team": "Villanova",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png",
+        "home_team_id": "222",
         "away_team": "Penn",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/219.png",
+        "away_team_id": "219",
         "date_time": "12/6 - 7:30 PM EST"
       },
       "nonconsos": 203.0
@@ -1605,8 +1695,10 @@
       "nextGame": {
         "home_team": "Texas A&M",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+        "home_team_id": "245",
         "away_team": "SMU",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+        "away_team_id": "2567",
         "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 189.0
@@ -1640,8 +1732,10 @@
       "nextGame": {
         "home_team": "Saint Louis",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png",
+        "home_team_id": "139",
         "away_team": "C Michigan",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+        "away_team_id": "2117",
         "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 171.0
@@ -1675,8 +1769,10 @@
       "nextGame": {
         "home_team": "Nebraska",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+        "home_team_id": "158",
         "away_team": "Creighton",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/156.png",
+        "away_team_id": "156",
         "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 58.0
@@ -1708,11 +1804,13 @@
       "quad3": "2-0",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Wisconsin",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
-        "away_team": "Northwestern",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
-        "date_time": "Final"
+        "home_team": "Northwestern",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+        "home_team_id": "77",
+        "away_team": "Ohio State",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+        "away_team_id": "194",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 68.0
     },
@@ -1745,8 +1843,10 @@
       "nextGame": {
         "home_team": "Iowa",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+        "home_team_id": "2294",
         "away_team": "Maryland",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+        "away_team_id": "120",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 87.0
@@ -1778,11 +1878,13 @@
       "quad3": "1-0",
       "quad4": "4-0",
       "nextGame": {
-        "home_team": "Texas",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
-        "away_team": "Virginia",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
-        "date_time": "Final"
+        "home_team": "Virginia",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+        "home_team_id": "258",
+        "away_team": "Dayton",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png",
+        "away_team_id": "2168",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 143.0
     },
@@ -1791,7 +1893,7 @@
       "espnId": "2294",
       "displayName": "Iowa Hawkeyes",
       "shortName": "Iowa",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2294.png",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
       "primaryColor": "000000",
       "secondaryColor": "fcd116",
       "bpi": 51.0,
@@ -1815,8 +1917,10 @@
       "nextGame": {
         "home_team": "Iowa",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+        "home_team_id": "2294",
         "away_team": "Maryland",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+        "away_team_id": "120",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 235.0
@@ -1850,8 +1954,10 @@
       "nextGame": {
         "home_team": "Kansas St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+        "home_team_id": "2306",
         "away_team": "Seton Hall",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
+        "away_team_id": "2550",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 28.0
@@ -1883,11 +1989,13 @@
       "quad3": "2-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Vanderbilt",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+        "home_team": "Texas A&M",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+        "home_team_id": "245",
         "away_team": "SMU",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
-        "date_time": "Final"
+        "away_team_id": "2567",
+        "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 110.0
     },
@@ -1920,8 +2028,10 @@
       "nextGame": {
         "home_team": "VCU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
+        "home_team_id": "2670",
         "away_team": "Samford",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+        "away_team_id": "2535",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 35.0
@@ -1955,8 +2065,10 @@
       "nextGame": {
         "home_team": "Xavier",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2752.png",
+        "home_team_id": "2752",
         "away_team": "Cincinnati",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+        "away_team_id": "2132",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 314.0
@@ -1990,8 +2102,10 @@
       "nextGame": {
         "home_team": "Syracuse",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+        "home_team_id": "183",
         "away_team": "Saint Joseph's",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2603.png",
+        "away_team_id": "2603",
         "date_time": "12/11 - 9:00 PM EST"
       },
       "nonconsos": 37.0
@@ -2023,11 +2137,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Georgia Tech",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
-        "away_team": "Mississippi St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
-        "date_time": "Final"
+        "home_team": "Mississippi St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+        "home_team_id": "344",
+        "away_team": "San Francisco",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
+        "away_team_id": "2539",
+        "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 30.0
     },
@@ -2060,8 +2176,10 @@
       "nextGame": {
         "home_team": "McNeese",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
+        "home_team_id": "2377",
         "away_team": "N'Western St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png",
+        "away_team_id": "2466",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 177.0
@@ -2095,8 +2213,10 @@
       "nextGame": {
         "home_team": "Providence",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2507.png",
+        "home_team_id": "2507",
         "away_team": "Rhode Island",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png",
+        "away_team_id": "227",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 60.0
@@ -2130,8 +2250,10 @@
       "nextGame": {
         "home_team": "Colorado St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+        "home_team_id": "36",
         "away_team": "Colorado",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+        "away_team_id": "38",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 184.0
@@ -2165,8 +2287,10 @@
       "nextGame": {
         "home_team": "Wisconsin",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+        "home_team_id": "275",
         "away_team": "Marquette",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/269.png",
+        "away_team_id": "269",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 116.0
@@ -2200,8 +2324,10 @@
       "nextGame": {
         "home_team": "Virginia Tech",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+        "home_team_id": "259",
         "away_team": "George Mason",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
+        "away_team_id": "2244",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 339.0
@@ -2235,8 +2361,10 @@
       "nextGame": {
         "home_team": "Houston",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+        "home_team_id": "248",
         "away_team": "Florida St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+        "away_team_id": "52",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 158.0
@@ -2270,8 +2398,10 @@
       "nextGame": {
         "home_team": "Virginia",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+        "home_team_id": "258",
         "away_team": "Dayton",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png",
+        "away_team_id": "2168",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 77.0
@@ -2305,8 +2435,10 @@
       "nextGame": {
         "home_team": "G Washington",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/45.png",
+        "home_team_id": "45",
         "away_team": "William & Mary",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png",
+        "away_team_id": "2729",
         "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 183.0
@@ -2340,8 +2472,10 @@
       "nextGame": {
         "home_team": "TCU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+        "home_team_id": "2628",
         "away_team": "Notre Dame",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+        "away_team_id": "87",
         "date_time": "12/5 - 8:00 PM EST"
       },
       "nonconsos": 50.0
@@ -2375,9 +2509,11 @@
       "nextGame": {
         "home_team": "High Point",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2272.png",
-        "away_team": "S Illinois",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
-        "date_time": "Final"
+        "home_team_id": "2272",
+        "away_team": "NJIT",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2885.png",
+        "away_team_id": "2885",
+        "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 302.0
     },
@@ -2408,11 +2544,13 @@
       "quad3": "1-0",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Washington",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
-        "away_team": "UCLA",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-        "date_time": "Final"
+        "home_team": "USC",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+        "home_team_id": "30",
+        "away_team": "Washington",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+        "away_team_id": "264",
+        "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 115.0
     },
@@ -2445,9 +2583,11 @@
       "nextGame": {
         "home_team": "Memphis",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
-        "away_team": "New Orleans",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2443.png",
-        "date_time": "Final"
+        "home_team_id": "235",
+        "away_team": "Baylor",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+        "away_team_id": "239",
+        "date_time": "12/6 - 4:30 PM EST"
       },
       "nonconsos": 15.0
     },
@@ -2478,11 +2618,13 @@
       "quad3": "1-0",
       "quad4": "4-0",
       "nextGame": {
-        "home_team": "Georgetown",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png",
-        "away_team": "UMBC",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2378.png",
-        "date_time": "Final"
+        "home_team": "North Carolina",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+        "home_team_id": "153",
+        "away_team": "Georgetown",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png",
+        "away_team_id": "46",
+        "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 94.0
     },
@@ -2515,8 +2657,10 @@
       "nextGame": {
         "home_team": "California",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+        "home_team_id": "25",
         "away_team": "Pacific",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
+        "away_team_id": "279",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 182.0
@@ -2550,8 +2694,10 @@
       "nextGame": {
         "home_team": "UCF",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+        "home_team_id": "2116",
         "away_team": "Towson",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png",
+        "away_team_id": "119",
         "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 108.0
@@ -2585,8 +2731,10 @@
       "nextGame": {
         "home_team": "South Carolina",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+        "home_team_id": "2579",
         "away_team": "Stetson",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png",
+        "away_team_id": "56",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 234.0
@@ -2620,8 +2768,10 @@
       "nextGame": {
         "home_team": "Grand Canyon",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2253.png",
+        "home_team_id": "2253",
         "away_team": "Oklahoma St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+        "away_team_id": "197",
         "date_time": "12/6 - 7:30 PM EST"
       },
       "nonconsos": 164.0
@@ -2653,11 +2803,13 @@
       "quad3": "3-1",
       "quad4": "1-1",
       "nextGame": {
-        "home_team": "San Francisco",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
-        "away_team": "North Alabama",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png",
-        "date_time": "Final"
+        "home_team": "Mississippi St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+        "home_team_id": "344",
+        "away_team": "San Francisco",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
+        "away_team_id": "2539",
+        "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 134.0
     },
@@ -2690,8 +2842,10 @@
       "nextGame": {
         "home_team": "UCLA",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+        "home_team_id": "26",
         "away_team": "Oregon",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+        "away_team_id": "2483",
         "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 27.0
@@ -2723,11 +2877,13 @@
       "quad3": "1-0",
       "quad4": "6-0",
       "nextGame": {
-        "home_team": "Seton Hall",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
-        "away_team": "C Connecticut",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png",
-        "date_time": "Final"
+        "home_team": "Kansas St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+        "home_team_id": "2306",
+        "away_team": "Seton Hall",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
+        "away_team_id": "2550",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 285.0
     },
@@ -2758,11 +2914,13 @@
       "quad3": "3-0",
       "quad4": "2-0",
       "nextGame": {
-        "home_team": "Santa Clara",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
-        "away_team": "Utah Tech",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
-        "date_time": "Final"
+        "home_team": "New Mexico",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+        "home_team_id": "167",
+        "away_team": "Santa Clara",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
+        "away_team_id": "2541",
+        "date_time": "12/6 - 9:00 PM EST"
       },
       "nonconsos": 127.0
     },
@@ -2795,8 +2953,10 @@
       "nextGame": {
         "home_team": "TCU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+        "home_team_id": "2628",
         "away_team": "Notre Dame",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+        "away_team_id": "87",
         "date_time": "12/5 - 8:00 PM EST"
       },
       "nonconsos": 93.0
@@ -2830,8 +2990,10 @@
       "nextGame": {
         "home_team": "South Florida",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+        "home_team_id": "58",
         "away_team": "Utah State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+        "away_team_id": "328",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 23.0
@@ -2865,8 +3027,10 @@
       "nextGame": {
         "home_team": "Liberty",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+        "home_team_id": "2335",
         "away_team": "Coppin St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2154.png",
+        "away_team_id": "2154",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 310.0
@@ -2900,8 +3064,10 @@
       "nextGame": {
         "home_team": "Pitt",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+        "home_team_id": "221",
         "away_team": "Hofstra",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2275.png",
+        "away_team_id": "2275",
         "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 63.0
@@ -2933,11 +3099,13 @@
       "quad3": "0-1",
       "quad4": "4-0",
       "nextGame": {
-        "home_team": "Minnesota",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
-        "away_team": "Indiana",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-        "date_time": "Final"
+        "home_team": "Purdue",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+        "home_team_id": "2509",
+        "away_team": "Minnesota",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+        "away_team_id": "135",
+        "date_time": "12/10 - 7:00 PM EST"
       },
       "nonconsos": 174.0
     },
@@ -2970,8 +3138,10 @@
       "nextGame": {
         "home_team": "Northern Iowa",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
+        "home_team_id": "2460",
         "away_team": "Wichita St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
+        "away_team_id": "2724",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 141.0
@@ -3003,11 +3173,13 @@
       "quad3": "1-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Akron",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
-        "away_team": "Bucknell",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2083.png",
-        "date_time": "Final"
+        "home_team": "Tulane",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+        "home_team_id": "2655",
+        "away_team": "Akron",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+        "away_team_id": "2006",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 262.0
     },
@@ -3040,9 +3212,11 @@
       "nextGame": {
         "home_team": "San Diego St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
-        "away_team": "Utah Valley",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3084.png",
-        "date_time": "Final"
+        "home_team_id": "21",
+        "away_team": "Lamar",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png",
+        "away_team_id": "2320",
+        "date_time": "12/10 - 10:00 PM EST"
       },
       "nonconsos": 47.0
     },
@@ -3075,8 +3249,10 @@
       "nextGame": {
         "home_team": "Butler",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
+        "home_team_id": "2086",
         "away_team": "Boise St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+        "away_team_id": "68",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 160.0
@@ -3110,8 +3286,10 @@
       "nextGame": {
         "home_team": "Drake",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
+        "home_team_id": "2181",
         "away_team": "UAB",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+        "away_team_id": "5",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 207.0
@@ -3145,8 +3323,10 @@
       "nextGame": {
         "home_team": "Virginia Tech",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+        "home_team_id": "259",
         "away_team": "George Mason",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
+        "away_team_id": "2244",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 32.0
@@ -3180,8 +3360,10 @@
       "nextGame": {
         "home_team": "Grand Canyon",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2253.png",
+        "home_team_id": "2253",
         "away_team": "Oklahoma St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+        "away_team_id": "197",
         "date_time": "12/6 - 7:30 PM EST"
       },
       "nonconsos": 206.0
@@ -3215,8 +3397,10 @@
       "nextGame": {
         "home_team": "Providence",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2507.png",
+        "home_team_id": "2507",
         "away_team": "Rhode Island",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png",
+        "away_team_id": "227",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 238.0
@@ -3250,8 +3434,10 @@
       "nextGame": {
         "home_team": "Indiana",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+        "home_team_id": "84",
         "away_team": "Penn State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+        "away_team_id": "213",
         "date_time": "12/9 - 8:30 PM EST"
       },
       "nonconsos": 329.0
@@ -3285,8 +3471,10 @@
       "nextGame": {
         "home_team": "Northern Iowa",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
+        "home_team_id": "2460",
         "away_team": "Wichita St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
+        "away_team_id": "2724",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 296.0
@@ -3320,8 +3508,10 @@
       "nextGame": {
         "home_team": "Colorado St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+        "home_team_id": "36",
         "away_team": "Colorado",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+        "away_team_id": "38",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 146.0
@@ -3355,8 +3545,10 @@
       "nextGame": {
         "home_team": "New Mexico",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+        "home_team_id": "167",
         "away_team": "Santa Clara",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
+        "away_team_id": "2541",
         "date_time": "12/6 - 9:00 PM EST"
       },
       "nonconsos": 226.0
@@ -3390,8 +3582,10 @@
       "nextGame": {
         "home_team": "Tulsa",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+        "home_team_id": "202",
         "away_team": "Missouri St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+        "away_team_id": "2623",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 192.0
@@ -3425,8 +3619,10 @@
       "nextGame": {
         "home_team": "Xavier",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2752.png",
+        "home_team_id": "2752",
         "away_team": "Cincinnati",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+        "away_team_id": "2132",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 109.0
@@ -3460,8 +3656,10 @@
       "nextGame": {
         "home_team": "Stanford",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+        "home_team_id": "24",
         "away_team": "UNLV",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+        "away_team_id": "2439",
         "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 232.0
@@ -3495,8 +3693,10 @@
       "nextGame": {
         "home_team": "Washington St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+        "home_team_id": "265",
         "away_team": "Nevada",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+        "away_team_id": "2440",
         "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 54.0
@@ -3530,8 +3730,10 @@
       "nextGame": {
         "home_team": "Stanford",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+        "home_team_id": "24",
         "away_team": "UNLV",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+        "away_team_id": "2439",
         "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 42.0
@@ -3565,9 +3767,11 @@
       "nextGame": {
         "home_team": "Yale",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png",
-        "away_team": "Brandeis",
-        "away_team_logo": null,
-        "date_time": "Final"
+        "home_team_id": "43",
+        "away_team": "UIC",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
+        "away_team_id": "82",
+        "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 249.0
     },
@@ -3600,8 +3804,10 @@
       "nextGame": {
         "home_team": "LMU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2351.png",
+        "home_team_id": "2351",
         "away_team": "UC San Diego",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/28.png",
+        "away_team_id": "28",
         "date_time": "12/16 - 11:30 PM EST"
       },
       "nonconsos": 261.0
@@ -3635,8 +3841,10 @@
       "nextGame": {
         "home_team": "Arizona St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+        "home_team_id": "9",
         "away_team": "Oklahoma",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+        "away_team_id": "201",
         "date_time": "12/6 - 10:00 PM EST"
       },
       "nonconsos": 61.0
@@ -3670,9 +3878,11 @@
       "nextGame": {
         "home_team": "Illinois St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
-        "away_team": "E Kentucky",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
-        "date_time": "Final"
+        "home_team_id": "2287",
+        "away_team": "Chicago St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
+        "away_team_id": "2130",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 268.0
     },
@@ -3705,8 +3915,10 @@
       "nextGame": {
         "home_team": "Miami OH",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+        "home_team_id": "193",
         "away_team": "Maine",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/311.png",
+        "away_team_id": "311",
         "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 365.0
@@ -3740,8 +3952,10 @@
       "nextGame": {
         "home_team": "Michigan",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+        "home_team_id": "130",
         "away_team": "Rutgers",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+        "away_team_id": "164",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 202.0
@@ -3775,8 +3989,10 @@
       "nextGame": {
         "home_team": "Utah",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+        "home_team_id": "254",
         "away_team": "CA Baptist",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2856.png",
+        "away_team_id": "2856",
         "date_time": "12/6 - 7:00 PM EST"
       },
       "nonconsos": 145.0
@@ -3810,8 +4026,10 @@
       "nextGame": {
         "home_team": "Murray St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
+        "home_team_id": "93",
         "away_team": "Bellarmine",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
+        "away_team_id": "91",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 191.0
@@ -3845,8 +4063,10 @@
       "nextGame": {
         "home_team": "Long Beach St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/299.png",
+        "home_team_id": "299",
         "away_team": "UC San Diego",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/28.png",
+        "away_team_id": "28",
         "date_time": "12/6 - 9:00 PM EST"
       },
       "nonconsos": 161.0
@@ -3878,11 +4098,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "UNC Wilmington",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/350.png",
-        "away_team": "Marshall",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
-        "date_time": "Final"
+        "home_team": "Louisiana",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+        "home_team_id": "309",
+        "away_team": "UNC Wilmington",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/350.png",
+        "away_team_id": "350",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 355.0
     },
@@ -3915,9 +4137,11 @@
       "nextGame": {
         "home_team": "Georgia Tech",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
-        "away_team": "Mississippi St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
-        "date_time": "Final"
+        "home_team_id": "59",
+        "away_team": "Monmouth",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
+        "away_team_id": "2405",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 218.0
     },
@@ -3950,8 +4174,10 @@
       "nextGame": {
         "home_team": "Bradley",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/71.png",
+        "home_team_id": "71",
         "away_team": "N Illinois",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+        "away_team_id": "2459",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 181.0
@@ -3985,8 +4211,10 @@
       "nextGame": {
         "home_team": "TCU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+        "home_team_id": "2628",
         "away_team": "North Texas",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+        "away_team_id": "249",
         "date_time": "12/7 - 5:30 PM EST"
       },
       "nonconsos": 345.0
@@ -4020,8 +4248,10 @@
       "nextGame": {
         "home_team": "DePaul",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/305.png",
+        "home_team_id": "305",
         "away_team": "AR-Pine Bluff",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2029.png",
+        "away_team_id": "2029",
         "date_time": "12/6 - 9:00 PM EST"
       },
       "nonconsos": 299.0
@@ -4055,8 +4285,10 @@
       "nextGame": {
         "home_team": "Saint Joseph's",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2603.png",
+        "home_team_id": "2603",
         "away_team": "Temple",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+        "away_team_id": "218",
         "date_time": "12/6 - 4:30 PM EST"
       },
       "nonconsos": 138.0
@@ -4088,11 +4320,13 @@
       "quad3": "2-1",
       "quad4": "2-0",
       "nextGame": {
-        "home_team": "Towson",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png",
-        "away_team": "Cornell",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png",
-        "date_time": "Final"
+        "home_team": "UCF",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+        "home_team_id": "2116",
+        "away_team": "Towson",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png",
+        "away_team_id": "119",
+        "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 65.0
     },
@@ -4125,8 +4359,10 @@
       "nextGame": {
         "home_team": "Troy",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
+        "home_team_id": "2653",
         "away_team": "LaGrange",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/548.png",
+        "away_team_id": "548",
         "date_time": "12/6 - 4:30 PM EST"
       },
       "nonconsos": 99.0
@@ -4160,8 +4396,10 @@
       "nextGame": {
         "home_team": "UC Irvine",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
+        "home_team_id": "300",
         "away_team": "UC Riverside",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+        "away_team_id": "27",
         "date_time": "12/4 - 10:00 PM EST"
       },
       "nonconsos": 216.0
@@ -4193,11 +4431,13 @@
       "quad3": "1-1",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Belmont",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
-        "away_team": "Richmond",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
-        "date_time": "Final"
+        "home_team": "Richmond",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
+        "home_team_id": "257",
+        "away_team": "Old Dominion",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+        "away_team_id": "295",
+        "date_time": "12/6 - 12:30 PM EST"
       },
       "nonconsos": 351.0
     },
@@ -4230,9 +4470,11 @@
       "nextGame": {
         "home_team": "Kent State",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
-        "away_team": "Austin Peay",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png",
-        "date_time": "Final"
+        "home_team_id": "2309",
+        "away_team": "Rob. Wesleyan",
+        "away_team_logo": null,
+        "away_team_id": "128531",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 331.0
     },
@@ -4263,11 +4505,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "St Bonaventure",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
-        "away_team": "Bloomsburg",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2071.png",
-        "date_time": "Final"
+        "home_team": "Buffalo",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
+        "home_team_id": "2084",
+        "away_team": "St Bonaventure",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
+        "away_team_id": "179",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 265.0
     },
@@ -4300,8 +4544,10 @@
       "nextGame": {
         "home_team": "Kennesaw St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+        "home_team_id": "338",
         "away_team": "Georgia St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+        "away_team_id": "2247",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 349.0
@@ -4333,11 +4579,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Youngstown St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
-        "away_team": "Wright St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
-        "date_time": "Final"
+        "home_team": "Wright St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
+        "home_team_id": "2750",
+        "away_team": "Green Bay",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
+        "away_team_id": "2739",
+        "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 227.0
     },
@@ -4368,11 +4616,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "High Point",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2272.png",
-        "away_team": "S Illinois",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
-        "date_time": "Final"
+        "home_team": "S Illinois",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
+        "home_team_id": "79",
+        "away_team": "UT Martin",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2630.png",
+        "away_team_id": "2630",
+        "date_time": "12/10 - 8:00 PM EST"
       },
       "nonconsos": 113.0
     },
@@ -4405,8 +4655,10 @@
       "nextGame": {
         "home_team": "FGCU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
+        "home_team_id": "526",
         "away_team": "FAU",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+        "away_team_id": "2226",
         "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 89.0
@@ -4440,8 +4692,10 @@
       "nextGame": {
         "home_team": "Davidson",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
+        "home_team_id": "2166",
         "away_team": "The Citadel",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2643.png",
+        "away_team_id": "2643",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 250.0
@@ -4475,8 +4729,10 @@
       "nextGame": {
         "home_team": "ETSU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+        "home_team_id": "2193",
         "away_team": "South Alabama",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+        "away_team_id": "6",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 347.0
@@ -4510,8 +4766,10 @@
       "nextGame": {
         "home_team": "Western KY",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+        "home_team_id": "98",
         "away_team": "Evansville",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/339.png",
+        "away_team_id": "339",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 159.0
@@ -4545,8 +4803,10 @@
       "nextGame": {
         "home_team": "Santa Barbara",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2540.png",
+        "home_team_id": "2540",
         "away_team": "Long Beach St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/299.png",
+        "away_team_id": "299",
         "date_time": "12/4 - 9:00 PM EST"
       },
       "nonconsos": 304.0
@@ -4580,8 +4840,10 @@
       "nextGame": {
         "home_team": "Jax State",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+        "home_team_id": "55",
         "away_team": "AU Montgomery",
         "away_team_logo": null,
+        "away_team_id": "2040",
         "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 348.0
@@ -4613,11 +4875,13 @@
       "quad3": "2-1",
       "quad4": "1-0",
       "nextGame": {
-        "home_team": "San Diego St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+        "home_team": "Bowling Green",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+        "home_team_id": "189",
         "away_team": "Utah Valley",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3084.png",
-        "date_time": "Final"
+        "away_team_id": "3084",
+        "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 167.0
     },
@@ -4650,8 +4914,10 @@
       "nextGame": {
         "home_team": "Hawai\u2019i",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+        "home_team_id": "62",
         "away_team": "UC Davis",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+        "away_team_id": "302",
         "date_time": "12/4 - 11:59 PM EST"
       },
       "nonconsos": 357.0
@@ -4685,8 +4951,10 @@
       "nextGame": {
         "home_team": "Winthrop",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2737.png",
+        "home_team_id": "2737",
         "away_team": "Coastal",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
+        "away_team_id": "324",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 85.0
@@ -4718,11 +4986,13 @@
       "quad3": "3-1",
       "quad4": "4-0",
       "nextGame": {
-        "home_team": "Belmont",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
-        "away_team": "Richmond",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
-        "date_time": "Final"
+        "home_team": "MTSU",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+        "home_team_id": "2393",
+        "away_team": "Belmont",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
+        "away_team_id": "2057",
+        "date_time": "12/7 - 4:30 PM EST"
       },
       "nonconsos": 353.0
     },
@@ -4755,8 +5025,10 @@
       "nextGame": {
         "home_team": "Duquesne",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
+        "home_team_id": "2184",
         "away_team": "Stony Brook",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png",
+        "away_team_id": "2619",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 346.0
@@ -4788,11 +5060,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "BYU",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+        "home_team": "Utah",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+        "home_team_id": "254",
         "away_team": "CA Baptist",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2856.png",
-        "date_time": "Final"
+        "away_team_id": "2856",
+        "date_time": "12/6 - 7:00 PM EST"
       },
       "nonconsos": 140.0
     },
@@ -4825,9 +5099,11 @@
       "nextGame": {
         "home_team": "Seattle U",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2547.png",
-        "away_team": "Puget Sound",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2508.png",
-        "date_time": "Final"
+        "home_team_id": "2547",
+        "away_team": "UTEP",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+        "away_team_id": "2638",
+        "date_time": "12/7 - 8:00 PM EST"
       },
       "nonconsos": 335.0
     },
@@ -4858,11 +5134,13 @@
       "quad3": "0-2",
       "quad4": "3-1",
       "nextGame": {
-        "home_team": "UIC",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
-        "away_team": "AR-Pine Bluff",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2029.png",
-        "date_time": "Final"
+        "home_team": "Yale",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png",
+        "home_team_id": "43",
+        "away_team": "UIC",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
+        "away_team_id": "82",
+        "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 332.0
     },
@@ -4895,8 +5173,10 @@
       "nextGame": {
         "home_team": "G Washington",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/45.png",
+        "home_team_id": "45",
         "away_team": "William & Mary",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png",
+        "away_team_id": "2729",
         "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 176.0
@@ -4930,8 +5210,10 @@
       "nextGame": {
         "home_team": "MTSU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+        "home_team_id": "2393",
         "away_team": "Belmont",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
+        "away_team_id": "2057",
         "date_time": "12/7 - 4:30 PM EST"
       },
       "nonconsos": 51.0
@@ -4965,8 +5247,10 @@
       "nextGame": {
         "home_team": "Little Rock",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2031.png",
+        "home_team_id": "2031",
         "away_team": "Arkansas St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+        "away_team_id": "2032",
         "date_time": "12/6 - 9:00 PM EST"
       },
       "nonconsos": 86.0
@@ -5000,8 +5284,10 @@
       "nextGame": {
         "home_team": "Texas Southern",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2640.png",
+        "home_team_id": "2640",
         "away_team": "Sam Houston",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+        "away_team_id": "2534",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 129.0
@@ -5035,9 +5321,11 @@
       "nextGame": {
         "home_team": "UMass",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
-        "away_team": "Harvard",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png",
-        "date_time": "Final"
+        "home_team_id": "113",
+        "away_team": "UMass Lowell",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2349.png",
+        "away_team_id": "2349",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 350.0
     },
@@ -5070,8 +5358,10 @@
       "nextGame": {
         "home_team": "Saint Joseph's",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2603.png",
+        "home_team_id": "2603",
         "away_team": "Temple",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+        "away_team_id": "218",
         "date_time": "12/6 - 4:30 PM EST"
       },
       "nonconsos": 241.0
@@ -5105,8 +5395,10 @@
       "nextGame": {
         "home_team": "Abilene Chrstn",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png",
+        "home_team_id": "2000",
         "away_team": "New Mexico St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+        "away_team_id": "166",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 336.0
@@ -5138,11 +5430,13 @@
       "quad3": "2-1",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "UNC Wilmington",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/350.png",
+        "home_team": "Ohio",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+        "home_team_id": "195",
         "away_team": "Marshall",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
-        "date_time": "Final"
+        "away_team_id": "276",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 133.0
     },
@@ -5175,8 +5469,10 @@
       "nextGame": {
         "home_team": "Drake",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
+        "home_team_id": "2181",
         "away_team": "UAB",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+        "away_team_id": "5",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 324.0
@@ -5208,11 +5504,13 @@
       "quad3": "2-0",
       "quad4": "4-0",
       "nextGame": {
-        "home_team": "Air Force",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+        "home_team": "California",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+        "home_team_id": "25",
         "away_team": "Pacific",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
-        "date_time": "Final"
+        "away_team_id": "279",
+        "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 318.0
     },
@@ -5245,8 +5543,10 @@
       "nextGame": {
         "home_team": "Tulane",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+        "home_team_id": "2655",
         "away_team": "Akron",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+        "away_team_id": "2006",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 287.0
@@ -5280,9 +5580,11 @@
       "nextGame": {
         "home_team": "Oregon St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
-        "away_team": "Vermont",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/261.png",
-        "date_time": "Final"
+        "home_team_id": "204",
+        "away_team": "Southern Utah",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
+        "away_team_id": "253",
+        "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 170.0
     },
@@ -5313,11 +5615,13 @@
       "quad3": "0-0",
       "quad4": "4-3",
       "nextGame": {
-        "home_team": "FIU",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
-        "away_team": "FGCU",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
-        "date_time": "Final"
+        "home_team": "FGCU",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
+        "home_team_id": "526",
+        "away_team": "FAU",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+        "away_team_id": "2226",
+        "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 281.0
     },
@@ -5350,9 +5654,11 @@
       "nextGame": {
         "home_team": "Boston College",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
-        "away_team": "LSU",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
-        "date_time": "Final/OT"
+        "home_team_id": "103",
+        "away_team": "New Haven",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2441.png",
+        "away_team_id": "2441",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 154.0
     },
@@ -5383,11 +5689,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Montana",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
-        "away_team": "N Dakota St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
-        "date_time": "Final"
+        "home_team": "N Dakota St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
+        "home_team_id": "2449",
+        "away_team": "N Arizona",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
+        "away_team_id": "2464",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 252.0
     },
@@ -5420,9 +5728,11 @@
       "nextGame": {
         "home_team": "James Madison",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
-        "away_team": "NC Central",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2428.png",
-        "date_time": "Final"
+        "home_team_id": "256",
+        "away_team": "Norfolk St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2450.png",
+        "away_team_id": "2450",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 258.0
     },
@@ -5455,8 +5765,10 @@
       "nextGame": {
         "home_team": "Wyoming",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+        "home_team_id": "2751",
         "away_team": "Dartmouth",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png",
+        "away_team_id": "159",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 308.0
@@ -5488,11 +5800,13 @@
       "quad3": "1-1",
       "quad4": "4-0",
       "nextGame": {
-        "home_team": "Omaha",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2437.png",
-        "away_team": "N Colorado",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
-        "date_time": "Final"
+        "home_team": "N Colorado",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
+        "home_team_id": "2458",
+        "away_team": "South Dakota",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png",
+        "away_team_id": "233",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 361.0
     },
@@ -5525,9 +5839,11 @@
       "nextGame": {
         "home_team": "Rice",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
-        "away_team": "Texas St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
-        "date_time": "Final"
+        "home_team_id": "242",
+        "away_team": "Arkansas St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+        "away_team_id": "2032",
+        "date_time": "12/13 - 3:00 PM EST"
       },
       "nonconsos": 197.0
     },
@@ -5558,11 +5874,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Rice",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
-        "away_team": "Texas St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
-        "date_time": "Final"
+        "home_team": "Texas St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
+        "home_team_id": "326",
+        "away_team": "Southern",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2582.png",
+        "away_team_id": "2582",
+        "date_time": "12/10 - 8:30 PM EST"
       },
       "nonconsos": 326.0
     },
@@ -5593,11 +5911,13 @@
       "quad3": "1-1",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Towson",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png",
+        "home_team": "Samford",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+        "home_team_id": "2535",
         "away_team": "Cornell",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png",
-        "date_time": "Final"
+        "away_team_id": "172",
+        "date_time": "12/7 - 7:00 PM EST"
       },
       "nonconsos": 150.0
     },
@@ -5630,8 +5950,10 @@
       "nextGame": {
         "home_team": "Milwaukee",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
+        "home_team_id": "270",
         "away_team": "Robert Morris",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
+        "away_team_id": "2523",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 46.0
@@ -5665,8 +5987,10 @@
       "nextGame": {
         "home_team": "Iona",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/314.png",
+        "home_team_id": "314",
         "away_team": "Quinnipiac",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2514.png",
+        "away_team_id": "2514",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 98.0
@@ -5700,9 +6024,11 @@
       "nextGame": {
         "home_team": "SF Austin",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png",
-        "away_team": "UT Rio Grande",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
-        "date_time": "Final"
+        "home_team_id": "2617",
+        "away_team": "UL Monroe",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+        "away_team_id": "2433",
+        "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 251.0
     },
@@ -5733,11 +6059,13 @@
       "quad3": "0-1",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Kent State",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
+        "home_team": "UT Rio Grande",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
+        "home_team_id": "292",
         "away_team": "Austin Peay",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png",
-        "date_time": "Final"
+        "away_team_id": "2046",
+        "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 104.0
     },
@@ -5770,8 +6098,10 @@
       "nextGame": {
         "home_team": "James Madison",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+        "home_team_id": "256",
         "away_team": "Norfolk St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2450.png",
+        "away_team_id": "2450",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 231.0
@@ -5805,9 +6135,11 @@
       "nextGame": {
         "home_team": "Oakland",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
-        "away_team": "Purdue FW",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
-        "date_time": "Final"
+        "home_team_id": "2473",
+        "away_team": "Toledo",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
+        "away_team_id": "2649",
+        "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 16.0
     },
@@ -5838,11 +6170,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "SF Austin",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png",
-        "away_team": "UT Rio Grande",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
-        "date_time": "Final"
+        "home_team": "UT Rio Grande",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
+        "home_team_id": "292",
+        "away_team": "Austin Peay",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png",
+        "away_team_id": "2046",
+        "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 39.0
     },
@@ -5875,8 +6209,10 @@
       "nextGame": {
         "home_team": "Oakland",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
+        "home_team_id": "2473",
         "away_team": "Toledo",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
+        "away_team_id": "2649",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 267.0
@@ -5910,8 +6246,10 @@
       "nextGame": {
         "home_team": "ETSU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+        "home_team_id": "2193",
         "away_team": "South Alabama",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+        "away_team_id": "6",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 264.0
@@ -5943,11 +6281,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Montana St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
-        "away_team": "St Thomas (MN)",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2900.png",
-        "date_time": "Final"
+        "home_team": "Oral Roberts",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
+        "home_team_id": "198",
+        "away_team": "Montana St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
+        "away_team_id": "147",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 142.0
     },
@@ -5980,8 +6320,10 @@
       "nextGame": {
         "home_team": "Iona",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/314.png",
+        "home_team_id": "314",
         "away_team": "Quinnipiac",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2514.png",
+        "away_team_id": "2514",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 280.0
@@ -6015,8 +6357,10 @@
       "nextGame": {
         "home_team": "VCU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
+        "home_team_id": "2670",
         "away_team": "Samford",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+        "away_team_id": "2535",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 152.0
@@ -6050,9 +6394,11 @@
       "nextGame": {
         "home_team": "Columbia",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/171.png",
-        "away_team": "Hofstra",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2275.png",
-        "date_time": "Final"
+        "home_team_id": "171",
+        "away_team": "UAlbany",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png",
+        "away_team_id": "399",
+        "date_time": "12/6 - 5:30 PM EST"
       },
       "nonconsos": 316.0
     },
@@ -6085,8 +6431,10 @@
       "nextGame": {
         "home_team": "Arkansas",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+        "home_team_id": "8",
         "away_team": "Fresno St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+        "away_team_id": "278",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 356.0
@@ -6120,8 +6468,10 @@
       "nextGame": {
         "home_team": "South Florida",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+        "home_team_id": "58",
         "away_team": "Charleston",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/232.png",
+        "away_team_id": "232",
         "date_time": "12/10 - 7:00 PM EST"
       },
       "nonconsos": 193.0
@@ -6153,11 +6503,13 @@
       "quad3": "0-1",
       "quad4": "3-1",
       "nextGame": {
-        "home_team": "Elon",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2210.png",
-        "away_team": "Furman",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
-        "date_time": "Final"
+        "home_team": "Wofford",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+        "home_team_id": "2747",
+        "away_team": "Elon",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2210.png",
+        "away_team_id": "2210",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 246.0
     },
@@ -6190,8 +6542,10 @@
       "nextGame": {
         "home_team": "UT Rio Grande",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
+        "home_team_id": "292",
         "away_team": "UT Arlington",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/250.png",
+        "away_team_id": "250",
         "date_time": "12/11 - 7:30 PM EST"
       },
       "nonconsos": 263.0
@@ -6223,11 +6577,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Weber St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png",
-        "away_team": "Oral Roberts",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
-        "date_time": "Final"
+        "home_team": "St Thomas (MN)",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2900.png",
+        "home_team_id": "2900",
+        "away_team": "Weber St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png",
+        "away_team_id": "2692",
+        "date_time": "12/7 - 1:00 PM EST"
       },
       "nonconsos": 222.0
     },
@@ -6260,8 +6616,10 @@
       "nextGame": {
         "home_team": "Villanova",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png",
+        "home_team_id": "222",
         "away_team": "Penn",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/219.png",
+        "away_team_id": "219",
         "date_time": "12/6 - 7:30 PM EST"
       },
       "nonconsos": 244.0
@@ -6295,8 +6653,10 @@
       "nextGame": {
         "home_team": "Bethune",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2065.png",
+        "home_team_id": "2065",
         "away_team": "SC State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png",
+        "away_team_id": "2569",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 21.0
@@ -6330,8 +6690,10 @@
       "nextGame": {
         "home_team": "Alabama",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+        "home_team_id": "333",
         "away_team": "UTSA",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+        "away_team_id": "2636",
         "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 354.0
@@ -6363,11 +6725,13 @@
       "quad3": "1-1",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Columbia",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/171.png",
+        "home_team": "Pitt",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+        "home_team_id": "221",
         "away_team": "Hofstra",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2275.png",
-        "date_time": "Final"
+        "away_team_id": "2275",
+        "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 123.0
     },
@@ -6398,11 +6762,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "N Arizona",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
-        "away_team": "S Dakota St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png",
-        "date_time": "Final"
+        "home_team": "S Dakota St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png",
+        "home_team_id": "2571",
+        "away_team": "Idaho",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+        "away_team_id": "70",
+        "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 208.0
     },
@@ -6435,8 +6801,10 @@
       "nextGame": {
         "home_team": "Fordham",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png",
+        "home_team_id": "2230",
         "away_team": "Holy Cross",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
+        "away_team_id": "107",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 364.0
@@ -6470,8 +6838,10 @@
       "nextGame": {
         "home_team": "Drexel",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2182.png",
+        "home_team_id": "2182",
         "away_team": "La Salle",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2325.png",
+        "away_team_id": "2325",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 179.0
@@ -6503,11 +6873,13 @@
       "quad3": "0-0",
       "quad4": "4-1",
       "nextGame": {
-        "home_team": "Delaware St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2169.png",
-        "away_team": "Navy",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
-        "date_time": "Final"
+        "home_team": "Navy",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
+        "home_team_id": "2426",
+        "away_team": "Air Force",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+        "away_team_id": "2005",
+        "date_time": "12/7 - 12:00 PM EST"
       },
       "nonconsos": 228.0
     },
@@ -6540,8 +6912,10 @@
       "nextGame": {
         "home_team": "Mercer",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png",
+        "home_team_id": "2382",
         "away_team": "Oglethorpe",
         "away_team_logo": null,
+        "away_team_id": "2476",
         "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 210.0
@@ -6573,11 +6947,13 @@
       "quad3": "1-2",
       "quad4": "1-1",
       "nextGame": {
-        "home_team": "Montana",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
-        "away_team": "N Dakota St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
-        "date_time": "Final"
+        "home_team": "North Dakota",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
+        "home_team_id": "155",
+        "away_team": "Montana",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
+        "away_team_id": "149",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 214.0
     },
@@ -6610,8 +6986,10 @@
       "nextGame": {
         "home_team": "CSU Northridge",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2463.png",
+        "home_team_id": "2463",
         "away_team": "Bakersfield",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2934.png",
+        "away_team_id": "2934",
         "date_time": "12/4 - 10:00 PM EST"
       },
       "nonconsos": 213.0
@@ -6645,8 +7023,10 @@
       "nextGame": {
         "home_team": "Bowling Green",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+        "home_team_id": "189",
         "away_team": "Utah Valley",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3084.png",
+        "away_team_id": "3084",
         "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 300.0
@@ -6662,7 +7042,7 @@
       "bpi": 181.0,
       "sor": 258.0,
       "kpi": 226,
-      "kenpomRank": "213",
+      "kenpomRank": "212",
       "torvikRank": "184",
       "wab": "287",
       "net": "262",
@@ -6680,9 +7060,11 @@
       "nextGame": {
         "home_team": "Ohio",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
-        "away_team": "Maine",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/311.png",
-        "date_time": "Final"
+        "home_team_id": "195",
+        "away_team": "Marshall",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+        "away_team_id": "276",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 25.0
     },
@@ -6697,7 +7079,7 @@
       "bpi": 184.0,
       "sor": 211.0,
       "kpi": 277,
-      "kenpomRank": "212",
+      "kenpomRank": "213",
       "torvikRank": "189",
       "wab": "216",
       "net": "209",
@@ -6713,11 +7095,13 @@
       "quad3": "0-0",
       "quad4": "4-2",
       "nextGame": {
-        "home_team": "Monmouth",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
-        "away_team": "Princeton",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/163.png",
-        "date_time": "Final"
+        "home_team": "Georgia Tech",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+        "home_team_id": "59",
+        "away_team": "Monmouth",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
+        "away_team_id": "2405",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 245.0
     },
@@ -6750,9 +7134,11 @@
       "nextGame": {
         "home_team": "American",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/44.png",
-        "away_team": "Drexel",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2182.png",
-        "date_time": "Final"
+        "home_team_id": "44",
+        "away_team": "MD Eastern",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2379.png",
+        "away_team_id": "2379",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 269.0
     },
@@ -6785,8 +7171,10 @@
       "nextGame": {
         "home_team": "Loyola Chicago",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
+        "home_team_id": "2350",
         "away_team": "Princeton",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/163.png",
+        "away_team_id": "163",
         "date_time": "12/6 - 2:30 PM EST"
       },
       "nonconsos": 185.0
@@ -6818,11 +7206,13 @@
       "quad3": "1-2",
       "quad4": "1-0",
       "nextGame": {
-        "home_team": "Elon",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2210.png",
-        "away_team": "Furman",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
-        "date_time": "Final"
+        "home_team": "Furman",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+        "home_team_id": "231",
+        "away_team": "Harvard",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png",
+        "away_team_id": "108",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 149.0
     },
@@ -6855,8 +7245,10 @@
       "nextGame": {
         "home_team": "San Jos\u00e9 St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+        "home_team_id": "23",
         "away_team": "San Diego",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png",
+        "away_team_id": "301",
         "date_time": "12/5 - 10:00 PM EST"
       },
       "nonconsos": 49.0
@@ -6888,11 +7280,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Oakland",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
-        "away_team": "Purdue FW",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
-        "date_time": "Final"
+        "home_team": "Purdue FW",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
+        "home_team_id": "2870",
+        "away_team": "N Kentucky",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
+        "away_team_id": "94",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 196.0
     },
@@ -6925,9 +7319,11 @@
       "nextGame": {
         "home_team": "Lipscomb",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/288.png",
-        "away_team": "Tennessee Tech",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png",
-        "date_time": "Final"
+        "home_team_id": "288",
+        "away_team": "Alabama A&M",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2010.png",
+        "away_team_id": "2010",
+        "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 157.0
     },
@@ -6958,11 +7354,13 @@
       "quad3": "1-2",
       "quad4": "2-0",
       "nextGame": {
-        "home_team": "Oregon St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+        "home_team": "Pepperdine",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2492.png",
+        "home_team_id": "2492",
         "away_team": "Vermont",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/261.png",
-        "date_time": "Final"
+        "away_team_id": "261",
+        "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 204.0
     },
@@ -6995,8 +7393,10 @@
       "nextGame": {
         "home_team": "Texas",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+        "home_team_id": "251",
         "away_team": "Southern",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2582.png",
+        "away_team_id": "2582",
         "date_time": "12/8 - 8:00 PM EST"
       },
       "nonconsos": 173.0
@@ -7028,11 +7428,13 @@
       "quad3": "0-2",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "GA Southern",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
-        "away_team": "Louisiana Tech",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
-        "date_time": "Final"
+        "home_team": "Louisiana Tech",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+        "home_team_id": "2348",
+        "away_team": "Ecclesia",
+        "away_team_logo": null,
+        "away_team_id": "3120",
+        "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 342.0
     },
@@ -7063,11 +7465,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Montana St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
-        "away_team": "St Thomas (MN)",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2900.png",
-        "date_time": "Final"
+        "home_team": "St Thomas (MN)",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2900.png",
+        "home_team_id": "2900",
+        "away_team": "Weber St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png",
+        "away_team_id": "2692",
+        "date_time": "12/7 - 1:00 PM EST"
       },
       "nonconsos": 274.0
     },
@@ -7100,8 +7504,10 @@
       "nextGame": {
         "home_team": "Colgate",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2142.png",
+        "home_team_id": "2142",
         "away_team": "St John Fisher",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/374.png",
+        "away_team_id": "374",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 153.0
@@ -7133,11 +7539,13 @@
       "quad3": "1-0",
       "quad4": "2-1",
       "nextGame": {
-        "home_team": "Idaho",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-        "away_team": "North Dakota",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
-        "date_time": "Final"
+        "home_team": "S Dakota St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png",
+        "home_team_id": "2571",
+        "away_team": "Idaho",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+        "away_team_id": "70",
+        "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 303.0
     },
@@ -7168,11 +7576,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "N Kentucky",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
-        "away_team": "Cleveland St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
-        "date_time": "Final"
+        "home_team": "Purdue FW",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
+        "home_team_id": "2870",
+        "away_team": "N Kentucky",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
+        "away_team_id": "94",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 306.0
     },
@@ -7205,8 +7615,10 @@
       "nextGame": {
         "home_team": "NC State",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+        "home_team_id": "152",
         "away_team": "UNC Asheville",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2427.png",
+        "away_team_id": "2427",
         "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 293.0
@@ -7238,11 +7650,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Youngstown St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
-        "away_team": "Wright St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
-        "date_time": "Final"
+        "home_team": "IU Indy",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/85.png",
+        "home_team_id": "85",
+        "away_team": "Youngstown St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
+        "away_team_id": "2754",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 151.0
     },
@@ -7275,8 +7689,10 @@
       "nextGame": {
         "home_team": "Lamar",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png",
+        "home_team_id": "2320",
         "away_team": "Texas A&M-CC",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/357.png",
+        "away_team_id": "357",
         "date_time": "12/6 - 7:00 PM EST"
       },
       "nonconsos": 36.0
@@ -7310,8 +7726,10 @@
       "nextGame": {
         "home_team": "Chattanooga",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png",
+        "home_team_id": "236",
         "away_team": "SE Missouri",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2546.png",
+        "away_team_id": "2546",
         "date_time": "12/6 - 4:30 PM EST"
       },
       "nonconsos": 286.0
@@ -7345,8 +7763,10 @@
       "nextGame": {
         "home_team": "Richmond",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
+        "home_team_id": "257",
         "away_team": "Old Dominion",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+        "away_team_id": "295",
         "date_time": "12/6 - 12:30 PM EST"
       },
       "nonconsos": 48.0
@@ -7380,8 +7800,10 @@
       "nextGame": {
         "home_team": "Nicholls",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2447.png",
+        "home_team_id": "2447",
         "away_team": "Incarnate Word",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png",
+        "away_team_id": "2916",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 224.0
@@ -7413,11 +7835,13 @@
       "quad3": "1-2",
       "quad4": "3-2",
       "nextGame": {
-        "home_team": "UMass",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+        "home_team": "Furman",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+        "home_team_id": "231",
         "away_team": "Harvard",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png",
-        "date_time": "Final"
+        "away_team_id": "108",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 284.0
     },
@@ -7450,8 +7874,10 @@
       "nextGame": {
         "home_team": "Marist",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2368.png",
+        "home_team_id": "2368",
         "away_team": "Mount St Marys",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/116.png",
+        "away_team_id": "116",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 352.0
@@ -7485,8 +7911,10 @@
       "nextGame": {
         "home_team": "Nicholls",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2447.png",
+        "home_team_id": "2447",
         "away_team": "Incarnate Word",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png",
+        "away_team_id": "2916",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 8.0
@@ -7520,8 +7948,10 @@
       "nextGame": {
         "home_team": "Washington St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+        "home_team_id": "265",
         "away_team": "Nevada",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+        "away_team_id": "2440",
         "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 122.0
@@ -7555,8 +7985,10 @@
       "nextGame": {
         "home_team": "UC Irvine",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
+        "home_team_id": "300",
         "away_team": "UC Riverside",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+        "away_team_id": "27",
         "date_time": "12/4 - 10:00 PM EST"
       },
       "nonconsos": 279.0
@@ -7590,9 +8022,11 @@
       "nextGame": {
         "home_team": "Lamar",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png",
-        "away_team": "Louisiana",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
-        "date_time": "Final"
+        "home_team_id": "2320",
+        "away_team": "Texas A&M-CC",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/357.png",
+        "away_team_id": "357",
+        "date_time": "12/6 - 7:00 PM EST"
       },
       "nonconsos": 333.0
     },
@@ -7623,11 +8057,13 @@
       "quad3": "0-2",
       "quad4": "3-2",
       "nextGame": {
-        "home_team": "Longwood",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2344.png",
-        "away_team": "Pfeiffer",
-        "away_team_logo": null,
-        "date_time": "Final"
+        "home_team": "Morgan St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2415.png",
+        "home_team_id": "2415",
+        "away_team": "Longwood",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2344.png",
+        "away_team_id": "2344",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 330.0
     },
@@ -7660,8 +8096,10 @@
       "nextGame": {
         "home_team": "Campbell",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png",
+        "home_team_id": "2097",
         "away_team": "VA Lynchburg",
         "away_team_logo": null,
+        "away_team_id": "3229",
         "date_time": "12/7 - 4:00 PM EST"
       },
       "nonconsos": 24.0
@@ -7693,11 +8131,13 @@
       "quad3": "2-0",
       "quad4": "1-4",
       "nextGame": {
-        "home_team": "Holy Cross",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
-        "away_team": "Northeastern",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/111.png",
-        "date_time": "Final"
+        "home_team": "Northeastern",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/111.png",
+        "home_team_id": "111",
+        "away_team": "C Connecticut",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png",
+        "away_team_id": "2115",
+        "date_time": "12/7 - 1:00 PM EST"
       },
       "nonconsos": 162.0
     },
@@ -7730,8 +8170,10 @@
       "nextGame": {
         "home_team": "FIU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+        "home_team_id": "2229",
         "away_team": "Jacksonville",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/294.png",
+        "away_team_id": "294",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 105.0
@@ -7763,11 +8205,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "South Dakota",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png",
-        "away_team": "Portland St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png",
-        "date_time": "Final"
+        "home_team": "Portland St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png",
+        "home_team_id": "2502",
+        "away_team": "Omaha",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2437.png",
+        "away_team_id": "2437",
+        "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 266.0
     },
@@ -7800,8 +8244,10 @@
       "nextGame": {
         "home_team": "Valparaiso",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2674.png",
+        "home_team_id": "2674",
         "away_team": "Calumet",
         "away_team_logo": null,
+        "away_team_id": "502",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 297.0
@@ -7833,11 +8279,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Boston U",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/104.png",
-        "away_team": "VTSU Johnson",
-        "away_team_logo": null,
-        "date_time": "Final"
+        "home_team": "New Hampshire",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png",
+        "home_team_id": "160",
+        "away_team": "Boston U",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/104.png",
+        "away_team_id": "104",
+        "date_time": "12/6 - 7:00 PM EST"
       },
       "nonconsos": 155.0
     },
@@ -7870,8 +8318,10 @@
       "nextGame": {
         "home_team": "Green Bay",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
+        "home_team_id": "2739",
         "away_team": "Robert Morris",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
+        "away_team_id": "2523",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 253.0
@@ -7905,9 +8355,11 @@
       "nextGame": {
         "home_team": "Radford",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2515.png",
-        "away_team": "Southern Miss",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
-        "date_time": "Final"
+        "home_team_id": "2515",
+        "away_team": "Saint Francis",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2598.png",
+        "away_team_id": "2598",
+        "date_time": "12/7 - 2:30 PM EST"
       },
       "nonconsos": 195.0
     },
@@ -7940,8 +8392,10 @@
       "nextGame": {
         "home_team": "Hawai\u2019i",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+        "home_team_id": "62",
         "away_team": "UC Davis",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+        "away_team_id": "302",
         "date_time": "12/4 - 11:59 PM EST"
       },
       "nonconsos": 278.0
@@ -7975,8 +8429,10 @@
       "nextGame": {
         "home_team": "San Jos\u00e9 St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+        "home_team_id": "23",
         "away_team": "San Diego",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png",
+        "away_team_id": "301",
         "date_time": "12/5 - 10:00 PM EST"
       },
       "nonconsos": 358.0
@@ -8008,11 +8464,13 @@
       "quad3": "0-1",
       "quad4": "3-2",
       "nextGame": {
-        "home_team": "App State",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
-        "away_team": "VA Lynchburg",
-        "away_team_logo": null,
-        "date_time": "Final"
+        "home_team": "East Carolina",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+        "home_team_id": "151",
+        "away_team": "App State",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
+        "away_team_id": "2026",
+        "date_time": "12/11 - 7:00 PM EST"
       },
       "nonconsos": 319.0
     },
@@ -8043,11 +8501,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Illinois St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
-        "away_team": "E Kentucky",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
-        "date_time": "Final"
+        "home_team": "E Kentucky",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
+        "home_team_id": "2198",
+        "away_team": "IU East",
+        "away_team_logo": null,
+        "away_team_id": "3138",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 82.0
     },
@@ -8078,11 +8538,13 @@
       "quad3": "0-3",
       "quad4": "3-1",
       "nextGame": {
-        "home_team": "Hampton",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2261.png",
-        "away_team": "Loyola MD",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2352.png",
-        "date_time": "Final"
+        "home_team": "Howard",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png",
+        "home_team_id": "47",
+        "away_team": "Hampton",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2261.png",
+        "away_team_id": "2261",
+        "date_time": "12/13 - 3:00 PM EST"
       },
       "nonconsos": 273.0
     },
@@ -8115,8 +8577,10 @@
       "nextGame": {
         "home_team": "SIUE",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2565.png",
+        "home_team_id": "2565",
         "away_team": "W Michigan",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+        "away_team_id": "2711",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 298.0
@@ -8148,11 +8612,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Alabama A&M",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2010.png",
+        "home_team": "UNLV",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+        "home_team_id": "2439",
         "away_team": "Tennessee St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2634.png",
-        "date_time": "Final"
+        "away_team_id": "2634",
+        "date_time": "12/13 - 9:30 PM EST"
       },
       "nonconsos": 221.0
     },
@@ -8183,11 +8649,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "SC Upstate",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2908.png",
+        "home_team": "Winthrop",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2737.png",
+        "home_team_id": "2737",
         "away_team": "Coastal",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
-        "date_time": "Final/OT"
+        "away_team_id": "324",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 322.0
     },
@@ -8220,8 +8688,10 @@
       "nextGame": {
         "home_team": "Charlotte",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+        "home_team_id": "2429",
         "away_team": "Utah State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+        "away_team_id": "328",
         "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 237.0
@@ -8253,11 +8723,13 @@
       "quad3": "1-2",
       "quad4": "3-2",
       "nextGame": {
-        "home_team": "GA Southern",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
-        "away_team": "Louisiana Tech",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
-        "date_time": "Final"
+        "home_team": "Gardner-Webb",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
+        "home_team_id": "2241",
+        "away_team": "GA Southern",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+        "away_team_id": "290",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 243.0
     },
@@ -8288,11 +8760,13 @@
       "quad3": "1-3",
       "quad4": "0-1",
       "nextGame": {
-        "home_team": "Memphis",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
-        "away_team": "New Orleans",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2443.png",
-        "date_time": "Final"
+        "home_team": "New Orleans",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2443.png",
+        "home_team_id": "2443",
+        "away_team": "Hou Christian",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2277.png",
+        "away_team_id": "2277",
+        "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 2.0
     },
@@ -8323,11 +8797,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Seton Hall",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
+        "home_team": "Northeastern",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/111.png",
+        "home_team_id": "111",
         "away_team": "C Connecticut",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png",
-        "date_time": "Final"
+        "away_team_id": "2115",
+        "date_time": "12/7 - 1:00 PM EST"
       },
       "nonconsos": 131.0
     },
@@ -8360,8 +8836,10 @@
       "nextGame": {
         "home_team": "Pepperdine",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2492.png",
+        "home_team_id": "2492",
         "away_team": "Vermont",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/261.png",
+        "away_team_id": "261",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 321.0
@@ -8393,11 +8871,13 @@
       "quad3": "0-2",
       "quad4": "2-0",
       "nextGame": {
-        "home_team": "N Arizona",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
-        "away_team": "S Dakota St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png",
-        "date_time": "Final"
+        "home_team": "N Dakota St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
+        "home_team_id": "2449",
+        "away_team": "N Arizona",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
+        "away_team_id": "2464",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 328.0
     },
@@ -8430,8 +8910,10 @@
       "nextGame": {
         "home_team": "Tulsa",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+        "home_team_id": "202",
         "away_team": "Missouri St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+        "away_team_id": "2623",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 360.0
@@ -8463,11 +8945,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Evansville",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/339.png",
-        "away_team": "Ball State",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
-        "date_time": "Final"
+        "home_team": "Ball State",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
+        "home_team_id": "2050",
+        "away_team": "S Dakota St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png",
+        "away_team_id": "2571",
+        "date_time": "12/9 - 7:00 PM EST"
       },
       "nonconsos": 320.0
     },
@@ -8500,9 +8984,11 @@
       "nextGame": {
         "home_team": "Wofford",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
-        "away_team": "Presbyterian",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2506.png",
-        "date_time": "Final"
+        "home_team_id": "2747",
+        "away_team": "Elon",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2210.png",
+        "away_team_id": "2210",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 212.0
     },
@@ -8535,8 +9021,10 @@
       "nextGame": {
         "home_team": "Indiana St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png",
+        "home_team_id": "282",
         "away_team": "So Indiana",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/88.png",
+        "away_team_id": "88",
         "date_time": "12/7 - 1:00 PM EST"
       },
       "nonconsos": 309.0
@@ -8570,8 +9058,10 @@
       "nextGame": {
         "home_team": "Siena",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2561.png",
+        "home_team_id": "2561",
         "away_team": "Niagara",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/315.png",
+        "away_team_id": "315",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 307.0
@@ -8605,8 +9095,10 @@
       "nextGame": {
         "home_team": "UT Martin",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2630.png",
+        "home_team_id": "2630",
         "away_team": "Alabama St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2011.png",
+        "away_team_id": "2011",
         "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 275.0
@@ -8638,11 +9130,13 @@
       "quad3": "0-1",
       "quad4": "3-3",
       "nextGame": {
-        "home_team": "American",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/44.png",
-        "away_team": "Drexel",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2182.png",
-        "date_time": "Final"
+        "home_team": "Drexel",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2182.png",
+        "home_team_id": "2182",
+        "away_team": "La Salle",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2325.png",
+        "away_team_id": "2325",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 270.0
     },
@@ -8675,8 +9169,10 @@
       "nextGame": {
         "home_team": "SE Louisiana",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2545.png",
+        "home_team_id": "2545",
         "away_team": "N'Western St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png",
+        "away_team_id": "2466",
         "date_time": "12/7 - 4:30 PM EST"
       },
       "nonconsos": 81.0
@@ -8710,8 +9206,10 @@
       "nextGame": {
         "home_team": "Chattanooga",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png",
+        "home_team_id": "236",
         "away_team": "SE Missouri",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2546.png",
+        "away_team_id": "2546",
         "date_time": "12/6 - 4:30 PM EST"
       },
       "nonconsos": 165.0
@@ -8745,8 +9243,10 @@
       "nextGame": {
         "home_team": "Manhattan",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2363.png",
+        "home_team_id": "2363",
         "away_team": "Fairfield",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2217.png",
+        "away_team_id": "2217",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 292.0
@@ -8780,8 +9280,10 @@
       "nextGame": {
         "home_team": "Merrimack",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png",
+        "home_team_id": "2771",
         "away_team": "Rider",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2520.png",
+        "away_team_id": "2520",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 52.0
@@ -8815,8 +9317,10 @@
       "nextGame": {
         "home_team": "Seattle U",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2547.png",
+        "home_team_id": "2547",
         "away_team": "UTEP",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+        "away_team_id": "2638",
         "date_time": "12/7 - 8:00 PM EST"
       },
       "nonconsos": 248.0
@@ -8848,11 +9352,13 @@
       "quad3": "0-4",
       "quad4": "2-1",
       "nextGame": {
-        "home_team": "Monmouth",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
+        "home_team": "Loyola Chicago",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
+        "home_team_id": "2350",
         "away_team": "Princeton",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/163.png",
-        "date_time": "Final"
+        "away_team_id": "163",
+        "date_time": "12/6 - 2:30 PM EST"
       },
       "nonconsos": 96.0
     },
@@ -8883,11 +9389,13 @@
       "quad3": "0-3",
       "quad4": "2-0",
       "nextGame": {
-        "home_team": "Mount St Marys",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/116.png",
-        "away_team": "Sacred Heart",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
-        "date_time": "Final"
+        "home_team": "Sacred Heart",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
+        "home_team_id": "2529",
+        "away_team": "Iona",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/314.png",
+        "away_team_id": "314",
+        "date_time": "12/7 - 2:00 PM EST"
       },
       "nonconsos": 91.0
     },
@@ -8920,8 +9428,10 @@
       "nextGame": {
         "home_team": "CSU Northridge",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2463.png",
+        "home_team_id": "2463",
         "away_team": "Bakersfield",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2934.png",
+        "away_team_id": "2934",
         "date_time": "12/4 - 10:00 PM EST"
       },
       "nonconsos": 132.0
@@ -8955,8 +9465,10 @@
       "nextGame": {
         "home_team": "E Michigan",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
+        "home_team_id": "2199",
         "away_team": "Cleary",
         "away_team_logo": null,
+        "away_team_id": "128438",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 79.0
@@ -8990,9 +9502,11 @@
       "nextGame": {
         "home_team": "Tarleton St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png",
-        "away_team": "Howard Payne",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2758.png",
-        "date_time": "Final"
+        "home_team_id": "2627",
+        "away_team": "Cameron",
+        "away_team_logo": null,
+        "away_team_id": "2096",
+        "date_time": "12/7 - 5:30 PM EST"
       },
       "nonconsos": 125.0
     },
@@ -9025,8 +9539,10 @@
       "nextGame": {
         "home_team": "Columbia",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/171.png",
+        "home_team_id": "171",
         "away_team": "UAlbany",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png",
+        "away_team_id": "399",
         "date_time": "12/6 - 5:30 PM EST"
       },
       "nonconsos": 223.0
@@ -9060,8 +9576,10 @@
       "nextGame": {
         "home_team": "Duquesne",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
+        "home_team_id": "2184",
         "away_team": "Stony Brook",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png",
+        "away_team_id": "2619",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 301.0
@@ -9095,8 +9613,10 @@
       "nextGame": {
         "home_team": "Bradley",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/71.png",
+        "home_team_id": "71",
         "away_team": "N Illinois",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+        "away_team_id": "2459",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 102.0
@@ -9130,8 +9650,10 @@
       "nextGame": {
         "home_team": "East Carolina",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+        "home_team_id": "151",
         "away_team": "UNC Greensboro",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2430.png",
+        "away_team_id": "2430",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 76.0
@@ -9165,8 +9687,10 @@
       "nextGame": {
         "home_team": "UConn",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+        "home_team_id": "41",
         "away_team": "E Texas A&M",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2837.png",
+        "away_team_id": "2837",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 294.0
@@ -9198,11 +9722,13 @@
       "quad3": "0-2",
       "quad4": "1-2",
       "nextGame": {
-        "home_team": "Omaha",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2437.png",
-        "away_team": "N Colorado",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
-        "date_time": "Final"
+        "home_team": "Portland St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png",
+        "home_team_id": "2502",
+        "away_team": "Omaha",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2437.png",
+        "away_team_id": "2437",
+        "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 199.0
     },
@@ -9233,11 +9759,13 @@
       "quad3": "0-1",
       "quad4": "2-3",
       "nextGame": {
-        "home_team": "Idaho",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-        "away_team": "North Dakota",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
-        "date_time": "Final"
+        "home_team": "North Dakota",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
+        "home_team_id": "155",
+        "away_team": "Montana",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
+        "away_team_id": "149",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 166.0
     },
@@ -9270,8 +9798,10 @@
       "nextGame": {
         "home_team": "Howard",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png",
+        "home_team_id": "47",
         "away_team": "Bowie State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2075.png",
+        "away_team_id": "2075",
         "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 340.0
@@ -9303,11 +9833,13 @@
       "quad3": "0-0",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Georgetown",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png",
+        "home_team": "Bucknell",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2083.png",
+        "home_team_id": "2083",
         "away_team": "UMBC",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2378.png",
-        "date_time": "Final"
+        "away_team_id": "2378",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 271.0
     },
@@ -9338,11 +9870,13 @@
       "quad3": "1-0",
       "quad4": "1-1",
       "nextGame": {
-        "home_team": "Denver",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2172.png",
-        "away_team": "E Washington",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
-        "date_time": "Final"
+        "home_team": "Idaho St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
+        "home_team_id": "304",
+        "away_team": "Denver",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2172.png",
+        "away_team_id": "2172",
+        "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 14.0
     },
@@ -9375,8 +9909,10 @@
       "nextGame": {
         "home_team": "Lehigh",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png",
+        "home_team_id": "2329",
         "away_team": "Long Island",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/112358.png",
+        "away_team_id": "112358",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 84.0
@@ -9410,8 +9946,10 @@
       "nextGame": {
         "home_team": "Lafayette",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/322.png",
+        "home_team_id": "322",
         "away_team": "Mercyhurst",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2385.png",
+        "away_team_id": "2385",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 100.0
@@ -9443,11 +9981,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Denver",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2172.png",
-        "away_team": "E Washington",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
-        "date_time": "Final"
+        "home_team": "E Washington",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
+        "home_team_id": "331",
+        "away_team": "Kansas City",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/140.png",
+        "away_team_id": "140",
+        "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 31.0
     },
@@ -9478,11 +10018,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Radford",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2515.png",
+        "home_team": "Miami",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+        "home_team_id": "2390",
         "away_team": "Southern Miss",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
-        "date_time": "Final"
+        "away_team_id": "2572",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 325.0
     },
@@ -9515,8 +10057,10 @@
       "nextGame": {
         "home_team": "Lafayette",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/322.png",
+        "home_team_id": "322",
         "away_team": "Mercyhurst",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2385.png",
+        "away_team_id": "2385",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 211.0
@@ -9548,11 +10092,13 @@
       "quad3": "0-3",
       "quad4": "1-2",
       "nextGame": {
-        "home_team": "C Arkansas",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
-        "away_team": "Little Rock",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2031.png",
-        "date_time": "Final"
+        "home_team": "Little Rock",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2031.png",
+        "home_team_id": "2031",
+        "away_team": "Arkansas St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+        "away_team_id": "2032",
+        "date_time": "12/6 - 9:00 PM EST"
       },
       "nonconsos": 59.0
     },
@@ -9585,8 +10131,10 @@
       "nextGame": {
         "home_team": "Manhattan",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2363.png",
+        "home_team_id": "2363",
         "away_team": "Fairfield",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2217.png",
+        "away_team_id": "2217",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 233.0
@@ -9602,7 +10150,7 @@
       "bpi": 294.0,
       "sor": 348.0,
       "kpi": 361,
-      "kenpomRank": "326",
+      "kenpomRank": "327",
       "torvikRank": "347",
       "wab": "365",
       "net": "329",
@@ -9618,11 +10166,13 @@
       "quad3": "0-4",
       "quad4": "0-5",
       "nextGame": {
-        "home_team": "Ohio",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+        "home_team": "Miami OH",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+        "home_team_id": "193",
         "away_team": "Maine",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/311.png",
-        "date_time": "Final"
+        "away_team_id": "311",
+        "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 118.0
     },
@@ -9655,8 +10205,10 @@
       "nextGame": {
         "home_team": "Delaware St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2169.png",
+        "home_team_id": "2169",
         "away_team": "Delaware",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+        "away_team_id": "48",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 276.0
@@ -9688,11 +10240,13 @@
       "quad3": "0-1",
       "quad4": "3-1",
       "nextGame": {
-        "home_team": "Santa Clara",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
-        "away_team": "Utah Tech",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
-        "date_time": "Final"
+        "home_team": "Utah Tech",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
+        "home_team_id": "3101",
+        "away_team": "Justice",
+        "away_team_logo": null,
+        "away_team_id": "130183",
+        "date_time": "12/13 - 9:00 PM EST"
       },
       "nonconsos": 230.0
     },
@@ -9725,8 +10279,10 @@
       "nextGame": {
         "home_team": "Fullerton",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2239.png",
+        "home_team_id": "2239",
         "away_team": "Cal Poly",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png",
+        "away_team_id": "13",
         "date_time": "12/4 - 10:00 PM EST"
       },
       "nonconsos": 78.0
@@ -9760,8 +10316,10 @@
       "nextGame": {
         "home_team": "Abilene Chrstn",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png",
+        "home_team_id": "2000",
         "away_team": "New Mexico St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+        "away_team_id": "166",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 343.0
@@ -9793,11 +10351,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "San Francisco",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
+        "home_team": "Alabama A&M",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2010.png",
+        "home_team_id": "2010",
         "away_team": "North Alabama",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png",
-        "date_time": "Final"
+        "away_team_id": "2453",
+        "date_time": "12/15 - 8:00 PM EST"
       },
       "nonconsos": 114.0
     },
@@ -9830,8 +10390,10 @@
       "nextGame": {
         "home_team": "SC Upstate",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2908.png",
+        "home_team_id": "2908",
         "away_team": "W Carolina",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png",
+        "away_team_id": "2717",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 139.0
@@ -9863,11 +10425,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Hampton",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2261.png",
+        "home_team": "VMI",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png",
+        "home_team_id": "2678",
         "away_team": "Loyola MD",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2352.png",
-        "date_time": "Final"
+        "away_team_id": "2352",
+        "date_time": "12/9 - 6:00 PM EST"
       },
       "nonconsos": 313.0
     },
@@ -9900,8 +10464,10 @@
       "nextGame": {
         "home_team": "Saint Louis",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png",
+        "home_team_id": "139",
         "away_team": "C Michigan",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+        "away_team_id": "2117",
         "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 220.0
@@ -9935,8 +10501,10 @@
       "nextGame": {
         "home_team": "UT Martin",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2630.png",
+        "home_team_id": "2630",
         "away_team": "Alabama St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2011.png",
+        "away_team_id": "2011",
         "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 83.0
@@ -9970,8 +10538,10 @@
       "nextGame": {
         "home_team": "Buffalo",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
+        "home_team_id": "2084",
         "away_team": "St Bonaventure",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
+        "away_team_id": "179",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 359.0
@@ -10005,8 +10575,10 @@
       "nextGame": {
         "home_team": "Southern Miss",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+        "home_team_id": "2572",
         "away_team": "Grambling",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
+        "away_team_id": "2755",
         "date_time": "12/8 - 8:00 PM EST"
       },
       "nonconsos": 130.0
@@ -10040,8 +10612,10 @@
       "nextGame": {
         "home_team": "Lehigh",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png",
+        "home_team_id": "2329",
         "away_team": "Long Island",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/112358.png",
+        "away_team_id": "112358",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 111.0
@@ -10073,11 +10647,13 @@
       "quad3": "0-1",
       "quad4": "2-2",
       "nextGame": {
-        "home_team": "Evansville",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/339.png",
-        "away_team": "Ball State",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
-        "date_time": "Final"
+        "home_team": "Western KY",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+        "home_team_id": "98",
+        "away_team": "Evansville",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/339.png",
+        "away_team_id": "339",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 236.0
     },
@@ -10110,8 +10686,10 @@
       "nextGame": {
         "home_team": "Brown",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/225.png",
+        "home_team_id": "225",
         "away_team": "Bryant",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2803.png",
+        "away_team_id": "2803",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 295.0
@@ -10145,8 +10723,10 @@
       "nextGame": {
         "home_team": "East Carolina",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+        "home_team_id": "151",
         "away_team": "UNC Greensboro",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2430.png",
+        "away_team_id": "2430",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 175.0
@@ -10178,11 +10758,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Mount St Marys",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/116.png",
-        "away_team": "Sacred Heart",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
-        "date_time": "Final"
+        "home_team": "Marist",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2368.png",
+        "home_team_id": "2368",
+        "away_team": "Mount St Marys",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/116.png",
+        "away_team_id": "116",
+        "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 43.0
     },
@@ -10213,11 +10795,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "W Michigan",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
-        "away_team": "So Indiana",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/88.png",
-        "date_time": "Final"
+        "home_team": "SIUE",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2565.png",
+        "home_team_id": "2565",
+        "away_team": "W Michigan",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+        "away_team_id": "2711",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 311.0
     },
@@ -10250,8 +10834,10 @@
       "nextGame": {
         "home_team": "Texas Southern",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2640.png",
+        "home_team_id": "2640",
         "away_team": "Sam Houston",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+        "away_team_id": "2534",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 20.0
@@ -10283,11 +10869,13 @@
       "quad3": "0-1",
       "quad4": "4-1",
       "nextGame": {
-        "home_team": "South Dakota",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png",
-        "away_team": "Portland St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png",
-        "date_time": "Final"
+        "home_team": "N Colorado",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
+        "home_team_id": "2458",
+        "away_team": "South Dakota",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png",
+        "away_team_id": "233",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 337.0
     },
@@ -10320,8 +10908,10 @@
       "nextGame": {
         "home_team": "Green Bay",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
+        "home_team_id": "2739",
         "away_team": "Robert Morris",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
+        "away_team_id": "2523",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 107.0
@@ -10355,9 +10945,11 @@
       "nextGame": {
         "home_team": "FIU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
-        "away_team": "FGCU",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
-        "date_time": "Final"
+        "home_team_id": "2229",
+        "away_team": "Jacksonville",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/294.png",
+        "away_team_id": "294",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 247.0
     },
@@ -10390,9 +10982,11 @@
       "nextGame": {
         "home_team": "SC Upstate",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2908.png",
-        "away_team": "Coastal",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
-        "date_time": "Final/OT"
+        "home_team_id": "2908",
+        "away_team": "W Carolina",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png",
+        "away_team_id": "2717",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 277.0
     },
@@ -10423,11 +11017,13 @@
       "quad3": "0-3",
       "quad4": "2-1",
       "nextGame": {
-        "home_team": "Akron",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
-        "away_team": "Bucknell",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2083.png",
-        "date_time": "Final"
+        "home_team": "Bucknell",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2083.png",
+        "home_team_id": "2083",
+        "away_team": "UMBC",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2378.png",
+        "away_team_id": "2378",
+        "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 73.0
     },
@@ -10458,11 +11054,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "N Kentucky",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
-        "away_team": "Cleveland St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
-        "date_time": "Final"
+        "home_team": "Cleveland St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
+        "home_team_id": "325",
+        "away_team": "Detroit Mercy",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
+        "away_team_id": "2174",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 126.0
     },
@@ -10493,11 +11091,13 @@
       "quad3": "0-2",
       "quad4": "1-1",
       "nextGame": {
-        "home_team": "Weber St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png",
-        "away_team": "Oral Roberts",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
-        "date_time": "Final"
+        "home_team": "Oral Roberts",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
+        "home_team_id": "198",
+        "away_team": "Montana St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
+        "away_team_id": "147",
+        "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 66.0
     },
@@ -10530,8 +11130,10 @@
       "nextGame": {
         "home_team": "Stonehill",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/284.png",
+        "home_team_id": "284",
         "away_team": "VTSU Johnson",
         "away_team_logo": null,
+        "away_team_id": "126751",
         "date_time": "12/12 - 7:00 PM EST"
       },
       "nonconsos": 200.0
@@ -10565,8 +11167,10 @@
       "nextGame": {
         "home_team": "NC Central",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2428.png",
+        "home_team_id": "2428",
         "away_team": "NC A&T",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2448.png",
+        "away_team_id": "2448",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 257.0
@@ -10598,11 +11202,13 @@
       "quad3": "1-2",
       "quad4": "0-1",
       "nextGame": {
-        "home_team": "Lipscomb",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/288.png",
+        "home_team": "West Georgia",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png",
+        "home_team_id": "2698",
         "away_team": "Tennessee Tech",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png",
-        "date_time": "Final"
+        "away_team_id": "2635",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 136.0
     },
@@ -10635,8 +11241,10 @@
       "nextGame": {
         "home_team": "Fullerton",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2239.png",
+        "home_team_id": "2239",
         "away_team": "Cal Poly",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png",
+        "away_team_id": "13",
         "date_time": "12/4 - 10:00 PM EST"
       },
       "nonconsos": 209.0
@@ -10670,8 +11278,10 @@
       "nextGame": {
         "home_team": "Gonzaga",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2250.png",
+        "home_team_id": "2250",
         "away_team": "North Florida",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2454.png",
+        "away_team_id": "2454",
         "date_time": "12/7 - 9:00 PM EST"
       },
       "nonconsos": 242.0
@@ -10703,11 +11313,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "C Arkansas",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
-        "away_team": "Little Rock",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2031.png",
-        "date_time": "Final"
+        "home_team": "E Texas A&M",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2837.png",
+        "home_team_id": "2837",
+        "away_team": "C Arkansas",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
+        "away_team_id": "2110",
+        "date_time": "12/7 - 6:00 PM EST"
       },
       "nonconsos": 186.0
     },
@@ -10738,11 +11350,13 @@
       "quad3": "0-0",
       "quad4": "2-3",
       "nextGame": {
-        "home_team": "Dartmouth",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png",
-        "away_team": "New Hampshire",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png",
-        "date_time": "Final"
+        "home_team": "Wyoming",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+        "home_team_id": "2751",
+        "away_team": "Dartmouth",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png",
+        "away_team_id": "159",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 363.0
     },
@@ -10773,11 +11387,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Kansas City",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/140.png",
-        "away_team": "Idaho St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
-        "date_time": "Final"
+        "home_team": "Idaho St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
+        "home_team_id": "304",
+        "away_team": "Denver",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2172.png",
+        "away_team_id": "2172",
+        "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 169.0
     },
@@ -10810,8 +11426,10 @@
       "nextGame": {
         "home_team": "Saint Peter's",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2612.png",
+        "home_team_id": "2612",
         "away_team": "Canisius",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2099.png",
+        "away_team_id": "2099",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 215.0
@@ -10845,8 +11463,10 @@
       "nextGame": {
         "home_team": "Charleston So",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2127.png",
+        "home_team_id": "2127",
         "away_team": "Warren Wilson",
         "away_team_logo": null,
+        "away_team_id": "2684",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 323.0
@@ -10878,11 +11498,13 @@
       "quad3": "1-1",
       "quad4": "2-2",
       "nextGame": {
-        "home_team": "Wofford",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
-        "away_team": "Presbyterian",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2506.png",
-        "date_time": "Final"
+        "home_team": "Presbyterian",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2506.png",
+        "home_team_id": "2506",
+        "away_team": "Morehead St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2413.png",
+        "away_team_id": "2413",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 219.0
     },
@@ -10913,11 +11535,13 @@
       "quad3": "1-1",
       "quad4": "1-4",
       "nextGame": {
-        "home_team": "Detroit Mercy",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
-        "away_team": "IU Indy",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/85.png",
-        "date_time": "Final"
+        "home_team": "IU Indy",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/85.png",
+        "home_team_id": "85",
+        "away_team": "Youngstown St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
+        "away_team_id": "2754",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 256.0
     },
@@ -10948,11 +11572,13 @@
       "quad3": "0-3",
       "quad4": "3-2",
       "nextGame": {
-        "home_team": "Air Force",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
-        "away_team": "Pacific",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
-        "date_time": "Final"
+        "home_team": "Navy",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
+        "home_team_id": "2426",
+        "away_team": "Air Force",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+        "away_team_id": "2005",
+        "date_time": "12/7 - 12:00 PM EST"
       },
       "nonconsos": 312.0
     },
@@ -10985,8 +11611,10 @@
       "nextGame": {
         "home_team": "Santa Barbara",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2540.png",
+        "home_team_id": "2540",
         "away_team": "Long Beach St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/299.png",
+        "away_team_id": "299",
         "date_time": "12/4 - 9:00 PM EST"
       },
       "nonconsos": 187.0
@@ -11020,8 +11648,10 @@
       "nextGame": {
         "home_team": "Presbyterian",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2506.png",
+        "home_team_id": "2506",
         "away_team": "Morehead St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2413.png",
+        "away_team_id": "2413",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 70.0
@@ -11055,8 +11685,10 @@
       "nextGame": {
         "home_team": "Boston College",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+        "home_team_id": "103",
         "away_team": "New Haven",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2441.png",
+        "away_team_id": "2441",
         "date_time": "12/6 - 12:00 PM EST"
       },
       "nonconsos": 290.0
@@ -11090,8 +11722,10 @@
       "nextGame": {
         "home_team": "McNeese",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
+        "home_team_id": "2377",
         "away_team": "N'Western St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png",
+        "away_team_id": "2466",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 34.0
@@ -11125,8 +11759,10 @@
       "nextGame": {
         "home_team": "CA Baptist",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2856.png",
+        "home_team_id": "2856",
         "away_team": "Sacramento St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
+        "away_team_id": "16",
         "date_time": "12/20 - 8:00 PM EST"
       },
       "nonconsos": 156.0
@@ -11142,7 +11778,7 @@
       "bpi": 330.0,
       "sor": 348.0,
       "kpi": 341,
-      "kenpomRank": "327",
+      "kenpomRank": "326",
       "torvikRank": "305",
       "wab": "356",
       "net": "349",
@@ -11158,11 +11794,13 @@
       "quad3": "0-1",
       "quad4": "1-3",
       "nextGame": {
-        "home_team": "Lamar",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png",
-        "away_team": "Louisiana",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
-        "date_time": "Final"
+        "home_team": "Louisiana",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+        "home_team_id": "309",
+        "away_team": "UNC Wilmington",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/350.png",
+        "away_team_id": "350",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 72.0
     },
@@ -11193,11 +11831,13 @@
       "quad3": "0-5",
       "quad4": "0-0",
       "nextGame": {
-        "home_team": "Kansas City",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/140.png",
-        "away_team": "Idaho St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
-        "date_time": "Final"
+        "home_team": "E Washington",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
+        "home_team_id": "331",
+        "away_team": "Kansas City",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/140.png",
+        "away_team_id": "140",
+        "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 75.0
     },
@@ -11230,8 +11870,10 @@
       "nextGame": {
         "home_team": "UMass",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+        "home_team_id": "113",
         "away_team": "UMass Lowell",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2349.png",
+        "away_team_id": "2349",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 190.0
@@ -11265,8 +11907,10 @@
       "nextGame": {
         "home_team": "Prairie View",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2504.png",
+        "home_team_id": "2504",
         "away_team": "Champ Chrstn",
         "away_team_logo": null,
+        "away_team_id": "3134",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 119.0
@@ -11300,8 +11944,10 @@
       "nextGame": {
         "home_team": "West Georgia",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png",
+        "home_team_id": "2698",
         "away_team": "Tennessee Tech",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png",
+        "away_team_id": "2635",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 135.0
@@ -11335,8 +11981,10 @@
       "nextGame": {
         "home_team": "Kennesaw St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+        "home_team_id": "338",
         "away_team": "Georgia St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+        "away_team_id": "2247",
         "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 112.0
@@ -11370,8 +12018,10 @@
       "nextGame": {
         "home_team": "Wagner",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2681.png",
+        "home_team_id": "2681",
         "away_team": "Bryant Str-Alb",
         "away_team_logo": null,
+        "away_team_id": "131603",
         "date_time": "12/6 - 1:00 PM EST"
       },
       "nonconsos": 9.0
@@ -11405,8 +12055,10 @@
       "nextGame": {
         "home_team": "Brown",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/225.png",
+        "home_team_id": "225",
         "away_team": "Bryant",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2803.png",
+        "away_team_id": "2803",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 128.0
@@ -11438,11 +12090,13 @@
       "quad3": "0-2",
       "quad4": "2-2",
       "nextGame": {
-        "home_team": "Holy Cross",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
-        "away_team": "Northeastern",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/111.png",
-        "date_time": "Final"
+        "home_team": "Fordham",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png",
+        "home_team_id": "2230",
+        "away_team": "Holy Cross",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
+        "away_team_id": "107",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 124.0
     },
@@ -11475,8 +12129,10 @@
       "nextGame": {
         "home_team": "FDU",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/161.png",
+        "home_team_id": "161",
         "away_team": "Manor",
         "away_team_logo": null,
+        "away_team_id": "130196",
         "date_time": "12/4 - 4:00 PM EST"
       },
       "nonconsos": 194.0
@@ -11508,11 +12164,13 @@
       "quad3": "0-2",
       "quad4": "2-2",
       "nextGame": {
-        "home_team": "Detroit Mercy",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
-        "away_team": "IU Indy",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/85.png",
-        "date_time": "Final"
+        "home_team": "Cleveland St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
+        "home_team_id": "325",
+        "away_team": "Detroit Mercy",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
+        "away_team_id": "2174",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 64.0
     },
@@ -11545,8 +12203,10 @@
       "nextGame": {
         "home_team": "VMI",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png",
+        "home_team_id": "2678",
         "away_team": "Christendom",
         "away_team_logo": null,
+        "away_team_id": "111180",
         "date_time": "12/5 - 7:30 PM EST"
       },
       "nonconsos": 225.0
@@ -11580,8 +12240,10 @@
       "nextGame": {
         "home_team": "Portland",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2501.png",
+        "home_team_id": "2501",
         "away_team": "Lewis & Clark",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2333.png",
+        "away_team_id": "2333",
         "date_time": "12/5 - 10:00 PM EST"
       },
       "nonconsos": 334.0
@@ -11615,8 +12277,10 @@
       "nextGame": {
         "home_team": "Florida A&M",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/50.png",
+        "home_team_id": "50",
         "away_team": "Barber Scotia",
         "away_team_logo": null,
+        "away_team_id": "489",
         "date_time": "12/5 - 5:00 PM EST"
       },
       "nonconsos": 7.0
@@ -11648,11 +12312,13 @@
       "quad3": "0-2",
       "quad4": "0-2",
       "nextGame": {
-        "home_team": "Dartmouth",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png",
-        "away_team": "New Hampshire",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png",
-        "date_time": "Final"
+        "home_team": "New Hampshire",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png",
+        "home_team_id": "160",
+        "away_team": "Boston U",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/104.png",
+        "away_team_id": "104",
+        "date_time": "12/6 - 7:00 PM EST"
       },
       "nonconsos": 144.0
     },
@@ -11683,11 +12349,13 @@
       "quad3": "0-0",
       "quad4": "2-1",
       "nextGame": {
-        "home_team": "Bellarmine",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
-        "away_team": "Midway",
-        "away_team_logo": null,
-        "date_time": "Final"
+        "home_team": "Murray St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
+        "home_team_id": "93",
+        "away_team": "Bellarmine",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
+        "away_team_id": "91",
+        "date_time": "12/6 - 3:00 PM EST"
       },
       "nonconsos": 239.0
     },
@@ -11720,8 +12388,10 @@
       "nextGame": {
         "home_team": "American",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/44.png",
+        "home_team_id": "44",
         "away_team": "MD Eastern",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2379.png",
+        "away_team_id": "2379",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 178.0
@@ -11755,8 +12425,10 @@
       "nextGame": {
         "home_team": "Oregon St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+        "home_team_id": "204",
         "away_team": "Southern Utah",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
+        "away_team_id": "253",
         "date_time": "12/6 - 5:00 PM EST"
       },
       "nonconsos": 289.0
@@ -11790,8 +12462,10 @@
       "nextGame": {
         "home_team": "Binghamton",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2066.png",
+        "home_team_id": "2066",
         "away_team": "Le Moyne",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2330.png",
+        "away_team_id": "2330",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 260.0
@@ -11823,11 +12497,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "Iowa State",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+        "home_team": "Baylor",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+        "home_team_id": "239",
         "away_team": "Alcorn St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2016.png",
-        "date_time": "Final"
+        "away_team_id": "2016",
+        "date_time": "12/19 - 8:00 PM EST"
       },
       "nonconsos": 5.0
     },
@@ -11842,7 +12518,7 @@
       "bpi": 348.0,
       "sor": 341.0,
       "kpi": 335,
-      "kenpomRank": "356",
+      "kenpomRank": "355",
       "torvikRank": "333",
       "wab": "334",
       "net": null,
@@ -11860,8 +12536,10 @@
       "nextGame": {
         "home_team": "Illinois St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
+        "home_team_id": "2287",
         "away_team": "Chicago St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
+        "away_team_id": "2130",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 18.0
@@ -11895,8 +12573,10 @@
       "nextGame": {
         "home_team": "New Orleans",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2443.png",
+        "home_team_id": "2443",
         "away_team": "Hou Christian",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2277.png",
+        "away_team_id": "2277",
         "date_time": "12/6 - 6:00 PM EST"
       },
       "nonconsos": 344.0
@@ -11930,8 +12610,10 @@
       "nextGame": {
         "home_team": "High Point",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2272.png",
+        "home_team_id": "2272",
         "away_team": "NJIT",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2885.png",
+        "away_team_id": "2885",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 117.0
@@ -11963,11 +12645,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "James Madison",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
-        "away_team": "NC Central",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2428.png",
-        "date_time": "Final"
+        "home_team": "NC Central",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2428.png",
+        "home_team_id": "2428",
+        "away_team": "NC A&T",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2448.png",
+        "away_team_id": "2448",
+        "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 67.0
     },
@@ -12000,8 +12684,10 @@
       "nextGame": {
         "home_team": "South Carolina",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+        "home_team_id": "2579",
         "away_team": "Stetson",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png",
+        "away_team_id": "56",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 180.0
@@ -12035,8 +12721,10 @@
       "nextGame": {
         "home_team": "Houston",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+        "home_team_id": "248",
         "away_team": "Jackson St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2296.png",
+        "away_team_id": "2296",
         "date_time": "12/10 - 8:00 PM EST"
       },
       "nonconsos": 6.0
@@ -12070,8 +12758,10 @@
       "nextGame": {
         "home_team": "Siena",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2561.png",
+        "home_team_id": "2561",
         "away_team": "Niagara",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/315.png",
+        "away_team_id": "315",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 291.0
@@ -12105,8 +12795,10 @@
       "nextGame": {
         "home_team": "E Illinois",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png",
+        "home_team_id": "2197",
         "away_team": "Lindenwood",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2815.png",
+        "away_team_id": "2815",
         "date_time": "12/6 - 8:00 PM EST"
       },
       "nonconsos": 95.0
@@ -12140,8 +12832,10 @@
       "nextGame": {
         "home_team": "Saint Peter's",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2612.png",
+        "home_team_id": "2612",
         "away_team": "Canisius",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2099.png",
+        "away_team_id": "2099",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 259.0
@@ -12175,8 +12869,10 @@
       "nextGame": {
         "home_team": "Bethune",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2065.png",
+        "home_team_id": "2065",
         "away_team": "SC State",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png",
+        "away_team_id": "2569",
         "date_time": "12/5 - 7:00 PM EST"
       },
       "nonconsos": 41.0
@@ -12210,8 +12906,10 @@
       "nextGame": {
         "home_team": "W Illinois",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2710.png",
+        "home_team_id": "2710",
         "away_team": "Han LaGrange",
         "away_team_logo": null,
+        "away_team_id": "533",
         "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 254.0
@@ -12245,8 +12943,10 @@
       "nextGame": {
         "home_team": "Binghamton",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2066.png",
+        "home_team_id": "2066",
         "away_team": "Le Moyne",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2330.png",
+        "away_team_id": "2330",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 338.0
@@ -12278,11 +12978,13 @@
       "quad3": "0-1",
       "quad4": "3-0",
       "nextGame": {
-        "home_team": "Alabama A&M",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2010.png",
-        "away_team": "Tennessee St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2634.png",
-        "date_time": "Final"
+        "home_team": "Lipscomb",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/288.png",
+        "home_team_id": "288",
+        "away_team": "Alabama A&M",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2010.png",
+        "away_team_id": "2010",
+        "date_time": "12/7 - 5:00 PM EST"
       },
       "nonconsos": 229.0
     },
@@ -12313,11 +13015,13 @@
       "quad3": "0-1",
       "quad4": "0-2",
       "nextGame": {
-        "home_team": "Saint Francis",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2598.png",
-        "away_team": "Penn State-She",
-        "away_team_logo": null,
-        "date_time": "Final"
+        "home_team": "Radford",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2515.png",
+        "home_team_id": "2515",
+        "away_team": "Saint Francis",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2598.png",
+        "away_team_id": "2598",
+        "date_time": "12/7 - 2:30 PM EST"
       },
       "nonconsos": 121.0
     },
@@ -12332,7 +13036,7 @@
       "bpi": 356.0,
       "sor": 348.0,
       "kpi": 350,
-      "kenpomRank": "355",
+      "kenpomRank": "356",
       "torvikRank": "359",
       "wab": "337",
       "net": null,
@@ -12348,11 +13052,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "UL Monroe",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
-        "away_team": "Miss Valley St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2400.png",
-        "date_time": "Final"
+        "home_team": "SF Austin",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png",
+        "home_team_id": "2617",
+        "away_team": "UL Monroe",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+        "away_team_id": "2433",
+        "date_time": "12/7 - 3:00 PM EST"
       },
       "nonconsos": 315.0
     },
@@ -12385,8 +13091,10 @@
       "nextGame": {
         "home_team": "Army",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+        "home_team_id": "349",
         "away_team": "Gallaudet",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/417.png",
+        "away_team_id": "417",
         "date_time": "12/7 - 12:00 PM EST"
       },
       "nonconsos": 201.0
@@ -12420,8 +13128,10 @@
       "nextGame": {
         "home_team": "Merrimack",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png",
+        "home_team_id": "2771",
         "away_team": "Rider",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2520.png",
+        "away_team_id": "2520",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 22.0
@@ -12455,8 +13165,10 @@
       "nextGame": {
         "home_team": "Morgan St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2415.png",
+        "home_team_id": "2415",
         "away_team": "Longwood",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2344.png",
+        "away_team_id": "2344",
         "date_time": "12/6 - 4:00 PM EST"
       },
       "nonconsos": 327.0
@@ -12488,11 +13200,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "UIC",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
+        "home_team": "DePaul",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/305.png",
+        "home_team_id": "305",
         "away_team": "AR-Pine Bluff",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2029.png",
-        "date_time": "Final"
+        "away_team_id": "2029",
+        "date_time": "12/6 - 9:00 PM EST"
       },
       "nonconsos": 4.0
     },
@@ -12525,9 +13239,11 @@
       "nextGame": {
         "home_team": "Delaware St",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2169.png",
-        "away_team": "Navy",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
-        "date_time": "Final"
+        "home_team_id": "2169",
+        "away_team": "Delaware",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+        "away_team_id": "48",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 272.0
     },
@@ -12558,11 +13274,13 @@
       "quad3": "0-4",
       "quad4": "0-1",
       "nextGame": {
-        "home_team": "Queens",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2511.png",
-        "away_team": "Gardner-Webb",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
-        "date_time": "Final"
+        "home_team": "Gardner-Webb",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
+        "home_team_id": "2241",
+        "away_team": "GA Southern",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+        "away_team_id": "290",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 33.0
     },
@@ -12595,8 +13313,10 @@
       "nextGame": {
         "home_team": "Davidson",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
+        "home_team_id": "2166",
         "away_team": "The Citadel",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2643.png",
+        "away_team_id": "2643",
         "date_time": "12/4 - 7:00 PM EST"
       },
       "nonconsos": 362.0
@@ -12628,11 +13348,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "West Virginia",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+        "home_team": "Liberty",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+        "home_team_id": "2335",
         "away_team": "Coppin St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2154.png",
-        "date_time": "Final"
+        "away_team_id": "2154",
+        "date_time": "12/6 - 2:00 PM EST"
       },
       "nonconsos": 55.0
     },
@@ -12663,11 +13385,13 @@
       "quad3": null,
       "quad4": null,
       "nextGame": {
-        "home_team": "UL Monroe",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+        "home_team": "Kansas St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+        "home_team_id": "2306",
         "away_team": "Miss Valley St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2400.png",
-        "date_time": "Final"
+        "away_team_id": "2400",
+        "date_time": "12/8 - 8:00 PM EST"
       },
       "nonconsos": 120.0
     }
