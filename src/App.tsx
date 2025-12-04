@@ -11,6 +11,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<number | string | null>(null);
   const [landingGauge, setLandingGauge] = useState(0);
+  const [allSchedules, setAllSchedules] = useState<Record<string, any>>({});
 
   useEffect(() => {
     const target = Math.floor(Math.random() * 100);
@@ -105,12 +106,17 @@ function App() {
 
   const loadData = async () => {
     try {
-      const response = await fetch('all_teams_rankings.json');
-      const data = await response.json();
+      const [rankingsResponse, schedulesResponse] = await Promise.all([
+        fetch('all_teams_rankings.json'),
+        fetch('all_teams_schedules.json')
+      ]);
+      
+      const rankingsData = await rankingsResponse.json();
+      const schedulesData = await schedulesResponse.json();
 
       const teamsMap: Record<string, Team> = {};
 
-      data.teams.forEach((team: any) => {
+      rankingsData.teams.forEach((team: any) => {
         teamsMap[team.slug] = {
           slug: team.slug,
           id: team.slug,
@@ -143,7 +149,8 @@ function App() {
       const teams = Object.values(teamsMap).sort((a, b) => a.displayName.localeCompare(b.displayName));
 
       setAllTeams(teams);
-      setLastUpdated(data.lastUpdated);
+      setAllSchedules(schedulesData.teams || {});
+      setLastUpdated(rankingsData.lastUpdated);
       setLoading(false);
     } catch (error) {
       console.error('Error loading data:', error);
@@ -203,6 +210,7 @@ function App() {
               <TeamView
                 key={team.id}
                 team={team}
+                schedule={allSchedules[team.slug]}
                 lastUpdated={lastUpdated}
                 formatRelativeTime={formatRelativeTime}
                 calculateTournamentOdds={calculateTournamentOdds}

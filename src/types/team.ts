@@ -38,3 +38,23 @@ export type NextGame = {
   away_team_logo?: string | null;
   date_time: string;
 };
+
+export type GameCompetitor = {
+  winner: boolean;
+  team_nickname: string;
+  score: {
+    value: number;
+    displayValue: string;
+  } | null;
+};
+
+export type ScheduleGame = {
+  date: string;
+  competitors: GameCompetitor[];
+};
+
+export type TeamSchedule = {
+  espn_id: string;
+  team_name: string;
+  schedule: ScheduleGame[];
+};

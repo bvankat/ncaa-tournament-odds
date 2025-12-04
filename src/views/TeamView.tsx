@@ -1,16 +1,17 @@
 import React from 'react';
 import { Speedometer } from '@/components/Speedometer';
 import { RankingSparkline } from '@/components/RankingSparkline';
-import type { Team } from '@/types/team';
+import type { Team, TeamSchedule } from '@/types/team';
 
 type TeamViewProps = {
   team: Team;
+  schedule?: TeamSchedule;
   lastUpdated?: number | string | null;
   formatRelativeTime: (t: number | string) => string;
   calculateTournamentOdds: (rankings: Record<string, number | string | undefined>) => number;
 };
 
-export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTournamentOdds }: TeamViewProps) {
+export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calculateTournamentOdds }: TeamViewProps) {
   const primaryColor = team.primaryColor ? `#${team.primaryColor}` : '#000000';
   const secondaryColor = team.secondaryColor ? `#${team.secondaryColor}` : '#ffffff';
   const tournamentOdds = calculateTournamentOdds(team as unknown as Record<string, number | string>);
@@ -145,10 +146,88 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
 
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
 
-          <div className="lg:col-span-5 border border-gray-200 p-8">
-            <table className="w-full">
-             <tr className="text-gray-500 text-center">[ Full schedule coming soon ] </tr>
-            </table>
+          <div id="schedule-table"className="lg:col-span-5">
+            {schedule && schedule.schedule && schedule.schedule.length > 0 ? (
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-300">
+                    <th className="text-left text-xs py-3 pr-4 font-medium geist-mono text-gray-400 uppercase">Opponent</th>
+                    <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">Date</th>
+                    <th className="text-right text-xs py-3 pl-4 font-medium text-gray-400 uppercase">Score</th>
+                    <th className="text-right text-xs py-3 pl-4 font-medium geist-mono text-gray-400 uppercase">Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {schedule.schedule.map((game, idx) => {
+                    // Find current team and opponent
+                    const currentTeamComp = game.competitors.find(c => c.team_nickname === team.shortName);
+                    const opponentComp = game.competitors.find(c => c.team_nickname !== team.shortName);
+                    
+                    if (!opponentComp) return null;
+                    
+                    // Check if opponent is competitors[0] to determine if it's a road game
+                    const isRoadGame = game.competitors[0].team_nickname === opponentComp.team_nickname;
+                    const opponentDisplay = isRoadGame ? <><span className="text-gray-400 font-light text-sm">at</span> {opponentComp.team_nickname}</> : opponentComp.team_nickname;
+                    
+                    // Check if game has been played (scores exist)
+                    const hasScores = game.competitors.every(c => c.score !== null && c.score !== undefined);
+                    
+                    let dateDisplay: string | JSX.Element = '—';
+                    let resultDisplay = '—';
+                    let resultClass = 'text-gray-700';
+                    
+                    const gameDate = new Date(game.date);
+                    
+                    if (hasScores) {
+                      // Game has been played - show date only
+                      dateDisplay = gameDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                      
+                      // Determine winner and format score
+                      const winner = game.competitors.find(c => c.winner);
+                      const loser = game.competitors.find(c => !c.winner);
+                      
+                      let scoreDisplay = '—';
+                      if (winner && loser && winner.score && loser.score) {
+                        scoreDisplay = `${winner.score.displayValue}-${loser.score.displayValue}`;
+                      }
+                      
+                      // Determine result
+                      if (currentTeamComp?.winner) {
+                        resultDisplay = `W ${scoreDisplay}`;
+                        resultClass = 'text-green-700';
+                      } else {
+                        resultDisplay = `L ${scoreDisplay}`;
+                        resultClass = 'text-red-700';
+                      }
+                    } else {
+                      // Game hasn't been played yet - show date and time
+                      dateDisplay = gameDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                      const timeDisplay = gameDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+                      dateDisplay = <>{dateDisplay} <span className="ml-2 text-[10px] text-gray-400">{timeDisplay}</span></>;
+                      resultDisplay = '—';
+                    }
+                    
+                    return (
+                      <tr key={idx} className="border-b border-gray-200">
+                        <td className="py-3 pr-4 text-gray-900 font-medium">{opponentDisplay}</td>
+                        <td className="py-3 px-4 text-left text-gray-700 text-sm">{dateDisplay}</td>
+                        <td className="py-3 pl-4 text-right geist-mono">
+                          
+                          {resultDisplay.split(' ').length > 1 && (
+                            <span className="text-gray-700">{resultDisplay.split(' ').slice(1).join(' ')}</span>
+                          )}
+                        </td>
+                        <td className="text-right"><span className={resultClass}>
+                            {resultDisplay[0]}
+                          </span></td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            ) : (
+              <p className="text-gray-500 text-center">Schedule not available</p>
+            )}
           </div>
 
             <div className="lg:col-span-2 lg:col-start-7">
