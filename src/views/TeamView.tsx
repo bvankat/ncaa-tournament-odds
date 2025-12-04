@@ -41,7 +41,7 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
                 </div>
               )}
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
-                <h1 className="text-3xl lg:text-5xl px-6 lg: px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white">
+                <h1 className="text-3xl lg:text-5xl px-6 lg:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
@@ -107,7 +107,7 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
               </tbody>
             </table>
           </div>
-          <div className="lg:col-span-2 lg:col-start-7">
+          <div className="lg:col-span-3 lg:col-start-6">
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
               <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">RECORD</h3>
@@ -122,7 +122,16 @@ export function TeamView({ team, lastUpdated, formatRelativeTime, calculateTourn
             
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
               <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">NEXT GAME</h3>
-              
+              {team.nextGame ? (
+                <div className="grid grid-cols-1 gap-2 align-middle items-center justify-between mt-2">
+                    <p className="text-md leading-4 items-center flex flex-row gap-2 font-medium text-gray-900 mt-1" id="nextGame-teams">
+                        <img src={`${team.nextGame.away_team_logo}`} alt={`${team.nextGame.away_team} logo`} className="inline-block w-6 h-6" /> <strong>{team.nextGame.away_team}</strong> at <img src={`${team.nextGame.home_team_logo}`} alt={`${team.nextGame.home_team} logo`} className="inline-block w-6 h-6" />  <strong>{team.nextGame.home_team}</strong>
+                    </p>
+                    <p className="text-xs text-gray-500 font-normal geist-mono" id="nextGame-details">{team.nextGame.date_time}</p>
+                </div>
+              ) : (
+                <p className="text-sm text-gray-500 mt-2">No upcoming game scheduled</p>
+              )}
             </div>
             
           </div>

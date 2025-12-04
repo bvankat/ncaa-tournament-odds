@@ -137,6 +137,7 @@ function App() {
           quad2: team.quad2,
           quad3: team.quad3,
           quad4: team.quad4,
+          nextGame: team.nextGame,
         } as Team;
       });
       const teams = Object.values(teamsMap).sort((a, b) => a.displayName.localeCompare(b.displayName));

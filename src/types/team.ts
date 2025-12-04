@@ -13,6 +13,7 @@ export type NcaaNetData = {
   quad4?: string | null;
 };
 
+
 export type Team = NcaaNetData & {
   id?: string;
   slug: string;
@@ -27,4 +28,13 @@ export type Team = NcaaNetData & {
   kenpom?: number | string | null; // mapped in App to kenpomRank
   torvik?: number | string | null; // mapped in App to torvikRank
   wab?: number | string | null;
+  nextGame?: NextGame | null;
+};
+
+export type NextGame = {
+  home_team: string;
+  home_team_logo?: string | null;
+  away_team: string;
+  away_team_logo?: string | null;
+  date_time: string;
 };
