@@ -167,7 +167,22 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     
                     // Check if opponent is competitors[0] to determine if it's a road game
                     const isRoadGame = game.competitors[0].team_nickname === opponentComp.team_nickname;
-                    const opponentDisplay = isRoadGame ? <><span className="text-gray-400 font-light text-sm">at</span> {opponentComp.team_nickname}</> : opponentComp.team_nickname;
+                    const opponentDisplay = (
+                      <div className="flex items-center gap-3">
+                        {opponentComp.logo && (
+                          <img 
+                            src={opponentComp.logo} 
+                            alt={opponentComp.team_nickname} 
+                            className="w-6 h-6 object-contain"
+                            loading="lazy"
+                          />
+                        )}
+                        <span>
+                          {isRoadGame && <span className="text-gray-400 font-light text-sm">at </span>}
+                          {opponentComp.team_nickname}
+                        </span>
+                      </div>
+                    );
                     
                     // Check if game has been played (scores exist)
                     const hasScores = game.competitors.every(c => c.score !== null && c.score !== undefined);

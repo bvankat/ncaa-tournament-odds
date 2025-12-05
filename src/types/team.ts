@@ -41,7 +41,9 @@ export type NextGame = {
 
 export type GameCompetitor = {
   winner: boolean;
+  team_id?: string | null;
   team_nickname: string;
+  logo?: string | null;
   score: {
     value: number;
     displayValue: string;
