@@ -38,11 +38,13 @@ export function LandingView({
               </p>
             </div>
           )}
-          <div className="flex flex-col mb-6">
+          <div className="flex flex-col mb-6 px-4">
             <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-bold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
             <p className="text-center lg:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
           </div>
+          <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team..." />
+          </div>
         </div>
 
         <div className="flex items-center justify-center">
@@ -53,28 +55,28 @@ export function LandingView({
       <div id="logo-scroller" className="mt-16 overflow-hidden" style={{ perspective: '1000px' }}>
         <div className="logo-row logo-row-1 flex gap-8 mb-8">
           {shuffledTeams.slice(0, 25).concat(shuffledTeams.slice(0, 25)).map((team, idx) => (
-            <button key={`row1-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
+            <button key={`row1-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
               <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
         </div>
         <div className="logo-row logo-row-2 flex gap-8 mb-8">
           {shuffledTeams.slice(25, 50).concat(shuffledTeams.slice(25, 50)).map((team, idx) => (
-            <button key={`row2-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
+            <button key={`row2-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
               <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
         </div>
         <div className="logo-row logo-row-3 flex gap-8 mb-8">
           {shuffledTeams.slice(50, 75).concat(shuffledTeams.slice(50, 75)).map((team, idx) => (
-            <button key={`row3-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
+            <button key={`row3-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
               <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
         </div>
         <div className="logo-row logo-row-4 flex gap-8">
           {shuffledTeams.slice(75, 100).concat(shuffledTeams.slice(75, 100)).map((team, idx) => (
-            <button key={`row4-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)}>
+            <button key={`row4-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
               <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}

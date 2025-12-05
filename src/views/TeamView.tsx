@@ -277,7 +277,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
               </div>
             
             {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
-              <div className="p-6">
+              <div className="mt-6">
                 <h3 className="text-md font-semibold text-gray-00  mb-4">Quadrants</h3>
                 <div className="grid grid-rows-2 grid-cols-2 gap-4">
                   {team.quad1 && (
