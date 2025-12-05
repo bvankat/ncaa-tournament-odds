@@ -43,7 +43,7 @@ export function LandingView({
             <p className="text-center lg:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
           </div>
           <div className="w-full max-w-xl">
-          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team..." />
+          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" />
           </div>
         </div>
 

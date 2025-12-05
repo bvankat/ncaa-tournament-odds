@@ -60,7 +60,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
             teams={teams}
             value={selectedSlug}
             onValueChange={(val: string) => onTeamSelect && onTeamSelect(val)}
-            placeholder="Search teams..."
+            placeholder="Select a team"
           />
         </div>
       </div>
