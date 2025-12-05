@@ -70,7 +70,6 @@ html, body { font-family: var(--font-sans); }
 }
 
 .logo-item {
-  transform: rotateY(20deg) skewY(10deg);
   background: none;
   border: none;
   padding: 0;
