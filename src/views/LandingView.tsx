@@ -24,7 +24,7 @@ export function LandingView({
 }: LandingViewProps) {
   return (
     <div className="max-w-screen bg-gray-100 mx-auto py-16 lg:py-24 overflow-x-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-48 mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-24 mb-24">
         <div className="flex flex-col px-4 justify-center gap-6 items-center lg:items-start text-center lg:text-left">
           {lastUpdated && (
             <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-2">
