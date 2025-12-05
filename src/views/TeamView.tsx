@@ -59,7 +59,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
       </div>
 
       <div id="ratings" className="bg-white px-6 py-6 lg:px-12 lg:py-12">
-        <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-8 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-12">
           <div className="lg:col-span-5">
             <table className="w-full">
               <thead>
@@ -142,11 +142,11 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
       {(team.record || team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
         <div id="schedule-details" className="bg-gray-50">
           <div className="px-6 py-12 lg:px-12 lg:py-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Schedule Details</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{ team.shortName } schedule</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-12">
 
-          <div id="schedule-table"className="lg:col-span-5">
+          <div id="schedule-table" className="order-2 lg:order-1 lg:col-span-5">
             {schedule && schedule.schedule && schedule.schedule.length > 0 ? (
               <table className="w-full">
                 <thead>
@@ -246,7 +246,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
             )}
           </div>
 
-            <div className="lg:col-span-3 lg:col-start-6">
+            <div id="record-details" className="order-1 lg:order-2 lg:col-span-3 lg:col-start-6">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
               <h3 className="text-md font-semibold mb-4">Record Details</h3>
               <div className="grid grid-rows-2 grid-cols-2 gap-4">
