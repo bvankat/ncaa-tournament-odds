@@ -43,7 +43,7 @@ export function LandingView({
               </p>
             </div>
           )}
-          <div className="flex flex-col mb-6 px-4">
+          <div className="flex flex-col mb-6 px-4 lg:px-0">
             <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-bold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
             <p className="text-center lg:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
           </div>
