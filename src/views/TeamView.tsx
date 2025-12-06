@@ -26,7 +26,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
           color: secondaryColor,
         }}
       >
-        <div className="max-w-screen-xl mx-auto px-2 py-8 lg:py-24">
+        <div className="max-w-screen-xl mx-auto px-2 py-12 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-3 lg:px-12">
             <div className="flex flex-col justify-center gap-4 text-center lg:text-left items-center lg:items-start">
               {lastUpdated && (
