@@ -41,7 +41,7 @@ export function Combobox({ teams, value, onValueChange, placeholder = "Select a 
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full justify-between font-medium px-6 py-6 border border-gray-300 bg-white text-gray-900 rounded-md"
+          className="w-full justify-between font-medium px-6 py-6 border-1 border-blue-200 bg-white text-gray-900 rounded-md"
         >
           {value && selectedTeam ? (
             <div className="flex items-center gap-2">
