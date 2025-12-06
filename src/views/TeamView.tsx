@@ -248,58 +248,61 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
 
             <div id="record-details" className="order-1 lg:order-2 lg:col-span-3 lg:col-start-6">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-              <h3 className="text-md font-semibold mb-4">Record Details</h3>
-              <div className="grid grid-rows-2 grid-cols-2 gap-4">
+              <h3 className="text-lg text-center font-semibold mb-4">Record Details</h3>
+              <div className="grid grid-cols-4 gap-2">
                 {team.record && (
-                   <div className="text-center p-4 bg-gray-50 rounded-lg">
+                   <div className="text-center p-4">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">OVERALL</div>
                       <div className="text-2xl font-bold text-gray-700">{team.record}</div>
                     </div>
                 )}
                 {team.home && (
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-center p-4">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">HOME</div>
                       <div className="text-2xl font-semibold text-gray-900">{team.home}</div>
                   </div>
                 )}
                 {team.road && (
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-center p-4">
                     <div className="text-xs text-gray-500 mb-1 geist-mono">AWAY</div>
                     <div className="text-2xl font-semibold text-gray-900">{team.road}</div>
                   </div>
                 )}
                 {team.neutral && (
-                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                  <div className="text-center p-4">
                     <div className="text-xs text-gray-500 mb-1 geist-mono">NEUTRAL</div>
                     <div className="text-2xl font-semibold text-gray-900">{team.neutral}</div>
                   </div>
                 )}
               </div>
+            </div>
             
             {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
-              <div className="mt-6">
-                <h3 className="text-md font-semibold text-gray-00  mb-4">Quadrants</h3>
-                <div className="grid grid-rows-2 grid-cols-2 gap-4">
+              
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+
+                <h3 className="text-lg text-center font-semibold mb-4">Quadrants</h3>
+                <div className="grid grid-cols-4 gap-2">
                   {team.quad1 && (
-                    <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-center p-4">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 1</div>
                       <div className="text-2xl font-bold">{team.quad1}</div>
                     </div>
                   )}
                   {team.quad2 && (
-                    <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-center p-4">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 2</div>
                       <div className="text-2xl font-bold text-gray-700">{team.quad2}</div>
                     </div>
                   )}
                   {team.quad3 && (
-                    <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-center p-4">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 3</div>
                       <div className="text-2xl font-bold text-gray-700">{team.quad3}</div>
                     </div>
                   )}
                   {team.quad4 && (
-                    <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-center p-4">
                       <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 4</div>
                       <div className="text-2xl font-bold text-gray-700">{team.quad4}</div>
                     </div>
@@ -307,7 +310,6 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                 </div>
               </div>
             )}
-            </div>
 
           </div>
           </div>
