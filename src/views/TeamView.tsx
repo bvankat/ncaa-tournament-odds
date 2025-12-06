@@ -151,10 +151,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-300">
-                    <th className="text-left text-xs py-3 pr-4 font-medium geist-mono text-gray-400 uppercase">Opponent</th>
-                    <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">Date</th>
-                    <th className="text-right text-xs py-3 pl-4 font-medium text-gray-400 uppercase">Score</th>
-                    <th className="text-right text-xs py-3 pl-4 font-medium geist-mono text-gray-400 uppercase">Result</th>
+                    <th className="text-left text-xs py-3 pr-2 font-medium geist-mono text-gray-400 uppercase">Opponent</th>
+                    <th className="text-left text-xs py-3 px-2 font-medium geist-mono text-gray-400 uppercase">Date</th>
+                    <th className="text-right text-xs py-3 pl-4 font-medium text-gray-400 geist-mono uppercase">Result</th>
+                    <th className="text-right text-xs py-3 font-medium geist-mono text-gray-400 uppercase"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -224,15 +224,15 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     
                     return (
                       <tr key={idx} className="border-b border-gray-200">
-                        <td className="py-3 pr-4 text-gray-900 font-medium">{opponentDisplay}</td>
-                        <td className="py-3 px-4 text-left text-gray-700 text-sm">{dateDisplay}</td>
-                        <td className="py-3 pl-4 text-right geist-mono">
+                        <td className="py-3 pr-2 text-gray-900 text-sm font-medium">{opponentDisplay}</td>
+                        <td className="py-3 px-2 text-left text-gray-700 text-sm">{dateDisplay}</td>
+                        <td className="py-3 pl-2 text-right text-sm geist-mono">
                           
                           {resultDisplay.split(' ').length > 1 && (
                             <span className="text-gray-700">{resultDisplay.split(' ').slice(1).join(' ')}</span>
                           )}
                         </td>
-                        <td className="text-right">
+                        <td className="text-right pl-2">
                           <span className={resultClass}>
                             {resultDisplay[0]}
                           </span></td>
@@ -247,31 +247,30 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
           </div>
 
             <div id="record-details" className="order-1 lg:order-2 lg:col-span-3 lg:col-start-6">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-              <h3 className="text-lg text-center font-semibold mb-4">Record Details</h3>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
               <div className="grid grid-cols-4 gap-2">
                 {team.record && (
-                   <div className="text-center p-4">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">OVERALL</div>
-                      <div className="text-2xl font-bold text-gray-700">{team.record}</div>
+                   <div className="text-center p-3 border-r border-gray-200">
+                      <div className="text-xs text-gray-400 mb-1 geist-mono">RECORD</div>
+                      <div className="text-xl font-medium text-gray-700">{team.record}</div>
                     </div>
                 )}
                 {team.home && (
-                  <div className="text-center p-4">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">HOME</div>
-                      <div className="text-2xl font-semibold text-gray-900">{team.home}</div>
+                  <div className="text-center p-3 border-r border-gray-200">
+                      <div className="text-xs text-gray-400 mb-1 geist-mono">HOME</div>
+                      <div className="text-xl font-medium text-gray-900">{team.home}</div>
                   </div>
                 )}
                 {team.road && (
-                  <div className="text-center p-4">
-                    <div className="text-xs text-gray-500 mb-1 geist-mono">AWAY</div>
-                    <div className="text-2xl font-semibold text-gray-900">{team.road}</div>
+                  <div className="text-center p-3 border-r border-gray-200">
+                    <div className="text-xs text-gray-400 mb-1 geist-mono">AWAY</div>
+                    <div className="text-xl font-medium text-gray-900">{team.road}</div>
                   </div>
                 )}
                 {team.neutral && (
-                  <div className="text-center p-4">
-                    <div className="text-xs text-gray-500 mb-1 geist-mono">NEUTRAL</div>
-                    <div className="text-2xl font-semibold text-gray-900">{team.neutral}</div>
+                  <div className="text-center p-3">
+                    <div className="text-xs text-gray-400 mb-1 geist-mono">NEUTRAL</div>
+                    <div className="text-xl font-medium text-gray-900">{team.neutral}</div>
                   </div>
                 )}
               </div>
@@ -279,32 +278,31 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
             
             {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
               
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
 
-                <h3 className="text-lg text-center font-semibold mb-4">Quadrants</h3>
                 <div className="grid grid-cols-4 gap-2">
                   {team.quad1 && (
-                    <div className="text-center p-4">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 1</div>
-                      <div className="text-2xl font-bold">{team.quad1}</div>
+                    <div className="text-center p-3 border-r border-gray-200">
+                      <div className="text-xs text-gray-400 mb-1 geist-mono">QUAD 1</div>
+                      <div className="text-xl font-medium">{team.quad1}</div>
                     </div>
                   )}
                   {team.quad2 && (
-                    <div className="text-center p-4">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 2</div>
-                      <div className="text-2xl font-bold text-gray-700">{team.quad2}</div>
+                    <div className="text-center p-3 border-r border-gray-200">
+                      <div className="text-xs text-gray-400 mb-1 geist-mono">QUAD 2</div>
+                      <div className="text-xl font-medium text-gray-700">{team.quad2}</div>
                     </div>
                   )}
                   {team.quad3 && (
-                    <div className="text-center p-4">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 3</div>
-                      <div className="text-2xl font-bold text-gray-700">{team.quad3}</div>
+                    <div className="text-center p-3 border-r border-gray-200">
+                      <div className="text-xs text-gray-400 mb-1 geist-mono">QUAD 3</div>
+                      <div className="text-xl font-medium text-gray-700">{team.quad3}</div>
                     </div>
                   )}
                   {team.quad4 && (
-                    <div className="text-center p-4">
-                      <div className="text-xs text-gray-500 mb-1 geist-mono">QUAD 4</div>
-                      <div className="text-2xl font-bold text-gray-700">{team.quad4}</div>
+                    <div className="text-center p-3">
+                      <div className="text-xs text-gray-400 mb-1 geist-mono">QUAD 4</div>
+                      <div className="text-xl font-medium text-gray-700">{team.quad4}</div>
                     </div>
                   )}
                 </div>
