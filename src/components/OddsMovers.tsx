@@ -29,7 +29,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                 Bubble Watch
               </h2>
               <p className="text-gray-600 mb-6 text-sm">
-                Teams closest to 50% tournament odds — right on the selection line
+                Teams closest to 50% tournament odds
               </p>
               <div className="rounded-lg border border-gray-200 overflow-hidden">
                 <table className="w-full">
