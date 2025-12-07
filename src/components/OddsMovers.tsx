@@ -13,10 +13,10 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
   }
 
   return (
-    <div className="bg-white py-12 lg:py-16">
+    <div className="bg-white mt-12 py-12 lg:py-16">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">
-          Tournament Odds Movers
+          Today's Biggest Movers
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -51,14 +51,14 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                             <img
                               src={team.logo}
                               alt={team.displayName}
-                              className="w-8 h-8 object-contain"
+                              className="w-6 h-6 object-contain"
                             />
-                            <span className="text-gray-900 font-medium">
+                            <span className="text-gray-900 font-medium text-sm">
                               {team.displayName}
                             </span>
                           </div>
                         </td>
-                        <td className="py-3 px-4 text-right">
+                        <td className="py-3 px-4 text-right text-sm">
                           <div className="flex items-center justify-end gap-2">
                             <ArrowUp className="w-4 h-4 text-green-600" />
                             <span className="font-medium geist-mono">
@@ -105,14 +105,14 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                             <img
                               src={team.logo}
                               alt={team.displayName}
-                              className="w-8 h-8 object-contain"
+                              className="w-6 h-6 object-contain"
                             />
-                            <span className="text-gray-900 font-medium">
+                            <span className="text-gray-900 font-medium text-sm">
                               {team.displayName}
                             </span>
                           </div>
                         </td>
-                        <td className="py-3 px-4 text-right">
+                        <td className="py-3 px-4 text-right text-sm">
                           <div className="flex items-center justify-end gap-2">
                             <ArrowDown className="w-4 h-4 text-red-600" />
                             <span className="font-medium geist-mono">
