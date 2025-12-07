@@ -38,7 +38,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
             </span>
           </button>
           <p className="text-sm leading-relaxed text-gray-400">
-            NCAA men's basketball tournament selection odds and current team-sheet metrics for all 360+ Division I teams
+            NCAA men's basketball tournament selection odds and current team-sheet metrics for all 360+ Division I teams. Updated daily.
           </p>
         </div>
         {/* Column 2: Meta Description */}
