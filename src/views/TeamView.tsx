@@ -27,8 +27,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
         }}
       >
         <div className="max-w-screen-xl mx-auto px-2 py-12 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-3 lg:px-12">
-            <div className="flex flex-col justify-center gap-4 text-center lg:text-left items-center lg:items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3 md:px-12">
+            <div className="flex flex-col justify-center gap-4 text-center md:text-left items-center md:items-start">
               {lastUpdated && (
                 <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-black/10 rounded-full border border-white/15 mb-2 lg:mb-6">
                   <span className="relative size-2">
@@ -58,9 +58,9 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
         </div>
       </div>
 
-      <div id="ratings" className="bg-white px-6 py-6 lg:px-12 lg:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-12">
-          <div className="lg:col-span-5">
+      <div id="ratings" className="bg-white px-6 py-6 md:px-12 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-8 gap-12">
+          <div className="md:col-span-5">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-300 uppercase">
@@ -108,7 +108,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
               </tbody>
             </table>
           </div>
-          <div className="lg:col-span-3 lg:col-start-6">
+          <div className="md:col-span-3 md:col-start-6">
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
               <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">RECORD</h3>

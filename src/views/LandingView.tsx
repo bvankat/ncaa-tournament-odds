@@ -32,8 +32,8 @@ export function LandingView({
       backgroundSize: 'cover, auto',
       backgroundPosition: 'center, 0 0'
       }}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-24 mb-24">
-        <div className="flex flex-col px-4 justify-center gap-6 items-center lg:items-start text-center lg:text-left">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-24 mb-24">
+        <div className="flex flex-col px-4 justify-center gap-6 items-center md:items-start text-center md:text-left">
           {lastUpdated && (
             <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-2">
               <span className="relative size-2">
@@ -47,8 +47,8 @@ export function LandingView({
             </div>
           )}
           <div className="flex flex-col mb-6 px-4 lg:px-0">
-            <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-extrabold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
-            <p className="text-center lg:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
+            <h1 className="text-center md:text-left text-4xl lg:text-5xl font-extrabold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
+            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
           </div>
           <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" />
