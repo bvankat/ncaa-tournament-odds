@@ -1,7 +1,8 @@
 import React from 'react';
 import { Combobox } from '@/components/ui/combobox';
 import { Speedometer } from '@/components/Speedometer';
-import type { Team } from '@/types/team';
+import { OddsMovers } from '@/components/OddsMovers';
+import type { Team, OddsMovers as OddsMoversType } from '@/types/team';
 
 type LandingViewProps = {
   teams?: Team[];
@@ -11,6 +12,7 @@ type LandingViewProps = {
   formatRelativeTime: (t: number | string) => string;
   landingGauge: number;
   shuffledTeams?: Team[];
+  oddsMovers?: OddsMoversType;
 };
 
 export function LandingView({
@@ -21,6 +23,7 @@ export function LandingView({
   formatRelativeTime,
   landingGauge,
   shuffledTeams = [],
+  oddsMovers,
 }: LandingViewProps) {
   return (
     <div className="max-w-screen bg-gray-50 mx-auto py-12 lg:py-24 overflow-x-hidden relative" style={{
@@ -44,7 +47,7 @@ export function LandingView({
             </div>
           )}
           <div className="flex flex-col mb-6 px-4 lg:px-0">
-            <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-bold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
+            <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-extrabold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
             <p className="text-center lg:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
           </div>
           <div className="w-full max-w-xl">
@@ -87,6 +90,8 @@ export function LandingView({
           ))}
         </div>
       </div>
+
+      <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
     </div>
   );
 }

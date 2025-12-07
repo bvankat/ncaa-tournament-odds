@@ -60,3 +60,19 @@ export type TeamSchedule = {
   team_name: string;
   schedule: ScheduleGame[];
 };
+
+export type OddsChange = {
+  espnId: string;
+  slug: string;
+  displayName: string;
+  logo: string;
+  currentOdds: number;
+  previousOdds: number | null;
+  change: number;
+};
+
+export type OddsMovers = {
+  lastUpdated: string;
+  biggestRisers: OddsChange[];
+  biggestFallers: OddsChange[];
+};

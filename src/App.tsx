@@ -3,7 +3,7 @@ import { Layout } from '@/components/Layout';
 import { LandingView } from '@/views/LandingView';
 import { TeamView } from '@/views/TeamView';
 import { formatRelativeTime, calculateTournamentOdds } from '@/lib/utils';
-import type { Team } from '@/types/team';
+import type { Team, OddsMovers } from '@/types/team';
 
 function App() {
   const [allTeams, setAllTeams] = useState<Team[]>([]);
@@ -12,6 +12,7 @@ function App() {
   const [lastUpdated, setLastUpdated] = useState<number | string | null>(null);
   const [landingGauge, setLandingGauge] = useState(0);
   const [allSchedules, setAllSchedules] = useState<Record<string, any>>({});
+  const [oddsMovers, setOddsMovers] = useState<OddsMovers | undefined>(undefined);
 
   useEffect(() => {
     const target = Math.floor(Math.random() * 100);
@@ -106,13 +107,15 @@ function App() {
 
   const loadData = async () => {
     try {
-      const [rankingsResponse, schedulesResponse] = await Promise.all([
+      const [rankingsResponse, schedulesResponse, moversResponse] = await Promise.all([
         fetch('all_teams_rankings.json'),
-        fetch('all_teams_schedules.json')
+        fetch('all_teams_schedules.json'),
+        fetch('odds_movers.json').catch(() => null) // Gracefully handle missing file
       ]);
       
       const rankingsData = await rankingsResponse.json();
       const schedulesData = await schedulesResponse.json();
+      const moversData = moversResponse ? await moversResponse.json() : undefined;
 
       const teamsMap: Record<string, Team> = {};
 
@@ -151,6 +154,7 @@ function App() {
       setAllTeams(teams);
       setAllSchedules(schedulesData.teams || {});
       setLastUpdated(rankingsData.lastUpdated);
+      setOddsMovers(moversData);
       setLoading(false);
     } catch (error) {
       console.error('Error loading data:', error);
@@ -203,6 +207,7 @@ function App() {
             formatRelativeTime={formatRelativeTime}
             landingGauge={landingGauge}
             shuffledTeams={shuffledTeams}
+            oddsMovers={oddsMovers}
           />
         ) : (
           <div className="space-y-0">
