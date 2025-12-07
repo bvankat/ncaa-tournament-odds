@@ -83,8 +83,8 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                 <h2 className="text-2xl font-extrabold text-gray-900 mb-4">
                   Today's Biggest Movers
                 </h2>
-                <h3 className="text-lg font-medium mb-4 flex items-center gap-1 text-green-700">
-                  <ArrowUp className="w-5 h-5" />
+                <h3 className="text-lg font-medium mb-4 flex items-center gap-1">
+                  <ArrowUp className="w-5 h-5 text-green-700" />
                   Highest Risers
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -117,8 +117,8 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
             {/* Biggest Fallers */}
             {moversData.biggestFallers.length > 0 && (
               <div>
-                <h3 className="text-lg font-medium mb-4 flex items-center gap-1 text-red-700">
-                  <ArrowDown className="w-5 h-5" />
+                <h3 className="text-lg font-medium mb-4 flex items-center gap-1">
+                  <ArrowDown className="w-5 h-5 text-red-700" />
                   Falling Fast
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
