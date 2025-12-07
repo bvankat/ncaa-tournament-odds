@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, ArrowDown } from 'lucide-react';
+import { ArrowUp, ArrowDown, AlertCircle } from 'lucide-react';
 import type { OddsMovers } from '@/types/team';
 
 type OddsMoversProps = {
@@ -128,6 +128,65 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
             </div>
           )}
         </div>
+
+        {/* Bubble Watch Section */}
+        {moversData.bubbleTeams && moversData.bubbleTeams.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">
+              Bubble Watch
+            </h2>
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 justify-center">
+                <AlertCircle className="w-5 h-5 text-orange-600" />
+                Teams on the Bubble
+              </h3>
+              <p className="text-center text-gray-600 mb-6">
+                Teams closest to 50% tournament odds — right on the selection line
+              </p>
+              <div className="rounded-lg border border-gray-200 overflow-hidden">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-300 bg-gray-50">
+                      <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                        Team
+                      </th>
+                      <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                        Odds
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {moversData.bubbleTeams.map((team) => (
+                      <tr
+                        key={team.espnId}
+                        className="border-b border-gray-200 hover:bg-white cursor-pointer transition-colors"
+                        onClick={() => onTeamSelect(team.slug)}
+                      >
+                        <td className="py-3 px-4">
+                          <div className="flex items-center gap-3">
+                            <img
+                              src={team.logo}
+                              alt={team.displayName}
+                              className="w-6 h-6 object-contain"
+                            />
+                            <span className="text-gray-900 font-medium text-sm">
+                              {team.displayName}
+                            </span>
+                          </div>
+                        </td>
+                        <td className="py-3 px-4 text-right text-sm">
+                          <span className="font-medium geist-mono text-orange-700">
+                            {team.currentOdds}%
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

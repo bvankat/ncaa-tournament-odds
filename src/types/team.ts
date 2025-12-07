@@ -71,8 +71,18 @@ export type OddsChange = {
   change: number;
 };
 
+export type BubbleTeam = {
+  espnId: string;
+  slug: string;
+  displayName: string;
+  logo: string;
+  currentOdds: number;
+  distanceFrom50: number;
+};
+
 export type OddsMovers = {
   lastUpdated: string;
   biggestRisers: OddsChange[];
   biggestFallers: OddsChange[];
+  bubbleTeams: BubbleTeam[];
 };
