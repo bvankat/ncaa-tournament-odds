@@ -66,11 +66,11 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
       </div>
       <div className="border-t border-white/10 px-8 py-4 text-center">
           <p className="text-xs text-gray-500 flex flex-row justify-center items-center gap-2">
-            Created by{' '}
+            {' '}
             <a href="https://benvankat.com" target="_blank" rel="noopener noreferrer" className="flex items-center underline hover:text-gray-300">
               <img src="https://benvankat.com/images/ben-vankat-headshot-2022-square.jpg" className="rounded-full w-6 h-6 mr-2" alt="Ben Vankat" />
-              Ben Vankat 
-            </a> &bull; <a href="https://x.com/bvankat" target="_blank" rel="noopener noreferrer" className="text-gray-700 underline hover:text-gray-300">Contact</a>
+              Created by Ben Vankat 
+            </a> &bull; <a href="https://x.com/bvankat" target="_blank" rel="noopener noreferrer" className="text-gray-600 underline hover:text-gray-300">Contact</a>
           </p>
       </div>
     </footer>
