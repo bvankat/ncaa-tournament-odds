@@ -35,6 +35,9 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                         Team
                       </th>
                       <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                        Current
+                      </th>
+                      <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                         Change
                       </th>
                     </tr>
@@ -57,6 +60,9 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                               {team.displayName}
                             </span>
                           </div>
+                        </td>
+                        <td className="py-3 px-4 text-right text-xs text-gray-500">
+                            {team.currentOdds}%
                         </td>
                         <td className="py-3 px-4 text-right text-sm">
                           <div className="flex items-center justify-end gap-2">
@@ -89,6 +95,9 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                         Team
                       </th>
                       <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                        Current
+                      </th>
+                      <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                         Change
                       </th>
                     </tr>
@@ -111,6 +120,9 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                               {team.displayName}
                             </span>
                           </div>
+                        </td>
+                        <td className="py-3 px-4 text-right text-xs text-gray-500">
+                            {team.currentOdds}%
                         </td>
                         <td className="py-3 px-4 text-right text-sm">
                           <div className="flex items-center justify-end gap-2">
@@ -175,7 +187,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                           </div>
                         </td>
                         <td className="py-3 px-4 text-right text-sm">
-                          <span className="font-medium geist-mono text-orange-700">
+                          <span className="font-medium geist-mono">
                             {team.currentOdds}%
                           </span>
                         </td>
