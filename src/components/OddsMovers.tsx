@@ -18,7 +18,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
     : [];
 
   return (
-    <div className="bg-white mt-12 py-12 lg:py-16">
+    <div className="bg-white py-12 lg:py-16">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           

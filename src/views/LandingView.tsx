@@ -60,7 +60,7 @@ export function LandingView({
         </div>
       </div>
 
-      <div id="logo-scroller" className="mt-16 overflow-hidden" style={{ perspective: '1000px' }}>
+      <div id="logo-scroller" className="mt-16 pb-16 overflow-hidden" style={{ perspective: '1000px' }}>
         <div className="logo-row logo-row-1 flex gap-8 mb-8">
           {shuffledTeams.slice(0, 25).concat(shuffledTeams.slice(0, 25)).map((team, idx) => (
             <button key={`row1-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
