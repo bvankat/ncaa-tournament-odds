@@ -16,6 +16,7 @@ export type NcaaNetData = {
 
 export type Team = NcaaNetData & {
   id?: string;
+  espnId?: string;
   slug: string;
   displayName: string;
   shortName: string;
@@ -44,8 +45,10 @@ export type Team = NcaaNetData & {
 export type NextGame = {
   home_team: string;
   home_team_logo?: string | null;
+  home_team_id?: string | null;
   away_team: string;
   away_team_logo?: string | null;
+  away_team_id?: string | null;
   date: string;
 };
 

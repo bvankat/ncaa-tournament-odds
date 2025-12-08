@@ -10,9 +10,10 @@ type TeamViewProps = {
   lastUpdated?: number | string | null;
   formatRelativeTime: (t: number | string) => string;
   calculateTournamentOdds: (rankings: Record<string, number | string | undefined>) => number;
+  allTeams: Team[];
 };
 
-export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calculateTournamentOdds }: TeamViewProps) {
+export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calculateTournamentOdds, allTeams }: TeamViewProps) {
   const primaryColor = team.primaryColor ? `#${team.primaryColor}` : '#000000';
   const secondaryColor = team.secondaryColor ? `#${team.secondaryColor}` : '#ffffff';
   const tournamentOdds = calculateTournamentOdds(team as unknown as Record<string, number | string>);
@@ -29,6 +30,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
     if (curr < prev) return 'up'; // Lower rank is better
     if (curr > prev) return 'down';
     return null;
+  };
+
+  // Helper function to get team slug from ESPN ID
+  const getTeamSlug = (espnId: string | null | undefined): string | null => {
+    if (!espnId) return null;
+    // Find the team in allTeams by ESPN ID
+    const foundTeam = allTeams.find(t => t.espnId === espnId);
+    return foundTeam?.slug || null;
   };
 
   return (
@@ -200,7 +209,33 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
               {team.nextGame ? (
                 <div className="grid grid-cols-1 gap-2 align-middle items-center justify-between mt-2">
                     <p className="text-md leading-4 items-center flex flex-row gap-2 font-medium text-gray-900 mt-1" id="nextGame-teams">
-                        <img src={`${team.nextGame.away_team_logo}`} alt={`${team.nextGame.away_team} logo`} className="inline-block w-6 h-6" /> <strong>{team.nextGame.away_team}</strong> at <img src={`${team.nextGame.home_team_logo}`} alt={`${team.nextGame.home_team} logo`} className="inline-block w-6 h-6" />  <strong>{team.nextGame.home_team}</strong>
+                        {(() => {
+                          const awaySlug = getTeamSlug(team.nextGame.away_team_id);
+                          const homeSlug = getTeamSlug(team.nextGame.home_team_id);
+                          const awayTeam = awaySlug ? (
+                            <a href={`/${awaySlug}`} className="inline-flex items-center gap-2 hover:opacity-70 transition-opacity">
+                              <img src={`${team.nextGame.away_team_logo}`} alt={`${team.nextGame.away_team} logo`} className="inline-block w-6 h-6" />
+                              <strong>{team.nextGame.away_team}</strong>
+                            </a>
+                          ) : (
+                            <span className="inline-flex items-center gap-2">
+                              <img src={`${team.nextGame.away_team_logo}`} alt={`${team.nextGame.away_team} logo`} className="inline-block w-6 h-6" />
+                              <strong>{team.nextGame.away_team}</strong>
+                            </span>
+                          );
+                          const homeTeam = homeSlug ? (
+                            <a href={`/${homeSlug}`} className="inline-flex items-center gap-2 hover:opacity-70 transition-opacity">
+                              <img src={`${team.nextGame.home_team_logo}`} alt={`${team.nextGame.home_team} logo`} className="inline-block w-6 h-6" />
+                              <strong>{team.nextGame.home_team}</strong>
+                            </a>
+                          ) : (
+                            <span className="inline-flex items-center gap-2">
+                              <img src={`${team.nextGame.home_team_logo}`} alt={`${team.nextGame.home_team} logo`} className="inline-block w-6 h-6" />
+                              <strong>{team.nextGame.home_team}</strong>
+                            </span>
+                          );
+                          return <>{awayTeam} <span className="mx-1">at</span> {homeTeam}</>;
+                        })()}
                     </p>
                     <p className="text-xs text-gray-500 font-normal geist-mono" id="nextGame-details">
                       {new Date(team.nextGame.date).toLocaleDateString('en-US', { 
@@ -251,7 +286,26 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     
                     // Check if opponent is competitors[0] to determine if it's a road game
                     const isRoadGame = game.competitors[0].team_nickname === opponentComp.team_nickname;
-                    const opponentDisplay = (
+                    const opponentSlug = getTeamSlug(opponentComp.team_id);
+                    const opponentDisplay = opponentSlug ? (
+                      <a href={`/${opponentSlug}`} className="flex items-center gap-3 hover:opacity-70 transition-opacity">
+                        {opponentComp.logo && (
+                          <img 
+                            src={opponentComp.logo} 
+                            alt={opponentComp.team_nickname} 
+                            className="w-6 h-6 object-contain"
+                            loading="lazy"
+                          />
+                        )}
+                        <span>
+                          {isRoadGame && <span className="text-gray-500 font-light text-sm">at </span>}
+                          {opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 25 && (
+                            <span className="mx-1 text-xs font-medium text-gray-600">#{opponentComp.gameRank}</span>
+                          )}
+                          {opponentComp.team_nickname}
+                        </span>
+                      </a>
+                    ) : (
                       <div className="flex items-center gap-3">
                         {opponentComp.logo && (
                           <img 

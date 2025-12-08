@@ -123,6 +123,7 @@ function App() {
         teamsMap[team.slug] = {
           slug: team.slug,
           id: team.slug,
+          espnId: team.espnId,
           displayName: team.displayName,
           shortName: team.shortName,
           logo: team.logo,
@@ -229,6 +230,7 @@ function App() {
                 lastUpdated={lastUpdated}
                 formatRelativeTime={formatRelativeTime}
                 calculateTournamentOdds={calculateTournamentOdds}
+                allTeams={allTeams}
               />
             ))}
           </div>
