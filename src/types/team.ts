@@ -29,6 +29,16 @@ export type Team = NcaaNetData & {
   torvik?: number | string | null; // mapped in App to torvikRank
   wab?: number | string | null;
   nextGame?: NextGame | null;
+  tournamentOdds?: number | null;
+  previousTournamentOdds?: number | null;
+  oddsChange?: number | null;
+  previousBpi?: number | string | null;
+  previousSor?: number | string | null;
+  previousKpi?: number | string | null;
+  previousKenpom?: number | string | null;
+  previousTorvik?: number | string | null;
+  previousWab?: number | string | null;
+  previousNet?: number | string | null;
 };
 
 export type NextGame = {
@@ -36,7 +46,7 @@ export type NextGame = {
   home_team_logo?: string | null;
   away_team: string;
   away_team_logo?: string | null;
-  date_time: string;
+  date: string;
 };
 
 export type GameCompetitor = {
@@ -48,6 +58,7 @@ export type GameCompetitor = {
     value: number;
     displayValue: string;
   } | null;
+  gameRank?: number | null;
 };
 
 export type ScheduleGame = {

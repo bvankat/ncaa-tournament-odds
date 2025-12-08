@@ -1,6 +1,7 @@
 import React from 'react';
 import { Speedometer } from '@/components/Speedometer';
 import { RankingSparkline } from '@/components/RankingSparkline';
+import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import type { Team, TeamSchedule } from '@/types/team';
 
 type TeamViewProps = {
@@ -15,6 +16,20 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
   const primaryColor = team.primaryColor ? `#${team.primaryColor}` : '#000000';
   const secondaryColor = team.secondaryColor ? `#${team.secondaryColor}` : '#ffffff';
   const tournamentOdds = calculateTournamentOdds(team as unknown as Record<string, number | string>);
+
+  // Get odds change directly from team data
+  const oddsChange = team.oddsChange ?? null;
+
+  // Helper function to determine ranking direction (lower rank = better)
+  const getRankingDirection = (current: number | string | null | undefined, previous: number | string | null | undefined) => {
+    if (!current || !previous) return null;
+    const curr = typeof current === 'string' ? parseFloat(current) : current;
+    const prev = typeof previous === 'string' ? parseFloat(previous) : previous;
+    if (isNaN(curr) || isNaN(prev)) return null;
+    if (curr < prev) return 'up'; // Lower rank is better
+    if (curr > prev) return 'down';
+    return null;
+  };
 
   return (
     <div>
@@ -51,8 +66,25 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
               </div>
             </div>
 
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-4">
               <Speedometer value={tournamentOdds} />
+              {oddsChange !== null && (
+                <div className="flex items-center gap-2 text-sm font-semibold geist-mono">
+                  {oddsChange > 0 ? (
+                    <>
+                      <span className="text-green-300">+{oddsChange}% TODAY</span>
+                    </>
+                  ) : oddsChange < 0 ? (
+                    <>
+                      <span className="text-red-300">{oddsChange}% TODAY</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-gray-400 font-normal">No change today</span>
+                    </>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -73,37 +105,79 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">NET</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.net} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.net || '—'}</td>
+                  <td className="py-3 pl-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      {getRankingDirection(team.net, team.previousNet) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
+                      {getRankingDirection(team.net, team.previousNet) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
+                      <span className="text-gray-700 geist-mono">{team.net || '—'}</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">BPI</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.bpi} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.bpi || '—'}</td>
+                  <td className="py-3 pl-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      {getRankingDirection(team.bpi, team.previousBpi) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
+                      {getRankingDirection(team.bpi, team.previousBpi) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
+                      <span className="text-gray-700 geist-mono">{team.bpi || '—'}</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">SOR</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.sor} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.sor || '—'}</td>
+                  <td className="py-3 pl-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      {getRankingDirection(team.sor, team.previousSor) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
+                      {getRankingDirection(team.sor, team.previousSor) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
+                      <span className="text-gray-700 geist-mono">{team.sor || '—'}</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">KPI</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kpi} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.kpi || '—'}</td>
+                  <td className="py-3 pl-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      {getRankingDirection(team.kpi, team.previousKpi) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
+                      {getRankingDirection(team.kpi, team.previousKpi) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
+                      <span className="text-gray-700 geist-mono">{team.kpi || '—'}</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">KenPom</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kenpom} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.kenpom || '—'}</td>
+                  <td className="py-3 pl-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      {getRankingDirection(team.kenpom, team.previousKenpom) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
+                      {getRankingDirection(team.kenpom, team.previousKenpom) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
+                      <span className="text-gray-700 geist-mono">{team.kenpom || '—'}</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">Torvik</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.torvik} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.torvik || '—'}</td>
+                  <td className="py-3 pl-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      {getRankingDirection(team.torvik, team.previousTorvik) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
+                      {getRankingDirection(team.torvik, team.previousTorvik) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
+                      <span className="text-gray-700 geist-mono">{team.torvik || '—'}</span>
+                    </div>
+                  </td>
                 </tr>
                 <tr className="">
                   <td className="py-3 pr-4 text-gray-900 font-semibold">WAB</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.wab} color={primaryColor} /></td>
-                  <td className="py-3 pl-4 text-right text-gray-700 geist-mono">{team.wab || '—'}</td>
+                  <td className="py-3 pl-4 text-right">
+                    <div className="flex items-center justify-end gap-2">
+                      {getRankingDirection(team.wab, team.previousWab) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
+                      {getRankingDirection(team.wab, team.previousWab) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
+                      <span className="text-gray-700 geist-mono">{team.wab || '—'}</span>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -111,7 +185,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
           <div className="md:col-span-3 md:col-start-6">
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-              <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">RECORD</h3>
+              <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">OVERALL</h3>
               <div className="">
                 {team.record && (
                   <div>
@@ -128,7 +202,17 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     <p className="text-md leading-4 items-center flex flex-row gap-2 font-medium text-gray-900 mt-1" id="nextGame-teams">
                         <img src={`${team.nextGame.away_team_logo}`} alt={`${team.nextGame.away_team} logo`} className="inline-block w-6 h-6" /> <strong>{team.nextGame.away_team}</strong> at <img src={`${team.nextGame.home_team_logo}`} alt={`${team.nextGame.home_team} logo`} className="inline-block w-6 h-6" />  <strong>{team.nextGame.home_team}</strong>
                     </p>
-                    <p className="text-xs text-gray-500 font-normal geist-mono" id="nextGame-details">{team.nextGame.date_time}</p>
+                    <p className="text-xs text-gray-500 font-normal geist-mono" id="nextGame-details">
+                      {new Date(team.nextGame.date).toLocaleDateString('en-US', { 
+                        weekday: 'short', 
+                        month: 'short', 
+                        day: 'numeric' 
+                      })}{' '}
+                      {new Date(team.nextGame.date).toLocaleTimeString('en-US', { 
+                        hour: 'numeric', 
+                        minute: '2-digit' 
+                      })}
+                    </p>
                 </div>
               ) : (
                 <p className="text-sm text-gray-500 mt-2">No upcoming game scheduled</p>
@@ -178,7 +262,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                           />
                         )}
                         <span>
-                          {isRoadGame && <span className="text-gray-400 font-light text-sm">at </span>}
+                          {isRoadGame && <span className="text-gray-500 font-light text-sm">at </span>}
+                          {opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 25 && (
+                            <span className="mx-1 text-xs font-medium text-gray-600">#{opponentComp.gameRank}</span>
+                          )}
                           {opponentComp.team_nickname}
                         </span>
                       </div>

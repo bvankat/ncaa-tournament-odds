@@ -147,6 +147,16 @@ function App() {
           quad3: team.quad3,
           quad4: team.quad4,
           nextGame: team.nextGame,
+          tournamentOdds: team.tournamentOdds,
+          previousTournamentOdds: team.previousTournamentOdds,
+          oddsChange: team.oddsChange,
+          previousBpi: team.previousBpi,
+          previousSor: team.previousSor,
+          previousKpi: team.previousKpi,
+          previousKenpom: team.previousKenpom,
+          previousTorvik: team.previousTorvik,
+          previousWab: team.previousWab,
+          previousNet: team.previousNet,
         } as Team;
       });
       const teams = Object.values(teamsMap).sort((a, b) => a.displayName.localeCompare(b.displayName));
