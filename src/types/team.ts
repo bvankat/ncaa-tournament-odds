@@ -40,6 +40,7 @@ export type Team = NcaaNetData & {
   previousTorvik?: number | string | null;
   previousWab?: number | string | null;
   previousNet?: number | string | null;
+  confRecord?: string | null;
 };
 
 export type NextGame = {
