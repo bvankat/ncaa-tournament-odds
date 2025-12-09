@@ -193,14 +193,22 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
           </div>
           <div className="md:col-span-3 md:col-start-6">
 
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-              <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">OVERALL</h3>
-              <div className="">
+            <div className="bg-white flex flex-row rounded-lg shadow-sm border border-gray-200 mb-6">
+              <div className="border-r border-gray-200 px-6 py-6 text-center flex-1">
                 {team.record && (
                   <div>
                     <div className="text-2xl font-bold text-gray-900">{team.record}</div>
                   </div>
                 )}
+                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">OVERALL</h3>
+              </div>
+              <div className="py-6 px-6 text-center flex-1">
+                {team.confRecord && (
+                  <div > 
+                    <div className="text-2xl font-bold text-gray-900">{team.confRecord}</div>
+                  </div>
+                )}
+                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{team.conference}</h3>
               </div>
             </div>
             
