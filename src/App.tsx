@@ -138,6 +138,8 @@ function App() {
           net: team.net,
           record: team.record,
           conference: team.conference,
+          confRecord: team.confRecord,
+          confStandingsPosition: team.confStandingsPosition,
           home: team.home,
           road: team.road,
           neutral: team.neutral,
