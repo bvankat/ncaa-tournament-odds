@@ -14,7 +14,7 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: Head
   return (
     <>
       <nav className="bg-black text-white py-3 px-6 flex items-center justify-between">
-        <button onClick={onHome} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <button onClick={onHome} className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
           <svg id="gauge" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 13m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
             <path d="M13.45 11.55l2.05 -2.05"></path>
@@ -25,13 +25,13 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: Head
         <div className="flex items-center gap-3">
           <button
             onClick={() => onOpenPalette && onOpenPalette()}
-            className="hidden sm:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-md hover:bg-white/15 text-xs font-medium transition-colors"
+            className="hidden sm:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-md hover:bg-white/15 text-xs font-medium transition-colors cursor-pointer"
             title="Open command palette (⌘K)"
           >
             <span className="opacity-80">Team search</span>
             <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded border border-white/10 text-[10px] geist-mono">⌘K</span>
           </button>
-          <button onClick={() => setMenuOpen(true)} className="hover:opacity-80 transition-opacity">
+          <button onClick={() => setMenuOpen(true)} className="hover:opacity-80 transition-opacity cursor-pointer">
             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -47,7 +47,7 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: Head
           <div className="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 overflow-y-auto animate-slide-in">
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
               <h2 className="text-2xl font-bold text-gray-900">Select a team</h2>
-              <button onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-gray-900">
+              <button onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-gray-900 cursor-pointer">
                 <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -62,7 +62,7 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: Head
                     onTeamSelect(team.slug);
                     setMenuOpen(false);
                   }}
-                  className="w-full flex items-center gap-3 p-3 hover:bg-gray-100 rounded-lg transition-colors text-left"
+                  className="w-full flex items-center gap-3 p-3 hover:bg-gray-100 rounded-lg transition-colors text-left cursor-pointer"
                 >
                   <img src={team.logo ?? ''} alt={team.shortName} className="w-8 h-8 object-contain" />
                   <span className="text-gray-900 font-medium">{team.displayName}</span>
