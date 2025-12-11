@@ -47,8 +47,8 @@ export function LandingView({
             </div>
           )}
           <div className="flex flex-col mb-6 px-4 lg:px-0">
-            <h1 className="text-center md:text-left text-4xl lg:text-5xl font-extrabold mb-4 text-balance">NCAA Men's Basketball Tournament Odds</h1>
-            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Select any team to view updated rankings and current chances for making the NCAA tournament.</p>
+            <h1 className="text-center md:text-left text-4xl lg:text-5xl font-extrabold mb-4 text-balance">NCAA Tournament Odds Machine</h1>
+            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's at-large bid chances</p>
           </div>
           <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" />
