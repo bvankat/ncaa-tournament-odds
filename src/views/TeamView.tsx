@@ -21,14 +21,15 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
   // Get odds change directly from team data
   const oddsChange = team.oddsChange ?? null;
 
-  // Helper function to determine ranking direction (lower rank = better)
-  const getRankingDirection = (current: number | string | null | undefined, previous: number | string | null | undefined) => {
+  // Helper function to determine ranking direction and delta (lower rank = better)
+  const getRankingChange = (current: number | string | null | undefined, previous: number | string | null | undefined): { direction: 'up' | 'down', delta: number } | null => {
     if (!current || !previous) return null;
     const curr = typeof current === 'string' ? parseFloat(current) : current;
     const prev = typeof previous === 'string' ? parseFloat(previous) : previous;
     if (isNaN(curr) || isNaN(prev)) return null;
-    if (curr < prev) return 'up'; // Lower rank is better
-    if (curr > prev) return 'down';
+    const delta = Math.abs(prev - curr);
+    if (curr < prev) return { direction: 'up', delta }; // Lower rank is better
+    if (curr > prev) return { direction: 'down', delta };
     return null;
   };
 
@@ -115,10 +116,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   <td className="py-3 pr-4 text-gray-900 font-semibold">NET</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.net} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      {getRankingDirection(team.net, team.previousNet) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
-                      {getRankingDirection(team.net, team.previousNet) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
-                      <span className="text-gray-700 geist-mono">{team.net || '—'}</span>
+                    <div className="flex items-center justify-end gap-4">
+                      {(() => {
+                        const change = getRankingChange(team.net, team.previousNet);
+                        if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
+                        if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
+                        return null;
+                      })()}
+                      <span className="text-gray-800 font-semibold geist-mono">{team.net || '—'}</span>
                     </div>
                   </td>
                 </tr>
@@ -126,10 +131,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   <td className="py-3 pr-4 text-gray-900 font-semibold">BPI</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.bpi} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      {getRankingDirection(team.bpi, team.previousBpi) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
-                      {getRankingDirection(team.bpi, team.previousBpi) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
-                      <span className="text-gray-700 geist-mono">{team.bpi || '—'}</span>
+                    <div className="flex items-center justify-end gap-4">
+                      {(() => {
+                        const change = getRankingChange(team.bpi, team.previousBpi);
+                        if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
+                        if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
+                        return null;
+                      })()}
+                      <span className="text-gray-800 font-semibold geist-mono">{team.bpi || '—'}</span>
                     </div>
                   </td>
                 </tr>
@@ -137,10 +146,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   <td className="py-3 pr-4 text-gray-900 font-semibold">SOR</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.sor} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      {getRankingDirection(team.sor, team.previousSor) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
-                      {getRankingDirection(team.sor, team.previousSor) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
-                      <span className="text-gray-700 geist-mono">{team.sor || '—'}</span>
+                    <div className="flex items-center justify-end gap-4">
+                      {(() => {
+                        const change = getRankingChange(team.sor, team.previousSor);
+                        if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
+                        if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
+                        return null;
+                      })()}
+                      <span className="text-gray-800 font-semibold geist-mono">{team.sor || '—'}</span>
                     </div>
                   </td>
                 </tr>
@@ -148,10 +161,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   <td className="py-3 pr-4 text-gray-900 font-semibold">KPI</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kpi} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      {getRankingDirection(team.kpi, team.previousKpi) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
-                      {getRankingDirection(team.kpi, team.previousKpi) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
-                      <span className="text-gray-700 geist-mono">{team.kpi || '—'}</span>
+                    <div className="flex items-center justify-end gap-4">
+                      {(() => {
+                        const change = getRankingChange(team.kpi, team.previousKpi);
+                        if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
+                        if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
+                        return null;
+                      })()}
+                      <span className="text-gray-800 font-semibold geist-mono">{team.kpi || '—'}</span>
                     </div>
                   </td>
                 </tr>
@@ -159,10 +176,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   <td className="py-3 pr-4 text-gray-900 font-semibold">KenPom</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.kenpom} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      {getRankingDirection(team.kenpom, team.previousKenpom) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
-                      {getRankingDirection(team.kenpom, team.previousKenpom) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
-                      <span className="text-gray-700 geist-mono">{team.kenpom || '—'}</span>
+                    <div className="flex items-center justify-end gap-4">
+                      {(() => {
+                        const change = getRankingChange(team.kenpom, team.previousKenpom);
+                        if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
+                        if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
+                        return null;
+                      })()}
+                      <span className="text-gray-800 font-semibold geist-mono">{team.kenpom || '—'}</span>
                     </div>
                   </td>
                 </tr>
@@ -170,10 +191,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   <td className="py-3 pr-4 text-gray-900 font-semibold">Torvik</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.torvik} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      {getRankingDirection(team.torvik, team.previousTorvik) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
-                      {getRankingDirection(team.torvik, team.previousTorvik) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
-                      <span className="text-gray-700 geist-mono">{team.torvik || '—'}</span>
+                    <div className="flex items-center justify-end gap-4">
+                      {(() => {
+                        const change = getRankingChange(team.torvik, team.previousTorvik);
+                        if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
+                        if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
+                        return null;
+                      })()}
+                      <span className="text-gray-800 font-semibold geist-mono">{team.torvik || '—'}</span>
                     </div>
                   </td>
                 </tr>
@@ -181,10 +206,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   <td className="py-3 pr-4 text-gray-900 font-semibold">WAB</td>
                   <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.wab} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
-                    <div className="flex items-center justify-end gap-2">
-                      {getRankingDirection(team.wab, team.previousWab) === 'up' && <ArrowUp className="w-3 h-3 text-green-600" />}
-                      {getRankingDirection(team.wab, team.previousWab) === 'down' && <ArrowDown className="w-3 h-3 text-red-600" />}
-                      <span className="text-gray-700 geist-mono">{team.wab || '—'}</span>
+                    <div className="flex items-center justify-end gap-4">
+                      {(() => {
+                        const change = getRankingChange(team.wab, team.previousWab);
+                        if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
+                        if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
+                        return null;
+                      })()}
+                      <span className="text-gray-800 font-semibold geist-mono">{team.wab || '—'}</span>
                     </div>
                   </td>
                 </tr>
