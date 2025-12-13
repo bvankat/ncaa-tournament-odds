@@ -25,7 +25,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
           {/* Left Column - Bubble Watch */}
           {sortedBubbleTeams.length > 0 && (
             <div>
-              <h2 className="text-2xl font-extrabold text-gray-900 mb-2">
+              <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">
                 Bubble Watch
               </h2>
               <p className="text-gray-600 mb-6 text-sm">
@@ -80,10 +80,10 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
             {/* Biggest Risers */}
             {moversData.biggestRisers.length > 0 && (
               <div>
-                <h2 className="text-2xl font-extrabold text-gray-900 mb-4">
+                <h2 className="text-3xl font-extrabold text-gray-900 mb-4 ibm-plex-sans">
                   Today's Biggest Movers
                 </h2>
-                <h3 className="text-lg font-medium mb-4 flex items-center gap-1">
+                <h3 className="text-lg font-medium mb-4 flex items-center gap-1 ibm-plex-sans">
                   <ArrowUp className="w-5 h-5 text-green-700" />
                   Highest Risers
                 </h3>
@@ -117,7 +117,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
             {/* Biggest Fallers */}
             {moversData.biggestFallers.length > 0 && (
               <div>
-                <h3 className="text-lg font-medium mb-4 flex items-center gap-1">
+                <h3 className="text-lg font-medium mb-4 flex items-center gap-1 ibm-plex-sans">
                   <ArrowDown className="w-5 h-5 text-red-700" />
                   Falling Fast
                 </h3>

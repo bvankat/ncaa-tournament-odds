@@ -46,7 +46,7 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: Head
           <div className="fixed inset-0 bg-black/50 z-40 transition-opacity" onClick={() => setMenuOpen(false)}></div>
           <div className="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 overflow-y-auto animate-slide-in">
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-gray-900">Select a team</h2>
+              <h2 className="text-2xl font-bold text-gray-900 ibm-plex-sans">Select a team</h2>
               <button onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-gray-900 cursor-pointer">
                 <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>

@@ -67,7 +67,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                 </div>
               )}
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
-                <h1 className="text-3xl lg:text-5xl px-6 lg:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white">
+                <h1 className="text-3xl lg:text-5xl px-6 lg:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white ibm-plex-sans">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
@@ -298,7 +298,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
       {(team.record || team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
         <div id="schedule-details" className="bg-gray-50">
           <div className="px-6 py-12 lg:px-12 lg:py-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{ team.shortName } schedule</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 ibm-plex-sans">{ team.shortName } schedule</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-12">
 

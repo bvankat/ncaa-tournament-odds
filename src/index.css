@@ -10,6 +10,7 @@ html, body { font-family: var(--font-sans); }
 
 .font-geist { font-family: var(--font-sans); }
 .geist-mono { font-family: var(--font-mono); }
+.ibm-plex-sans { font-family: 'IBM Plex Sans Condensed', sans-serif; }
 
 /* Heading styles with IBM Plex Sans */
 h1, h2, h3, h4, h5, h6 {
