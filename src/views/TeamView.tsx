@@ -237,7 +237,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     <div className="text-2xl font-bold text-gray-900">{team.confRecord}</div>
                   </div>
                 )}
-                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{team.conference}</h3>
+                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{team.confStandingsPosition}</h3>
               </div>
             </div>
             
