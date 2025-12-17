@@ -1,14 +1,32 @@
 {
-  "lastUpdated": "2025-12-16T23:04:59.894704",
+  "lastUpdated": "2025-12-17T09:55:24.665054",
   "biggestRisers": [
     {
       "espnId": "2633",
       "slug": "tennessee-volunteers",
       "displayName": "Tennessee Volunteers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
-      "currentOdds": 90,
+      "currentOdds": 91,
       "previousOdds": 76,
-      "change": 14
+      "change": 15
+    },
+    {
+      "espnId": "28",
+      "slug": "uc-san-diego-tritons",
+      "displayName": "UC San Diego Tritons",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/28.png",
+      "currentOdds": 36,
+      "previousOdds": 23,
+      "change": 13
+    },
+    {
+      "espnId": "228",
+      "slug": "clemson-tigers",
+      "displayName": "Clemson Tigers",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+      "currentOdds": 78,
+      "previousOdds": 66,
+      "change": 12
     },
     {
       "espnId": "251",
@@ -18,24 +36,6 @@
       "currentOdds": 36,
       "previousOdds": 28,
       "change": 8
-    },
-    {
-      "espnId": "228",
-      "slug": "clemson-tigers",
-      "displayName": "Clemson Tigers",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
-      "currentOdds": 75,
-      "previousOdds": 69,
-      "change": 6
-    },
-    {
-      "espnId": "239",
-      "slug": "baylor-bears",
-      "displayName": "Baylor Bears",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
-      "currentOdds": 78,
-      "previousOdds": 73,
-      "change": 5
     }
   ],
   "biggestFallers": [
@@ -44,18 +44,18 @@
       "slug": "butler-bulldogs",
       "displayName": "Butler Bulldogs",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
-      "currentOdds": 32,
+      "currentOdds": 26,
       "previousOdds": 42,
-      "change": -10
+      "change": -16
     },
     {
-      "espnId": "87",
-      "slug": "notre-dame-fighting-irish",
-      "displayName": "Notre Dame Fighting Irish",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
-      "currentOdds": 38,
-      "previousOdds": 43,
-      "change": -5
+      "espnId": "201",
+      "slug": "oklahoma-sooners",
+      "displayName": "Oklahoma Sooners",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "currentOdds": 40,
+      "previousOdds": 53,
+      "change": -13
     },
     {
       "espnId": "57",
@@ -67,12 +67,12 @@
       "change": -4
     },
     {
-      "espnId": "201",
-      "slug": "oklahoma-sooners",
-      "displayName": "Oklahoma Sooners",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
-      "currentOdds": 49,
-      "previousOdds": 53,
+      "espnId": "2244",
+      "slug": "george-mason-patriots",
+      "displayName": "George Mason Patriots",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
+      "currentOdds": 18,
+      "previousOdds": 22,
       "change": -4
     }
   ],
@@ -110,14 +110,6 @@
       "distanceFrom50": 1
     },
     {
-      "espnId": "201",
-      "slug": "oklahoma-sooners",
-      "displayName": "Oklahoma Sooners",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
-      "currentOdds": 49,
-      "distanceFrom50": 1
-    },
-    {
       "espnId": "38",
       "slug": "colorado-buffaloes",
       "displayName": "Colorado Buffaloes",
@@ -132,6 +124,14 @@
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
       "currentOdds": 51,
       "distanceFrom50": 1
+    },
+    {
+      "espnId": "84",
+      "slug": "indiana-hoosiers",
+      "displayName": "Indiana Hoosiers",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+      "currentOdds": 54,
+      "distanceFrom50": 4
     },
     {
       "espnId": "26",
@@ -150,12 +150,12 @@
       "distanceFrom50": 4
     },
     {
-      "espnId": "84",
-      "slug": "indiana-hoosiers",
-      "displayName": "Indiana Hoosiers",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-      "currentOdds": 55,
-      "distanceFrom50": 5
+      "espnId": "154",
+      "slug": "wake-forest-demon-deacons",
+      "displayName": "Wake Forest Demon Deacons",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+      "currentOdds": 42,
+      "distanceFrom50": 8
     }
   ]
 }
