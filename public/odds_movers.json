@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2025-12-16T09:12:31.407390",
+  "lastUpdated": "2025-12-16T23:04:59.894704",
   "biggestRisers": [
+    {
+      "espnId": "2633",
+      "slug": "tennessee-volunteers",
+      "displayName": "Tennessee Volunteers",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+      "currentOdds": 90,
+      "previousOdds": 76,
+      "change": 14
+    },
+    {
+      "espnId": "251",
+      "slug": "texas-longhorns",
+      "displayName": "Texas Longhorns",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "currentOdds": 36,
+      "previousOdds": 28,
+      "change": 8
+    },
+    {
+      "espnId": "228",
+      "slug": "clemson-tigers",
+      "displayName": "Clemson Tigers",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+      "currentOdds": 75,
+      "previousOdds": 69,
+      "change": 6
+    },
     {
       "espnId": "239",
       "slug": "baylor-bears",
@@ -9,71 +36,44 @@
       "currentOdds": 78,
       "previousOdds": 73,
       "change": 5
-    },
-    {
-      "espnId": "2377",
-      "slug": "mcneese-cowboys",
-      "displayName": "McNeese Cowboys",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
-      "currentOdds": 12,
-      "previousOdds": 8,
-      "change": 4
-    },
-    {
-      "espnId": "197",
-      "slug": "oklahoma-state-cowboys",
-      "displayName": "Oklahoma State Cowboys",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
-      "currentOdds": 58,
-      "previousOdds": 55,
-      "change": 3
-    },
-    {
-      "espnId": "84",
-      "slug": "indiana-hoosiers",
-      "displayName": "Indiana Hoosiers",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-      "currentOdds": 55,
-      "previousOdds": 54,
-      "change": 1
     }
   ],
   "biggestFallers": [
+    {
+      "espnId": "2086",
+      "slug": "butler-bulldogs",
+      "displayName": "Butler Bulldogs",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
+      "currentOdds": 32,
+      "previousOdds": 42,
+      "change": -10
+    },
     {
       "espnId": "87",
       "slug": "notre-dame-fighting-irish",
       "displayName": "Notre Dame Fighting Irish",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
-      "currentOdds": 39,
+      "currentOdds": 38,
       "previousOdds": 43,
+      "change": -5
+    },
+    {
+      "espnId": "57",
+      "slug": "florida-gators",
+      "displayName": "Florida Gators",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "currentOdds": 81,
+      "previousOdds": 85,
       "change": -4
     },
     {
-      "espnId": "228",
-      "slug": "clemson-tigers",
-      "displayName": "Clemson Tigers",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
-      "currentOdds": 66,
-      "previousOdds": 69,
-      "change": -3
-    },
-    {
-      "espnId": "2628",
-      "slug": "tcu-horned-frogs",
-      "displayName": "TCU Horned Frogs",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-      "currentOdds": 7,
-      "previousOdds": 10,
-      "change": -3
-    },
-    {
-      "espnId": "26",
-      "slug": "ucla-bruins",
-      "displayName": "UCLA Bruins",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-      "currentOdds": 53,
-      "previousOdds": 54,
-      "change": -1
+      "espnId": "201",
+      "slug": "oklahoma-sooners",
+      "displayName": "Oklahoma Sooners",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "currentOdds": 49,
+      "previousOdds": 53,
+      "change": -4
     }
   ],
   "bubbleTeams": [
@@ -82,6 +82,14 @@
       "slug": "wisconsin-badgers",
       "displayName": "Wisconsin Badgers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+      "currentOdds": 50,
+      "distanceFrom50": 0
+    },
+    {
+      "espnId": "259",
+      "slug": "virginia-tech-hokies",
+      "displayName": "Virginia Tech Hokies",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
       "currentOdds": 50,
       "distanceFrom50": 0
     },
@@ -102,10 +110,18 @@
       "distanceFrom50": 1
     },
     {
-      "espnId": "259",
-      "slug": "virginia-tech-hokies",
-      "displayName": "Virginia Tech Hokies",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "espnId": "201",
+      "slug": "oklahoma-sooners",
+      "displayName": "Oklahoma Sooners",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "currentOdds": 49,
+      "distanceFrom50": 1
+    },
+    {
+      "espnId": "38",
+      "slug": "colorado-buffaloes",
+      "displayName": "Colorado Buffaloes",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
       "currentOdds": 51,
       "distanceFrom50": 1
     },
@@ -118,28 +134,12 @@
       "distanceFrom50": 1
     },
     {
-      "espnId": "38",
-      "slug": "colorado-buffaloes",
-      "displayName": "Colorado Buffaloes",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
-      "currentOdds": 52,
-      "distanceFrom50": 2
-    },
-    {
       "espnId": "26",
       "slug": "ucla-bruins",
       "displayName": "UCLA Bruins",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-      "currentOdds": 53,
-      "distanceFrom50": 3
-    },
-    {
-      "espnId": "201",
-      "slug": "oklahoma-sooners",
-      "displayName": "Oklahoma Sooners",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
-      "currentOdds": 53,
-      "distanceFrom50": 3
+      "currentOdds": 54,
+      "distanceFrom50": 4
     },
     {
       "espnId": "2116",
