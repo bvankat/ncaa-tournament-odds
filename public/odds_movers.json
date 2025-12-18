@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2025-12-17T09:55:24.665054",
+  "lastUpdated": "2025-12-17T23:21:47.899103",
   "biggestRisers": [
     {
       "espnId": "2633",
       "slug": "tennessee-volunteers",
       "displayName": "Tennessee Volunteers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
-      "currentOdds": 91,
+      "currentOdds": 98,
       "previousOdds": 76,
-      "change": 15
+      "change": 22
     },
     {
       "espnId": "28",
       "slug": "uc-san-diego-tritons",
       "displayName": "UC San Diego Tritons",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/28.png",
-      "currentOdds": 36,
+      "currentOdds": 44,
       "previousOdds": 23,
-      "change": 13
+      "change": 21
     },
     {
       "espnId": "228",
       "slug": "clemson-tigers",
       "displayName": "Clemson Tigers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
-      "currentOdds": 78,
+      "currentOdds": 80,
       "previousOdds": 66,
-      "change": 12
+      "change": 14
     },
     {
       "espnId": "251",
       "slug": "texas-longhorns",
       "displayName": "Texas Longhorns",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
-      "currentOdds": 36,
+      "currentOdds": 40,
       "previousOdds": 28,
-      "change": 8
+      "change": 12
     }
   ],
   "biggestFallers": [
@@ -44,52 +44,44 @@
       "slug": "butler-bulldogs",
       "displayName": "Butler Bulldogs",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
-      "currentOdds": 26,
+      "currentOdds": 21,
       "previousOdds": 42,
-      "change": -16
+      "change": -21
     },
     {
       "espnId": "201",
       "slug": "oklahoma-sooners",
       "displayName": "Oklahoma Sooners",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
-      "currentOdds": 40,
+      "currentOdds": 35,
       "previousOdds": 53,
-      "change": -13
+      "change": -18
+    },
+    {
+      "espnId": "154",
+      "slug": "wake-forest-demon-deacons",
+      "displayName": "Wake Forest Demon Deacons",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+      "currentOdds": 27,
+      "previousOdds": 44,
+      "change": -17
     },
     {
       "espnId": "57",
       "slug": "florida-gators",
       "displayName": "Florida Gators",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
-      "currentOdds": 81,
+      "currentOdds": 80,
       "previousOdds": 85,
-      "change": -4
-    },
-    {
-      "espnId": "2244",
-      "slug": "george-mason-patriots",
-      "displayName": "George Mason Patriots",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
-      "currentOdds": 18,
-      "previousOdds": 22,
-      "change": -4
+      "change": -5
     }
   ],
   "bubbleTeams": [
     {
-      "espnId": "275",
-      "slug": "wisconsin-badgers",
-      "displayName": "Wisconsin Badgers",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
-      "currentOdds": 50,
-      "distanceFrom50": 0
-    },
-    {
-      "espnId": "259",
-      "slug": "virginia-tech-hokies",
-      "displayName": "Virginia Tech Hokies",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "espnId": "9",
+      "slug": "arizona-state-sun-devils",
+      "displayName": "Arizona State Sun Devils",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
       "currentOdds": 50,
       "distanceFrom50": 0
     },
@@ -110,18 +102,26 @@
       "distanceFrom50": 1
     },
     {
-      "espnId": "38",
-      "slug": "colorado-buffaloes",
-      "displayName": "Colorado Buffaloes",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+      "espnId": "275",
+      "slug": "wisconsin-badgers",
+      "displayName": "Wisconsin Badgers",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
       "currentOdds": 51,
       "distanceFrom50": 1
     },
     {
-      "espnId": "9",
-      "slug": "arizona-state-sun-devils",
-      "displayName": "Arizona State Sun Devils",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+      "espnId": "259",
+      "slug": "virginia-tech-hokies",
+      "displayName": "Virginia Tech Hokies",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "currentOdds": 49,
+      "distanceFrom50": 1
+    },
+    {
+      "espnId": "38",
+      "slug": "colorado-buffaloes",
+      "displayName": "Colorado Buffaloes",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
       "currentOdds": 51,
       "distanceFrom50": 1
     },
@@ -142,20 +142,20 @@
       "distanceFrom50": 4
     },
     {
+      "espnId": "28",
+      "slug": "uc-san-diego-tritons",
+      "displayName": "UC San Diego Tritons",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/28.png",
+      "currentOdds": 44,
+      "distanceFrom50": 6
+    },
+    {
       "espnId": "2116",
       "slug": "ucf-knights",
       "displayName": "UCF Knights",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
-      "currentOdds": 54,
-      "distanceFrom50": 4
-    },
-    {
-      "espnId": "154",
-      "slug": "wake-forest-demon-deacons",
-      "displayName": "Wake Forest Demon Deacons",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
-      "currentOdds": 42,
-      "distanceFrom50": 8
+      "currentOdds": 57,
+      "distanceFrom50": 7
     }
   ]
 }
