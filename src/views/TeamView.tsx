@@ -41,6 +41,18 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
     return foundTeam?.slug || null;
   };
 
+  // Helper function to format month names
+  const formatMonth = (date: Date): string => {
+    const monthNames = ['Jan.', 'Feb.', 'March', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+    return monthNames[date.getMonth()];
+  };
+
+  // Helper function to format time, removing :00 minutes for unplayed games
+  const formatGameTime = (date: Date): string => {
+    const timeString = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+    return timeString.replace(/:00\s/, ' ');
+  };
+
   return (
     <div>
       <div
@@ -373,7 +385,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     
                     if (hasScores) {
                       // Game has been played - show date only
-                      dateDisplay = gameDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                      dateDisplay = `${formatMonth(gameDate)} ${gameDate.getDate()}`;
                       
                       // Determine winner and format score
                       const winner = game.competitors.find(c => c.winner);
@@ -394,9 +406,9 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                       }
                     } else {
                       // Game hasn't been played yet - show date and time
-                      dateDisplay = gameDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                      const timeDisplay = gameDate.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
-                      dateDisplay = <>{dateDisplay} <span className="ml-2 text-[10px] text-gray-400">{timeDisplay}</span></>;
+                      const formattedDate = `${formatMonth(gameDate)} ${gameDate.getDate()}`;
+                      const timeDisplay = formatGameTime(gameDate);
+                      dateDisplay = <>{formattedDate} <span className="ml-2 text-[10px] text-gray-400">{timeDisplay}</span></>;
                       resultDisplay = '—';
                     }
                     
