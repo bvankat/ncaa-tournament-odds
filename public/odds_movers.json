@@ -1,23 +1,32 @@
 {
-  "lastUpdated": "2025-12-18T09:30:48.931183",
+  "lastUpdated": "2025-12-18T13:22:58.771325",
   "biggestRisers": [
     {
       "espnId": "26",
       "slug": "ucla-bruins",
       "displayName": "UCLA Bruins",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-      "currentOdds": 65,
+      "currentOdds": 69,
       "previousOdds": 54,
-      "change": 11
+      "change": 15
     },
     {
       "espnId": "156",
       "slug": "creighton-bluejays",
       "displayName": "Creighton Bluejays",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/156.png",
-      "currentOdds": 13,
+      "currentOdds": 16,
       "previousOdds": 4,
-      "change": 9
+      "change": 12
+    },
+    {
+      "espnId": "139",
+      "slug": "saint-louis-billikens",
+      "displayName": "Saint Louis Billikens",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png",
+      "currentOdds": 92,
+      "previousOdds": 82,
+      "change": 10
     },
     {
       "espnId": "28",
@@ -27,15 +36,6 @@
       "currentOdds": 44,
       "previousOdds": 36,
       "change": 8
-    },
-    {
-      "espnId": "2633",
-      "slug": "tennessee-volunteers",
-      "displayName": "Tennessee Volunteers",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
-      "currentOdds": 98,
-      "previousOdds": 91,
-      "change": 7
     }
   ],
   "biggestFallers": [
@@ -44,18 +44,18 @@
       "slug": "wake-forest-demon-deacons",
       "displayName": "Wake Forest Demon Deacons",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
-      "currentOdds": 27,
+      "currentOdds": 19,
       "previousOdds": 42,
-      "change": -15
+      "change": -23
     },
     {
       "espnId": "57",
       "slug": "florida-gators",
       "displayName": "Florida Gators",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
-      "currentOdds": 70,
+      "currentOdds": 69,
       "previousOdds": 81,
-      "change": -11
+      "change": -12
     },
     {
       "espnId": "2086",
@@ -78,10 +78,10 @@
   ],
   "bubbleTeams": [
     {
-      "espnId": "152",
-      "slug": "nc-state-wolfpack",
-      "displayName": "NC State Wolfpack",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+      "espnId": "275",
+      "slug": "wisconsin-badgers",
+      "displayName": "Wisconsin Badgers",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
       "currentOdds": 50,
       "distanceFrom50": 0
     },
@@ -94,10 +94,10 @@
       "distanceFrom50": 1
     },
     {
-      "espnId": "275",
-      "slug": "wisconsin-badgers",
-      "displayName": "Wisconsin Badgers",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+      "espnId": "152",
+      "slug": "nc-state-wolfpack",
+      "displayName": "NC State Wolfpack",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
       "currentOdds": 51,
       "distanceFrom50": 1
     },
@@ -122,8 +122,8 @@
       "slug": "arizona-state-sun-devils",
       "displayName": "Arizona State Sun Devils",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
-      "currentOdds": 48,
-      "distanceFrom50": 2
+      "currentOdds": 47,
+      "distanceFrom50": 3
     },
     {
       "espnId": "84",
@@ -142,20 +142,20 @@
       "distanceFrom50": 6
     },
     {
-      "espnId": "2116",
-      "slug": "ucf-knights",
-      "displayName": "UCF Knights",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
-      "currentOdds": 57,
-      "distanceFrom50": 7
-    },
-    {
       "espnId": "197",
       "slug": "oklahoma-state-cowboys",
       "displayName": "Oklahoma State Cowboys",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
       "currentOdds": 57,
       "distanceFrom50": 7
+    },
+    {
+      "espnId": "222",
+      "slug": "villanova-wildcats",
+      "displayName": "Villanova Wildcats",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png",
+      "currentOdds": 58,
+      "distanceFrom50": 8
     }
   ]
 }
