@@ -68,7 +68,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                             <div className={`flex items-center justify-end gap-1 ${
                               team.change > 0 ? 'text-green-800/50' : 'text-red-800/50'
                             }`}>
-                              <span className="font-light geist-mono text-xs">
+                              <span className="font-medium geist-mono text-xs">
                                 {team.change > 0 ? '+' : ''}{team.change}%
                               </span>
                             </div>
