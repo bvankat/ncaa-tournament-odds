@@ -83,7 +83,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
-                  NCAA Tournament chances for {team.shortName} based on its current team-sheet ranks
+                  At-large bid chances for {team.shortName} based on its current team-sheet ranks
                 </p>
               </div>
             </div>
