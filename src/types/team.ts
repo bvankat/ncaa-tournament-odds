@@ -93,6 +93,8 @@ export type BubbleTeam = {
   displayName: string;
   logo: string;
   currentOdds: number;
+  previousOdds: number | null;
+  change: number;
   distanceFrom50: number;
 };
 

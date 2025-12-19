@@ -38,6 +38,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                       <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                         Team
                       </th>
+                      <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase"></th>
                       <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                         Odds
                       </th>
@@ -61,6 +62,20 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                               {team.displayName}
                             </span>
                           </div>
+                        </td>
+                        <td className="py-3 px-4 text-right">
+                          {team.change !== 0 && (
+                            <div className={`flex items-center justify-end gap-1 ${
+                              team.change > 0 ? 'text-green-800/50' : 'text-red-800/50'
+                            }`}>
+                              <span className="font-light geist-mono text-xs">
+                                {team.change > 0 ? '+' : ''}{team.change}%
+                              </span>
+                            </div>
+                          )}
+                          {team.change === 0 && (
+                            <span className="text-gray-400 geist-mono text-xs"></span>
+                          )}
                         </td>
                         <td className="py-3 px-4 text-right text-md">
                           <span className="font-medium geist-mono">
@@ -103,8 +118,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                         {team.displayName}
                       </span>
                       <div className="flex items-center gap-1 text-green-700">
-                        <ArrowUp className="w-4 h-4" />
-                        <span className="font-bold geist-mono text-base">
+                          <span className="font-bold geist-mono text-base">
                           +{team.change}%
                         </span>
                       </div>
@@ -137,7 +151,6 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                         {team.displayName}
                       </span>
                       <div className="flex items-center gap-1 text-red-700">
-                        <ArrowDown className="w-4 h-4" />
                         <span className="font-bold geist-mono text-base">
                           {team.change}%
                         </span>
