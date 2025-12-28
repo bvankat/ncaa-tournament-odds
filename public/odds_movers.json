@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-28T01:09:37.872104",
+  "lastUpdated": "2025-12-28T16:06:01.848350",
   "biggestRisers": [
     {
       "espnId": "26",
@@ -11,6 +11,15 @@
       "change": 4
     },
     {
+      "espnId": "194",
+      "slug": "ohio-state-buckeyes",
+      "displayName": "Ohio State Buckeyes",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "currentOdds": 65,
+      "previousOdds": 62,
+      "change": 3
+    },
+    {
       "espnId": "277",
       "slug": "west-virginia-mountaineers",
       "displayName": "West Virginia Mountaineers",
@@ -20,21 +29,12 @@
       "change": 3
     },
     {
-      "espnId": "61",
-      "slug": "georgia-bulldogs",
-      "displayName": "Georgia Bulldogs",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
-      "currentOdds": 95,
-      "previousOdds": 94,
-      "change": 1
-    },
-    {
-      "espnId": "2287",
-      "slug": "illinois-state-redbirds",
-      "displayName": "Illinois State Redbirds",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
-      "currentOdds": 2,
-      "previousOdds": 1,
+      "espnId": "2599",
+      "slug": "st-johns-red-storm",
+      "displayName": "St. John's Red Storm",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2599.png",
+      "currentOdds": 73,
+      "previousOdds": 72,
       "change": 1
     }
   ],
@@ -49,6 +49,24 @@
       "change": -5
     },
     {
+      "espnId": "2244",
+      "slug": "george-mason-patriots",
+      "displayName": "George Mason Patriots",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
+      "currentOdds": 7,
+      "previousOdds": 10,
+      "change": -3
+    },
+    {
+      "espnId": "2306",
+      "slug": "kansas-state-wildcats",
+      "displayName": "Kansas State Wildcats",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+      "currentOdds": 22,
+      "previousOdds": 24,
+      "change": -2
+    },
+    {
       "espnId": "2541",
       "slug": "santa-clara-broncos",
       "displayName": "Santa Clara Broncos",
@@ -56,24 +74,6 @@
       "currentOdds": 6,
       "previousOdds": 8,
       "change": -2
-    },
-    {
-      "espnId": "25",
-      "slug": "california-golden-bears",
-      "displayName": "California Golden Bears",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
-      "currentOdds": 47,
-      "previousOdds": 48,
-      "change": -1
-    },
-    {
-      "espnId": "61",
-      "slug": "georgia-bulldogs",
-      "displayName": "Georgia Bulldogs",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
-      "currentOdds": 95,
-      "previousOdds": 94,
-      "change": 1
     }
   ],
   "bubbleTeams": [
@@ -82,10 +82,10 @@
       "slug": "oklahoma-state-cowboys",
       "displayName": "Oklahoma State Cowboys",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
-      "currentOdds": 51,
+      "currentOdds": 52,
       "previousOdds": 51,
-      "change": 0,
-      "distanceFrom50": 1
+      "change": 1,
+      "distanceFrom50": 2
     },
     {
       "espnId": "259",
@@ -132,10 +132,10 @@
       "slug": "indiana-hoosiers",
       "displayName": "Indiana Hoosiers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-      "currentOdds": 56,
+      "currentOdds": 55,
       "previousOdds": 56,
-      "change": 0,
-      "distanceFrom50": 6
+      "change": -1,
+      "distanceFrom50": 5
     },
     {
       "espnId": "2086",
@@ -146,16 +146,6 @@
       "previousOdds": 59,
       "change": 0,
       "distanceFrom50": 9
-    },
-    {
-      "espnId": "194",
-      "slug": "ohio-state-buckeyes",
-      "displayName": "Ohio State Buckeyes",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
-      "currentOdds": 62,
-      "previousOdds": 62,
-      "change": 0,
-      "distanceFrom50": 12
     },
     {
       "espnId": "167",
@@ -175,6 +165,16 @@
       "currentOdds": 35,
       "previousOdds": 35,
       "change": 0,
+      "distanceFrom50": 15
+    },
+    {
+      "espnId": "194",
+      "slug": "ohio-state-buckeyes",
+      "displayName": "Ohio State Buckeyes",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "currentOdds": 65,
+      "previousOdds": 62,
+      "change": 3,
       "distanceFrom50": 15
     }
   ]
