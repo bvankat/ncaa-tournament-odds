@@ -35,6 +35,10 @@ export function AllTeamsView({ teams, onTeamSelect }: AllTeamsViewProps) {
     }
   };
 
+  const teamsAbove40 = useMemo(() => {
+    return teams.filter(team => (team.tournamentOdds ?? 0) >= 40).length;
+  }, [teams]);
+
   return (
     <div className="bg-white py-12 lg:py-16 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
@@ -43,8 +47,8 @@ export function AllTeamsView({ teams, onTeamSelect }: AllTeamsViewProps) {
             All Teams
           </h1>
           <p className="text-gray-600 text-lg">
-            NCAA Tournament at-large bid odds for all {teams.length} Division I teams
-          </p>
+            NCAA Tournament at-large bid odds for all {teams.length} Division I teams.</p>
+            <p className="mt-20 text-gray-500 text-xs geist-mono">Right now: {teamsAbove40} teams with odds above 40%</p>
         </div>
 
         <div className="rounded-lg border border-gray-200 overflow-hidden">
