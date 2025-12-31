@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Layout } from '@/components/Layout';
 import { LandingView } from '@/views/LandingView';
 import { TeamView } from '@/views/TeamView';
+import { AllTeamsView } from '@/views/AllTeamsView';
 import { formatRelativeTime, calculateTournamentOdds } from '@/lib/utils';
 import type { Team, OddsMovers } from '@/types/team';
 
@@ -74,6 +75,8 @@ function App() {
   // Dynamic document title and meta description
   useEffect(() => {
     const isLanding = selectedSlugs.length === 0;
+    const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'all-teams';
+    
     if (isLanding) {
       document.title = 'NCAA Tournament Odds';
       const meta = document.querySelector('meta[name="description"]');
@@ -81,6 +84,18 @@ function App() {
         meta.setAttribute(
           'content',
           "NCAA men's basketball tournament selection odds and current team-sheet metrics for all 360+ Division I teams. Updated daily."
+        );
+      }
+      return;
+    }
+
+    if (isAllTeamsPage) {
+      document.title = 'All Teams — NCAA Tournament Odds';
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) {
+        meta.setAttribute(
+          'content',
+          "Complete list of NCAA Tournament odds for all 360+ Division I men's basketball teams, sorted by selection probability."
         );
       }
       return;
@@ -205,8 +220,12 @@ function App() {
   }
 
   const isLanding = selectedSlugs.length === 0;
+  const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'all-teams';
 
-  const selectedTeams = selectedSlugs.map((slug) => getTeamBySlug(slug)).filter(Boolean) as Team[];
+  const selectedTeams = selectedSlugs
+    .filter(slug => slug !== 'all-teams')
+    .map((slug) => getTeamBySlug(slug))
+    .filter(Boolean) as Team[];
 
   return (
     <div className="min-h-screen bg-white">
@@ -221,6 +240,11 @@ function App() {
             landingGauge={landingGauge}
             shuffledTeams={shuffledTeams}
             oddsMovers={oddsMovers}
+          />
+        ) : isAllTeamsPage ? (
+          <AllTeamsView
+            teams={allTeams}
+            onTeamSelect={handleTeamSelect}
           />
         ) : (
           <div className="space-y-0">
