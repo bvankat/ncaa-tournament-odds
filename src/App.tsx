@@ -95,7 +95,7 @@ function App() {
       if (meta) {
         meta.setAttribute(
           'content',
-          "Complete list of NCAA Tournament odds for all 360+ Division I men's basketball teams, sorted by selection probability."
+          "Complete list of NCAA Tournament at-large bid odds for all 360+ Division I men's basketball teams, sorted by selection probability."
         );
       }
       return;

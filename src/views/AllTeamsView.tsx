@@ -43,7 +43,7 @@ export function AllTeamsView({ teams, onTeamSelect }: AllTeamsViewProps) {
             All Teams
           </h1>
           <p className="text-gray-600 text-lg">
-            NCAA Tournament odds for all {teams.length} Division I teams
+            NCAA Tournament at-large bid odds for all {teams.length} Division I teams
           </p>
         </div>
 
