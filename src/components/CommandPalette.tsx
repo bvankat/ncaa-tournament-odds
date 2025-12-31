@@ -9,9 +9,10 @@ type CommandPaletteProps = {
   teams: Team[];
   onSelectTeam: (slug: string) => void;
   onHome: () => void;
+  onAllTeams: () => void;
 };
 
-export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome }: CommandPaletteProps) {
+export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome, onAllTeams }: CommandPaletteProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -74,6 +75,17 @@ export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome
               >
                 <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏠</span>
                 Home
+              </CommandItem>
+              <CommandItem
+                value="Full team list"
+                keywords={["all teams", "all", "teams", "list"]}
+                onSelect={() => {
+                  onAllTeams();
+                  onOpenChange(false);
+                }}
+              >
+                <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">📊</span>
+                Full team list
               </CommandItem>
             </CommandGroup>
             <CommandGroup heading="Teams">

@@ -13,6 +13,7 @@ type LandingViewProps = {
   landingGauge: number;
   shuffledTeams?: Team[];
   oddsMovers?: OddsMoversType;
+  onAllTeams?: () => void;
 };
 
 export function LandingView({
@@ -24,6 +25,7 @@ export function LandingView({
   landingGauge,
   shuffledTeams = [],
   oddsMovers,
+  onAllTeams,
 }: LandingViewProps) {
   return (
     <div className="max-w-screen bg-gray-50 mx-auto pt-12 lg:pt-24 overflow-x-hidden relative" style={{
@@ -51,7 +53,7 @@ export function LandingView({
             <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's chances of getting an at-large bid</p>
           </div>
           <div className="w-full max-w-xl">
-          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" />
+          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onAllTeams={onAllTeams} />
           </div>
         </div>
 

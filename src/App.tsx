@@ -197,6 +197,14 @@ function App() {
     trackPageView('/');
   };
 
+  const goAllTeams = () => {
+    const newPath = '/all-teams';
+    window.history.pushState({}, '', newPath);
+    setSelectedSlugs(['all-teams']);
+    window.scrollTo(0, 0);
+    trackPageView(newPath);
+  };
+
   const handleTeamSelect = (slug: string) => {
     if (slug) {
       const newPath = `/${slug}`;
@@ -229,7 +237,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Layout onHome={goHome} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
+      <Layout onHome={goHome} onAllTeams={goAllTeams} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
         {isLanding ? (
           <LandingView
             teams={allTeams}
@@ -240,6 +248,7 @@ function App() {
             landingGauge={landingGauge}
             shuffledTeams={shuffledTeams}
             oddsMovers={oddsMovers}
+            onAllTeams={goAllTeams}
           />
         ) : isAllTeamsPage ? (
           <AllTeamsView

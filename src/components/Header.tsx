@@ -6,9 +6,10 @@ type HeaderProps = {
   teams: Team[];
   onTeamSelect: (slug: string) => void;
   onOpenPalette?: () => void;
+  onAllTeams?: () => void;
 };
 
-export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: HeaderProps) {
+export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllTeams }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -55,6 +56,17 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette }: Head
               </button>
             </div>
             <div className="p-6">
+              {onAllTeams && (
+                <button
+                  onClick={() => {
+                    onAllTeams();
+                    setMenuOpen(false);
+                  }}
+                  className="w-full flex items-center gap-3 p-3 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold border-b border-gray-200 mb-2"
+                >
+                  <span className="text-gray-400 text-sm font-light">Full team list</span>
+                </button>
+              )}
               {teams.map((team) => (
                 <button
                   key={team.id ?? team.slug}

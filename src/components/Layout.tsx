@@ -7,19 +7,20 @@ import type { Team } from '@/types/team';
 type LayoutProps = {
   children: React.ReactNode;
   onHome: () => void;
+  onAllTeams?: () => void;
   teams: Team[];
   selectedSlug?: string;
   onTeamSelect: (slug: string) => void;
 };
 
-export function Layout({ children, onHome, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
+export function Layout({ children, onHome, onAllTeams, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
   const [paletteOpen, setPaletteOpen] = useState(false);
 
   return (
     <>
-      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} />
+      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} />
       {children}
-      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} />
+      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} />
       <CommandPalette
         open={paletteOpen}
         onOpenChange={setPaletteOpen}
@@ -27,6 +28,10 @@ export function Layout({ children, onHome, teams, selectedSlug = '', onTeamSelec
         onSelectTeam={onTeamSelect}
         onHome={() => {
           onHome();
+          setPaletteOpen(false);
+        }}
+        onAllTeams={() => {
+          onAllTeams?.();
           setPaletteOpen(false);
         }}
       />

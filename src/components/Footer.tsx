@@ -8,9 +8,10 @@ type FooterProps = {
   selectedSlug?: string;
   onTeamSelect?: (slug: string) => void;
   onOpenPalette?: () => void;
+  onAllTeams?: () => void;
 };
 
-export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette }: FooterProps) {
+export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette, onAllTeams }: FooterProps) {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -61,6 +62,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
             value={selectedSlug}
             onValueChange={(val: string) => onTeamSelect && onTeamSelect(val)}
             placeholder="Select a team"
+            onAllTeams={onAllTeams}
           />
         </div>
       </div>
