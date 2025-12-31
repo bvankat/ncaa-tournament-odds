@@ -64,7 +64,8 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
                   }}
                   className="w-full flex items-center gap-3 p-3 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold border-b border-gray-200 mb-2"
                 >
-                  <span className="text-gray-400 text-sm font-light">Full team list</span>
+                  <span className="w-8 h-8 inline-flex items-center justify-center text-xl">📊</span>
+                  <span className="text-sm font-normal text-gray-600"><a href="/all-teams">Full team list</a></span>
                 </button>
               )}
               {teams.map((team) => (
