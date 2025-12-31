@@ -5,9 +5,11 @@ import type { Team } from '@/types/team';
 type AllTeamsViewProps = {
   teams: Team[];
   onTeamSelect: (slug: string) => void;
+  lastUpdated?: number | string | null;
+  formatRelativeTime?: (t: number | string) => string;
 };
 
-export function AllTeamsView({ teams, onTeamSelect }: AllTeamsViewProps) {
+export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeTime }: AllTeamsViewProps) {
   const [sortField, setSortField] = useState<'odds' | 'name'>('odds');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
 
@@ -43,7 +45,19 @@ export function AllTeamsView({ teams, onTeamSelect }: AllTeamsViewProps) {
     <div className="bg-white py-12 lg:py-16 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
         <div className="mb-8">
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">
+          {lastUpdated && formatRelativeTime && (
+            <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-gray-200 mb-4">
+              <span className="relative size-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
+                <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
+              </span>
+              <p className="opacity-60 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
+                <span>UPDATED </span>
+                <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
+              </p>
+            </div>
+          )}
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
             All Teams
           </h1>
           <p className="text-gray-600 text-lg">

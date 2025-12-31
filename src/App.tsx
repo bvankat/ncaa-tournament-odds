@@ -254,6 +254,8 @@ function App() {
           <AllTeamsView
             teams={allTeams}
             onTeamSelect={handleTeamSelect}
+            lastUpdated={lastUpdated}
+            formatRelativeTime={formatRelativeTime}
           />
         ) : (
           <div className="space-y-0">
