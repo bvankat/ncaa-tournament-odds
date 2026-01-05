@@ -58,6 +58,7 @@ export type GameCompetitor = {
   winner: boolean;
   team_id?: string | null;
   team_nickname: string;
+  slug?: string | null;
   logo?: string | null;
   score: {
     value: number;

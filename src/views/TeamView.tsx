@@ -332,10 +332,11 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     const opponentComp = game.competitors.find(c => c.team_nickname !== team.shortName);
                     
                     if (!opponentComp) return null;
-                    
+
                     // Check if opponent is competitors[0] to determine if it's a road game
                     const isRoadGame = game.competitors[0].team_nickname === opponentComp.team_nickname;
-                    const opponentSlug = getTeamSlug(opponentComp.team_id);
+                    // Use pre-computed slug from schedule data, fallback to lookup if not available
+                    const opponentSlug = opponentComp.slug || getTeamSlug(opponentComp.team_id);
                     const opponentDisplay = opponentSlug ? (
                       <a href={`/${opponentSlug}`} className="flex items-center gap-3 hover:opacity-70 transition-opacity">
                         {opponentComp.logo && (
