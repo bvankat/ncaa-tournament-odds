@@ -61,15 +61,15 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
             All Teams
           </h1>
           <p className="text-gray-600 text-lg">
-            NCAA Tournament at-large bid odds for all {teams.length} Division I teams.</p>
-            <p className="mt-20 text-gray-500 text-xs geist-mono">Right now: {teamsAbove40} teams with odds above 40%</p>
+            Current NCAA Tournament at-large bid odds for all {teams.length} Division I teams.</p>
+            <p className="mt-12 text-gray-500 text-sm geist-mono">Right now: {teamsAbove40} teams with odds above 40%</p>
         </div>
 
         <div className="rounded-lg border border-gray-200 overflow-hidden">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
-                <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                <th className="text-left text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
                   Rank
                 </th>
                 <th 
@@ -81,7 +81,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                 <th className="hidden md:table-cell text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                   Conference
                 </th>
-                <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                <th className="text-right text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
                   Change
                 </th>
                 <th 
@@ -103,7 +103,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     className="border-b border-gray-200 hover:bg-gray-50 cursor-pointer transition-colors"
                     onClick={() => onTeamSelect(team.slug)}
                   >
-                    <td className="py-3 px-4 text-gray-500 geist-mono text-sm">
+                    <td className="py-3 px-3 text-gray-500 geist-mono text-xs">
                       {sortField === 'odds' ? index + 1 : '—'}
                     </td>
                     <td className="py-3 px-4">
@@ -123,7 +123,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     <td className="hidden md:table-cell py-3 px-4 text-gray-600 text-sm">
                       {team.conference || '—'}
                     </td>
-                    <td className="py-3 px-4 text-right">
+                    <td className="py-3 px-3 text-right">
                       {oddsChange !== 0 ? (
                         <div className={`flex items-center justify-end gap-1 ${
                           oddsChange > 0 ? 'text-green-800/50' : 'text-red-800/50'
@@ -136,7 +136,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                         <span className="text-gray-400 geist-mono text-xs">—</span>
                       )}
                     </td>
-                    <td className="py-3 px-4 text-right text-sm md:text-md">
+                    <td className="py-3 px- text-right text-sm md:text-md">
                       <span className="font-medium geist-mono">
                         {currentOdds > 0 ? `${currentOdds}%` : '<1%'}
                       </span>
