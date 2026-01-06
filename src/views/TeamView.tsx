@@ -524,7 +524,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                 <tbody>
                   {(team as any).bauertology?.BRCT_rank && (
                     <tr className="border-b border-gray-200">
-                      <td className="py-3 pr-4 text-gray-900 font-semibold">Bauertology BRCT</td>
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Bauertology</td>
                       <td className="py-3 px-4 flex justify-center">
                         <RankingSparkline rank={(team as any).bauertology.BRCT_rank} color={primaryColor} />
                       </td>
