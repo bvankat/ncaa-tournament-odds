@@ -506,6 +506,149 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
             </div>
 
       )}
+
+      {/* Other Notable Rankings - Nebraska only */}
+      {team.slug === 'nebraska-cornhuskers' && (team as any).polls && (
+        <div id="other-rankings" className="bg-white px-6 py-6 md:px-12 md:py-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 ibm-plex-sans">Other Notable Rankings</h2>
+          <div className="grid grid-cols-1 md:grid-cols-8 gap-12">
+            <div className="md:col-span-5">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-300 uppercase">
+                    <th className="text-left text-xs py-3 pr-4 font-medium geist-mono text-gray-400">Metric</th>
+                    <th className="text-center text-xs py-3 px-4 font-medium geist-mono text-gray-400"></th>
+                    <th className="text-right text-xs py-3 pl-4 font-medium geist-mono text-gray-400">Rank</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(team as any).bauertology?.BRCT_rank && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Bauertology BRCT</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).bauertology.BRCT_rank} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).bauertology.BRCT_rank}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).evanmiya?.miya_rating && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Evan Miyakawa</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).evanmiya.miya_rating} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).evanmiya.miya_rating}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).haslametrics?.haslam_rating && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Haslametrics</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).haslametrics.haslam_rating} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).haslametrics.haslam_rating}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).shot_quality?.sq_ranking && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Shot Quality</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).shot_quality.sq_ranking} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).shot_quality.sq_ranking}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).warrennolan?.rpi && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">RPI</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).warrennolan.rpi} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).warrennolan.rpi}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).sports_reference?.srs_rank && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Sports Reference SRS</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).sports_reference.srs_rank} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).sports_reference.srs_rank}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).massey_ratings?.massey_rank && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Massey Composite</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).massey_ratings.massey_rank} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).massey_ratings.massey_rank}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).warrennolan?.elo && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">ELO Rank</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).warrennolan.elo} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).warrennolan.elo}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).teamrankings?.rank && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">TeamRankings.com</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).teamrankings.rank} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).teamrankings.rank}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).polls?.ap_rank && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">AP Poll</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).polls.ap_rank} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).polls.ap_rank}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).polls?.coaches_rank && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Coaches Poll</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).polls.coaches_rank} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).polls.coaches_rank}</span>
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
