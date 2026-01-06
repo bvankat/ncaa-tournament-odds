@@ -509,7 +509,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
 
       {/* Other Notable Rankings & Bracket Chances - Nebraska only */}
       {team.slug === 'nebraska-cornhuskers' && (team as any).polls && (
-        <div id="other-rankings-bracket-chances" className="bg-white px-6 py-6 md:px-12 md:py-12">
+        <div id="other-rankings-bracket-chances" className="bg-white px-6 pt-6 pb-12 md:px-12 md:pt-12 md:pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             
             {/* Other Notable Rankings */}
