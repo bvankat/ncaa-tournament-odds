@@ -234,7 +234,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
           </div>
           <div className="md:col-span-3 md:col-start-6">
 
-            <div className="bg-white flex flex-row rounded-lg shadow-sm border border-gray-200 mb-6">
+            <div className="bg-white flex flex-row rounded-lg shadow-xs border border-gray-200 mb-6">
               <div className="border-r border-gray-200 px-6 py-6 text-center flex-1">
                 {team.record && (
                   <div>
@@ -253,7 +253,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
               </div>
             </div>
             
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+            <div className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 mb-6">
               <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">NEXT GAME</h3>
               {team.nextGame ? (
                 <div className="grid grid-cols-1 gap-2 align-middle items-center justify-between mt-2">
@@ -438,7 +438,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
           </div>
 
             <div id="record-details" className="order-1 lg:order-2 lg:col-span-3 lg:col-start-6">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+              <div className="bg-white rounded-lg shadow-xs border border-gray-200 mb-6">
               <div className="grid grid-cols-4 gap-2">
                 {team.record && (
                    <div className="text-center p-3 border-r border-gray-200">
@@ -469,7 +469,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
             
             {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
               
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="bg-white rounded-lg shadow-xs border border-gray-200">
 
                 <div className="grid grid-cols-4 gap-2">
                   {team.quad1 && (
@@ -507,12 +507,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
 
       )}
 
-      {/* Other Notable Rankings - Nebraska only */}
+      {/* Other Notable Rankings & Bracket Chances - Nebraska only */}
       {team.slug === 'nebraska-cornhuskers' && (team as any).polls && (
-        <div id="other-rankings" className="bg-white px-6 py-6 md:px-12 md:py-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 ibm-plex-sans">Other Notable Rankings</h2>
-          <div className="grid grid-cols-1 md:grid-cols-8 gap-12">
-            <div className="md:col-span-5">
+        <div id="other-rankings-bracket-chances" className="bg-white px-6 py-6 md:px-12 md:py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+            
+            {/* Other Notable Rankings */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 ibm-plex-sans">Other Notable Rankings</h2>
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-300 uppercase">
@@ -646,6 +648,88 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                 </tbody>
               </table>
             </div>
+
+            {/* Bracket Chances */}
+            {((team as any).trank?.trank_make_tourney || (team as any).teamrankings?.make_tournament || (team as any).bracketproject?.matrix_count) && (
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 ibm-plex-sans">Bracket Chances</h2>
+                <div className="bg-white rounded-lg shadow-xs border border-gray-200 mb-6">
+                  <div className="grid grid-cols-3 divide-x divide-gray-200">
+                    {(team as any).trank?.trank_make_tourney && (
+                      <div className="text-center p-4">
+                        <div className="text-xs text-gray-400 mb-1 geist-mono uppercase">Torvik</div>
+                        <div className="text-xl font-medium text-gray-900">{(team as any).trank.trank_make_tourney}%</div>
+                      </div>
+                    )}
+                    {(team as any).teamrankings?.make_tournament && (
+                      <div className="text-center p-4">
+                        <div className="text-xs text-gray-400 mb-1 geist-mono uppercase">TeamRankings.com</div>
+                        <div className="text-xl font-medium text-gray-900">{(team as any).teamrankings.make_tournament}</div>
+                      </div>
+                    )}
+                    {(team as any).bracketproject?.matrix_count && (team as any).bracketproject?.total_brackets && (
+                      <div className="text-center p-4">
+                        <div className="text-xs text-gray-400 mb-1 geist-mono uppercase">Bracket Matrix</div>
+                        <div className="text-xl font-medium text-gray-900">
+                          {(team as any).bracketproject.matrix_count}/{(team as any).bracketproject.total_brackets}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Projected Seeds Table */}
+                <div className="bg-white rounded-lg shadow-xs border border-gray-200">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-gray-200">
+                        <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">Projection</th>
+                        <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">Seed</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(team as any).bracketproject?.matrix_seed && (
+                        <tr className="border-b border-gray-100">
+                          <td className="py-3 px-4 text-gray-900 text-sm">Bracket Matrix</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).bracketproject.matrix_seed}</td>
+                        </tr>
+                      )}
+                      {(team as any).espn_bracketology?.seed && (
+                        <tr className="border-b border-gray-100">
+                          <td className="py-3 px-4 text-gray-900 text-sm">ESPN Lunardi</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).espn_bracketology.seed}</td>
+                        </tr>
+                      )}
+                      {(team as any).trank?.trank_seed && (
+                        <tr className="border-b border-gray-100">
+                          <td className="py-3 px-4 text-gray-900 text-sm">Bart Torvik</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).trank.trank_seed}</td>
+                        </tr>
+                      )}
+                      {(team as any).teamrankings?.most_likely_seed && (
+                        <tr className="border-b border-gray-100">
+                          <td className="py-3 px-4 text-gray-900 text-sm">TeamRankings.com</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).teamrankings.most_likely_seed}</td>
+                        </tr>
+                      )}
+                      {(team as any).haslametrics?.seed && (
+                        <tr className="border-b border-gray-100">
+                          <td className="py-3 px-4 text-gray-900 text-sm">Haslametrics</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).haslametrics.seed}</td>
+                        </tr>
+                      )}
+                      {(team as any).evanmiya?.miya_resume_category && (
+                        <tr>
+                          <td className="py-3 px-4 text-gray-900 text-sm">Evan Miyakawa</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).evanmiya.miya_resume_category}</td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
       )}
