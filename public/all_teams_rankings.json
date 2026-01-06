@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-06T01:45:38.813317",
+  "lastUpdated": "2026-01-06T03:26:08.272441",
   "teams": [
     {
       "slug": "duke-blue-devils",
@@ -1705,16 +1705,6 @@
       "confStandingsPosition": "1st in Big Ten",
       "confRecord": "3-0",
       "nonconsos": 222.0,
-      "tournamentOdds": 99,
-      "previousTournamentOdds": 99,
-      "oddsChange": 0,
-      "previousBpi": 26.0,
-      "previousSor": 5.0,
-      "previousKpi": 6,
-      "previousKenpom": "22",
-      "previousTorvik": "23",
-      "previousWab": "9",
-      "previousNet": "11",
       "bauertology": {
         "BRCT_rank": "8"
       },
@@ -1776,7 +1766,17 @@
         "trank_seed": "5",
         "wab_rank": 5,
         "wab_score": "+4.5"
-      }
+      },
+      "tournamentOdds": 99,
+      "previousTournamentOdds": 99,
+      "oddsChange": 0,
+      "previousBpi": 26.0,
+      "previousSor": 5.0,
+      "previousKpi": 6,
+      "previousKenpom": "22",
+      "previousTorvik": "23",
+      "previousWab": "9",
+      "previousNet": "11"
     },
     {
       "slug": "north-carolina-tar-heels",
@@ -14397,8 +14397,16 @@
       "quad2": "0-1",
       "quad3": "0-2",
       "quad4": "0-4",
-      "nextGame": null,
-      "confStandingsPosition": null,
+      "nextGame": {
+        "home_team": "Grambling",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
+        "home_team_id": "2755",
+        "away_team": "Texas Southern",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2640.png",
+        "away_team_id": "2640",
+        "date": "2026-01-06T00:30Z"
+      },
+      "confStandingsPosition": "11th in SWAC",
       "confRecord": "0-1",
       "nonconsos": 29.0,
       "tournamentOdds": 1,
