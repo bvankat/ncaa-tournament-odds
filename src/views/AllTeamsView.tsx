@@ -78,7 +78,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                 >
                   Team {sortField === 'name' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
-                <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                <th className="hidden md:table-cell text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                   Conference
                 </th>
                 <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
@@ -115,12 +115,12 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                             className="w-6 h-6 object-contain"
                           />
                         )}
-                        <span className="text-gray-900 font-medium text-md">
+                        <span className="text-gray-900 font-medium text-sm md:text-md">
                           {team.displayName}
                         </span>
                       </div>
                     </td>
-                    <td className="py-3 px-4 text-gray-600 text-sm">
+                    <td className="hidden md:table-cell py-3 px-4 text-gray-600 text-sm">
                       {team.conference || '—'}
                     </td>
                     <td className="py-3 px-4 text-right">
@@ -128,11 +128,6 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                         <div className={`flex items-center justify-end gap-1 ${
                           oddsChange > 0 ? 'text-green-800/50' : 'text-red-800/50'
                         }`}>
-                          {oddsChange > 0 ? (
-                            <ArrowUp className="w-3 h-3" />
-                          ) : (
-                            <ArrowDown className="w-3 h-3" />
-                          )}
                           <span className="font-medium geist-mono text-xs">
                             {oddsChange > 0 ? '+' : ''}{oddsChange}%
                           </span>
@@ -141,7 +136,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                         <span className="text-gray-400 geist-mono text-xs">—</span>
                       )}
                     </td>
-                    <td className="py-3 px-4 text-right text-md">
+                    <td className="py-3 px-4 text-right text-sm md:text-md">
                       <span className="font-medium geist-mono">
                         {currentOdds > 0 ? `${currentOdds}%` : '<1%'}
                       </span>
