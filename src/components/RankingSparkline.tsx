@@ -15,7 +15,7 @@ export function RankingSparkline({ rank, maxRank = 362, color = '#000' }: Rankin
   const position = ((maxRank - (numericRank as number)) / (maxRank - 1)) * 100;
 
   return (
-    <div className="w-20 md:w-36 h-8 flex items-center relative">
+    <div className="w-26 md:w-36 h-8 flex items-center relative">
       <div className="absolute w-full h-0.5 bg-gray-300"></div>
       <div className="absolute left-0 w-1 h-1 rounded-full bg-gray-400"></div>
       <div className="absolute right-0 w-1 h-1 rounded-full bg-gray-400"></div>
