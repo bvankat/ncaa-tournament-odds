@@ -50,7 +50,7 @@ export function LandingView({
           )}
           <div className="flex flex-col mb-6 px-4 lg:px-0">
             <h1 className="text-center md:text-left text-4xl lg:text-5xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Tournament Odds Machine</h1>
-            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's chances of getting an at-large bid</p>
+            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's current chances of getting an at-large bid</p>
           </div>
           <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onAllTeams={onAllTeams} />
