@@ -510,7 +510,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
       {/* Other Notable Rankings & Bracket Chances - Nebraska only */}
       {team.slug === 'nebraska-cornhuskers' && (team as any).polls && (
         <div id="other-rankings-bracket-chances" className="bg-white px-6 pt-6 pb-12 md:px-12 md:pt-12 md:pb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-24">
             
             {/* Other Notable Rankings */}
             <div>
@@ -523,7 +523,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     <th className="text-right text-xs py-3 pl-4 font-medium geist-mono text-gray-400">Rank</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="text-sm">
                   {(team as any).bauertology?.BRCT_rank && (
                     <tr className="border-b border-gray-200">
                       <td className="py-3 pr-4 text-gray-900 font-semibold">Bauertology</td>
@@ -663,7 +663,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                     )}
                     {(team as any).teamrankings?.make_tournament && (
                       <div className="text-center p-4">
-                        <div className="text-xs text-gray-400 mb-1 geist-mono uppercase">TeamRankings.com</div>
+                        <div className="text-xs text-gray-400 mb-1 geist-mono uppercase">TeamRankings</div>
                         <div className="text-xl font-medium text-gray-900">{(team as any).teamrankings.make_tournament}</div>
                       </div>
                     )}
