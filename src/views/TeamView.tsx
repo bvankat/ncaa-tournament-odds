@@ -691,37 +691,37 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calc
                       {(team as any).bracketproject?.matrix_seed && (
                         <tr className="border-b border-gray-100">
                           <td className="py-3 px-4 text-gray-900 text-sm">Bracket Matrix</td>
-                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).bracketproject.matrix_seed}</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).bracketproject.matrix_seed}</td>
                         </tr>
                       )}
                       {(team as any).espn_bracketology?.seed && (
                         <tr className="border-b border-gray-100">
                           <td className="py-3 px-4 text-gray-900 text-sm">ESPN Lunardi</td>
-                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).espn_bracketology.seed}</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).espn_bracketology.seed}</td>
                         </tr>
                       )}
                       {(team as any).trank?.trank_seed && (
                         <tr className="border-b border-gray-100">
                           <td className="py-3 px-4 text-gray-900 text-sm">Bart Torvik</td>
-                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).trank.trank_seed}</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).trank.trank_seed}</td>
                         </tr>
                       )}
                       {(team as any).teamrankings?.most_likely_seed && (
                         <tr className="border-b border-gray-100">
                           <td className="py-3 px-4 text-gray-900 text-sm">TeamRankings.com</td>
-                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).teamrankings.most_likely_seed}</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).teamrankings.most_likely_seed}</td>
                         </tr>
                       )}
                       {(team as any).haslametrics?.seed && (
                         <tr className="border-b border-gray-100">
                           <td className="py-3 px-4 text-gray-900 text-sm">Haslametrics</td>
-                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).haslametrics.seed}</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).haslametrics.seed}</td>
                         </tr>
                       )}
                       {(team as any).evanmiya?.miya_resume_category && (
                         <tr>
                           <td className="py-3 px-4 text-gray-900 text-sm">Evan Miyakawa</td>
-                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono">{(team as any).evanmiya.miya_resume_category}</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).evanmiya.miya_resume_category}</td>
                         </tr>
                       )}
                     </tbody>
