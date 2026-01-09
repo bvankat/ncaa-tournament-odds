@@ -1,9 +1,9 @@
-export function formatRelativeTime(dateString) {
+export function formatRelativeTime(dateString: string) {
   if (!dateString) return '';
 
   const date = new Date(dateString);
   const now = new Date();
-  const seconds = Math.floor((now - date) / 1000);
+  const seconds = Math.floor((now.getTime() - date.getTime()) / 1000);
 
   if (seconds < 60) return 'just now';
   if (seconds < 3600) {
@@ -58,11 +58,29 @@ export function findScore(data: number | string | null | undefined): number | nu
 }
 
 export function calculateTournamentOdds(team: any): number {
-  const rankings = [team.bpi, team.sor, team.kpi, team.kenpom, team.torvik, team.wab];
+  // Define metrics with their weights
+  // SOR, KPI, and WAB have 1.5x weight; others have 1.0x weight
+  const metrics: Array<{ ranking: any; weight: number }> = [
+    { ranking: team.bpi, weight: 1.0 },
+    { ranking: team.sor, weight: 1.5 },
+    { ranking: team.kpi, weight: 1.5 },
+    { ranking: team.kenpom, weight: 1.0 },
+    { ranking: team.torvik, weight: 1.0 },
+    { ranking: team.wab, weight: 1.5 },
+    { ranking: team.net, weight: 1.0 }
+  ];
 
-  const scores = rankings.map((ranking) => findScore(ranking)).filter((score) => score !== null) as number[];
+  // Calculate weighted scores
+  let weightedSum = 0;
+  let totalWeight = 0;
 
-  const totalScore = scores.length > 0 ? Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length) : 0;
+  for (const { ranking, weight } of metrics) {
+    const score = findScore(ranking);
+    if (score !== null) {
+      weightedSum += score * weight;
+      totalWeight += weight;
+    }
+  }
 
-  return totalScore;
+  return totalWeight > 0 ? Math.round(weightedSum / totalWeight) : 0;
 }
