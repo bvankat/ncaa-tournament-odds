@@ -96,19 +96,19 @@ ncaa-tournament-odds/
    - Rankings scraper: NET, BPI, SOR, KPI, KenPom, Torvik rankings from NCAA team sheets
    - Schedule scraper: Full season schedules with opponent logos, scores, slugs, and rankings
    - Odds calculator: Tournament odds based on weighted metrics and historical data
+   - Bubble Watch: Teams closest to 50% tournament odds
+   - Risers/Fallers: Shows which teams jumped or dropped in today's rankings
    - Team mappings: Cross-reference between ESPN IDs, slugs, display names, and data source names
-   - Daily baselines: Historical snapshots for day-over-day odds changes
 
 2. **Storage** - Data saved to JSON files in `/public`
    - `all_teams_rankings.json` - 362 teams with all ranking metrics and tournament odds
    - `all_teams_schedules.json` - Complete schedule data with pre-computed opponent slugs
    - `odds_movers.json` - Biggest risers, fallers, and bubble teams based on odds changes
    - `team_mappings.json` - Team identity mapping
-   - `rankings/` - Daily snapshots (not committed, used for local calculations only)
 
 3. **Frontend** - React app fetches JSON on load
    - `App.tsx` loads all data files and manages global state
-   - Client-side routing via URL slugs (e.g., `/duke-blue-devils`, `/all-teams`)
+   - Client-side routing via URL slugs (e.g., `/nebraska-cornhuskers`, `/all-teams`)
    - Tournament odds pre-calculated in at scraper runtime
    - Google Analytics tracks page views and navigation
 
