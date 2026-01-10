@@ -18,8 +18,20 @@ export function Speedometer({ value, className = '' }) {
   // Smoothness config
   const bounceSmoothMs = 500;
   const bounceTimingFn = 'cubic-bezier(.22,1,.36,1)';
-  const bounceAmplitude = 2; // +/- value
   const bounceIntervalMs = 160;
+
+  // Calculate bounce amplitude based on value using a bell curve
+  // Teams near 50% have high variability (amplitude 8), teams near 0% or 100% have low (amplitude 2)
+  const calculateBounceAmplitude = (val) => {
+    const minAmplitude = 2;
+    const maxAmplitude = 8;
+    // Distance from 50, normalized to 0-1
+    const distanceFrom50 = Math.abs(val - 50) / 50;
+    // Bell curve: amplitude is highest at 50, lowest at 0 and 100
+    // Using (1 - distance^2) for a parabolic bell shape
+    const bellFactor = 1 - Math.pow(distanceFrom50, 2);
+    return minAmplitude + (maxAmplitude - minAmplitude) * bellFactor;
+  };
 
   // Apply transition function
   const applyTransition = () => {
@@ -73,6 +85,7 @@ export function Speedometer({ value, className = '' }) {
       bounceIntervalIdRef.current = setInterval(() => {
         if (isAnimating) return;
 
+        const bounceAmplitude = calculateBounceAmplitude(baseValue);
         const jitter = Math.round((Math.random() * (bounceAmplitude * 2)) - bounceAmplitude);
         const bounced = Math.max(config.minValue, Math.min(config.maxValue, baseValue + jitter));
         updateNeedle(bounced);
