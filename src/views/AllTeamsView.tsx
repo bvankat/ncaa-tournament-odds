@@ -28,6 +28,34 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
     });
   }, [teams, sortField, sortDirection]);
 
+  // Calculate tied ranks for sorted teams (standard competition ranking)
+  const teamRanks = useMemo(() => {
+    if (sortField !== 'odds') return {};
+    
+    const ranks: Record<string, number> = {};
+    let currentRank = 1;
+    
+    for (let i = 0; i < sortedTeams.length; i++) {
+      const team = sortedTeams[i];
+      const currentOdds = team.tournamentOdds ?? -1;
+      
+      if (i === 0) {
+        ranks[team.espnId || team.slug] = 1;
+      } else {
+        const prevTeam = sortedTeams[i - 1];
+        const prevOdds = prevTeam.tournamentOdds ?? -1;
+        
+        // If odds are different from previous team, update rank to current position
+        if (currentOdds !== prevOdds) {
+          currentRank = i + 1;
+        }
+        ranks[team.espnId || team.slug] = currentRank;
+      }
+    }
+    
+    return ranks;
+  }, [sortedTeams, sortField]);
+
   const handleSort = (field: 'odds' | 'name') => {
     if (sortField === field) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
@@ -104,7 +132,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     onClick={() => onTeamSelect(team.slug)}
                   >
                     <td className="py-3 px-3 text-gray-500 geist-mono text-xs">
-                      {sortField === 'odds' ? index + 1 : '—'}
+                      {sortField === 'odds' ? teamRanks[team.espnId || team.slug] : '—'}
                     </td>
                     <td className="py-3 px-4">
                       <div className="flex items-center gap-3">
