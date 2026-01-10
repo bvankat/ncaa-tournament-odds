@@ -9,14 +9,13 @@ type TeamViewProps = {
   schedule?: TeamSchedule;
   lastUpdated?: number | string | null;
   formatRelativeTime: (t: number | string) => string;
-  calculateTournamentOdds: (rankings: Record<string, number | string | undefined>) => number;
   allTeams: Team[];
 };
 
-export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, calculateTournamentOdds, allTeams }: TeamViewProps) {
+export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allTeams }: TeamViewProps) {
   const primaryColor = team.primaryColor ? `#${team.primaryColor}` : '#000000';
   const secondaryColor = team.secondaryColor ? `#${team.secondaryColor}` : '#ffffff';
-  const tournamentOdds = calculateTournamentOdds(team as unknown as Record<string, number | string>);
+  const tournamentOdds = team.tournamentOdds ?? 0;
 
   // Get odds change directly from team data
   const oddsChange = team.oddsChange ?? null;
