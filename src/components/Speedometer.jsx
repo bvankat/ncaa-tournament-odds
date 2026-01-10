@@ -22,7 +22,13 @@ export function Speedometer({ value, className = '' }) {
 
   // Calculate bounce amplitude based on value using a bell curve
   // Teams near 50% have high variability (amplitude 8), teams near 0% or 100% have low (amplitude 2)
+  // Teams with odds < 1% or exactly 100% have zero amplitude (no bounce)
   const calculateBounceAmplitude = (val) => {
+    // No bounce for teams with less than 1% or exactly 100%
+    if (val < 1 || val === 100) {
+      return 0;
+    }
+    
     const minAmplitude = 2;
     const maxAmplitude = 8;
     // Distance from 50, normalized to 0-1
