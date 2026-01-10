@@ -136,7 +136,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                         <span className="text-gray-400 geist-mono text-xs">—</span>
                       )}
                     </td>
-                    <td className="py-3 px- text-right text-sm md:text-md">
+                    <td className="py-3 px-3 text-right text-sm md:text-md">
                       <span className="font-medium geist-mono">
                         {currentOdds > 0 ? `${currentOdds}%` : '<1%'}
                       </span>
