@@ -78,19 +78,19 @@ function App() {
     const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'all-teams';
     
     if (isLanding) {
-      document.title = 'NCAA Tournament Odds';
+      document.title = 'NCAA Tournament Odds Machine';
       const meta = document.querySelector('meta[name="description"]');
       if (meta) {
         meta.setAttribute(
           'content',
-          "NCAA men's basketball tournament selection odds and current team-sheet metrics for all 360+ Division I teams. Updated daily."
+          "On the bubble? Track NCAA men's basketball tournament selection odds and current team-sheet metrics for all 360+ Division I teams. Updated daily."
         );
       }
       return;
     }
 
     if (isAllTeamsPage) {
-      document.title = 'All Teams — NCAA Tournament Odds';
+      document.title = 'All Teams — NCAA Tournament Odds Machine';
       const meta = document.querySelector('meta[name="description"]');
       if (meta) {
         meta.setAttribute(
@@ -103,7 +103,7 @@ function App() {
 
     const team = allTeams.find((t) => t.slug === selectedSlugs[0]);
     if (team) {
-      const title = `${team.displayName} — NCAA Tournament Odds`;
+      const title = `${team.displayName} — NCAA Tournament Odds Machine`;
       document.title = title;
       const meta = document.querySelector('meta[name="description"]');
       if (meta) {
