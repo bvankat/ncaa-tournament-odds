@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-01-10T03:04:45.517344",
+  "lastUpdated": "2026-01-10T09:36:37.707142",
   "biggestRisers": [
+    {
+      "espnId": "30",
+      "slug": "usc-trojans",
+      "displayName": "USC Trojans",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+      "currentOdds": 76,
+      "previousOdds": 62,
+      "change": 14
+    },
     {
       "espnId": "202",
       "slug": "tulsa-golden-hurricane",
@@ -9,15 +18,6 @@
       "currentOdds": 23,
       "previousOdds": 10,
       "change": 13
-    },
-    {
-      "espnId": "30",
-      "slug": "usc-trojans",
-      "displayName": "USC Trojans",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
-      "currentOdds": 73,
-      "previousOdds": 62,
-      "change": 11
     },
     {
       "espnId": "2116",
@@ -58,22 +58,22 @@
       "change": -26
     },
     {
-      "espnId": "193",
-      "slug": "miami-oh-redhawks",
-      "displayName": "Miami (OH) RedHawks",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
-      "currentOdds": 8,
-      "previousOdds": 34,
-      "change": -26
-    },
-    {
       "espnId": "142",
       "slug": "missouri-tigers",
       "displayName": "Missouri Tigers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
-      "currentOdds": 27,
+      "currentOdds": 26,
       "previousOdds": 50,
-      "change": -23
+      "change": -24
+    },
+    {
+      "espnId": "197",
+      "slug": "oklahoma-state-cowboys",
+      "displayName": "Oklahoma State Cowboys",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+      "currentOdds": 30,
+      "previousOdds": 52,
+      "change": -22
     }
   ],
   "bubbleTeams": [
@@ -82,20 +82,20 @@
       "slug": "lsu-tigers",
       "displayName": "LSU Tigers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
-      "currentOdds": 50,
+      "currentOdds": 49,
       "previousOdds": 47,
-      "change": 3,
-      "distanceFrom50": 0
+      "change": 2,
+      "distanceFrom50": 1
     },
     {
       "espnId": "239",
       "slug": "baylor-bears",
       "displayName": "Baylor Bears",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
-      "currentOdds": 47,
+      "currentOdds": 48,
       "previousOdds": 46,
-      "change": 1,
-      "distanceFrom50": 3
+      "change": 2,
+      "distanceFrom50": 2
     },
     {
       "espnId": "167",
@@ -122,10 +122,10 @@
       "slug": "kentucky-wildcats",
       "displayName": "Kentucky Wildcats",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
-      "currentOdds": 40,
+      "currentOdds": 39,
       "previousOdds": 51,
-      "change": -11,
-      "distanceFrom50": 10
+      "change": -12,
+      "distanceFrom50": 11
     },
     {
       "espnId": "245",
@@ -152,30 +152,30 @@
       "slug": "tcu-horned-frogs",
       "displayName": "TCU Horned Frogs",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-      "currentOdds": 33,
+      "currentOdds": 32,
       "previousOdds": 37,
-      "change": -4,
-      "distanceFrom50": 17
+      "change": -5,
+      "distanceFrom50": 18
     },
     {
       "espnId": "275",
       "slug": "wisconsin-badgers",
       "displayName": "Wisconsin Badgers",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
-      "currentOdds": 32,
+      "currentOdds": 30,
       "previousOdds": 49,
-      "change": -17,
-      "distanceFrom50": 18
+      "change": -19,
+      "distanceFrom50": 20
     },
     {
-      "espnId": "26",
-      "slug": "ucla-bruins",
-      "displayName": "UCLA Bruins",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-      "currentOdds": 31,
-      "previousOdds": 47,
-      "change": -16,
-      "distanceFrom50": 19
+      "espnId": "197",
+      "slug": "oklahoma-state-cowboys",
+      "displayName": "Oklahoma State Cowboys",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+      "currentOdds": 30,
+      "previousOdds": 52,
+      "change": -22,
+      "distanceFrom50": 20
     }
   ]
 }
