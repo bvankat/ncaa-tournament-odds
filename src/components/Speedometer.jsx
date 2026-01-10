@@ -4,7 +4,7 @@ export function Speedometer({ value, className = '' }) {
   const needleContainerRef = useRef(null);
   const valueDisplayRef = useRef(null);
   const bounceIntervalIdRef = useRef(null);
-  const [baseValue, setBaseValue] = useState(value || 50);
+  const [baseValue, setBaseValue] = useState(value ?? 50);
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Configuration
@@ -70,7 +70,7 @@ export function Speedometer({ value, className = '' }) {
 
   // Update when value changes
   useEffect(() => {
-    const newValue = value || 50;
+    const newValue = value ?? 50;
     setBaseValue(newValue);
     updateNeedle(newValue);
   }, [value]);
