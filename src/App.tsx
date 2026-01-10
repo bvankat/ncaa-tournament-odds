@@ -3,7 +3,7 @@ import { Layout } from '@/components/Layout';
 import { LandingView } from '@/views/LandingView';
 import { TeamView } from '@/views/TeamView';
 import { AllTeamsView } from '@/views/AllTeamsView';
-import { formatRelativeTime, calculateTournamentOdds } from '@/lib/utils';
+import { formatRelativeTime } from '@/lib/utils';
 import type { Team, OddsMovers } from '@/types/team';
 
 function App() {
@@ -231,7 +231,6 @@ function App() {
                 schedule={allSchedules[team.slug]}
                 lastUpdated={lastUpdated}
                 formatRelativeTime={formatRelativeTime}
-                calculateTournamentOdds={calculateTournamentOdds}
                 allTeams={allTeams}
               />
             ))}
