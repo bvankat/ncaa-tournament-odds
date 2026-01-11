@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-11T16:07:12.717837",
+  "lastUpdated": "2026-01-11T16:31:47.929118",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -68988,12 +68988,15 @@
           "date": "2026-01-11T20:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2724",
               "team_nickname": "Wichita St",
               "slug": "wichita-state-shockers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             },
             {
@@ -69002,7 +69005,10 @@
               "team_nickname": "North Texas",
               "slug": "north-texas-mean-green",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
-              "score": null,
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
               "gameRank": 99
             }
           ]
@@ -92644,12 +92650,15 @@
           "date": "2026-01-11T20:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2724",
               "team_nickname": "Wichita St",
               "slug": "wichita-state-shockers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             },
             {
@@ -92658,7 +92667,10 @@
               "team_nickname": "North Texas",
               "slug": "north-texas-mean-green",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
-              "score": null,
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
               "gameRank": 99
             }
           ]
@@ -135163,7 +135175,7 @@
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2750",
               "team_nickname": "Wright St",
               "slug": "wright-state-raiders",
