@@ -48,7 +48,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                   <tbody>
                     {sortedBubbleTeams.map((team) => {
                       const changeMagnitude = Math.abs(team.change ?? 0);
-                      const hasChange = changeMagnitude >= 0.01;
+                      const hasChange = changeMagnitude >= 1;
                       const formattedChange = formatPercent(changeMagnitude, {
                         includeSymbol: false,
                         decimals: 0,
@@ -118,6 +118,8 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                   {moversData.biggestRisers.slice(0, 4).map((team) => {
+                    const changeMagnitude = Math.abs(team.change ?? 0);
+                    const hasChange = changeMagnitude >= 1;
                     const changeLabel = formatPercent(team.change ?? 0, {
                       includeSymbol: false,
                       decimals: 0,
@@ -137,11 +139,13 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                         <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
                           {team.displayName}
                         </span>
-                        <div className="flex items-center gap-1 text-green-700">
+                        {hasChange && (
+                          <div className="flex items-center gap-1 text-green-700">
                             <span className="font-bold geist-mono text-base">
-                            +{changeLabel}%
-                          </span>
-                        </div>
+                              +{changeLabel}%
+                            </span>
+                          </div>
+                        )}
                       </div>
                     );
                   })}
@@ -158,6 +162,8 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                   {moversData.biggestFallers.slice(0, 4).map((team) => {
+                    const changeMagnitude = Math.abs(team.change ?? 0);
+                    const hasChange = changeMagnitude >= 1;
                     const changeLabel = formatPercent(Math.abs(team.change ?? 0), {
                       includeSymbol: false,
                       decimals: 0,
@@ -177,11 +183,13 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                         <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
                           {team.displayName}
                         </span>
-                        <div className="flex items-center gap-1 text-red-700">
-                          <span className="font-bold geist-mono text-base">
-                            -{changeLabel}%
-                          </span>
-                        </div>
+                        {hasChange && (
+                          <div className="flex items-center gap-1 text-red-700">
+                            <span className="font-bold geist-mono text-base">
+                              -{changeLabel}%
+                            </span>
+                          </div>
+                        )}
                       </div>
                     );
                   })}
