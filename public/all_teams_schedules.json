@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-11T18:27:59.793796",
+  "lastUpdated": "2026-01-11T20:43:17.227819",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -22467,12 +22467,15 @@
           "date": "2026-01-11T23:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "264",
               "team_nickname": "Washington",
               "slug": "washington-huskies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
-              "score": null,
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
               "gameRank": 99
             },
             {
@@ -22481,7 +22484,10 @@
               "team_nickname": "Ohio State",
               "slug": "ohio-state-buckeyes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             }
           ]
@@ -39594,12 +39600,15 @@
           "date": "2026-01-11T22:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "164",
               "team_nickname": "Rutgers",
               "slug": "rutgers-scarlet-knights",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 99
             },
             {
@@ -39608,7 +39617,10 @@
               "team_nickname": "Northwestern",
               "slug": "northwestern-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
-              "score": null,
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
               "gameRank": 99
             }
           ]
@@ -55930,12 +55942,15 @@
           "date": "2026-01-11T23:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "264",
               "team_nickname": "Washington",
               "slug": "washington-huskies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
-              "score": null,
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
               "gameRank": 99
             },
             {
@@ -55944,7 +55959,10 @@
               "team_nickname": "Ohio State",
               "slug": "ohio-state-buckeyes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             }
           ]
@@ -86886,12 +86904,15 @@
           "date": "2026-01-11T22:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "164",
               "team_nickname": "Rutgers",
               "slug": "rutgers-scarlet-knights",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 99
             },
             {
@@ -86900,7 +86921,10 @@
               "team_nickname": "Northwestern",
               "slug": "northwestern-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
-              "score": null,
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
               "gameRank": 99
             }
           ]
