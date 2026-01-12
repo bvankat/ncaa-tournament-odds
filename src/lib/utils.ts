@@ -17,3 +17,40 @@ export function formatRelativeTime(dateString: string | number) {
   const days = Math.floor(seconds / 86400);
   return `${days} ${days === 1 ? 'day' : 'days'} ago`;
 }
+
+export type FormatPercentOptions = {
+  decimals?: number;
+  includeSymbol?: boolean;
+  showLessThanOne?: boolean;
+  lessThanOneLabel?: string;
+  fallback?: string;
+};
+
+export function formatPercent(
+  value?: number | null,
+  options: FormatPercentOptions = {}
+): string {
+  const {
+    decimals = 0,
+    includeSymbol = true,
+    showLessThanOne = true,
+    lessThanOneLabel = '<1%',
+    fallback = '—',
+  } = options;
+
+  if (value === null || value === undefined || Number.isNaN(value)) {
+    return fallback;
+  }
+
+  const numeric = Number(value);
+
+  if (showLessThanOne && numeric >= 0 && numeric < 1) {
+    if (includeSymbol) {
+      return lessThanOneLabel;
+    }
+    return lessThanOneLabel.replace('%', '').trim();
+  }
+
+  const formatted = numeric.toFixed(decimals);
+  return includeSymbol ? `${formatted}%` : formatted;
+}

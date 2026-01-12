@@ -1,6 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import type { Team } from '@/types/team';
+import { formatPercent } from '@/lib/utils';
+
+const ODDS_TOLERANCE = 0.005;
+
+const areOddsEqual = (a: number, b: number, tolerance = ODDS_TOLERANCE) => {
+  return Math.abs(a - b) < tolerance;
+};
 
 type AllTeamsViewProps = {
   teams: Team[];
@@ -46,7 +53,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
         const prevOdds = prevTeam.tournamentOdds ?? -1;
         
         // If odds are different from previous team, update rank to current position
-        if (currentOdds !== prevOdds) {
+        if (!areOddsEqual(currentOdds, prevOdds)) {
           currentRank = i + 1;
         }
         ranks[team.espnId || team.slug] = currentRank;
@@ -121,9 +128,16 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
               </tr>
             </thead>
             <tbody>
-              {sortedTeams.map((team, index) => {
+              {sortedTeams.map((team) => {
                 const oddsChange = team.oddsChange ?? 0;
                 const currentOdds = team.tournamentOdds ?? 0;
+                const hasChange = Math.abs(oddsChange) >= 0.01;
+                const formattedChange = formatPercent(Math.abs(oddsChange), {
+                  includeSymbol: false,
+                  decimals: 0,
+                  showLessThanOne: false,
+                });
+                const formattedOdds = formatPercent(currentOdds, { decimals: 2 });
                 
                 return (
                   <tr
@@ -152,12 +166,12 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                       {team.conference || '—'}
                     </td>
                     <td className="py-3 px-3 text-right">
-                      {oddsChange !== 0 ? (
+                      {hasChange ? (
                         <div className={`flex items-center justify-end gap-1 ${
                           oddsChange > 0 ? 'text-green-800/50' : 'text-red-800/50'
                         }`}>
                           <span className="font-medium geist-mono text-xs">
-                            {oddsChange > 0 ? '+' : ''}{oddsChange}%
+                            {oddsChange > 0 ? '+' : '-'}{formattedChange}%
                           </span>
                         </div>
                       ) : (
@@ -166,7 +180,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     </td>
                     <td className="py-3 px-3 text-right text-sm md:text-md">
                       <span className="font-medium geist-mono">
-                        {currentOdds > 0 ? `${currentOdds}%` : '<1%'}
+                        {formattedOdds}
                       </span>
                     </td>
                   </tr>

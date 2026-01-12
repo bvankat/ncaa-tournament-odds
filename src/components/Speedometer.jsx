@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { formatPercent } from '@/lib/utils';
 
 export function Speedometer({ value, className = '' }) {
   const needleContainerRef = useRef(null);
@@ -64,7 +65,11 @@ export function Speedometer({ value, className = '' }) {
 
     // Update value display
     if (valueDisplayRef.current) {
-      valueDisplayRef.current.textContent = Math.round(clampedValue);
+      valueDisplayRef.current.textContent = formatPercent(clampedValue, {
+        decimals: 0,
+        includeSymbol: false,
+        showLessThanOne: false,
+      });
     }
   };
 
@@ -166,7 +171,11 @@ export function Speedometer({ value, className = '' }) {
           zIndex: 10
         }}
       >
-        {value || 50}
+        {formatPercent(value ?? 50, {
+          decimals: 0,
+          includeSymbol: false,
+          showLessThanOne: false,
+        })}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUp, ArrowDown, AlertCircle } from 'lucide-react';
 import type { OddsMovers } from '@/types/team';
+import { formatPercent } from '@/lib/utils';
 
 type OddsMoversProps = {
   moversData?: OddsMovers;
@@ -45,45 +46,55 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                     </tr>
                   </thead>
                   <tbody>
-                    {sortedBubbleTeams.map((team) => (
-                      <tr
-                        key={team.espnId}
-                        className="border-b border-gray-200 hover:bg-gray-50 cursor-pointer transition-colors"
-                        onClick={() => onTeamSelect(team.slug)}
-                      >
-                        <td className="py-3 px-4">
-                          <div className="flex items-center gap-3">
-                            <img
-                              src={team.logo}
-                              alt={team.displayName}
-                              className="w-6 h-6 object-contain"
-                            />
-                            <span className="text-gray-900 font-medium text-md">
-                              {team.displayName}
-                            </span>
-                          </div>
-                        </td>
-                        <td className="py-3 px-4 text-right">
-                          {team.change !== 0 && (
-                            <div className={`flex items-center justify-end gap-1 ${
-                              team.change > 0 ? 'text-green-800/50' : 'text-red-800/50'
-                            }`}>
-                              <span className="font-medium geist-mono text-xs">
-                                {team.change > 0 ? '+' : ''}{team.change}%
+                    {sortedBubbleTeams.map((team) => {
+                      const changeMagnitude = Math.abs(team.change ?? 0);
+                      const hasChange = changeMagnitude >= 0.01;
+                      const formattedChange = formatPercent(changeMagnitude, {
+                        includeSymbol: false,
+                        decimals: 0,
+                        showLessThanOne: false,
+                      });
+                      const formattedOdds = formatPercent(team.currentOdds, { decimals: 0 });
+
+                      return (
+                        <tr
+                          key={team.espnId}
+                          className="border-b border-gray-200 hover:bg-gray-50 cursor-pointer transition-colors"
+                          onClick={() => onTeamSelect(team.slug)}
+                        >
+                          <td className="py-3 px-4">
+                            <div className="flex items-center gap-3">
+                              <img
+                                src={team.logo}
+                                alt={team.displayName}
+                                className="w-6 h-6 object-contain"
+                              />
+                              <span className="text-gray-900 font-medium text-md">
+                                {team.displayName}
                               </span>
                             </div>
-                          )}
-                          {team.change === 0 && (
-                            <span className="text-gray-400 geist-mono text-xs"></span>
-                          )}
-                        </td>
-                        <td className="py-3 px-4 text-right text-md">
-                          <span className="font-medium geist-mono">
-                            {team.currentOdds}%
-                          </span>
-                        </td>
-                      </tr>
-                    ))}
+                          </td>
+                          <td className="py-3 px-4 text-right">
+                            {hasChange ? (
+                              <div className={`flex items-center justify-end gap-1 ${
+                                team.change > 0 ? 'text-green-800/50' : 'text-red-800/50'
+                              }`}>
+                                <span className="font-medium geist-mono text-xs">
+                                  {team.change > 0 ? '+' : '-'}{formattedChange}%
+                                </span>
+                              </div>
+                            ) : (
+                              <span className="text-gray-400 geist-mono text-xs"></span>
+                            )}
+                          </td>
+                          <td className="py-3 px-4 text-right text-md">
+                            <span className="font-medium geist-mono">
+                              {formattedOdds}
+                            </span>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
                 
@@ -106,27 +117,34 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                   Highest Risers
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                  {moversData.biggestRisers.slice(0, 4).map((team) => (
-                    <div
-                      key={team.espnId}
-                      className="flex flex-col items-center text-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 cursor-pointer transition-all"
-                      onClick={() => onTeamSelect(team.slug)}
-                    >
-                      <img
-                        src={team.logo}
-                        alt={team.displayName}
-                        className="w-12 h-12 object-contain mb-3"
-                      />
-                      <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
-                        {team.displayName}
-                      </span>
-                      <div className="flex items-center gap-1 text-green-700">
-                          <span className="font-bold geist-mono text-base">
-                          +{team.change}%
+                  {moversData.biggestRisers.slice(0, 4).map((team) => {
+                    const changeLabel = formatPercent(team.change ?? 0, {
+                      includeSymbol: false,
+                      decimals: 0,
+                      showLessThanOne: false,
+                    });
+                    return (
+                      <div
+                        key={team.espnId}
+                        className="flex flex-col items-center text-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 cursor-pointer transition-all"
+                        onClick={() => onTeamSelect(team.slug)}
+                      >
+                        <img
+                          src={team.logo}
+                          alt={team.displayName}
+                          className="w-12 h-12 object-contain mb-3"
+                        />
+                        <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
+                          {team.displayName}
                         </span>
+                        <div className="flex items-center gap-1 text-green-700">
+                            <span className="font-bold geist-mono text-base">
+                            +{changeLabel}%
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}
@@ -139,27 +157,34 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                   Falling Fast
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                  {moversData.biggestFallers.slice(0, 4).map((team) => (
-                    <div
-                      key={team.espnId}
-                      className="flex flex-col items-center text-center p-4 rounded-lg border border-gray-200 hover:border-red-300 hover:bg-red-50 cursor-pointer transition-all"
-                      onClick={() => onTeamSelect(team.slug)}
-                    >
-                      <img
-                        src={team.logo}
-                        alt={team.displayName}
-                        className="w-12 h-12 object-contain mb-3"
-                      />
-                      <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
-                        {team.displayName}
-                      </span>
-                      <div className="flex items-center gap-1 text-red-700">
-                        <span className="font-bold geist-mono text-base">
-                          {team.change}%
+                  {moversData.biggestFallers.slice(0, 4).map((team) => {
+                    const changeLabel = formatPercent(Math.abs(team.change ?? 0), {
+                      includeSymbol: false,
+                      decimals: 0,
+                      showLessThanOne: false,
+                    });
+                    return (
+                      <div
+                        key={team.espnId}
+                        className="flex flex-col items-center text-center p-4 rounded-lg border border-gray-200 hover:border-red-300 hover:bg-red-50 cursor-pointer transition-all"
+                        onClick={() => onTeamSelect(team.slug)}
+                      >
+                        <img
+                          src={team.logo}
+                          alt={team.displayName}
+                          className="w-12 h-12 object-contain mb-3"
+                        />
+                        <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
+                          {team.displayName}
                         </span>
+                        <div className="flex items-center gap-1 text-red-700">
+                          <span className="font-bold geist-mono text-base">
+                            -{changeLabel}%
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}

@@ -30,9 +30,9 @@ export type Team = NcaaNetData & {
   torvik?: number | string | null; // mapped in App to torvikRank
   wab?: number | string | null;
   nextGame?: NextGame | null;
-  tournamentOdds?: number | null;
-  previousTournamentOdds?: number | null;
-  oddsChange?: number | null;
+  tournamentOdds?: number | null; // percentage stored with up to two decimals
+  previousTournamentOdds?: number | null; // previous percentage snapshot
+  oddsChange?: number | null; // delta in percentage points (two-decimal precision)
   previousBpi?: number | string | null;
   previousSor?: number | string | null;
   previousKpi?: number | string | null;
@@ -83,9 +83,9 @@ export type OddsChange = {
   slug: string;
   displayName: string;
   logo: string;
-  currentOdds: number;
+  currentOdds: number; // percentage with up to two decimals
   previousOdds: number | null;
-  change: number;
+  change: number; // delta between snapshots
 };
 
 export type BubbleTeam = {
@@ -93,7 +93,7 @@ export type BubbleTeam = {
   slug: string;
   displayName: string;
   logo: string;
-  currentOdds: number;
+  currentOdds: number; // percentage with up to two decimals
   previousOdds: number | null;
   change: number;
   distanceFrom50: number;
