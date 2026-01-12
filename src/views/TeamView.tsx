@@ -3,6 +3,7 @@ import { Speedometer } from '@/components/Speedometer';
 import { RankingSparkline } from '@/components/RankingSparkline';
 import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import type { Team, TeamSchedule } from '@/types/team';
+import { formatPercent } from '@/lib/utils';
 
 type TeamViewProps = {
   team: Team;
@@ -19,6 +20,9 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
 
   // Get odds change directly from team data
   const oddsChange = team.oddsChange ?? null;
+  const oddsChangeLabel = oddsChange !== null
+    ? formatPercent(Math.abs(oddsChange), { decimals: 0 })
+    : null;
 
   // Helper function to determine ranking direction and delta (lower rank = better)
   const getRankingChange = (current: number | string | null | undefined, previous: number | string | null | undefined): { direction: 'up' | 'down', delta: number } | null => {
@@ -91,17 +95,17 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
               <Speedometer value={tournamentOdds} />
               {oddsChange !== null && (
                 <div className="flex items-center gap-2 text-sm font-semibold geist-mono">
-                  {oddsChange > 0 ? (
+                  {Math.abs(oddsChange) < 1 ? (
                     <>
-                      <span className="text-green-300">+{oddsChange}% TODAY</span>
+                      <span className="text-gray-400 font-normal">No change today</span>
                     </>
-                  ) : oddsChange < 0 ? (
+                  ) : oddsChange > 0 ? (
                     <>
-                      <span className="text-red-300">{oddsChange}% TODAY</span>
+                      <span className="text-green-300">+{oddsChangeLabel} TODAY</span>
                     </>
                   ) : (
                     <>
-                      <span className="text-gray-400 font-normal">No change today</span>
+                      <span className="text-red-300">-{oddsChangeLabel} TODAY</span>
                     </>
                   )}
                 </div>
