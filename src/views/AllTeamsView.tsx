@@ -131,13 +131,13 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
               {sortedTeams.map((team) => {
                 const oddsChange = team.oddsChange ?? 0;
                 const currentOdds = team.tournamentOdds ?? 0;
-                const hasChange = Math.abs(oddsChange) >= 0.01;
+                const hasChange = Math.abs(oddsChange) >= 1;
                 const formattedChange = formatPercent(Math.abs(oddsChange), {
                   includeSymbol: false,
                   decimals: 0,
                   showLessThanOne: false,
                 });
-                const formattedOdds = formatPercent(currentOdds, { decimals: 2 });
+                const formattedOdds = formatPercent(currentOdds, { decimals: 0 });
                 
                 return (
                   <tr
