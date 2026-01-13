@@ -435,9 +435,9 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                       const winProb = getWinProbability(gameDate);
                       if (winProb !== null) {
                         const probPercent = Math.round(winProb * 100);
-                        const probColor = winProb >= 0.5 ? 'text-green-800/50' : 'text-red-800/50';
+                        const probColor = winProb >= 0.5 ? 'text-green-800/60' : 'text-red-800/60';
                         resultDisplay = `${probPercent}%`;
-                        resultClass = `${probColor} text-[10px] font-normal`;
+                        resultClass = `${probColor} text-[11px] font-normal`;
                       } else {
                         resultDisplay = '—';
                       }
