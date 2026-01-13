@@ -750,7 +750,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                       )}
                       {(team as any).jthom_analytics?.seed && (
                         <tr className="border-b border-gray-100">
-                          <td className="py-3 px-4 text-gray-900 text-sm">J. Thom Analytics</td>
+                          <td className="py-3 px-4 text-gray-900 text-sm">JThom Analytics</td>
                           <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).jthom_analytics.seed}</td>
                         </tr>
                       )}
