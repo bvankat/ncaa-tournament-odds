@@ -24,6 +24,23 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
     ? formatPercent(Math.abs(oddsChange), { decimals: 0 })
     : null;
 
+  // Helper function to get win probability for a game (Nebraska-specific)
+  const getWinProbability = (gameDate: Date): number | null => {
+    // @ts-ignore - jthom_analytics is Nebraska-specific and not in the type
+    if (!team.jthom_analytics?.games) return null;
+    
+    // @ts-ignore
+    const game = team.jthom_analytics.games.find((g: any) => {
+      // Parse the jthom_analytics date format (MM/DD)
+      const [month, day] = g.date.split('/').map((n: string) => parseInt(n, 10));
+      
+      // Compare month and day with the schedule game date (using local time, not UTC)
+      return gameDate.getMonth() + 1 === month && gameDate.getDate() === day;
+    });
+    
+    return game?.kenpom_win_prob ?? null;
+  };
+
   // Helper function to determine ranking direction and delta (lower rank = better)
   const getRankingChange = (current: number | string | null | undefined, previous: number | string | null | undefined): { direction: 'up' | 'down', delta: number } | null => {
     if (!current || !previous) return null;
@@ -413,7 +430,17 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                       const formattedDate = `${formatMonth(gameDate)} ${gameDate.getDate()}`;
                       const timeDisplay = formatGameTime(gameDate);
                       dateDisplay = <>{formattedDate} <span className="ml-2 text-[10px] text-gray-400">{timeDisplay}</span></>;
-                      resultDisplay = '—';
+                      
+                      // Get win probability for upcoming game (Nebraska-specific)
+                      const winProb = getWinProbability(gameDate);
+                      if (winProb !== null) {
+                        const probPercent = Math.round(winProb * 100);
+                        const probColor = winProb >= 0.5 ? 'text-green-800/50' : 'text-red-800/50';
+                        resultDisplay = `${probPercent}%`;
+                        resultClass = `${probColor} text-[10px] font-normal`;
+                      } else {
+                        resultDisplay = '—';
+                      }
                     }
                     
                     return (
@@ -428,7 +455,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         </td>
                         <td className="text-right pl-2">
                           <span className={resultClass}>
-                            {resultDisplay[0]}
+                            {hasScores ? resultDisplay[0] : resultDisplay}
                           </span></td>
                       </tr>
                     );
@@ -719,6 +746,12 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         <tr className="border-b border-gray-100">
                           <td className="py-3 px-4 text-gray-900 text-sm">Haslametrics</td>
                           <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).haslametrics.seed}</td>
+                        </tr>
+                      )}
+                      {(team as any).jthom_analytics?.seed && (
+                        <tr className="border-b border-gray-100">
+                          <td className="py-3 px-4 text-gray-900 text-sm">J. Thom Analytics</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).jthom_analytics.seed}</td>
                         </tr>
                       )}
                       {(team as any).evanmiya?.miya_resume_category && (
