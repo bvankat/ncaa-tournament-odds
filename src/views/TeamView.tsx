@@ -38,7 +38,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
       return gameDate.getMonth() + 1 === month && gameDate.getDate() === day;
     });
     
-    return game?.team_win_prob ?? null;
+    return game?.team_win_prob ?? null; 
   };
 
   // Helper function to determine ranking direction and delta (lower rank = better)
