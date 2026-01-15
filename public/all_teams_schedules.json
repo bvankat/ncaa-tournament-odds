@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-15T00:18:23.189217",
+  "lastUpdated": "2026-01-15T11:31:48.752419",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -478,16 +478,22 @@
               "team_nickname": "California",
               "slug": "california-golden-bears",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
-              "score": null,
+              "score": {
+                "value": 56.0,
+                "displayValue": "56"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "150",
               "team_nickname": "Duke",
               "slug": "duke-blue-devils",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
-              "score": null,
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
               "gameRank": 6
             }
           ]
@@ -11146,12 +11152,15 @@
           "date": "2026-01-15T04:10Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "252",
               "team_nickname": "BYU",
               "slug": "byu-cougars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 11
             },
             {
@@ -11160,7 +11169,10 @@
               "team_nickname": "TCU",
               "slug": "tcu-horned-frogs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             }
           ]
@@ -65381,12 +65393,15 @@
           "date": "2026-01-15T04:10Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "252",
               "team_nickname": "BYU",
               "slug": "byu-cougars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 11
             },
             {
@@ -65395,7 +65410,10 @@
               "team_nickname": "TCU",
               "slug": "tcu-horned-frogs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             }
           ]
@@ -93306,7 +93324,7 @@
           ]
         },
         {
-          "date": "2026-01-18T21:00Z",
+          "date": "2026-01-18T22:00Z",
           "competitors": [
             {
               "winner": false,
@@ -122901,7 +122919,7 @@
           ]
         },
         {
-          "date": "2026-01-18T21:00Z",
+          "date": "2026-01-18T22:00Z",
           "competitors": [
             {
               "winner": false,
@@ -217880,7 +217898,7 @@
           ]
         },
         {
-          "date": "2026-01-19T23:00Z",
+          "date": "2026-01-19T19:00Z",
           "competitors": [
             {
               "winner": false,
@@ -286356,7 +286374,7 @@
           ]
         },
         {
-          "date": "2026-01-19T23:00Z",
+          "date": "2026-01-19T19:00Z",
           "competitors": [
             {
               "winner": false,
