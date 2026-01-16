@@ -8,6 +8,27 @@ import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+// Detect if running on Vercel
+const isVercel = process.env.VERCEL === '1'
+
+// Get Chromium config based on environment
+async function getChromiumConfig() {
+  if (isVercel) {
+    // On Vercel, use @sparticuz/chromium
+    const chromium = await import('@sparticuz/chromium')
+    return {
+      headless: chromium.default.headless,
+      args: chromium.default.args,
+      executablePath: await chromium.default.executablePath(),
+    }
+  }
+  // Locally, use default Puppeteer settings (will find local Chrome)
+  return {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  }
+}
+
 // Load team data once at config time
 let teamData = null
 function loadTeamData() {
@@ -90,7 +111,10 @@ function getSeoMetaTags(route) {
   }
 }
 
-export default defineConfig({
+export default defineConfig(async () => {
+  const chromiumConfig = await getChromiumConfig()
+  
+  return {
   plugins: [
     react(),
     prerender({
@@ -98,7 +122,7 @@ export default defineConfig({
       renderer: new PuppeteerRenderer({
         renderAfterTime: 2000,
         maxConcurrentRoutes: 4,
-        headless: true,
+        ...chromiumConfig,
       }),
       postProcess(renderedRoute) {
         const seo = getSeoMetaTags(renderedRoute.route)
@@ -160,4 +184,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+}})

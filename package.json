@@ -1,6 +1,6 @@
 {
   "name": "ncaa-tournament-odds",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@prerenderer/renderer-puppeteer": "^1.2.4",
     "@prerenderer/rollup-plugin": "^0.3.12",
+    "@sparticuz/chromium": "^143.0.4",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
@@ -31,6 +32,7 @@
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.22",
     "postcss": "^8.5.6",
+    "puppeteer-core": "^24.35.0",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
     "vite": "^5.0.0"
