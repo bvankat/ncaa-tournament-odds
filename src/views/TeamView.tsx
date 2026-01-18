@@ -26,19 +26,28 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
 
   // Helper function to get win probability for a game (Nebraska-specific)
   const getWinProbability = (gameDate: Date): number | null => {
-    // @ts-ignore - jthom_analytics is Nebraska-specific and not in the type
-    if (!team.jthom_analytics?.games) return null;
+    // @ts-ignore - kenpom.remaining_games is Nebraska-specific and not in the type
+    if (!team.kenpom?.remaining_games) return null;
+    
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const gameMonth = monthNames[gameDate.getMonth()];
+    const gameDay = gameDate.getDate();
     
     // @ts-ignore
-    const game = team.jthom_analytics.games.find((g: any) => {
-      // Parse the jthom_analytics date format (MM/DD)
-      const [month, day] = g.date.split('/').map((n: string) => parseInt(n, 10));
+    const game = team.kenpom.remaining_games.find((g: any) => {
+      // Parse the kenpom date format ("Wed Jan 21", "Sat Feb 28", etc.)
+      const parts = g.date.split(' ');
+      if (parts.length < 3) return false;
+      const month = parts[1];
+      const day = parseInt(parts[2], 10);
       
-      // Compare month and day with the schedule game date (using local time, not UTC)
-      return gameDate.getMonth() + 1 === month && gameDate.getDate() === day;
+      return month === gameMonth && day === gameDay;
     });
     
-    return game?.team_win_prob ?? null; 
+    if (!game?.prob) return null;
+    // Parse "83%" -> 0.83
+    const probValue = parseInt(game.prob.replace('%', ''), 10);
+    return isNaN(probValue) ? null : probValue / 100;
   };
 
   // Helper function to determine ranking direction and delta (lower rank = better)
