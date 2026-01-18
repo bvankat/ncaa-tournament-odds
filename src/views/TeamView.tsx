@@ -1,5 +1,6 @@
 import React from 'react';
 import { Speedometer } from '@/components/Speedometer';
+import { PulseRings } from '@/components/PulseRings';
 import { RankingSparkline } from '@/components/RankingSparkline';
 import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import type { Team, TeamSchedule } from '@/types/team';
@@ -118,7 +119,17 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
             </div>
 
             <div className="flex flex-col items-center justify-center gap-4">
+              <div style={{ position: 'relative', width: 340, height: 340 }}>
+              <PulseRings startRadius={150} 
+                expandDistance={200} 
+                color="#cdf6fc"
+                strokeOpacity={0.1}
+                fillOpacity={0.08}
+                glowBlur={2}
+                duration={6}
+              />                
               <Speedometer value={tournamentOdds} />
+              </div>
               {oddsChange !== null && (
                 <div className="flex items-center gap-2 text-sm font-semibold geist-mono">
                   {Math.abs(oddsChange) < 1 ? (

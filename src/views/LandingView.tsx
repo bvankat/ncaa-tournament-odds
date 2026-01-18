@@ -1,6 +1,7 @@
 import React from 'react';
 import { Combobox } from '@/components/ui/combobox';
 import { Speedometer } from '@/components/Speedometer';
+import { PulseRings } from '@/components/PulseRings';
 import { OddsMovers } from '@/components/OddsMovers';
 import type { Team, OddsMovers as OddsMoversType } from '@/types/team';
 
@@ -58,7 +59,18 @@ export function LandingView({
         </div>
 
         <div className="flex items-center justify-center">
-          <Speedometer value={landingGauge} />
+          <div style={{ position: 'relative', width: 340, height: 340 }}>
+          <PulseRings 
+            startRadius={150} 
+            expandDistance={200} 
+            color="#3b82f6"
+            strokeOpacity={0.12}
+            fillOpacity={0.03}
+            duration={7}
+            glowBlur={6}
+            />            
+            <Speedometer value={landingGauge} />
+          </div>
         </div>
       </div>
 
