@@ -127,6 +127,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 fillOpacity={0.08}
                 glowBlur={2}
                 duration={6}
+                strokeWidth={2}
               />                
               <Speedometer value={tournamentOdds} />
               </div>
