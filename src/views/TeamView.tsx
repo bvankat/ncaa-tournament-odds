@@ -26,15 +26,15 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
 
   // Helper function to get win probability for a game (Nebraska-specific)
   const getWinProbability = (gameDate: Date): number | null => {
-    // @ts-ignore - kenpom.remaining_games is Nebraska-specific and not in the type
-    if (!team.kenpom?.remaining_games) return null;
+    // @ts-ignore - kenpom_remaining_games is Nebraska-specific and not in the type
+    if (!team.kenpom_remaining_games) return null;
     
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const gameMonth = monthNames[gameDate.getMonth()];
     const gameDay = gameDate.getDate();
     
     // @ts-ignore
-    const game = team.kenpom.remaining_games.find((g: any) => {
+    const game = team.kenpom_remaining_games.find((g: any) => {
       // Parse the kenpom date format ("Wed Jan 21", "Sat Feb 28", etc.)
       const parts = g.date.split(' ');
       if (parts.length < 3) return false;
