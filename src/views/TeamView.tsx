@@ -119,16 +119,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
             </div>
 
             <div className="flex flex-col items-center justify-center gap-4">
-              <div style={{ position: 'relative', width: 340, height: 340 }}>
-              <PulseRings startRadius={150} 
-                expandDistance={200} 
-                color="#cdf6fc"
-                strokeOpacity={0.1}
-                fillOpacity={0.08}
-                glowBlur={2}
-                duration={6}
-                strokeWidth={2}
-              />                
+              <div style={{ position: 'relative', width: 340, height: 340 }}>                
               <Speedometer value={tournamentOdds} />
               </div>
               {oddsChange !== null && (
