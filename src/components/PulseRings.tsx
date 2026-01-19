@@ -35,6 +35,7 @@ export function PulseRings({
 }: PulseRingsProps) {
   const rings = Array.from({ length: ringCount }, (_, i) => i);
   const endRadius = startRadius + expandDistance;
+  const scaleEnd = endRadius / startRadius;
   const svgSize = (endRadius + 20) * 2;
   const uniqueId = `pulse-${startRadius}-${endRadius}-${strokeOpacity}-${fillOpacity}`.replace(/\./g, '_');
 
@@ -62,10 +63,10 @@ export function PulseRings({
         <defs>
           <filter
             id={`${uniqueId}-glow`}
-            x="-50%"
-            y="-50%"
-            width="200%"
-            height="200%"
+            x="-100%"
+            y="-100%"
+            width="300%"
+            height="300%"
           >
             <feGaussianBlur stdDeviation={glowBlur} result="blur" />
             <feMerge>
@@ -89,8 +90,11 @@ export function PulseRings({
               stroke={color}
               strokeWidth={strokeWidth}
               filter={`url(#${uniqueId}-glow)`}
-              opacity="0"
               style={{
+                opacity: 0,
+                fillOpacity: fillOpacity,
+                transformOrigin: `${center}px ${center}px`,
+                willChange: 'transform, opacity',
                 animation: `${uniqueId}-expand ${duration}s ease-out infinite`,
                 animationDelay: `${delay}s`,
               }}
@@ -102,16 +106,12 @@ export function PulseRings({
       <style>{`
         @keyframes ${uniqueId}-expand {
           0% {
-            r: ${startRadius}px;
+            transform: scale(1);
             opacity: ${strokeOpacity};
-            stroke-width: ${strokeWidth}px;
-            fill-opacity: ${fillOpacity};
           }
           100% {
-            r: ${endRadius}px;
+            transform: scale(${scaleEnd});
             opacity: 0;
-            stroke-width: ${strokeWidth * 0.5}px;
-            fill-opacity: 0;
           }
         }
       `}</style>
