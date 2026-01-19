@@ -60,16 +60,6 @@ export function LandingView({
 
         <div className="flex items-center justify-center">
           <div style={{ position: 'relative', width: 340, height: 340 }}>
-          <PulseRings 
-            startRadius={150} 
-            expandDistance={200} 
-            color="#3b82f6"
-            strokeOpacity={0.08}
-            fillOpacity={0.03}
-            duration={7}
-            glowBlur={6}
-            strokeWidth={2}
-            />            
             <Speedometer value={landingGauge} />
           </div>
         </div>
