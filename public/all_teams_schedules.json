@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-22T11:52:25.854681",
+  "lastUpdated": "2026-01-22T11:58:53.017366",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -122101,8 +122101,8 @@
               "slug": "ul-monroe-warhawks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
               "score": {
-                "value": 37.0,
-                "displayValue": "37"
+                "value": 36.0,
+                "displayValue": "36"
               },
               "gameRank": 99
             }
@@ -190127,7 +190127,10 @@
               "team_nickname": "App State",
               "slug": "app-state-mountaineers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
-              "score": null,
+              "score": {
+                "value": 31.0,
+                "displayValue": "31"
+              },
               "gameRank": 99
             },
             {
@@ -190136,7 +190139,10 @@
               "team_nickname": "Louisiana",
               "slug": "louisiana-ragin-cajuns",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
-              "score": null,
+              "score": {
+                "value": 30.0,
+                "displayValue": "30"
+              },
               "gameRank": 99
             }
           ]
