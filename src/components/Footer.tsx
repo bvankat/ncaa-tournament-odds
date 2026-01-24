@@ -70,7 +70,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
           <p className="text-xs text-gray-500 flex flex-row justify-center items-center gap-2">
             {' '}
             <a href="https://benvankat.com" target="_blank" rel="noopener noreferrer" className="flex items-center underline hover:text-gray-300">
-              <img src="/public/ben-vankat.webp" className="rounded-full w-6 h-6 mr-2" alt="Ben Vankat" />
+              <img src="/ben-vankat.webp" className="rounded-full w-6 h-6 mr-2" alt="Ben Vankat" />
               Created by Ben Vankat 
             </a> &bull; <a href="https://x.com/bvankat" target="_blank" rel="noopener noreferrer" className="text-gray-600 underline hover:text-gray-300">Contact</a>
           </p>
