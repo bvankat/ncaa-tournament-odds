@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-28T11:45:32.284708",
+  "lastUpdated": "2026-01-28T16:32:00.642339",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -167774,12 +167774,15 @@
           "date": "2026-01-28T19:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2582",
               "team_nickname": "Southern",
               "slug": "southern-jaguars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2582.png",
-              "score": null,
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
               "gameRank": 99
             },
             {
@@ -167788,7 +167791,10 @@
               "team_nickname": "Miss Valley St",
               "slug": "mississippi-valley-state-delta-devils",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2400.png",
-              "score": null,
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
               "gameRank": 99
             }
           ]
@@ -222599,6 +222605,29 @@
           ]
         },
         {
+          "date": "2026-02-02T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2154",
+              "team_nickname": "Coppin St",
+              "slug": "coppin-state-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2154.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "47",
+              "team_nickname": "Howard",
+              "slug": "howard-bison",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
           "date": "2026-02-07T22:30Z",
           "competitors": [
             {
@@ -240071,29 +240100,6 @@
           ]
         },
         {
-          "date": "2026-01-28T20:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2755",
-              "team_nickname": "Grambling",
-              "slug": "grambling-tigers",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
-              "score": null,
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2029",
-              "team_nickname": "AR-Pine Bluff",
-              "slug": "arkansas-pine-bluff-golden-lions",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2029.png",
-              "score": null,
-              "gameRank": 99
-            }
-          ]
-        },
-        {
           "date": "2026-01-31T21:00Z",
           "competitors": [
             {
@@ -240134,6 +240140,29 @@
               "team_nickname": "Grambling",
               "slug": "grambling-tigers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-05T00:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2755",
+              "team_nickname": "Grambling",
+              "slug": "grambling-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2029",
+              "team_nickname": "AR-Pine Bluff",
+              "slug": "arkansas-pine-bluff-golden-lions",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2029.png",
               "score": null,
               "gameRank": 99
             }
@@ -299354,14 +299383,14 @@
           ]
         },
         {
-          "date": "2026-01-28T20:00Z",
+          "date": "2026-01-31T23:00Z",
           "competitors": [
             {
               "winner": false,
-              "team_id": "2755",
-              "team_nickname": "Grambling",
-              "slug": "grambling-tigers",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
+              "team_id": "2400",
+              "team_nickname": "Miss Valley St",
+              "slug": "mississippi-valley-state-delta-devils",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2400.png",
               "score": null,
               "gameRank": 99
             },
@@ -299377,14 +299406,14 @@
           ]
         },
         {
-          "date": "2026-01-31T23:00Z",
+          "date": "2026-02-05T00:30Z",
           "competitors": [
             {
               "winner": false,
-              "team_id": "2400",
-              "team_nickname": "Miss Valley St",
-              "slug": "mississippi-valley-state-delta-devils",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2400.png",
+              "team_id": "2755",
+              "team_nickname": "Grambling",
+              "slug": "grambling-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
               "score": null,
               "gameRank": 99
             },
@@ -302798,6 +302827,29 @@
           ]
         },
         {
+          "date": "2026-02-02T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2154",
+              "team_nickname": "Coppin St",
+              "slug": "coppin-state-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2154.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "47",
+              "team_nickname": "Howard",
+              "slug": "howard-bison",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
           "date": "2026-02-07T21:30Z",
           "competitors": [
             {
@@ -303548,12 +303600,15 @@
           "date": "2026-01-28T19:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2582",
               "team_nickname": "Southern",
               "slug": "southern-jaguars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2582.png",
-              "score": null,
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
               "gameRank": 99
             },
             {
@@ -303562,7 +303617,10 @@
               "team_nickname": "Miss Valley St",
               "slug": "mississippi-valley-state-delta-devils",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2400.png",
-              "score": null,
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
               "gameRank": 99
             }
           ]
