@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-28T23:32:03.988425",
+  "lastUpdated": "2026-01-29T09:58:05.769511",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -18285,16 +18285,22 @@
               "team_nickname": "Oregon",
               "slug": "oregon-ducks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
-              "score": null,
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "26",
               "team_nickname": "UCLA",
               "slug": "ucla-bruins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-              "score": null,
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
               "gameRank": 99
             }
           ]
@@ -51157,12 +51163,15 @@
           "date": "2026-01-29T03:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "21",
               "team_nickname": "San Diego St",
               "slug": "san-diego-state-aztecs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
-              "score": null,
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
               "gameRank": 99
             },
             {
@@ -51171,7 +51180,10 @@
               "team_nickname": "Colorado St",
               "slug": "colorado-state-rams",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
-              "score": null,
+              "score": {
+                "value": 50.0,
+                "displayValue": "50"
+              },
               "gameRank": 99
             }
           ]
@@ -63843,12 +63855,15 @@
           "date": "2026-01-29T04:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2541",
               "team_nickname": "Santa Clara",
               "slug": "santa-clara-broncos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
-              "score": null,
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
               "gameRank": 99
             },
             {
@@ -63857,7 +63872,10 @@
               "team_nickname": "San Francisco",
               "slug": "san-francisco-dons",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
-              "score": null,
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
               "gameRank": 99
             }
           ]
@@ -64641,16 +64659,22 @@
               "team_nickname": "Oregon",
               "slug": "oregon-ducks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
-              "score": null,
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "26",
               "team_nickname": "UCLA",
               "slug": "ucla-bruins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-              "score": null,
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
               "gameRank": 99
             }
           ]
@@ -66378,12 +66402,15 @@
           "date": "2026-01-29T04:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2541",
               "team_nickname": "Santa Clara",
               "slug": "santa-clara-broncos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
-              "score": null,
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
               "gameRank": 99
             },
             {
@@ -66392,7 +66419,10 @@
               "team_nickname": "San Francisco",
               "slug": "san-francisco-dons",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
-              "score": null,
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
               "gameRank": 99
             }
           ]
@@ -73051,12 +73081,15 @@
           "date": "2026-01-29T03:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "21",
               "team_nickname": "San Diego St",
               "slug": "san-diego-state-aztecs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
-              "score": null,
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
               "gameRank": 99
             },
             {
@@ -73065,7 +73098,10 @@
               "team_nickname": "Colorado St",
               "slug": "colorado-state-rams",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
-              "score": null,
+              "score": {
+                "value": 50.0,
+                "displayValue": "50"
+              },
               "gameRank": 99
             }
           ]
@@ -132993,7 +133029,7 @@
           ]
         },
         {
-          "date": "2026-01-31T23:00Z",
+          "date": "2026-01-31T00:00Z",
           "competitors": [
             {
               "winner": false,
@@ -197629,7 +197665,7 @@
           ]
         },
         {
-          "date": "2026-01-31T23:00Z",
+          "date": "2026-01-31T00:00Z",
           "competitors": [
             {
               "winner": false,
