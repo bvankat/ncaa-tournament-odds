@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-29T23:33:45.807778",
+  "lastUpdated": "2026-01-30T04:16:03.199059",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -100182,12 +100182,15 @@
           "date": "2026-01-30T04:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "300",
               "team_nickname": "UC Irvine",
               "slug": "uc-irvine-anteaters",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
-              "score": null,
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
               "gameRank": 99
             },
             {
@@ -100196,7 +100199,10 @@
               "team_nickname": "Hawai\u2019i",
               "slug": "hawaii-rainbow-warriors",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
@@ -111995,12 +112001,15 @@
           "date": "2026-01-30T04:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "300",
               "team_nickname": "UC Irvine",
               "slug": "uc-irvine-anteaters",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
-              "score": null,
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
               "gameRank": 99
             },
             {
@@ -112009,7 +112018,10 @@
               "team_nickname": "Hawai\u2019i",
               "slug": "hawaii-rainbow-warriors",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
