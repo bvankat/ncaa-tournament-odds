@@ -90,9 +90,9 @@ function getSeoMetaTags(route) {
   if (team) {
     const odds = team.tournamentOdds?.toFixed(1) || '0'
     const net = team.net || '—'
-    const kenpom = team.kenpom || '—'
+    const kenpom = team.kenpomRank || '—'
     const bpi = team.bpi || '—'
-    const torvik = team.torvik || '—'
+    const torvik = team.torvikRank || '—'
     const sor = team.sor || '—'
     const kpi = team.kpi || '—'
     const wab = team.wab || '—'
