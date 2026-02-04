@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-04T05:49:06.117541",
+  "lastUpdated": "2026-02-04T09:32:09.595427",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -206035,6 +206035,863 @@
               "team_nickname": "C Michigan",
               "slug": "central-michigan-chippewas",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        }
+      ]
+    },
+    "wofford-terriers": {
+      "espn_id": "2747",
+      "team_name": "Wofford Terriers",
+      "schedule": [
+        {
+          "date": "2025-11-04T00:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2244",
+              "team_nickname": "George Mason",
+              "slug": "george-mason-patriots",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 46.0,
+                "displayValue": "46"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-08T19:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "270",
+              "team_nickname": "Milwaukee",
+              "slug": "milwaukee-panthers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-12T01:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2",
+              "team_nickname": "Auburn",
+              "slug": "auburn-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
+              "gameRank": 22
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-15T19:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "91",
+              "team_nickname": "Bellarmine",
+              "slug": "bellarmine-knights",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 94.0,
+                "displayValue": "94"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-20T00:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2454",
+              "team_nickname": "North Florida",
+              "slug": "north-florida-ospreys",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2454.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-22T00:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2215",
+              "team_nickname": "Erskine",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-26T19:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "94",
+              "team_nickname": "N Kentucky",
+              "slug": "northern-kentucky-norse",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-29T22:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2198",
+              "team_nickname": "E Kentucky",
+              "slug": "eastern-kentucky-colonels",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-04T00:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 63.0,
+                "displayValue": "63"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2506",
+              "team_nickname": "Presbyterian",
+              "slug": "presbyterian-blue-hose",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2506.png",
+              "score": {
+                "value": 56.0,
+                "displayValue": "56"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-06T21:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 52.0,
+                "displayValue": "52"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2210",
+              "team_nickname": "Elon",
+              "slug": "elon-phoenix",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2210.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-16T00:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2241",
+              "team_nickname": "Gardner-Webb",
+              "slug": "gardner-webb-runnin-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-18T00:30Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2724",
+              "team_nickname": "Wichita St",
+              "slug": "wichita-state-shockers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-28T19:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2841",
+              "team_nickname": "Union (KY)",
+              "slug": null,
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2841.png",
+              "score": {
+                "value": 54.0,
+                "displayValue": "54"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-31T18:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2717",
+              "team_nickname": "W Carolina",
+              "slug": "western-carolina-catamounts",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-03T18:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2643",
+              "team_nickname": "The Citadel",
+              "slug": "the-citadel-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2643.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 95.0,
+                "displayValue": "95"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-07T23:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 97.0,
+                "displayValue": "97"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2430",
+              "team_nickname": "UNC Greensboro",
+              "slug": "unc-greensboro-spartans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2430.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-10T19:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2382",
+              "team_nickname": "Mercer",
+              "slug": "mercer-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png",
+              "score": {
+                "value": 109.0,
+                "displayValue": "109"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 97.0,
+                "displayValue": "97"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-14T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "236",
+              "team_nickname": "Chattanooga",
+              "slug": "chattanooga-mocs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-17T22:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "231",
+              "team_nickname": "Furman",
+              "slug": "furman-paladins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-21T23:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-24T16:00Z",
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2382",
+              "team_nickname": "Mercer",
+              "slug": "mercer-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-29T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "236",
+              "team_nickname": "Chattanooga",
+              "slug": "chattanooga-mocs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png",
+              "score": {
+                "value": 55.0,
+                "displayValue": "55"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-02T00:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2193",
+              "team_nickname": "ETSU",
+              "slug": "east-tennessee-state-buccaneers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-04T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2678",
+              "team_nickname": "VMI",
+              "slug": "vmi-keydets",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-07T21:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2717",
+              "team_nickname": "W Carolina",
+              "slug": "western-carolina-catamounts",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-12T00:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-14T22:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2430",
+              "team_nickname": "UNC Greensboro",
+              "slug": "unc-greensboro-spartans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2430.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-18T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2678",
+              "team_nickname": "VMI",
+              "slug": "vmi-keydets",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-22T00:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "231",
+              "team_nickname": "Furman",
+              "slug": "furman-paladins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-26T00:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2193",
+              "team_nickname": "ETSU",
+              "slug": "east-tennessee-state-buccaneers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-28T19:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2643",
+              "team_nickname": "The Citadel",
+              "slug": "the-citadel-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2643.png",
               "score": null,
               "gameRank": 99
             }
