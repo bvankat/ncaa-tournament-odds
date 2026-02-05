@@ -289,7 +289,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
               <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">NEXT GAME</h3>
               {team.nextGame ? (
                 <div className="grid grid-cols-1 gap-2 align-middle items-center justify-between mt-2">
-                    <p className="text-md leading-4 items-center flex flex-row gap-2 font-medium text-gray-900 mt-1" id="nextGame-teams">
+                    <p className="text-md leading-4 items-center flex flex-row flex-wrap gap-2 font-medium text-gray-900 mt-1" id="nextGame-teams">
                         {(() => {
                           const awaySlug = getTeamSlug(team.nextGame.away_team_id);
                           const homeSlug = getTeamSlug(team.nextGame.home_team_id);
