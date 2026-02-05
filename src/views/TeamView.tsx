@@ -109,7 +109,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 </div>
               )}
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
-                <h1 className="text-3xl lg:text-5xl px-6 lg:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white ibm-plex-sans">
+                <h1 className="text-3xl lg:text-5xl px-6 md:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white ibm-plex-sans">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
