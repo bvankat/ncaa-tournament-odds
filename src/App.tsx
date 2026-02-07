@@ -3,6 +3,7 @@ import { Layout } from '@/components/Layout';
 import { LandingView } from '@/views/LandingView';
 import { TeamView } from '@/views/TeamView';
 import { AllTeamsView } from '@/views/AllTeamsView';
+import { ConferenceListView } from '@/views/ConferenceListView';
 import { formatRelativeTime } from '@/lib/utils';
 import type { Team, OddsMovers } from '@/types/team';
 
@@ -122,6 +123,14 @@ function App() {
     trackPageView(newPath);
   };
 
+  const goConferences = () => {
+    const newPath = '/conferences';
+    window.history.pushState({}, '', newPath);
+    setSelectedSlugs(['conferences']);
+    window.scrollTo(0, 0);
+    trackPageView(newPath);
+  };
+
   const handleTeamSelect = (slug: string) => {
     if (slug) {
       const newPath = `/${slug}`;
@@ -146,6 +155,7 @@ function App() {
 
   const isLanding = selectedSlugs.length === 0;
   const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'all-teams';
+  const isConferencesPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'conferences';
 
   const selectedTeams = selectedSlugs
     .filter(slug => slug !== 'all-teams')
@@ -154,7 +164,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Layout onHome={goHome} onAllTeams={goAllTeams} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
+      <Layout onHome={goHome} onAllTeams={goAllTeams} onConferences={goConferences} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
         {isLanding ? (
           <LandingView
             teams={allTeams}
@@ -169,6 +179,13 @@ function App() {
           />
         ) : isAllTeamsPage ? (
           <AllTeamsView
+            teams={allTeams}
+            onTeamSelect={handleTeamSelect}
+            lastUpdated={lastUpdated}
+            formatRelativeTime={formatRelativeTime}
+          />
+        ) : isConferencesPage ? (
+          <ConferenceListView
             teams={allTeams}
             onTeamSelect={handleTeamSelect}
             lastUpdated={lastUpdated}

@@ -3,6 +3,7 @@ import { Combobox } from '@/components/ui/combobox';
 import { Speedometer } from '@/components/Speedometer';
 import { PulseRings } from '@/components/PulseRings';
 import { OddsMovers } from '@/components/OddsMovers';
+import { TournamentDashboard } from '@/components/TournamentDashboard';
 import type { Team, OddsMovers as OddsMoversType } from '@/types/team';
 
 type LandingViewProps = {
@@ -93,6 +94,15 @@ export function LandingView({
               <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
             </button>
           ))}
+        </div>
+      </div>
+
+      <div className="bg-white pt-12 lg:pt-16 pb-4 lg:pb-6">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-6 ibm-plex-sans">
+            Bracket Glance
+          </h2>
+          <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
         </div>
       </div>
 

@@ -8,19 +8,20 @@ type LayoutProps = {
   children: React.ReactNode;
   onHome: () => void;
   onAllTeams?: () => void;
+  onConferences?: () => void;
   teams: Team[];
   selectedSlug?: string;
   onTeamSelect: (slug: string) => void;
 };
 
-export function Layout({ children, onHome, onAllTeams, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
+export function Layout({ children, onHome, onAllTeams, onConferences, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
   const [paletteOpen, setPaletteOpen] = useState(false);
 
   return (
     <>
-      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} />
+      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} />
       {children}
-      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} />
+      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} />
       <CommandPalette
         open={paletteOpen}
         onOpenChange={setPaletteOpen}
@@ -32,6 +33,10 @@ export function Layout({ children, onHome, onAllTeams, teams, selectedSlug = '',
         }}
         onAllTeams={() => {
           onAllTeams?.();
+          setPaletteOpen(false);
+        }}
+        onConferences={() => {
+          onConferences?.();
           setPaletteOpen(false);
         }}
       />

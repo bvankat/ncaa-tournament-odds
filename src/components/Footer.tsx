@@ -9,9 +9,10 @@ type FooterProps = {
   onTeamSelect?: (slug: string) => void;
   onOpenPalette?: () => void;
   onAllTeams?: () => void;
+  onConferences?: () => void;
 };
 
-export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette, onAllTeams }: FooterProps) {
+export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette, onAllTeams, onConferences }: FooterProps) {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">

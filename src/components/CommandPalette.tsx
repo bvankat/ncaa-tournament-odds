@@ -10,9 +10,10 @@ type CommandPaletteProps = {
   onSelectTeam: (slug: string) => void;
   onHome: () => void;
   onAllTeams: () => void;
+  onConferences: () => void;
 };
 
-export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome, onAllTeams }: CommandPaletteProps) {
+export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome, onAllTeams, onConferences }: CommandPaletteProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -86,6 +87,17 @@ export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome
               >
                 <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">📊</span>
                 Full team list
+              </CommandItem>
+              <CommandItem
+                value="Conference standings"
+                keywords={["conferences", "conference", "standings"]}
+                onSelect={() => {
+                  onConferences();
+                  onOpenChange(false);
+                }}
+              >
+                <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏀</span>
+                Conference view
               </CommandItem>
             </CommandGroup>
             <CommandGroup heading="Teams">
