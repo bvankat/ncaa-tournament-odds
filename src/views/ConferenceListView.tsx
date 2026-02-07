@@ -76,8 +76,8 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
             const teams = conferenceGroups[conference];
             const leader = teams[0];
             const locks = teams.filter(t => (t.tournamentOdds ?? 0) > 90 && t.slug !== leader?.slug);
-            const likelyIn = teams.filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90);
-            const bubble = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70);
+            const likelyIn = teams.filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && t.slug !== leader?.slug);
+            const bubble = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && t.slug !== leader?.slug);
 
             return (
               <div key={conference} className="scroll-mt-24">

@@ -43,8 +43,11 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
     .filter(t => (t.tournamentOdds ?? 0) > 90 && !conferenceLeaders.has(t.slug))
     .sort((a, b) => a.shortName.localeCompare(b.shortName));
   
-  const likelyInTeams = teams.filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90);
-  const bubbleTeams = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70);
+  const likelyInTeams = teams
+    .filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && !conferenceLeaders.has(t.slug));
+  
+  const bubbleTeams = teams
+    .filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && !conferenceLeaders.has(t.slug));
   
   const locks = locksTeams.length;
   const likelyIn = likelyInTeams.length;
