@@ -92,7 +92,7 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
             <div className="text-xs font-medium geist-mono text-gray-500 uppercase mb-1">
               Locks
             </div>
-            <div className="text-4xl font-bold text-green-600 ibm-plex-sans mb-3">
+            <div className="text-4xl font-bold text-green-700 ibm-plex-sans mb-3">
               {locks}
             </div>
             <div className="flex flex-wrap gap-1.5">
@@ -121,7 +121,7 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
           <div className="text-xs font-medium geist-mono text-gray-500 uppercase mb-1">
             Safe for now
           </div>
-          <div className="text-4xl font-bold text-green-500 ibm-plex-sans mb-4">
+          <div className="text-4xl font-bold text-green-400 ibm-plex-sans mb-4">
             {likelyIn}
           </div>
           <div className="flex flex-wrap gap-2">
