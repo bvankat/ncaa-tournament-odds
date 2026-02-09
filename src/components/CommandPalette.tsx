@@ -97,7 +97,7 @@ export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome
                 }}
               >
                 <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏀</span>
-                Conference view
+                Conference breakdown
               </CommandItem>
             </CommandGroup>
             <CommandGroup heading="Teams">

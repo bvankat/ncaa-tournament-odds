@@ -17,7 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-export function Combobox({ teams, value, onValueChange, placeholder = "Select a team...", onAllTeams }) {
+export function Combobox({ teams, value, onValueChange, placeholder = "Select a team...", onAllTeams, onConferences }) {
   const [open, setOpen] = React.useState(false)
 
   const selectedTeam = teams.find((team) => team.slug === value)
@@ -84,6 +84,30 @@ export function Combobox({ teams, value, onValueChange, placeholder = "Select a 
                   <Check className="mr-2 h-4 w-4 opacity-0" />
                   <span className="mr-2 w-5 h-5 inline-flex items-center justify-center text-sm">📊</span>
                   Full team list
+                </CommandItem>
+              )}
+              {onConferences && (
+                <CommandItem
+                  value="Conference breakdown"
+                  keywords={["conferences", "conference", "standings", "breakdown"]}
+                  onSelect={() => {
+                    onConferences()
+                    setOpen(false)
+                  }}
+                  onMouseDown={(e) => {
+                    e.preventDefault()
+                  }}
+                  onPointerUp={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    onConferences()
+                    setOpen(false)
+                  }}
+                  className="font-semibold border-b border-gray-200"
+                >
+                  <Check className="mr-2 h-4 w-4 opacity-0" />
+                  <span className="mr-2 w-5 h-5 inline-flex items-center justify-center text-sm">🏀</span>
+                  Conference breakdown
                 </CommandItem>
               )}
               {teams.map((team) => (

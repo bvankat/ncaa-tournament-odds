@@ -62,10 +62,10 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
             </div>
           )}
           <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
-            Conference Standings
+            Conference Breakdown
           </h1>
           <p className="text-gray-600 text-lg mb-6">
-            Current conference standings with tournament odds for all Division I conferences.
+            Updated tournament projections and current standings for all 31 Division I conferences.
           </p>
         </div>
 
