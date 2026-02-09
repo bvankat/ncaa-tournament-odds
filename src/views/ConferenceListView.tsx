@@ -230,7 +230,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                               className="border-b border-gray-200 hover:bg-gray-50 cursor-pointer transition-colors"
                               onClick={() => onTeamSelect(team.slug)}
                             >
-                              <td className="py-2 px-2 text-gray-400 geist-mono text-xs font-normal">
+                              <td className="py-2 pl-2 text-gray-400 geist-mono text-xs font-normal">
                                 {position}
                               </td>
                               <td className="py-2 px-3">
