@@ -195,9 +195,6 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                       </div>
                     )}
 
-                    <p className="text-xs text-gray-500 geist-mono pt-2">
-                      {teams.length} teams
-                    </p>
                   </div>
 
                   {/* Main Content - Standings Table */}
