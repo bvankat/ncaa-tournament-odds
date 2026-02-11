@@ -79,7 +79,7 @@ export function Combobox({ teams, value, onValueChange, placeholder = "Select a 
                     onAllTeams()
                     setOpen(false)
                   }}
-                  className="font-semibold border-b border-gray-200"
+                  className="font-medium text-sm"
                 >
                   <Check className="mr-2 h-4 w-4 opacity-0" />
                   <span className="mr-2 w-5 h-5 inline-flex items-center justify-center text-sm">📊</span>
@@ -103,7 +103,7 @@ export function Combobox({ teams, value, onValueChange, placeholder = "Select a 
                     onConferences()
                     setOpen(false)
                   }}
-                  className="font-semibold border-b border-gray-200"
+                  className="font-medium mb-4 text-sm"
                 >
                   <Check className="mr-2 h-4 w-4 opacity-0" />
                   <span className="mr-2 w-5 h-5 inline-flex items-center justify-center text-sm">🏀</span>

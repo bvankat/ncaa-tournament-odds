@@ -63,10 +63,10 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
                     onAllTeams();
                     setMenuOpen(false);
                   }}
-                  className="w-full flex items-center gap-3 p-3 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold border-b border-gray-200 mb-2"
+                  className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold"
                 >
                   <span className="w-8 h-8 inline-flex items-center justify-center text-xl">📊</span>
-                  <span className="text-sm font-normal text-gray-600"><a href="/all-teams">Full team list</a></span>
+                  <span className="font-normal text-gray-600"><a href="/all-teams">Full teams list</a></span>
                 </button>
               )}
               {onConferences && (
@@ -75,10 +75,10 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
                     onConferences();
                     setMenuOpen(false);
                   }}
-                  className="w-full flex items-center gap-3 p-3 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold border-b border-gray-200 mb-2"
+                  className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold mb-6"
                 >
                   <span className="w-8 h-8 inline-flex items-center justify-center text-xl">🏀</span>
-                  <span className="text-sm font-normal text-gray-600"><a href="/conferences">Conference breakdown</a></span>
+                  <span className="font-normal text-gray-600"><a href="/conferences">Conference breakdown</a></span>
                 </button>
               )}
               {teams.map((team) => (
