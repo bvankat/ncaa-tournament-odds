@@ -274,7 +274,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
             const teams = conferenceGroups[conference];
             const leader = teams[0];
             const locks = teams.filter(t => (t.tournamentOdds ?? 0) > 90 && t.slug !== leader?.slug)
-              .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+              .sort((a, b) => a.shortName.localeCompare(b.shortName));
             const likelyIn = teams.filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && t.slug !== leader?.slug)
               .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
             const bubble = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && t.slug !== leader?.slug)

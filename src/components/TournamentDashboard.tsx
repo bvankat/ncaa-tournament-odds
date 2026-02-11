@@ -34,14 +34,14 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
 
   const autobids = Object.keys(conferenceGroups).length;
   
-  // Get conference leaders sorted by tournament odds
+  // Get conference leaders sorted alphabetically
   const autobidTeams = teams
     .filter(t => conferenceLeaders.has(t.slug))
-    .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+    .sort((a, b) => a.shortName.localeCompare(b.shortName));
   
   const locksTeams = teams
     .filter(t => (t.tournamentOdds ?? 0) > 90 && !conferenceLeaders.has(t.slug))
-    .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+    .sort((a, b) => a.shortName.localeCompare(b.shortName));
   
   const likelyInTeams = teams
     .filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && !conferenceLeaders.has(t.slug))
