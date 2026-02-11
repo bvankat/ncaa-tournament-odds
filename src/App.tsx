@@ -25,7 +25,7 @@ function App() {
   const shuffledTeams = useMemo(() => {
     if (allTeams.length === 0) return [] as Team[];
     const shuffled = [...allTeams].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 100);
+    return shuffled.slice(0, 75);
   }, [allTeams]);
 
   // Google Analytics SPA page_view tracking helper
