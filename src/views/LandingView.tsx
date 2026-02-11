@@ -53,8 +53,8 @@ export function LandingView({
             </div>
           )}
           <div className="flex flex-col mb-6 px-4 lg:px-0">
-            <h1 className="text-center md:text-left text-5xl lg:text-6xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Tournament Odds Machine</h1>
-            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">On the bubble? Track your team's current chances of getting an at-large bid. </p>
+            <h1 className="text-center md:text-left text-5xl lg:text-6xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Basketball Tournament Odds Machine</h1>
+            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's bubble chances with current metrics for all 360+ Division I schools.</p>
           </div>
           <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onAllTeams={onAllTeams} onConferences={onConferences} />
@@ -69,40 +69,103 @@ export function LandingView({
       </div>
 
       <div id="logo-scroller" className="mt-16 pb-16 overflow-hidden" style={{ perspective: '1000px' }}>
-        <div className="logo-row logo-row-1 flex gap-8 mb-8">
+        <div className="logo-row logo-row-1 flex gap-4 lg:gap-8 mb-6 lg:mb-8">
           {shuffledTeams.slice(0, 25).concat(shuffledTeams.slice(0, 25)).map((team, idx) => (
             <button key={`row1-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
-              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
+              <img src={team.logo ?? ''} alt={team.shortName} className="w-9 h-9 lg:w-16 lg:h-16 object-contain" />
             </button>
           ))}
         </div>
-        <div className="logo-row logo-row-2 flex gap-8 mb-8">
+        <div className="logo-row logo-row-2 flex gap-4 lg:gap-8 mb-6 lg:mb-8">
           {shuffledTeams.slice(25, 50).concat(shuffledTeams.slice(25, 50)).map((team, idx) => (
             <button key={`row2-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
-              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
+              <img src={team.logo ?? ''} alt={team.shortName} className="w-9 h-9 lg:w-16 lg:h-16 object-contain" />
             </button>
           ))}
         </div>
-        <div className="logo-row logo-row-3 flex gap-8 mb-8">
+        <div className="logo-row logo-row-3 flex gap-4 lg:gap-8">
           {shuffledTeams.slice(50, 75).concat(shuffledTeams.slice(50, 75)).map((team, idx) => (
             <button key={`row3-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
-              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
+              <img src={team.logo ?? ''} alt={team.shortName} className="w-9 h-9 lg:w-16 lg:h-16 object-contain" />
             </button>
           ))}
         </div>
-        <div className="logo-row logo-row-4 flex gap-8">
-          {shuffledTeams.slice(75, 100).concat(shuffledTeams.slice(75, 100)).map((team, idx) => (
-            <button key={`row4-${idx}`} className="logo-item flex-shrink-0 cursor-pointer" onClick={() => onTeamSelect(team.slug)} title={team.displayName}>
-              <img src={team.logo ?? ''} alt={team.shortName} className="w-16 h-16 object-contain" />
-            </button>
-          ))}
+      </div>
+
+      {/* Feature Cards Section */}
+      <div className="pb-20 px-4 lg:px-16 xl:px-24">
+        <div className="max-w-7xl mx-auto">
+          {/* Mobile: Stacked, Desktop: 2x2 grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              
+              {/* Card 1 */}
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-200" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"></path>
+                      </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Latest rankings</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">NET, Kenpom, Torvik, BPI, SOR, KPI, WAB — all in one place.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-200" xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 13m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M13.45 11.55l2.05 -2.05"></path><path d="M6.4 20a9 9 0 1 1 11.2 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">The needle</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">At-large chances boiled down to one number</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Bubble watch</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Who's safe and who's sweating on Selection Sunday</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Bid breakdowns</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Current status reports for all 31 conferences</p>
+                  </div>
+                </div>
+              </div>
+
+          </div>
         </div>
       </div>
 
       <div className="bg-white pt-12 lg:pt-16 pb-4 lg:pb-6">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6 ibm-plex-sans">
-            Bracket Glance
+            Today's Bracket: At a Glance
           </h2>
           <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
           <p className="mt-4 text-gray-500 text-xs cursor-pointer hover:underline"><a href="/conferences">Conference breakdown »</a></p>
