@@ -105,6 +105,8 @@ export function LandingView({
             Bracket Glance
           </h2>
           <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
+          <p className="mt-4 text-gray-500 text-xs cursor-pointer hover:underline"><a href="/conferences">Conference breakdown »</a></p>
+
         </div>
       </div>
 
