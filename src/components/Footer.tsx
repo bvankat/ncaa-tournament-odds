@@ -51,7 +51,8 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
         {/* Column 3: Team Selector */}
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xs uppercase geist-mono tracking-wider text-gray-400">Select a team</h3>
+            <p className="geist-mono text-xs font-medium uppercase tracking-wide text-gray-400">LINKS</p>
+            
             <p
               className="inline-flex items-center gap-2 text-xs font-medium transition-colors"
             >
@@ -69,6 +70,26 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
             onConferences={onConferences}
             onBracket={onBracket}
           />
+          <nav className="mt-6 space-y-2">
+            <button
+              onClick={onBracket}
+              className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
+            >
+              Projected Bracket
+            </button>
+            <button
+              onClick={onConferences}
+              className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
+            >
+              Conference Breakdown
+            </button>
+            <button
+              onClick={onAllTeams}
+              className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
+            >
+              Full Teams List
+            </button>
+          </nav>
         </div>
       </div>
       <div className="border-t border-white/10 px-8 py-4 text-center">
