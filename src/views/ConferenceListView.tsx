@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import type { Team } from '@/types/team';
 import { formatPercent } from '@/lib/utils';
+import { calculateBracket } from '@/lib/bracketProjection';
 import { TournamentDashboard } from '@/components/TournamentDashboard';
 
 type ConferenceListViewProps = {
@@ -44,6 +45,60 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
   const sortedConferences = useMemo(() => {
     return Object.keys(conferenceGroups).sort((a, b) => a.localeCompare(b));
   }, [conferenceGroups]);
+
+  // Calculate bracket projection for seed assignments and bubble teams
+  const bracketData = useMemo(() => calculateBracket(teams), [teams]);
+  const { teamSeedMap, bracketTeams, bubbleTeams } = bracketData;
+
+  // Multi-bid conferences grid data
+  const multiBidGrid = useMemo(() => {
+    const bracketTeamIds = new Set(bracketTeams.map(t => t.espnId || t.slug));
+    const firstFourOut = bubbleTeams.slice(0, 4);
+    const nextFourOut = bubbleTeams.slice(4, 8);
+    const bubbleTeamIds = new Set([...firstFourOut, ...nextFourOut].map(t => t.espnId || t.slug));
+    
+    type ConferenceData = {
+      conference: string;
+      tournamentTeams: Team[];
+      bubbleTeams: Team[];
+      tournamentCount: number;
+    };
+    
+    const conferencesByBids: ConferenceData[] = [];
+    
+    Object.keys(conferenceGroups).forEach(conf => {
+      const confTeams = conferenceGroups[conf];
+      
+      // Separate tournament teams from bubble teams
+      const tournamentTeams = confTeams
+        .filter(t => bracketTeamIds.has(t.espnId || t.slug))
+        .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+      
+      const bubble = confTeams
+        .filter(t => bubbleTeamIds.has(t.espnId || t.slug))
+        .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+      
+      // Only include conferences with at least 2 teams total (tournament + bubble)
+      const totalTeams = tournamentTeams.length + bubble.length;
+      if (totalTeams >= 2) {
+        conferencesByBids.push({
+          conference: conf,
+          tournamentTeams,
+          bubbleTeams: bubble,
+          tournamentCount: tournamentTeams.length
+        });
+      }
+    });
+    
+    // Sort conferences by number of tournament teams (descending)
+    conferencesByBids.sort((a, b) => b.tournamentCount - a.tournamentCount);
+    
+    // Find max depth for each section
+    const maxTournamentDepth = Math.max(...conferencesByBids.map(c => c.tournamentTeams.length), 0);
+    const maxBubbleDepth = Math.max(...conferencesByBids.map(c => c.bubbleTeams.length), 0);
+    
+    return { conferences: conferencesByBids, maxTournamentDepth, maxBubbleDepth };
+  }, [conferenceGroups, bracketTeams, bubbleTeams]);
 
   return (
     <div className="min-h-screen">
@@ -94,6 +149,124 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
           </select>
         </div>
       </div>
+      
+      {/* Multi-bid Conferences Grid */}
+      {multiBidGrid.conferences.length > 0 && (
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 mb-12">
+          <div className="mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 ibm-plex-sans">Multi-Bid Conferences</h2>
+            <p className="text-sm text-gray-600 mt-1">
+              Conferences with multiple tournament-caliber teams, including bubble teams just outside the field
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-gray-300 bg-gray-50">
+                  {multiBidGrid.conferences.map(({ conference, tournamentCount }) => (
+                    <th key={conference} className="text-center text-xs py-2 px-2 font-semibold text-gray-900 border-r border-gray-200 last:border-r-0 min-w-[80px]">
+                      <a 
+                        href={`#${conference.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="hover:text-blue-600 transition-colors block"
+                      >
+                        <div>{conference}</div>
+                        <div className="text-[10px] font-normal text-gray-500 mt-1 geist-mono">
+                          {tournamentCount} {tournamentCount === 1 ? 'team' : 'teams'}
+                        </div>
+                      </a>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {/* Tournament Teams */}
+                {Array.from({ length: multiBidGrid.maxTournamentDepth }).map((_, rowIndex) => (
+                  <tr key={`tournament-${rowIndex}`} className="border-b border-gray-200">
+                    {multiBidGrid.conferences.map(({ conference, tournamentTeams }) => {
+                      const team = tournamentTeams[rowIndex];
+                      const teamId = team ? (team.espnId || team.slug) : null;
+                      const seed = teamId ? teamSeedMap.get(teamId) : null;
+                      return (
+                        <td 
+                          key={conference} 
+                          className="py-1.5 px-2 border-r border-gray-200 last:border-r-0 align-top"
+                        >
+                          {team ? (
+                            <button
+                              onClick={() => onTeamSelect(team.slug)}
+                              className="w-full flex items-center justify-center gap-1.5 py-1 px-1 rounded hover:bg-gray-50 transition-colors"
+                              title={`${team.shortName}: ${seed} seed`}
+                            >
+                              {seed && (
+                                <span className="text-[10px] font-bold text-gray-500 geist-mono w-4 text-left">
+                                  {seed}
+                                </span>
+                              )}
+                              {team.logo && (
+                                <img
+                                  src={team.logo}
+                                  alt={`${team.shortName}: ${seed} seed`}
+                                  className="w-6 h-6 object-contain"
+                                />
+                              )}
+                            </button>
+                          ) : (
+                            <div className="h-8"></div>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+                {/* Separator row */}
+                {multiBidGrid.maxBubbleDepth > 0 && (
+                  <tr>
+                    {multiBidGrid.conferences.map(({ conference }) => (
+                      <td key={conference} className="border-r border-gray-200 last:border-r-0">
+                        <div className="border-t-2 border-gray-900"></div>
+                      </td>
+                    ))}
+                  </tr>
+                )}
+                {/* Bubble Teams (First Four Out + Next Four Out) */}
+                {Array.from({ length: multiBidGrid.maxBubbleDepth }).map((_, rowIndex) => (
+                  <tr key={`bubble-${rowIndex}`} className="border-b border-gray-200 last:border-b-0">
+                    {multiBidGrid.conferences.map(({ conference, bubbleTeams }) => {
+                      const team = bubbleTeams[rowIndex];
+                      const bubbleCategory = rowIndex < 4 ? 'First Four Out' : 'Next Four Out';
+                      return (
+                        <td 
+                          key={conference} 
+                          className="py-1.5 px-2 border-r border-gray-200 last:border-r-0 align-top"
+                        >
+                          {team ? (
+                            <button
+                              onClick={() => onTeamSelect(team.slug)}
+                              className="w-full flex items-center justify-center gap-1.5 py-1 px-1 rounded hover:bg-gray-50 transition-colors opacity-60"
+                              title={`${team.shortName} - ${bubbleCategory}`}
+                            >
+                              {team.logo && (
+                                <img
+                                  src={team.logo}
+                                  alt={`${team.shortName} - ${bubbleCategory}`}
+                                  className="w-6 h-6 object-contain"
+                                />
+                              )}
+                            </button>
+                          ) : (
+                            <div className="h-8"></div>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+      
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
 
         <div className="space-y-12">
@@ -112,7 +285,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                   </a>
                 </h2>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-12">
                   {/* Sidebar - Tournament Context */}
                   <div className="space-y-4">
                     {/* Conference Leader */}
