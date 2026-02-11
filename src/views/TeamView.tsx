@@ -275,14 +275,14 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 )}
                 <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">OVERALL</h3>
               </div>
-              <div className="py-6 px-6 text-center flex-1">
+              <a href="/conferences" className="py-6 px-6 text-center flex-1 hover:bg-gray-50 transition-colors">
                 {team.confRecord && (
-                  <div > 
+                  <div>
                     <div className="text-2xl font-bold text-gray-900">{team.confRecord}</div>
                   </div>
                 )}
                 <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{team.confStandingsPosition}</h3>
-              </div>
+              </a>
             </div>
             
             <div className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 mb-6">
