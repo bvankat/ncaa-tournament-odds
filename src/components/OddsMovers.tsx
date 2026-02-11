@@ -30,7 +30,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                 Bubble Watch
               </h2>
               <p className="text-gray-600 mb-6 text-sm">
-                Teams closest to the cut line. High volatility for wins and losses. Click a team to view more details.
+                Teams closest to the cut line. High volatility for wins and losses.
               </p>
               <div className="rounded-lg border border-gray-200 overflow-hidden">
                 <table className="w-full">
@@ -69,7 +69,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                                 alt={team.displayName}
                                 className="w-6 h-6 object-contain"
                               />
-                              <span className="text-gray-900 font-medium text-md">
+                              <span className="text-gray-900 font-medium text-sm">
                                 {team.displayName}
                               </span>
                             </div>
@@ -87,7 +87,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                               <span className="text-gray-400 geist-mono text-xs"></span>
                             )}
                           </td>
-                          <td className="py-3 px-4 text-right text-md">
+                          <td className="py-3 px-4 text-right text-sm">
                             <span className="font-medium geist-mono">
                               {formattedOdds}
                             </span>
@@ -128,13 +128,13 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                     return (
                       <div
                         key={team.espnId}
-                        className="flex flex-col items-center text-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 cursor-pointer transition-all"
+                        className="flex flex-col items-center text-center p-4 rounded-md border border-gray-200 hover:border-green-300 hover:bg-green-50 cursor-pointer transition-all"
                         onClick={() => onTeamSelect(team.slug)}
                       >
                         <img
                           src={team.logo}
                           alt={team.displayName}
-                          className="w-12 h-12 object-contain mb-3"
+                          className="w-9 h-9 object-contain mb-3"
                         />
                         <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
                           {team.displayName}
@@ -158,7 +158,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
               <div>
                 <h3 className="text-lg font-medium mb-4 flex items-center gap-1 ibm-plex-sans">
                   <ArrowDown className="w-5 h-5 text-red-700" />
-                  Falling Fast
+                  Headed Down
                 </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                   {moversData.biggestFallers.slice(0, 4).map((team) => {
@@ -172,13 +172,13 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                     return (
                       <div
                         key={team.espnId}
-                        className="flex flex-col items-center text-center p-4 rounded-lg border border-gray-200 hover:border-red-300 hover:bg-red-50 cursor-pointer transition-all"
+                        className="flex flex-col items-center text-center p-4 rounded-md border border-gray-200 hover:border-red-300 hover:bg-red-50 cursor-pointer transition-all"
                         onClick={() => onTeamSelect(team.slug)}
                       >
                         <img
                           src={team.logo}
                           alt={team.displayName}
-                          className="w-12 h-12 object-contain mb-3"
+                          className="w-9 h-9 object-contain mb-3"
                         />
                         <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
                           {team.displayName}
