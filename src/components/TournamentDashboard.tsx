@@ -55,7 +55,7 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
   const spotsAvailable = 68 - autobids - locks - likelyIn;
 
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden mb-8">
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Column 1 - Autobids and Locks */}
         <div className="md:border-r border-gray-200">
