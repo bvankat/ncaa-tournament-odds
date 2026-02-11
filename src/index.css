@@ -125,3 +125,12 @@ h1, h2, h3, h4, h5, h6 {
 .animate-slide-in {
   animation: slide-in 0.3s ease-out;
 }
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
