@@ -80,14 +80,14 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
             defaultValue=""
             onChange={(e) => {
               if (e.target.value) {
-                document.getElementById(e.target.value)?.scrollIntoView({ behavior: 'smooth' });
+                window.location.hash = e.target.value;
                 e.target.value = '';
               }
             }}
           >
             <option value="" disabled>Jump to a conference</option>
             {sortedConferences.map(conf => (
-              <option key={conf} value={`conf-${conf.toLowerCase().replace(/\s+/g, '-')}`}>
+              <option key={conf} value={`${conf.toLowerCase().replace(/\s+/g, '-')}`}>
                 {conf}
               </option>
             ))}
@@ -105,9 +105,11 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
             const bubble = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && t.slug !== leader?.slug);
 
             return (
-              <div key={conference} id={`conf-${conference.toLowerCase().replace(/\s+/g, '-')}`} className="scroll-mt-24">
+              <div key={conference} id={`${conference.toLowerCase().replace(/\s+/g, '-')}`} className="scroll-mt-24">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 ibm-plex-sans">
-                  {conference}
+                  <a href={`/conferences#${conference.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-gray-700 transition-colors">
+                    {conference}
+                  </a>
                 </h2>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6">

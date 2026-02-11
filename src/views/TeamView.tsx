@@ -275,7 +275,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 )}
                 <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">OVERALL</h3>
               </div>
-              <a href="/conferences" className="py-6 px-6 text-center flex-1 hover:bg-gray-50 transition-colors">
+              <a href={`/conferences#${(team.conference || '').toLowerCase().replace(/\s+/g, '-')}`} className="py-6 px-6 text-center flex-1 hover:bg-gray-50 transition-colors">
                 {team.confRecord && (
                   <div>
                     <div className="text-2xl font-bold text-gray-900">{team.confRecord}</div>
