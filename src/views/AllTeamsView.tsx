@@ -77,28 +77,34 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
   }, [teams]);
 
   return (
-    <div className="bg-white py-12 lg:py-16 min-h-screen">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
-        <div className="mb-8">
-          {lastUpdated && formatRelativeTime && (
-            <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-gray-200 mb-4">
-              <span className="relative size-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
-                <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
-              </span>
-              <p className="opacity-60 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
-                <span>UPDATED </span>
-                <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
-              </p>
-            </div>
-          )}
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
-            All Teams
-          </h1>
-          <p className="text-gray-600 text-lg">
-            Current NCAA Tournament at-large bid odds for all {teams.length} Division I teams.</p>
-            <p className="mt-12 text-gray-500 text-sm geist-mono">Right now: {teamsAbove40} teams with odds above 40%</p>
+    <div className="min-h-screen">
+      <div className="pt-12 lg:pt-16 pb-12" style={{
+        backgroundImage: `linear-gradient(to bottom, hsla(212, 72%, 59%, 0.12), transparent), url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='28' height='28' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(0,0,0,0)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(4,0)' stroke-linecap='square' stroke-width='1' stroke='rgba(0,0,0,0.03)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")`
+      }}>
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+          <div className="mb-8">
+            {lastUpdated && formatRelativeTime && (
+              <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-4">
+                <span className="relative size-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
+                  <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
+                </span>
+                <p className="opacity-60 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
+                  <span>UPDATED </span>
+                  <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
+                </p>
+              </div>
+            )}
+            <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
+              All Teams
+            </h1>
+            <p className="text-gray-600 text-lg">
+              Current NCAA Tournament at-large bid odds for all {teams.length} Division I teams.</p>
+              <p className="mt-12 text-gray-500 text-sm geist-mono">Right now: {teamsAbove40} teams with odds above 40%</p>
+          </div>
         </div>
+      </div>
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
 
         <div className="rounded-lg border border-gray-200 overflow-hidden">
           <table className="w-full">
