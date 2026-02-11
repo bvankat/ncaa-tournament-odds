@@ -11,9 +11,10 @@ type CommandPaletteProps = {
   onHome: () => void;
   onAllTeams: () => void;
   onConferences: () => void;
+  onBracket: () => void;
 };
 
-export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome, onAllTeams, onConferences }: CommandPaletteProps) {
+export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome, onAllTeams, onConferences, onBracket }: CommandPaletteProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -98,6 +99,17 @@ export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome
               >
                 <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏀</span>
                 Conference breakdown
+              </CommandItem>
+              <CommandItem
+                value="Projected Bracket"
+                keywords={["bracket", "seed", "seeding", "projection"]}
+                onSelect={() => {
+                  onBracket();
+                  onOpenChange(false);
+                }}
+              >
+                <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏆</span>
+                Projected Bracket
               </CommandItem>
             </CommandGroup>
             <CommandGroup heading="Teams">

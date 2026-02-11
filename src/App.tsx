@@ -4,6 +4,7 @@ import { LandingView } from '@/views/LandingView';
 import { TeamView } from '@/views/TeamView';
 import { AllTeamsView } from '@/views/AllTeamsView';
 import { ConferenceListView } from '@/views/ConferenceListView';
+import { BracketView } from '@/views/BracketView';
 import { formatRelativeTime } from '@/lib/utils';
 import type { Team, OddsMovers } from '@/types/team';
 
@@ -131,6 +132,14 @@ function App() {
     trackPageView(newPath);
   };
 
+  const goBracket = () => {
+    const newPath = '/bracket';
+    window.history.pushState({}, '', newPath);
+    setSelectedSlugs(['bracket']);
+    window.scrollTo(0, 0);
+    trackPageView(newPath);
+  };
+
   const handleTeamSelect = (slug: string) => {
     if (slug) {
       const newPath = `/${slug}`;
@@ -156,15 +165,16 @@ function App() {
   const isLanding = selectedSlugs.length === 0;
   const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'all-teams';
   const isConferencesPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'conferences';
+  const isBracketPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'bracket';
 
   const selectedTeams = selectedSlugs
-    .filter(slug => slug !== 'all-teams')
+    .filter(slug => slug !== 'all-teams' && slug !== 'conferences' && slug !== 'bracket')
     .map((slug) => getTeamBySlug(slug))
     .filter(Boolean) as Team[];
 
   return (
     <div className="min-h-screen bg-white">
-      <Layout onHome={goHome} onAllTeams={goAllTeams} onConferences={goConferences} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
+      <Layout onHome={goHome} onAllTeams={goAllTeams} onConferences={goConferences} onBracket={goBracket} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
         {isLanding ? (
           <LandingView
             teams={allTeams}
@@ -187,6 +197,13 @@ function App() {
           />
         ) : isConferencesPage ? (
           <ConferenceListView
+            teams={allTeams}
+            onTeamSelect={handleTeamSelect}
+            lastUpdated={lastUpdated}
+            formatRelativeTime={formatRelativeTime}
+          />
+        ) : isBracketPage ? (
+          <BracketView
             teams={allTeams}
             onTeamSelect={handleTeamSelect}
             lastUpdated={lastUpdated}

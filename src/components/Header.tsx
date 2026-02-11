@@ -8,9 +8,10 @@ type HeaderProps = {
   onOpenPalette?: () => void;
   onAllTeams?: () => void;
   onConferences?: () => void;
+  onBracket?: () => void;
 };
 
-export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllTeams, onConferences }: HeaderProps) {
+export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -75,10 +76,22 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
                     onConferences();
                     setMenuOpen(false);
                   }}
-                  className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold mb-6"
+                  className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold"
                 >
                   <span className="w-8 h-8 inline-flex items-center justify-center text-xl">🏀</span>
                   <span className="font-normal text-gray-600"><a href="/conferences">Conference breakdown</a></span>
+                </button>
+              )}
+              {onBracket && (
+                <button
+                  onClick={() => {
+                    onBracket();
+                    setMenuOpen(false);
+                  }}
+                  className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold mb-6"
+                >
+                  <span className="w-8 h-8 inline-flex items-center justify-center text-xl">🏆</span>
+                  <span className="font-normal text-gray-600"><a href="/bracket">Projected Bracket</a></span>
                 </button>
               )}
               {teams.map((team) => (

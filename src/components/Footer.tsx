@@ -10,9 +10,10 @@ type FooterProps = {
   onOpenPalette?: () => void;
   onAllTeams?: () => void;
   onConferences?: () => void;
+  onBracket?: () => void;
 };
 
-export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette, onAllTeams, onConferences }: FooterProps) {
+export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket }: FooterProps) {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -65,6 +66,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
             placeholder="Select a team"
             onAllTeams={onAllTeams}
             onConferences={onConferences}
+            onBracket={onBracket}
           />
         </div>
       </div>
