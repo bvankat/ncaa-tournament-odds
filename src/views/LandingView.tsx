@@ -15,8 +15,10 @@ type LandingViewProps = {
   landingGauge: number;
   shuffledTeams?: Team[];
   oddsMovers?: OddsMoversType;
+  onHome?: () => void;
   onAllTeams?: () => void;
   onConferences?: () => void;
+  onBracket?: () => void;
 };
 
 export function LandingView({
@@ -28,8 +30,10 @@ export function LandingView({
   landingGauge,
   shuffledTeams = [],
   oddsMovers,
+  onHome,
   onAllTeams,
   onConferences,
+  onBracket,
 }: LandingViewProps) {
   return (
     <div className="max-w-screen bg-gray-50 mx-auto pt-12 lg:pt-24 overflow-x-hidden relative" style={{
@@ -57,7 +61,7 @@ export function LandingView({
             <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's bubble chances with current metrics for all 360+ Division I schools.</p>
           </div>
           <div className="w-full max-w-xl">
-          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onAllTeams={onAllTeams} onConferences={onConferences} />
+          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} />
           </div>
         </div>
 
@@ -102,21 +106,6 @@ export function LandingView({
               <div className="p-4">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-200" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"></path>
-                      </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Latest rankings</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">NET, Kenpom, Torvik, BPI, SOR, KPI, WAB — all in one place.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="p-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
                     <svg className="w-6 h-6 text-blue-200" xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M12 13m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M13.45 11.55l2.05 -2.05"></path><path d="M6.4 20a9 9 0 1 1 11.2 0z"></path>
                     </svg>
@@ -128,7 +117,41 @@ export function LandingView({
                 </div>
               </div>
 
+              {/* Card 2 */}
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-200" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"></path>
+                      </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Latest rankings</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">NET, Kenpom, Torvik, BPI, SOR, KPI, WAB — all in one place</p>
+                  </div>
+                </div>
+              </div>
+
+
               {/* Card 3 */}
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
+                      <line x1="2" y1="3" x2="14" y2="3"/>
+                      <line x1="2" y1="21" x2="14" y2="21"/>
+                      <line x1="28" y1="12" x2="14.5" y2="12"/>
+                      <line x1="14" y1="3" x2="14" y2="21"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Projected bracket</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Updated seed list and play-in games</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4 */}
               <div className="p-4">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
@@ -143,7 +166,22 @@ export function LandingView({
                 </div>
               </div>
 
-              {/* Card 4 */}
+              {/* Card 5 */}
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Biggest movers</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Teams rising and falling based on today's metrics changes</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 6 */}
               <div className="p-4">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
@@ -157,6 +195,8 @@ export function LandingView({
                   </div>
                 </div>
               </div>
+
+
 
           </div>
         </div>

@@ -187,6 +187,7 @@ function App() {
             oddsMovers={oddsMovers}
             onAllTeams={goAllTeams}
             onConferences={goConferences}
+            onBracket={goBracket}
           />
         ) : isAllTeamsPage ? (
           <AllTeamsView

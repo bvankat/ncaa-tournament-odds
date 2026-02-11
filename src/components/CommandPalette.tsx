@@ -75,30 +75,12 @@ export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome
                   onOpenChange(false);
                 }}
               >
-                <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏠</span>
+                <span className="mr-2 w-6 h-6 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </span>
                 Home
-              </CommandItem>
-              <CommandItem
-                value="Full team list"
-                keywords={["all teams", "all", "teams", "list"]}
-                onSelect={() => {
-                  onAllTeams();
-                  onOpenChange(false);
-                }}
-              >
-                <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">📊</span>
-                Full team list
-              </CommandItem>
-              <CommandItem
-                value="Conference standings"
-                keywords={["conferences", "conference", "standings"]}
-                onSelect={() => {
-                  onConferences();
-                  onOpenChange(false);
-                }}
-              >
-                <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏀</span>
-                Conference breakdown
               </CommandItem>
               <CommandItem
                 value="Projected Bracket"
@@ -108,8 +90,45 @@ export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome
                   onOpenChange(false);
                 }}
               >
-                <span className="mr-2 w-6 h-6 inline-flex items-center justify-center rounded bg-gray-100 text-xs font-medium text-gray-600">🏆</span>
-                Projected Bracket
+                <span className="mr-2 w-6 h-6 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
+                    <line x1="2" y1="3" x2="14" y2="3"/>
+                    <line x1="2" y1="21" x2="14" y2="21"/>
+                    <line x1="28" y1="12" x2="14.5" y2="12"/>
+                    <line x1="14" y1="3" x2="14" y2="21"/>
+                  </svg>
+                </span>
+                Projected bracket
+              </CommandItem>
+              <CommandItem
+                value="Conference standings"
+                keywords={["conferences", "conference", "standings"]}
+                onSelect={() => {
+                  onConferences();
+                  onOpenChange(false);
+                }}
+              >
+                <span className="mr-2 w-6 h-6 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </span>
+                Conference breakdown
+              </CommandItem>
+              <CommandItem
+                value="Full team list"
+                keywords={["all teams", "all", "teams", "list"]}
+                onSelect={() => {
+                  onAllTeams();
+                  onOpenChange(false);
+                }}
+              >
+                <span className="mr-2 w-6 h-6 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-blue-200" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                  </svg>
+                </span>
+                Full teams list
               </CommandItem>
             </CommandGroup>
             <CommandGroup heading="Teams">
