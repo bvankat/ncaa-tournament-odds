@@ -273,9 +273,12 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
           {sortedConferences.map(conference => {
             const teams = conferenceGroups[conference];
             const leader = teams[0];
-            const locks = teams.filter(t => (t.tournamentOdds ?? 0) > 90 && t.slug !== leader?.slug);
-            const likelyIn = teams.filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && t.slug !== leader?.slug);
-            const bubble = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && t.slug !== leader?.slug);
+            const locks = teams.filter(t => (t.tournamentOdds ?? 0) > 90 && t.slug !== leader?.slug)
+              .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+            const likelyIn = teams.filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && t.slug !== leader?.slug)
+              .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+            const bubble = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && t.slug !== leader?.slug)
+              .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
 
             return (
               <div key={conference} id={`${conference.toLowerCase().replace(/\s+/g, '-')}`} className="scroll-mt-24">

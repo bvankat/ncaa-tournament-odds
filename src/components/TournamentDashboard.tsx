@@ -34,20 +34,22 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
 
   const autobids = Object.keys(conferenceGroups).length;
   
-  // Get conference leaders sorted alphabetically
+  // Get conference leaders sorted by tournament odds
   const autobidTeams = teams
     .filter(t => conferenceLeaders.has(t.slug))
-    .sort((a, b) => a.shortName.localeCompare(b.shortName));
+    .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
   
   const locksTeams = teams
     .filter(t => (t.tournamentOdds ?? 0) > 90 && !conferenceLeaders.has(t.slug))
-    .sort((a, b) => a.shortName.localeCompare(b.shortName));
+    .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
   
   const likelyInTeams = teams
-    .filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && !conferenceLeaders.has(t.slug));
+    .filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && !conferenceLeaders.has(t.slug))
+    .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
   
   const bubbleTeams = teams
-    .filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && !conferenceLeaders.has(t.slug));
+    .filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && !conferenceLeaders.has(t.slug))
+    .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
   
   const locks = locksTeams.length;
   const likelyIn = likelyInTeams.length;
