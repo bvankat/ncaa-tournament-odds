@@ -46,30 +46,55 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
   }, [conferenceGroups]);
 
   return (
-    <div className="bg-white py-12 lg:py-16 min-h-screen">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
-        <div className="mb-8">
-          {lastUpdated && formatRelativeTime && (
-            <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-gray-200 mb-4">
-              <span className="relative size-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
-                <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
-              </span>
-              <p className="opacity-60 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
-                <span>UPDATED </span>
-                <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
-              </p>
-            </div>
-          )}
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
-            Conference Breakdown
-          </h1>
-          <p className="text-gray-600 text-lg mb-6">
-            Updated tournament projections and current standings for all 31 Division I conferences.
-          </p>
+    <div className="min-h-screen">
+      <div className="pt-12 lg:pt-16 pb-0" style={{
+        backgroundImage: `linear-gradient(to bottom, hsla(212, 72%, 59%, 0.12), transparent), url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='28' height='28' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(0,0,0,0)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(4,0)' stroke-linecap='square' stroke-width='1' stroke='rgba(0,0,0,0.03)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")`
+      }}>
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+          <div className="mb-8">
+            {lastUpdated && formatRelativeTime && (
+              <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-4">
+                <span className="relative size-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
+                  <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
+                </span>
+                <p className="opacity-60 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
+                  <span>UPDATED </span>
+                  <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
+                </p>
+              </div>
+            )}
+            <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
+              Conference Breakdown
+            </h1>
+            <p className="text-gray-600 text-lg mb-6">
+              Updated tournament projections and current standings for all 31 Division I conferences.
+            </p>
+          </div>
         </div>
-
-        <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
+      </div>
+      <div className="sticky top-0 z-10 bg-white/30 backdrop-blur-lg no-scrollbar py-3 mb-12">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+          <select
+            className="border border-blue-200 rounded-md px-4 py-3 text-sm font-medium text-gray-900 bg-white cursor-pointer hover:border-blue-400 transition-colors"
+            defaultValue=""
+            onChange={(e) => {
+              if (e.target.value) {
+                document.getElementById(e.target.value)?.scrollIntoView({ behavior: 'smooth' });
+                e.target.value = '';
+              }
+            }}
+          >
+            <option value="" disabled>Jump to a conference</option>
+            {sortedConferences.map(conf => (
+              <option key={conf} value={`conf-${conf.toLowerCase().replace(/\s+/g, '-')}`}>
+                {conf}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
 
         <div className="space-y-12">
           {sortedConferences.map(conference => {
@@ -80,7 +105,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
             const bubble = teams.filter(t => (t.tournamentOdds ?? 0) > 25 && (t.tournamentOdds ?? 0) <= 70 && t.slug !== leader?.slug);
 
             return (
-              <div key={conference} className="scroll-mt-24">
+              <div key={conference} id={`conf-${conference.toLowerCase().replace(/\s+/g, '-')}`} className="scroll-mt-24">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 ibm-plex-sans">
                   {conference}
                 </h2>
