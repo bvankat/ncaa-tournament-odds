@@ -165,7 +165,7 @@ export function LandingView({
       <div className="bg-white pt-12 lg:pt-16 pb-4 lg:pb-6">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6 ibm-plex-sans">
-            Today's Bracket: At a Glance
+            Bracket Outlook
           </h2>
           <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
           <p className="mt-4 text-gray-500 text-xs cursor-pointer hover:underline"><a href="/conferences">Conference breakdown »</a></p>
