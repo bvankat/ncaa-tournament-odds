@@ -57,7 +57,7 @@ export function LandingView({
             </div>
           )}
           <div className="flex flex-col mb-3 px-4 lg:px-0">
-            <h1 className="text-center md:text-left text-5xl lg:text-6xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Basketball Tournament Odds Machine</h1>
+            <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Basketball Tournament Odds Machine</h1>
             <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's bubble chances with current metrics for all 360+ Division I schools.</p>
           </div>
           <div className="w-full max-w-xl">
