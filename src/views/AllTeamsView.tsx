@@ -143,7 +143,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
       </div>
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12 pb-12">
         <p className="lg:hidden text-[10px] text-gray-400 text-right mb-2 flex items-center justify-end gap-1">
-          Scroll for metrics
+          Scroll for more
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
