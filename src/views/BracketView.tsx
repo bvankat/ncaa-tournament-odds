@@ -99,12 +99,18 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12">
           {/* Main bracket table */}
-          <div className="rounded-lg border border-gray-200 overflow-hidden">
-            <table className="w-full">
+          <div>
+            <p className="lg:hidden text-[10px] text-gray-400 text-right mb-2 flex items-center justify-end gap-1">
+              Scroll for metrics
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </p>
+            <div className="rounded-lg border border-gray-200 overflow-x-auto">
+            <table className="w-full min-w-[640px]">
               <thead>
                 <tr className="border-b border-gray-300 bg-gray-50">
-                  <th className="text-left text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
-                    Seed
+                  <th className="text-left text-xs py-3 pl-3 font-medium geist-mono text-gray-400 uppercase">
                   </th>
                   <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                     Team
@@ -112,13 +118,13 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                   <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                     Bid Type
                   </th>
-                  <th className="hidden lg:table-cell text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                     Predictive Avg
                   </th>
-                  <th className="hidden lg:table-cell text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                     Resume Avg
                   </th>
-                  <th className="hidden md:table-cell text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
                     NET
                   </th>
                 </tr>
@@ -155,7 +161,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                         }`}
                         onClick={() => onTeamSelect(team.slug)}
                       >
-                        <td className="py-3 px-3 text-gray-700 font-semibold geist-mono text-xs">
+                        <td className="py-3 pl-3 text-gray-700 font-semibold geist-mono text-xs">
                           {seedDisplay}
                         </td>
                         <td className="py-3 px-4">
@@ -188,18 +194,18 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                           </div>
                         </td>
                         <td 
-                          className="hidden lg:table-cell py-3 px-4 text-right text-gray-700 geist-mono text-xs"
+                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs"
                           title={predictiveTooltip}
                         >
                           {predictiveAvg !== null ? predictiveAvg.toFixed(1) : '—'}
                         </td>
                         <td 
-                          className="hidden lg:table-cell py-3 px-4 text-right text-gray-700 geist-mono text-xs"
+                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs"
                           title={resumeTooltip}
                         >
                           {resumeAvg !== null ? resumeAvg.toFixed(1) : '—'}
                         </td>
-                        <td className="hidden md:table-cell py-3 px-4 text-right text-gray-700 geist-mono text-xs">
+                        <td className="py-3 px-4 text-right text-gray-700 geist-mono text-xs">
                           {team.net || '—'}
                         </td>
                       </tr>
@@ -208,6 +214,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                 })}
               </tbody>
             </table>
+          </div>
           </div>
 
           {/* Sidebar with bubble teams */}
