@@ -148,7 +148,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
           </svg>
         </p>
         <div className="rounded-lg border border-gray-200 overflow-x-auto">
-          <table className="w-full min-w-[900px]">
+          <table className="w-full">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
                 <th className="text-left text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
