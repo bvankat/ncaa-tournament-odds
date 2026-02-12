@@ -63,8 +63,8 @@ export function LandingView({
           <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} />
 
-          <div className="mt-10 flex gap-4 justify-center md:justify-start">
-            <button onClick={onBracket} className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:underline cursor-pointer ">
+          <div className="mt-10 flex gap-5 justify-center md:justify-start">
+            <button onClick={onBracket} className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 underline cursor-pointer ">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
                 <line x1="2" y1="3" x2="14" y2="3"/>
                 <line x1="2" y1="21" x2="14" y2="21"/>
@@ -73,18 +73,13 @@ export function LandingView({
               </svg>
               Projected Bracket
             </button>
-            <button onClick={onConferences} className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:underline cursor-pointer">
+            <button onClick={onConferences} className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 underline cursor-pointer">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
               Conference Breakdown
             </button>
-            <button onClick={onAllTeams} className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:underline cursor-pointer">
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
-              </svg>
-              Full Teams List
-            </button>
+            
           </div>
           </div>
         </div>
