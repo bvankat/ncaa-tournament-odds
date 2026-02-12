@@ -42,7 +42,7 @@ export function LandingView({
       backgroundSize: 'cover, auto',
       backgroundPosition: 'center, 0 0'
       }}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-24 mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-24 mb-12">
         <div className="flex flex-col px-4 justify-center gap-6 items-center md:items-start text-center md:text-left">
           {lastUpdated && (
             <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-2">
@@ -58,29 +58,11 @@ export function LandingView({
           )}
           <div className="flex flex-col mb-3 px-4 lg:px-0">
             <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Basketball Tournament Odds Machine</h1>
-            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Track your team's bubble chances with current metrics for all 360+ Division I schools.</p>
+            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Bubble chances and projected seeds for all 360+ Division I teams</p>
           </div>
           <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} />
 
-          <div className="mt-10 flex gap-5 justify-center md:justify-start">
-            <button onClick={onBracket} className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 underline cursor-pointer ">
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
-                <line x1="2" y1="3" x2="14" y2="3"/>
-                <line x1="2" y1="21" x2="14" y2="21"/>
-                <line x1="28" y1="12" x2="14.5" y2="12"/>
-                <line x1="14" y1="3" x2="14" y2="21"/>
-              </svg>
-              Projected Bracket
-            </button>
-            <button onClick={onConferences} className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 underline cursor-pointer">
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
-              Conference Breakdown
-            </button>
-            
-          </div>
           </div>
         </div>
 
@@ -90,6 +72,7 @@ export function LandingView({
           </div>
         </div>
       </div>
+
 
       <div id="logo-scroller" className="mt-16 pb-16 overflow-hidden" style={{ perspective: '1000px' }}>
         <div className="logo-row logo-row-1 flex gap-4 lg:gap-8 mb-6 lg:mb-8">
@@ -121,22 +104,8 @@ export function LandingView({
           {/* Mobile: Stacked, Desktop: 2x2 grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               
-              {/* Card 1 */}
-              <div className="p-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-200" xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 13m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M13.45 11.55l2.05 -2.05"></path><path d="M6.4 20a9 9 0 1 1 11.2 0z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">The needle</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">At-large chances boiled down to one number</p>
-                  </div>
-                </div>
-              </div>
 
-              {/* Card 2 */}
+              {/* Card 1 */}
               <button onClick={onAllTeams} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
@@ -152,7 +121,7 @@ export function LandingView({
               </button>
 
 
-              {/* Card 3 */}
+              {/* Card 2 */}
               <button onClick={onBracket} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
@@ -170,7 +139,7 @@ export function LandingView({
                 </div>
               </button>
 
-              {/* Card 4 */}
+              {/* Card 3 */}
               <a href="#bubble-watch" className="group p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
@@ -185,22 +154,7 @@ export function LandingView({
                 </div>
               </a>
 
-              {/* Card 5 */}
-              <a href="#biggest-movers" className="group p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
-                    <svg className="w-6 h-6 text-blue-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Biggest movers</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Teams rising and falling based on today's metrics changes</p>
-                  </div>
-                </div>
-              </a>
-
-              {/* Card 6 */}
+              {/* Card 4 */}
               <button onClick={onConferences} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
@@ -220,6 +174,7 @@ export function LandingView({
           </div>
         </div>
       </div>
+
 
       <div className="bg-white pt-12 lg:pt-16 pb-4 lg:pb-6">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
