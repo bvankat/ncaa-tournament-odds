@@ -31,7 +31,6 @@ export type Team = NcaaNetData & {
   wab?: number | string | null;
   nextGame?: NextGame | null;
   tournamentOdds?: number | null; // percentage stored with up to two decimals
-  seedOdds?: number | null; // seed projection rating (1-100) based on 60% predictive, 40% resume
   previousTournamentOdds?: number | null; // previous percentage snapshot
   oddsChange?: number | null; // delta in percentage points (two-decimal precision)
   previousBpi?: number | string | null;

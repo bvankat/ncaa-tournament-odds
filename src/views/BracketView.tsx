@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import type { Team } from '@/types/team';
-import { calculateBracket, getSeedDisplay, shouldAddSeparator } from '@/lib/bracketProjection';
+import { calculateBracket, getSeedDisplay, shouldAddSeparator, calculateCompositeRanking } from '@/lib/bracketProjection';
 
 type BracketViewProps = {
   teams: Team[];
@@ -116,15 +116,18 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                     Team
                   </th>
                   <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
-                    Bid Type
+                    Bid
                   </th>
-                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-amber-50/50">
+                    Composite
+                  </th>
+                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
                     Predictive Avg
                   </th>
-                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
                     Resume Avg
                   </th>
-                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
                     NET
                   </th>
                 </tr>
@@ -174,7 +177,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                               />
                             )}
                             <span className="text-gray-900 font-medium text-sm md:text-md">
-                              {team.displayName}
+                              {team.shortName}
                             </span>
                           </div>
                         </td>
@@ -193,19 +196,22 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                             )}
                           </div>
                         </td>
+                        <td className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-amber-50/50 font-semibold">
+                          {calculateCompositeRanking(team).toFixed(1)}
+                        </td>
                         <td 
-                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs"
+                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25"
                           title={predictiveTooltip}
                         >
                           {predictiveAvg !== null ? predictiveAvg.toFixed(1) : '—'}
                         </td>
                         <td 
-                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs"
+                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25"
                           title={resumeTooltip}
                         >
                           {resumeAvg !== null ? resumeAvg.toFixed(1) : '—'}
                         </td>
-                        <td className="py-3 px-4 text-right text-gray-700 geist-mono text-xs">
+                        <td className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25">
                           {team.net || '—'}
                         </td>
                       </tr>
