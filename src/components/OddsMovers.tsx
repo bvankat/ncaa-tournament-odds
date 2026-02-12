@@ -70,7 +70,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                                 className="w-6 h-6 object-contain"
                               />
                               <span className="text-gray-900 font-medium text-sm">
-                                {team.displayName}
+                                {team.shortName}
                               </span>
                             </div>
                           </td>
@@ -137,7 +137,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                           className="w-9 h-9 object-contain mb-3"
                         />
                         <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
-                          {team.displayName}
+                          {team.shortName}
                         </span>
                         {hasChange && (
                           <div className="flex items-center gap-1 text-green-700">
@@ -181,7 +181,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                           className="w-9 h-9 object-contain mb-3"
                         />
                         <span className="text-gray-900 font-medium text-sm mb-2 line-clamp-2">
-                          {team.displayName}
+                          {team.shortName}
                         </span>
                         {hasChange && (
                           <div className="flex items-center gap-1 text-red-700">

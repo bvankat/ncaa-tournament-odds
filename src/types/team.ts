@@ -82,6 +82,7 @@ export type OddsChange = {
   espnId: string;
   slug: string;
   displayName: string;
+  shortName: string;
   logo: string;
   currentOdds: number; // percentage with up to two decimals
   previousOdds: number | null;
@@ -92,6 +93,7 @@ export type BubbleTeam = {
   espnId: string;
   slug: string;
   displayName: string;
+  shortName: string;
   logo: string;
   currentOdds: number; // percentage with up to two decimals
   previousOdds: number | null;
