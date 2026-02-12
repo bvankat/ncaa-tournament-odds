@@ -70,7 +70,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
 
   return (
     <div className="min-h-screen">
-      <div className="pt-12 lg:pt-16 pb-12" style={{
+      <div className="pt-12 lg:pt-16 pb-8" style={{
         backgroundImage: `linear-gradient(to bottom, hsla(212, 72%, 59%, 0.12), transparent), url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='28' height='28' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(0,0,0,0)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(4,0)' stroke-linecap='square' stroke-width='1' stroke='rgba(0,0,0,0.03)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")`
       }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
@@ -101,34 +101,34 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
           {/* Main bracket table */}
           <div>
             <p className="lg:hidden text-[10px] text-gray-400 text-right mb-2 flex items-center justify-end gap-1">
-              Scroll for metrics
+              Scroll for more
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </p>
             <div className="rounded-lg border border-gray-200 overflow-x-auto">
-            <table className="w-full min-w-[640px]">
+            <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-300 bg-gray-50">
-                  <th className="text-left text-xs py-3 pl-3 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-left text-xs py-2 pl-2 md:py-3 md:pl-3 font-medium geist-mono text-gray-400 uppercase">
                   </th>
-                  <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase min-w-[120px]">
                     Team
                   </th>
-                  <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase">
-                    Bid
-                  </th>
-                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-amber-50/50">
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-amber-50/50">
                     Composite
                   </th>
-                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
                     Predictive Avg
                   </th>
-                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
                     Resume Avg
                   </th>
-                  <th className="text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
                     NET
+                  </th>
+                  <th className="text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase min-w-[80px]">
+                    Bid
                   </th>
                 </tr>
               </thead>
@@ -164,10 +164,10 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                         }`}
                         onClick={() => onTeamSelect(team.slug)}
                       >
-                        <td className="py-3 pl-3 text-gray-700 font-semibold geist-mono text-xs">
+                        <td className="py-2 pl-4 md:py-3 md:pl-3 text-gray-500 font-medium geist-mono text-xs">
                           {seedDisplay}
                         </td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-2 md:py-3 md:px-4">
                           <div className="flex items-center gap-3">
                             {team.logo && (
                               <img
@@ -181,7 +181,25 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                             </span>
                           </div>
                         </td>
-                        <td className="py-3 px-4">
+                        <td className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-amber-50/50 font-semibold">
+                          {calculateCompositeRanking(team).toFixed(1)}
+                        </td>
+                        <td 
+                          className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25"
+                          title={predictiveTooltip}
+                        >
+                          {predictiveAvg !== null ? predictiveAvg.toFixed(1) : '—'}
+                        </td>
+                        <td 
+                          className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25"
+                          title={resumeTooltip}
+                        >
+                          {resumeAvg !== null ? resumeAvg.toFixed(1) : '—'}
+                        </td>
+                        <td className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25">
+                          {team.net || '—'}
+                        </td>
+                        <td className="py-2 px-2 md:py-3 md:px-4">
                           <div className="flex flex-col gap-0.5">
                             <span className="text-xs font-medium text-gray-500 geist-mono">
                               {bidType}
@@ -195,24 +213,6 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                               </span>
                             )}
                           </div>
-                        </td>
-                        <td className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-amber-50/50 font-semibold">
-                          {calculateCompositeRanking(team).toFixed(1)}
-                        </td>
-                        <td 
-                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25"
-                          title={predictiveTooltip}
-                        >
-                          {predictiveAvg !== null ? predictiveAvg.toFixed(1) : '—'}
-                        </td>
-                        <td 
-                          className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25"
-                          title={resumeTooltip}
-                        >
-                          {resumeAvg !== null ? resumeAvg.toFixed(1) : '—'}
-                        </td>
-                        <td className="py-3 px-4 text-right text-gray-700 geist-mono text-xs bg-gray-50/25">
-                          {team.net || '—'}
                         </td>
                       </tr>
                     </React.Fragment>
