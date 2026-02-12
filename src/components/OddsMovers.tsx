@@ -25,7 +25,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
           
           {/* Left Column - Bubble Watch */}
           {sortedBubbleTeams.length > 0 && (
-            <div>
+            <div id="bubble-watch">
               <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">
                 Bubble Watch
               </h2>
@@ -108,7 +108,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
           <div className="space-y-8">
             {/* Biggest Risers */}
             {moversData.biggestRisers.length > 0 && (
-              <div>
+              <div id="biggest-movers">
                 <h2 className="text-3xl font-extrabold text-gray-900 mb-4 ibm-plex-sans">
                   Today's Biggest Movers
                 </h2>

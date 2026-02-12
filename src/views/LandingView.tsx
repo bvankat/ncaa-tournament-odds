@@ -153,7 +153,7 @@ export function LandingView({
 
 
               {/* Card 3 */}
-              <div className="p-4">
+              <button onClick={onBracket} className="p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
                     <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
@@ -168,10 +168,10 @@ export function LandingView({
                     <p className="text-sm text-gray-600 leading-relaxed">Updated seed list and play-in games</p>
                   </div>
                 </div>
-              </div>
+              </button>
 
               {/* Card 4 */}
-              <div className="p-4">
+              <a href="#bubble-watch" className="p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
                     <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,10 +183,10 @@ export function LandingView({
                     <p className="text-sm text-gray-600 leading-relaxed">Who's safe and who's sweating on Selection Sunday</p>
                   </div>
                 </div>
-              </div>
+              </a>
 
               {/* Card 5 */}
-              <div className="p-4">
+              <a href="#biggest-movers" className="p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
                     <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -198,10 +198,10 @@ export function LandingView({
                     <p className="text-sm text-gray-600 leading-relaxed">Teams rising and falling based on today's metrics changes</p>
                   </div>
                 </div>
-              </div>
+              </a>
 
               {/* Card 6 */}
-              <div className="p-4">
+              <button onClick={onConferences} className="p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
                     <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,7 +213,7 @@ export function LandingView({
                     <p className="text-sm text-gray-600 leading-relaxed">Current status reports for all 31 conferences</p>
                   </div>
                 </div>
-              </div>
+              </button>
 
 
 

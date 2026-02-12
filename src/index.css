@@ -6,6 +6,10 @@
   --font-mono: 'Geist Mono', monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body { font-family: var(--font-sans); }
 
 .font-geist { font-family: var(--font-sans); }
