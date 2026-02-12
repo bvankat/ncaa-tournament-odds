@@ -40,7 +40,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
         case 'odds':
           const oddsA = a.tournamentOdds ?? -1;
           const oddsB = b.tournamentOdds ?? -1;
-          compareValue = oddsB - oddsA;
+          compareValue = oddsA - oddsB;
           break;
         case 'composite':
           const compA = calculateCompositeRanking(a);
@@ -115,11 +115,11 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
 
   return (
     <div className="min-h-screen">
-      <div className="pt-12 lg:pt-16 pb-12" style={{
+      <div className="py-12" style={{
         backgroundImage: `linear-gradient(to bottom, hsla(212, 72%, 59%, 0.12), transparent), url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='28' height='28' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(0,0,0,0)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(4,0)' stroke-linecap='square' stroke-width='1' stroke='rgba(0,0,0,0.03)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")`
       }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
-          <div className="mb-8">
+          <div className="">
             {lastUpdated && formatRelativeTime && (
               <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-4">
                 <span className="relative size-2">
@@ -135,13 +135,12 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
               All Teams
             </h1>
-            <p className="text-gray-600 text-lg">
-              Current NCAA Tournament at-large bid odds for all {teams.length} Division I teams.</p>
-              <p className="mt-12 text-gray-500 text-sm geist-mono">Right now: {teamsAbove40} teams with at-large odds above 40%</p>
+            <p className="text-gray-600 text-lg text-balance">
+              Current NCAA Tournament at-large bid odds, projected seeds and updated rankings for all {teams.length} Division I teams.</p>
           </div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-12 pb-12">
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
         <p className="lg:hidden text-[10px] text-gray-400 text-right mb-2 flex items-center justify-end gap-1">
           Scroll for more
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
@@ -164,38 +163,44 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                 <th 
                   className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'odds' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('odds')}
+                  title="Chance team makes tournament without winning conference tournament"
                 >
-                  Odds {sortField === 'odds' && (sortDirection === 'asc' ? '↑' : '↓')}
+                  At-Large Odds {sortField === 'odds' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : ''}`}
+                  onClick={() => handleSort('seed')}
+                  title="Expected seed based on current rankings"
+                >
+                  Proj. Seed {sortField === 'seed' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
                   className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'composite' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('composite')}
+                  title="Weighted average of predictive, resume, and NET metrics"
                 >
                   Composite {sortField === 'composite' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
                   className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('predictive')}
+                  title="Average of KenPom, Torvik, and BPI metrics"
                 >
                   Predictive {sortField === 'predictive' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
                   className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'resume' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('resume')}
+                  title="Average of WAB, SOR, and KPI metrics"
                 >
                   Resume {sortField === 'resume' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
                   className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('net')}
+                  title="NCAA sorting tool for quadrants"
                 >
                   NET {sortField === 'net' && (sortDirection === 'asc' ? '↑' : '↓')}
-                </th>
-                <th 
-                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : ''}`}
-                  onClick={() => handleSort('seed')}
-                >
-                  Seed {sortField === 'seed' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
               </tr>
             </thead>
@@ -235,6 +240,9 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'odds' ? 'bg-amber-50' : ''}`}>
                       {formattedOdds}
                     </td>
+                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'seed' ? 'bg-amber-50' : ''}`}>
+                      {seed || '—'}
+                    </td>
                     <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'composite' ? 'bg-amber-50' : ''}`}>
                       {composite !== Infinity ? composite.toFixed(1) : '—'}
                     </td>
@@ -246,9 +254,6 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     </td>
                     <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'net' ? 'bg-amber-50' : ''}`}>
                       {team.net || '—'}
-                    </td>
-                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'seed' ? 'bg-amber-50' : ''}`}>
-                      {seed || '—'}
                     </td>
                   </tr>
                 );
