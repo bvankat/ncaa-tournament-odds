@@ -137,10 +137,10 @@ export function LandingView({
               </div>
 
               {/* Card 2 */}
-              <div className="p-4">
+              <button onClick={onAllTeams} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-200" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
+                    <svg className="w-6 h-6 text-blue-200 group-hover:text-black transition-colors" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"></path>
                       </svg>
                   </div>
@@ -149,14 +149,14 @@ export function LandingView({
                     <p className="text-sm text-gray-600 leading-relaxed">NET, Kenpom, Torvik, BPI, SOR, KPI, WAB — all in one place</p>
                   </div>
                 </div>
-              </div>
+              </button>
 
 
               {/* Card 3 */}
-              <button onClick={onBracket} className="p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
+              <button onClick={onBracket} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
+                    <svg className="w-6 h-6 text-blue-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
                       <line x1="2" y1="3" x2="14" y2="3"/>
                       <line x1="2" y1="21" x2="14" y2="21"/>
                       <line x1="28" y1="12" x2="14.5" y2="12"/>
@@ -171,10 +171,10 @@ export function LandingView({
               </button>
 
               {/* Card 4 */}
-              <a href="#bubble-watch" className="p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
+              <a href="#bubble-watch" className="group p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
+                    <svg className="w-6 h-6 text-blue-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
@@ -186,10 +186,10 @@ export function LandingView({
               </a>
 
               {/* Card 5 */}
-              <a href="#biggest-movers" className="p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
+              <a href="#biggest-movers" className="group p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
+                    <svg className="w-6 h-6 text-blue-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
@@ -201,10 +201,10 @@ export function LandingView({
               </a>
 
               {/* Card 6 */}
-              <button onClick={onConferences} className="p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
+              <button onClick={onConferences} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
+                    <svg className="w-6 h-6 text-blue-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                     </svg>
                   </div>
