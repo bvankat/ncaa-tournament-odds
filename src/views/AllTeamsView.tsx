@@ -151,52 +151,52 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
-                <th className="text-left text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
+                <th className="text-left text-xs px-4 py-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase">
                   Rank
                 </th>
                 <th 
-                  className={`text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'name' ? 'bg-amber-50' : ''}`}
+                  className={`text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 min-w-[150px] ${sortField === 'name' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('name')}
                 >
                   Team {sortField === 'name' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'odds' ? 'bg-amber-50' : ''}`}
+                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'odds' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('odds')}
                   title="Chance team makes tournament without winning conference tournament"
                 >
                   At-Large Odds {sortField === 'odds' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : ''}`}
+                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('seed')}
                   title="Expected seed based on current rankings"
                 >
                   Proj. Seed {sortField === 'seed' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'composite' ? 'bg-amber-50' : ''}`}
+                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'composite' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('composite')}
                   title="Weighted average of predictive, resume, and NET metrics"
                 >
                   Composite {sortField === 'composite' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}
+                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('predictive')}
                   title="Average of KenPom, Torvik, and BPI metrics"
                 >
                   Predictive {sortField === 'predictive' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'resume' ? 'bg-amber-50' : ''}`}
+                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'resume' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('resume')}
                   title="Average of WAB, SOR, and KPI metrics"
                 >
                   Resume {sortField === 'resume' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : ''}`}
+                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('net')}
                   title="NCAA sorting tool for quadrants"
                 >
@@ -220,10 +220,10 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     className="border-b border-gray-200 hover:bg-gray-50 cursor-pointer transition-colors"
                     onClick={() => onTeamSelect(team.slug)}
                   >
-                    <td className="py-3 px-3 text-gray-500 geist-mono text-xs">
+                    <td className="py-2 pl-4 md:py-3 md:px-3 text-gray-500 geist-mono text-xs">
                       {rank || '—'}
                     </td>
-                    <td className={`py-3 px-4 ${sortField === 'name' ? 'bg-amber-50' : ''}`}>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 ${sortField === 'name' ? 'bg-amber-50' : ''}`}>
                       <div className="flex items-center gap-3">
                         {team.logo && (
                           <img
@@ -237,22 +237,22 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                         </span>
                       </div>
                     </td>
-                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'odds' ? 'bg-amber-50' : ''}`}>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'odds' ? 'bg-amber-50' : ''}`}>
                       {formattedOdds}
                     </td>
-                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'seed' ? 'bg-amber-50' : ''}`}>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'seed' ? 'bg-amber-50' : ''}`}>
                       {seed || '—'}
                     </td>
-                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'composite' ? 'bg-amber-50' : ''}`}>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'composite' ? 'bg-amber-50' : ''}`}>
                       {composite !== Infinity ? composite.toFixed(1) : '—'}
                     </td>
-                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}>
                       {predictiveAvg !== null ? predictiveAvg.toFixed(1) : '—'}
                     </td>
-                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'resume' ? 'bg-amber-50' : ''}`}>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'resume' ? 'bg-amber-50' : ''}`}>
                       {resumeAvg !== null ? resumeAvg.toFixed(1) : '—'}
                     </td>
-                    <td className={`py-3 px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'net' ? 'bg-amber-50' : ''}`}>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'net' ? 'bg-amber-50' : ''}`}>
                       {team.net || '—'}
                     </td>
                   </tr>
