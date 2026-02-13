@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Combobox } from '@/components/ui/combobox';
 import { Speedometer } from '@/components/Speedometer';
 import { PulseRings } from '@/components/PulseRings';
 import { OddsMovers } from '@/components/OddsMovers';
 import { TournamentDashboard } from '@/components/TournamentDashboard';
+import { BubbleSidebar } from '@/components/BubbleSidebar';
+import { calculateBracket } from '@/lib/bracketProjection';
 import type { Team, OddsMovers as OddsMoversType } from '@/types/team';
 
 type LandingViewProps = {
@@ -37,6 +39,17 @@ export function LandingView({
   onBracket,
   onBubbleWatch,
 }: LandingViewProps) {
+  // Calculate bracket projection for bubble teams
+  const {
+    lastFourByesList,
+    lastFourInList,
+    bubbleTeams,
+    teamSeedMap
+  } = useMemo(() => calculateBracket(teams), [teams]);
+
+  const firstFourOut = bubbleTeams.slice(0, 4);
+  const nextFourOut = bubbleTeams.slice(4, 8);
+
   return (
     <div className="max-w-screen bg-gray-50 mx-auto pt-12 lg:pt-24 overflow-x-hidden relative" style={{
       backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 800 450' opacity='0.12'%3E%3Cdefs%3E%3Cfilter id='bbblurry-filter' x='-100%25' y='-100%25' width='400%25' height='400%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='130' x='0%25' y='0%25' width='100%25' height='100%25' in='SourceGraphic' edgeMode='none' result='blur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23bbblurry-filter)'%3E%3Cellipse rx='277.5' ry='63.5' cx='396.1211464621804' cy='-24.698486328125' fill='hsla(212, 72%, 59%, 1.00)'%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E"),url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='28' height='28' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='rgba(0,0,0,0)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(4,0)' stroke-linecap='square' stroke-width='1' stroke='rgba(0,0,0,0.03)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")`,
@@ -179,6 +192,7 @@ export function LandingView({
 
 
       <div className="bg-white pt-12 lg:pt-16 pb-4 lg:pb-6">
+        
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6 ibm-plex-sans">
             At A Glance
@@ -192,20 +206,39 @@ export function LandingView({
             <button onClick={onConferences} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
               Conference Breakdown »
             </button>
-            <button onClick={onBracket} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
-              Projected Bracket »
-            </button>
-            <button onClick={onBubbleWatch} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
-              Bubble Watch »
-            </button>
             
           </div>
 
         </div>
 
-          <div className="py-12 lg:py-16 px-6 lg:px-12 max-w-screen-xl mx-auto">
-      <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 my-8 md:my-20">
+
+          <div className="grid grid-cols-1 md:grid-cols-8 gap-8">
+            <div className="md:col-span-3">
+              <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">On the Bubble</h2>
+              <p className="text-gray-600 mb-6 text-sm">Tournament seed projections based on current team-sheet metrics.</p>
+              <p className="text-gray-600 mb-6 text-sm"><a onClick={onBubbleWatch} className="underline cursor-pointer">Bubble Watch »</a></p>
           </div>
+          <div className="md:col-span-5" id="bubble-projection">
+            <BubbleSidebar
+              lastFourByesList={lastFourByesList}
+              lastFourInList={lastFourInList}
+              firstFourOut={firstFourOut}
+              nextFourOut={nextFourOut}
+              onTeamSelect={onTeamSelect}
+              variant="list"
+              teamSeedMap={teamSeedMap}
+            />
+          </div>
+        </div>
+
+        </div>
+
+        <div className="py-12 lg:py-16 px-6 lg:px-12 max-w-screen-xl mx-auto">
+            <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
+        </div>
+
+
       </div>
     </div>
   );
