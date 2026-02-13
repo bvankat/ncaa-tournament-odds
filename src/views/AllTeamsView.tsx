@@ -11,36 +11,11 @@ type AllTeamsViewProps = {
 };
 
 export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeTime }: AllTeamsViewProps) {
-  const [sortField, setSortField] = useState<'odds' | 'name' | 'composite' | 'predictive' | 'resume' | 'net' | 'seed'>('odds');
+  const [sortField, setSortField] = useState<'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor'>('odds');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
 
   // Calculate bracket projection to get seeds
   const { teamSeedMap } = useMemo(() => calculateBracket(teams), [teams]);
-
-  // Helper to calculate average of numeric rankings
-  const calculateAverage = (values: (number | string | null | undefined)[]): number | null => {
-    const validValues = values
-      .map(v => {
-        if (v === null || v === undefined) return null;
-        const num = typeof v === 'string' ? parseFloat(v) : v;
-        return isNaN(num) ? null : num;
-      })
-      .filter(v => v !== null) as number[];
-    
-    if (validValues.length === 0) return null;
-    return validValues.reduce((sum, val) => sum + val, 0) / validValues.length;
-  };
-
-  // Helper to format a list of rankings
-  const formatRankings = (labels: string[], values: (number | string | null | undefined)[]): string => {
-    const formatted = labels.map((label, i) => {
-      const val = values[i];
-      if (val === null || val === undefined) return null;
-      return `${label}: ${val}`;
-    }).filter(Boolean);
-    
-    return formatted.join(', ') || 'N/A';
-  };
 
   // Sort teams
   const sortedTeams = useMemo(() => {
@@ -53,21 +28,6 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
           const oddsB = b.tournamentOdds ?? -1;
           compareValue = oddsA - oddsB;
           break;
-        case 'composite':
-          const compA = calculateCompositeRanking(a);
-          const compB = calculateCompositeRanking(b);
-          compareValue = compA - compB; // Lower is better
-          break;
-        case 'predictive':
-          const predA = calculateAverage([a.kenpom, a.torvik, a.bpi]) ?? 999;
-          const predB = calculateAverage([b.kenpom, b.torvik, b.bpi]) ?? 999;
-          compareValue = predA - predB; // Lower is better
-          break;
-        case 'resume':
-          const resA = calculateAverage([a.wab, a.kpi, a.sor]) ?? 999;
-          const resB = calculateAverage([b.wab, b.kpi, b.sor]) ?? 999;
-          compareValue = resA - resB; // Lower is better
-          break;
         case 'net':
           const netA = typeof a.net === 'string' ? parseFloat(a.net) : (a.net ?? 999);
           const netB = typeof b.net === 'string' ? parseFloat(b.net) : (b.net ?? 999);
@@ -77,6 +37,36 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
           const seedA = teamSeedMap.get(a.espnId || a.slug) ?? 999;
           const seedB = teamSeedMap.get(b.espnId || b.slug) ?? 999;
           compareValue = seedA - seedB; // Lower is better
+          break;
+        case 'kenpom':
+          const kenpomA = typeof a.kenpom === 'string' ? parseFloat(a.kenpom) : (a.kenpom ?? 999);
+          const kenpomB = typeof b.kenpom === 'string' ? parseFloat(b.kenpom) : (b.kenpom ?? 999);
+          compareValue = kenpomA - kenpomB; // Lower is better
+          break;
+        case 'torvik':
+          const torvikA = typeof a.torvik === 'string' ? parseFloat(a.torvik) : (a.torvik ?? 999);
+          const torvikB = typeof b.torvik === 'string' ? parseFloat(b.torvik) : (b.torvik ?? 999);
+          compareValue = torvikA - torvikB; // Lower is better
+          break;
+        case 'bpi':
+          const bpiA = typeof a.bpi === 'string' ? parseFloat(a.bpi) : (a.bpi ?? 999);
+          const bpiB = typeof b.bpi === 'string' ? parseFloat(b.bpi) : (b.bpi ?? 999);
+          compareValue = bpiA - bpiB; // Lower is better
+          break;
+        case 'wab':
+          const wabA = typeof a.wab === 'string' ? parseFloat(a.wab) : (a.wab ?? 999);
+          const wabB = typeof b.wab === 'string' ? parseFloat(b.wab) : (b.wab ?? 999);
+          compareValue = wabA - wabB; // Lower is better
+          break;
+        case 'kpi':
+          const kpiA = typeof a.kpi === 'string' ? parseFloat(a.kpi) : (a.kpi ?? 999);
+          const kpiB = typeof b.kpi === 'string' ? parseFloat(b.kpi) : (b.kpi ?? 999);
+          compareValue = kpiA - kpiB; // Lower is better
+          break;
+        case 'sor':
+          const sorA = typeof a.sor === 'string' ? parseFloat(a.sor) : (a.sor ?? 999);
+          const sorB = typeof b.sor === 'string' ? parseFloat(b.sor) : (b.sor ?? 999);
+          compareValue = sorA - sorB; // Lower is better
           break;
         case 'name':
           compareValue = a.displayName.localeCompare(b.displayName);
@@ -104,7 +94,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
     return ranks;
   }, [sortedTeams, sortField]);
 
-  const handleSort = (field: 'odds' | 'name' | 'composite' | 'predictive' | 'resume' | 'net' | 'seed') => {
+  const handleSort = (field: 'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor') => {
     if (sortField === field) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
@@ -144,10 +134,10 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
               </div>
             )}
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
-              All Teams
+              Latest rankings
             </h1>
             <p className="text-gray-600 text-lg text-balance">
-              Current NCAA Tournament at-large bid odds, projected seeds and updated rankings for all {teams.length} Division I teams.</p>
+              Current NCAA Tournament at-large bid odds, projected seeds and updated metrics for all {teams.length} Division I teams.</p>
           </div>
         </div>
       </div>
@@ -162,56 +152,77 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
-                <th className="text-left text-xs px-4 py-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase">
+                <th className="sticky top-0 z-10 text-left text-xs px-4 py-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
                   Rank
                 </th>
                 <th 
-                  className={`text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 min-w-[150px] ${sortField === 'name' ? 'bg-amber-50' : ''}`}
+                  className={`sticky top-0 z-10 text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 min-w-[150px] ${sortField === 'name' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('name')}
                 >
                   Team {sortField === 'name' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'odds' ? 'bg-amber-50' : ''}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'odds' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('odds')}
                   title="Chance team gets bid without winning conference tournament"
                 >
                   At-Large Odds {sortField === 'odds' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : ''}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('seed')}
                   title="Expected seed based on current rankings"
                 >
                   Proj. Seed {sortField === 'seed' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'composite' ? 'bg-amber-50' : ''}`}
-                  onClick={() => handleSort('composite')}
-                  title="Weighted average of predictive, resume, and NET metrics"
-                >
-                  Composite {sortField === 'composite' && (sortDirection === 'asc' ? '↑' : '↓')}
-                </th>
-                <th 
-                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}
-                  onClick={() => handleSort('predictive')}
-                  title="Average of KenPom, Torvik, and BPI metrics"
-                >
-                  Predictive {sortField === 'predictive' && (sortDirection === 'asc' ? '↑' : '↓')}
-                </th>
-                <th 
-                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'resume' ? 'bg-amber-50' : ''}`}
-                  onClick={() => handleSort('resume')}
-                  title="Average of WAB, SOR, and KPI metrics"
-                >
-                  Resume {sortField === 'resume' && (sortDirection === 'asc' ? '↑' : '↓')}
-                </th>
-                <th 
-                  className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : ''}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('net')}
                   title="NCAA sorting tool for quadrants"
                 >
                   NET {sortField === 'net' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'kenpom' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('kenpom')}
+                  title="Ken Pomeroy - predictive metric"
+                >
+                  KenPom {sortField === 'kenpom' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'torvik' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('torvik')}
+                  title="Bart Torvik - predictive metric"
+                >
+                  Torvik {sortField === 'torvik' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'bpi' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('bpi')}
+                  title="ESPN Basketball Power Index - predictive metric"
+                >
+                  BPI {sortField === 'bpi' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'wab' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('wab')}
+                  title="Wins Above Bubble - resume metric"
+                >
+                  WAB {sortField === 'wab' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'kpi' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('kpi')}
+                  title="Kevin Pauga Index - resume metric"
+                >
+                  KPI {sortField === 'kpi' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'sor' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('sor')}
+                  title="ESPN Strength of Record - resume metric"
+                >
+                  SOR {sortField === 'sor' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
               </tr>
             </thead>
@@ -219,19 +230,8 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
               {sortedTeams.map((team) => {
                 const currentOdds = team.tournamentOdds ?? 0;
                 const formattedOdds = formatPercent(currentOdds, { decimals: 0 });
-                const predictiveAvg = calculateAverage([team.kenpom, team.torvik, team.bpi]);
-                const resumeAvg = calculateAverage([team.wab, team.kpi, team.sor]);
-                const composite = calculateCompositeRanking(team);
                 const seed = teamSeedMap.get(team.espnId || team.slug);
                 const rank = teamRanks[team.espnId || team.slug];
-                const predictiveTooltip = formatRankings(
-                  ['KenPom', 'Torvik', 'BPI'],
-                  [team.kenpom, team.torvik, team.bpi]
-                );
-                const resumeTooltip = formatRankings(
-                  ['WAB', 'KPI', 'SOR'],
-                  [team.wab, team.kpi, team.sor]
-                );
                 
                 return (
                   <tr
@@ -262,23 +262,26 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'seed' ? 'bg-amber-50' : ''}`}>
                       {seed || '—'}
                     </td>
-                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'composite' ? 'bg-amber-50' : ''}`}>
-                      {composite !== Infinity ? composite.toFixed(1) : '—'}
-                    </td>
-                    <td 
-                      className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}
-                      title={predictiveTooltip}
-                    >
-                      {predictiveAvg !== null ? predictiveAvg.toFixed(1) : '—'}
-                    </td>
-                    <td 
-                      className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'resume' ? 'bg-amber-50' : ''}`}
-                      title={resumeTooltip}
-                    >
-                      {resumeAvg !== null ? resumeAvg.toFixed(1) : '—'}
-                    </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'net' ? 'bg-amber-50' : ''}`}>
                       {team.net || '—'}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'kenpom' ? 'bg-amber-50' : ''}`}>
+                      {team.kenpom || '—'}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'torvik' ? 'bg-amber-50' : ''}`}>
+                      {team.torvik || '—'}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'bpi' ? 'bg-amber-50' : ''}`}>
+                      {team.bpi || '—'}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'wab' ? 'bg-amber-50' : ''}`}>
+                      {team.wab || '—'}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'kpi' ? 'bg-amber-50' : ''}`}>
+                      {team.kpi || '—'}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'sor' ? 'bg-amber-50' : ''}`}>
+                      {team.sor || '—'}
                     </td>
                   </tr>
                 );
