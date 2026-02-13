@@ -178,8 +178,8 @@ export function LandingView({
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Bid breakdowns</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Current status reports for all 31 conferences</p>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Conference breakdown</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Current standings and bid status for all 31 conferences</p>
                   </div>
                 </div>
               </button>
