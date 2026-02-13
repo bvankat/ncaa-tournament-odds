@@ -11,9 +11,10 @@ type FooterProps = {
   onAllTeams?: () => void;
   onConferences?: () => void;
   onBracket?: () => void;
+  onBubbleWatch?: () => void;
 };
 
-export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket }: FooterProps) {
+export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket, onBubbleWatch }: FooterProps) {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -69,6 +70,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
             onAllTeams={onAllTeams}
             onConferences={onConferences}
             onBracket={onBracket}
+            onBubbleWatch={onBubbleWatch}
           />
           <nav className="mt-6 space-y-2">
             <button
@@ -76,6 +78,12 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
               className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
             >
               Projected Bracket
+            </button>
+            <button
+              onClick={onBubbleWatch}
+              className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
+            >
+              Bubble Watch
             </button>
             <button
               onClick={onConferences}

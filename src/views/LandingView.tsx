@@ -19,6 +19,7 @@ type LandingViewProps = {
   onAllTeams?: () => void;
   onConferences?: () => void;
   onBracket?: () => void;
+  onBubbleWatch?: () => void;
 };
 
 export function LandingView({
@@ -34,6 +35,7 @@ export function LandingView({
   onAllTeams,
   onConferences,
   onBracket,
+  onBubbleWatch,
 }: LandingViewProps) {
   return (
     <div className="max-w-screen bg-gray-50 mx-auto pt-12 lg:pt-24 overflow-x-hidden relative" style={{
@@ -61,7 +63,7 @@ export function LandingView({
             <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Bubble chances and projected seeds for all 360+ Division I teams</p>
           </div>
           <div className="w-full max-w-xl">
-          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} />
+          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} />
 
           </div>
         </div>
@@ -140,7 +142,7 @@ export function LandingView({
               </button>
 
               {/* Card 3 */}
-              <a href="#bubble-watch" className="group p-4 block cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
+              <button onClick={onBubbleWatch} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-md bg-black group-hover:bg-blue-200 flex items-center justify-center transition-colors">
                     <svg className="w-6 h-6 text-blue-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -152,7 +154,7 @@ export function LandingView({
                     <p className="text-sm text-gray-600 leading-relaxed">Who's safe and who's sweating on Selection Sunday</p>
                   </div>
                 </div>
-              </a>
+              </button>
 
               {/* Card 4 */}
               <button onClick={onConferences} className="group p-4 w-full text-left cursor-pointer hover:bg-gray-50/50 rounded-lg transition-colors">
@@ -179,14 +181,14 @@ export function LandingView({
       <div className="bg-white pt-12 lg:pt-16 pb-4 lg:pb-6">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6 ibm-plex-sans">
-            Bracket Outlook
+            At A Glance
           </h2>
+          <p className="text-gray-600 mb-6 text-sm">
+                Bracket status based on the latest metrics. <a onClick={onBracket} className="underline cursor-pointer">Full projected bracket »</a>
+              </p>
           <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
           
           <div className="mt-4 flex gap-5 justify-start">
-            <button onClick={onBracket} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer ">
-              Projected Bracket »
-            </button>
             <button onClick={onConferences} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
               Conference Breakdown »
             </button>
@@ -194,9 +196,11 @@ export function LandingView({
           </div>
 
         </div>
-      </div>
 
+          <div className="py-12 lg:py-16 px-6 lg:px-12 max-w-screen-xl mx-auto">
       <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
+          </div>
+      </div>
     </div>
   );
 }

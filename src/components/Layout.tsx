@@ -10,19 +10,20 @@ type LayoutProps = {
   onAllTeams?: () => void;
   onConferences?: () => void;
   onBracket?: () => void;
+  onBubbleWatch?: () => void;
   teams: Team[];
   selectedSlug?: string;
   onTeamSelect: (slug: string) => void;
 };
 
-export function Layout({ children, onHome, onAllTeams, onConferences, onBracket, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
+export function Layout({ children, onHome, onAllTeams, onConferences, onBracket, onBubbleWatch, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
   const [paletteOpen, setPaletteOpen] = useState(false);
 
   return (
     <>
-      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} />
+      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} />
       {children}
-      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} />
+      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} />
       <CommandPalette
         open={paletteOpen}
         onOpenChange={setPaletteOpen}
@@ -42,6 +43,10 @@ export function Layout({ children, onHome, onAllTeams, onConferences, onBracket,
         }}
         onBracket={() => {
           onBracket?.();
+          setPaletteOpen(false);
+        }}
+        onBubbleWatch={() => {
+          onBubbleWatch?.();
           setPaletteOpen(false);
         }}
       />

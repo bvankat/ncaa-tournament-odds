@@ -17,7 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-export function Combobox({ teams, value, onValueChange, placeholder = "Select a team...", onHome, onAllTeams, onConferences, onBracket }) {
+export function Combobox({ teams, value, onValueChange, placeholder = "Select a team...", onHome, onAllTeams, onConferences, onBracket, onBubbleWatch }) {
   const [open, setOpen] = React.useState(false)
 
   const selectedTeam = teams.find((team) => team.slug === value)

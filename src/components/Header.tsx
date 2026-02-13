@@ -9,9 +9,10 @@ type HeaderProps = {
   onAllTeams?: () => void;
   onConferences?: () => void;
   onBracket?: () => void;
+  onBubbleWatch?: () => void;
 };
 
-export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket }: HeaderProps) {
+export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket, onBubbleWatch }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -57,7 +58,6 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
               </button>
             </div>
             <div className="p-6">
-              <p className="text-2xl font-bold text-gray-900 ibm-plex-sans mb-4">Links</p>
               <button
                 onClick={() => {
                   onHome();
@@ -81,7 +81,7 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
                 className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold"
                 >
                   <span className="w-8 h-8 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
+                    <svg className="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 30 24" strokeWidth="3" strokeLinecap="round">
                       <line x1="2" y1="3" x2="14" y2="3"/>
                       <line x1="2" y1="21" x2="14" y2="21"/>
                       <line x1="28" y1="12" x2="14.5" y2="12"/>
@@ -89,6 +89,22 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
                     </svg>
                   </span>
                   <span className="font-normal text-gray-600"><a href="/bracket">Projected bracket</a></span>
+                </button>
+              )}
+              {onBubbleWatch && (
+                <button
+                onClick={() => {
+                  onBubbleWatch();
+                  setMenuOpen(false);
+                }}
+                className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold"
+                >
+                  <span className="w-8 h-8 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-blue-200 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </span>
+                  <span className="font-normal text-gray-600"><a href="/bubble-watch">Bubble watch</a></span>
                 </button>
               )}
               {onConferences && (

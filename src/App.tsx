@@ -5,6 +5,7 @@ import { TeamView } from '@/views/TeamView';
 import { AllTeamsView } from '@/views/AllTeamsView';
 import { ConferenceListView } from '@/views/ConferenceListView';
 import { BracketView } from '@/views/BracketView';
+import { BubbleWatchView } from '@/views/BubbleWatchView';
 import { formatRelativeTime } from '@/lib/utils';
 import type { Team, OddsMovers } from '@/types/team';
 
@@ -140,6 +141,14 @@ function App() {
     trackPageView(newPath);
   };
 
+  const goBubbleWatch = () => {
+    const newPath = '/bubble-watch';
+    window.history.pushState({}, '', newPath);
+    setSelectedSlugs(['bubble-watch']);
+    window.scrollTo(0, 0);
+    trackPageView(newPath);
+  };
+
   const handleTeamSelect = (slug: string) => {
     if (slug) {
       const newPath = `/${slug}`;
@@ -166,15 +175,16 @@ function App() {
   const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'all-teams';
   const isConferencesPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'conferences';
   const isBracketPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'bracket';
+  const isBubbleWatchPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'bubble-watch';
 
   const selectedTeams = selectedSlugs
-    .filter(slug => slug !== 'all-teams' && slug !== 'conferences' && slug !== 'bracket')
+    .filter(slug => slug !== 'all-teams' && slug !== 'conferences' && slug !== 'bracket' && slug !== 'bubble-watch')
     .map((slug) => getTeamBySlug(slug))
     .filter(Boolean) as Team[];
 
   return (
     <div className="min-h-screen bg-white">
-      <Layout onHome={goHome} onAllTeams={goAllTeams} onConferences={goConferences} onBracket={goBracket} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
+      <Layout onHome={goHome} onAllTeams={goAllTeams} onConferences={goConferences} onBracket={goBracket} onBubbleWatch={goBubbleWatch} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
         {isLanding ? (
           <LandingView
             teams={allTeams}
@@ -188,6 +198,7 @@ function App() {
             onAllTeams={goAllTeams}
             onConferences={goConferences}
             onBracket={goBracket}
+            onBubbleWatch={goBubbleWatch}
           />
         ) : isAllTeamsPage ? (
           <AllTeamsView
@@ -206,6 +217,15 @@ function App() {
         ) : isBracketPage ? (
           <BracketView
             teams={allTeams}
+            onTeamSelect={handleTeamSelect}
+            lastUpdated={lastUpdated}
+            formatRelativeTime={formatRelativeTime}
+          />
+        ) : isBubbleWatchPage ? (
+          <BubbleWatchView
+            teams={allTeams}
+            oddsMovers={oddsMovers}
+            allSchedules={allSchedules}
             onTeamSelect={handleTeamSelect}
             lastUpdated={lastUpdated}
             formatRelativeTime={formatRelativeTime}
