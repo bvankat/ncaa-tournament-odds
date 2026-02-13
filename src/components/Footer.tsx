@@ -74,10 +74,16 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
           />
           <nav className="mt-6 space-y-2">
             <button
+              onClick={onAllTeams}
+              className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
+            >
+              Latest Rankings
+            </button>
+            <button
               onClick={onBracket}
               className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
             >
-              Projected bracket
+              Projected Bracket
             </button>
             <button
               onClick={onBubbleWatch}
@@ -89,13 +95,7 @@ export function Footer({ onHome, teams = [], selectedSlug = '', onTeamSelect, on
               onClick={onConferences}
               className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
             >
-              Conference breakdown
-            </button>
-            <button
-              onClick={onAllTeams}
-              className="block text-sm text-gray-200 hover:text-white transition-colors text-left w-full cursor-pointer"
-            >
-              Latest rankings
+              Conference Breakdown
             </button>
           </nav>
         </div>
