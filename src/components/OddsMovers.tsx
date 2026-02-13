@@ -19,15 +19,15 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
     : [];
 
   return (
-    <div className="bg-white py-12 lg:py-16">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+    <div className="bg-white">
+      <div className="max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
           {/* Left Column - Bubble Watch */}
           {sortedBubbleTeams.length > 0 && (
             <div id="bubble-watch">
               <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">
-                Bubble Watch
+                At-Large Odds
               </h2>
               <p className="text-gray-600 mb-6 text-sm">
                 Teams closest to the cut line. High volatility for wins and losses.
@@ -105,7 +105,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
           )}
 
           {/* Right Column - Movers (Stacked) */}
-          <div className="space-y-8">
+          <div className="space-y-8" id="odds-movers">
             {/* Biggest Risers */}
             {moversData.biggestRisers.length > 0 && (
               <div id="biggest-movers">
