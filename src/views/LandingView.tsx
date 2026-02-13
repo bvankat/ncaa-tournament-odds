@@ -192,6 +192,12 @@ export function LandingView({
             <button onClick={onConferences} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
               Conference Breakdown »
             </button>
+            <button onClick={onBracket} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
+              Projected Bracket »
+            </button>
+            <button onClick={onBubbleWatch} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
+              Bubble Watch »
+            </button>
             
           </div>
 
