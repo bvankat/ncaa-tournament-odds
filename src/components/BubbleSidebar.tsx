@@ -93,20 +93,24 @@ export function BubbleSidebar({
               <th className="text-left text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase">
                 Team
               </th>
-              <th className="text-center text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase">
+              <th className="text-center text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase"                   
+                title="Expected seed based on current rankings">
                 Seed
               </th>
               <th className="text-left text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase">
                 Status
               </th>
             
-              <th className="text-right text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
-                Pred. Avg
+              <th className="text-right text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50"
+            title="Average of KenPom, Torvik, and BPI metrics">
+                Predictive
               </th>
-              <th className="text-right text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
-                Resume Avg
+              <th className="text-right text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50"
+                title="Average of WAB, KPI, and SOR metrics">
+                Resume
               </th>
-              <th className="text-right text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
+              <th className="text-right text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50"
+              title="NCAA sorting tool for quadrants">
                 NET
               </th>
             </tr>
