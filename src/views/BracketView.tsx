@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import type { Team } from '@/types/team';
 import { calculateBracket, getSeedDisplay, shouldAddSeparator, calculateCompositeRanking } from '@/lib/bracketProjection';
+import { BubbleSidebar } from '@/components/BubbleSidebar';
 
 type BracketViewProps = {
   teams: Team[];
@@ -224,114 +225,14 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
           </div>
 
           {/* Sidebar with bubble teams */}
-          <div className="space-y-12">
-            {/* Last Four Byes */}
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-3 geist-mono uppercase">
-                Last Four Byes
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {lastFourByesList.map((team) => (
-                  <button
-                    key={team.espnId || team.slug}
-                    onClick={() => onTeamSelect(team.slug)}
-                    className="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-orange-200 bg-orange-50/25 hover:bg-orange-50 transition-colors cursor-pointer"
-                  >
-                    {team.logo && (
-                      <img
-                        src={team.logo}
-                        alt={team.displayName}
-                        className="w-4 h-4 object-contain"
-                      />
-                    )}
-                    <span className="text-xs font-medium text-gray-900">
-                      {team.shortName}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Last Four In */}
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-3 geist-mono uppercase">
-                Last Four In
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {lastFourInList.map((team) => (
-                  <button
-                    key={team.espnId || team.slug}
-                    onClick={() => onTeamSelect(team.slug)}
-                    className="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-purple-200 bg-purple-50/25 hover:bg-purple-50 transition-colors cursor-pointer"
-                  >
-                    {team.logo && (
-                      <img
-                        src={team.logo}
-                        alt={team.displayName}
-                        className="w-4 h-4 object-contain"
-                      />
-                    )}
-                    <span className="text-xs font-medium text-gray-900">
-                      {team.shortName}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* First Four Out */}
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-3 geist-mono uppercase">
-                First Four Out
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {bubbleTeams.slice(0, 4).map((team) => (
-                  <button
-                    key={team.espnId || team.slug}
-                    onClick={() => onTeamSelect(team.slug)}
-                    className="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-gray-200 hover:bg-gray-100 transition-colors cursor-pointer"
-                  >
-                    {team.logo && (
-                      <img
-                        src={team.logo}
-                        alt={team.displayName}
-                        className="w-4 h-4 object-contain"
-                      />
-                    )}
-                    <span className="text-xs font-medium text-gray-900">
-                      {team.shortName}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Next Four Out */}
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-3 geist-mono uppercase">
-                Next Four Out
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {bubbleTeams.slice(4, 8).map((team) => (
-                  <button
-                    key={team.espnId || team.slug}
-                    onClick={() => onTeamSelect(team.slug)}
-                    className="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-full border border-gray-200 hover:bg-gray-100 transition-colors cursor-pointer"
-                  >
-                    {team.logo && (
-                      <img
-                        src={team.logo}
-                        alt={team.displayName}
-                        className="w-4 h-4 object-contain"
-                      />
-                    )}
-                    <span className="text-xs font-medium text-gray-900">
-                      {team.shortName}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
+          <div className="lg:sticky lg:top-6 lg:self-start">
+            <BubbleSidebar
+              lastFourByesList={lastFourByesList}
+              lastFourInList={lastFourInList}
+              firstFourOut={bubbleTeams.slice(0, 4)}
+              nextFourOut={bubbleTeams.slice(4, 8)}
+              onTeamSelect={onTeamSelect}
+            />
           </div>
         </div>
       </div>
