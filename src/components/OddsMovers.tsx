@@ -100,7 +100,7 @@ export function OddsMovers({ moversData, onTeamSelect }: OddsMoversProps) {
                 
               
               </div>
-                <p className="mt-4 text-gray-500 text-xs cursor-pointer hover:underline"><a href="/all-teams">Full teams list »</a></p>
+                <p className="mt-4 text-gray-500 text-xs cursor-pointer hover:underline"><a href="/latest-rankings">Latest rankings for all teams »</a></p>
             </div>
           )}
 
