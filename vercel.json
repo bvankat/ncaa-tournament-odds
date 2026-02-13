@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/all-teams",
+      "destination": "/latest-rankings",
+      "permanent": true
+    }
+  ],
   "rewrites": [
 	{
 	  "source": "/(.*)",

@@ -45,7 +45,7 @@ function loadTeamData() {
 
 // Generate routes from team data
 function getRoutes() {
-  const routes = ['/', '/all-teams']
+  const routes = ['/', '/latest-rankings', '/bracket', '/bubble-watch', '/conferences']
   const data = loadTeamData()
   
   if (data.teams) {
@@ -74,12 +74,39 @@ function getSeoMetaTags(route) {
     }
   }
   
-  // All teams page
-  if (route === '/all-teams') {
+  // Latest rankings page
+  if (route === '/latest-rankings') {
     return {
-      title: 'All Teams — NCAA Tournament Odds Machine',
+      title: 'Latest Rankings — NCAA Basketball Tournament Odds Machine',
       description: 'View tournament odds and team-sheet metrics for all 360+ Division I basketball teams.',
-      url: `${baseUrl}/all-teams`
+      url: `${baseUrl}/latest-rankings`
+    }
+  }
+  
+  // Bracket page
+  if (route === '/bracket') {
+    return {
+      title: 'Projected Bracket — NCAA Basketball Tournament Odds Machine',
+      description: 'Tournament seed projections based on current team-sheet metrics',
+      url: `${baseUrl}/bracket`
+    }
+  }
+  
+  // Bubble watch page
+  if (route === '/bubble-watch') {
+    return {
+      title: 'Bubble Watch — NCAA Basketball Tournament Odds Machine',
+      description: 'Updated projections and critical upcoming games for teams chasing at-large bids',
+      url: `${baseUrl}/bubble-watch`
+    }
+  }
+  
+  // Conferences page
+  if (route === '/conferences') {
+    return {
+      title: 'Conference Breakdown — NCAA Basketball Tournament Odds Machine',
+      description: 'Updated tournament projections and current standings for all 31 Division I conferences.',
+      url: `${baseUrl}/conferences`
     }
   }
   
@@ -97,7 +124,7 @@ function getSeoMetaTags(route) {
     const kpi = team.kpi || '—'
     const wab = team.wab || '—'
     return {
-      title: `${team.displayName} — NCAA Tournament Odds`,
+      title: `${team.displayName} — NCAA Basketball Tournament Odds`,
       description: `Current odds for ${team.displayName}: ${odds}% chance to make the NCAA Tournament as an at-large team. NET ${net} | Kenpom ${kenpom} | BPI ${bpi} | Torvik ${torvik} | SOR ${sor} | KPI ${kpi} | WAB ${wab}`,
       url: `${baseUrl}/${team.slug}`
     }
@@ -105,7 +132,7 @@ function getSeoMetaTags(route) {
   
   // Fallback
   return {
-    title: 'NCAA Tournament Odds Machine',
+    title: 'NCAA Basketball Tournament Odds Machine',
     description: "Track NCAA men's basketball tournament selection odds for all 360+ Division I teams.",
     url: baseUrl + route
   }

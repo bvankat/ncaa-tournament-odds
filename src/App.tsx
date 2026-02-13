@@ -118,9 +118,9 @@ function App() {
   };
 
   const goAllTeams = () => {
-    const newPath = '/all-teams';
+    const newPath = '/latest-rankings';
     window.history.pushState({}, '', newPath);
-    setSelectedSlugs(['all-teams']);
+    setSelectedSlugs(['latest-rankings']);
     window.scrollTo(0, 0);
     trackPageView(newPath);
   };
@@ -172,13 +172,13 @@ function App() {
   }
 
   const isLanding = selectedSlugs.length === 0;
-  const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'all-teams';
+  const isAllTeamsPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'latest-rankings';
   const isConferencesPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'conferences';
   const isBracketPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'bracket';
   const isBubbleWatchPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'bubble-watch';
 
   const selectedTeams = selectedSlugs
-    .filter(slug => slug !== 'all-teams' && slug !== 'conferences' && slug !== 'bracket' && slug !== 'bubble-watch')
+    .filter(slug => slug !== 'latest-rankings' && slug !== 'conferences' && slug !== 'bracket' && slug !== 'bubble-watch')
     .map((slug) => getTeamBySlug(slug))
     .filter(Boolean) as Team[];
 
