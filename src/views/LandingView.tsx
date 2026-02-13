@@ -129,7 +129,7 @@ export function LandingView({
                       </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Latest rankings</h3>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Latest Rankings</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">NET, Kenpom, Torvik, BPI, SOR, KPI, WAB — all in one place</p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export function LandingView({
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Projected bracket</h3>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Projected Bracket</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">Updated seed list and play-in games</p>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export function LandingView({
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Bubble watch</h3>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Bubble Watch</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">Who's safe and who's sweating on Selection Sunday</p>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export function LandingView({
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Conference breakdown</h3>
+                    <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Conference Breakdown</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">Current standings and bid status for all 31 conferences</p>
                   </div>
                 </div>
