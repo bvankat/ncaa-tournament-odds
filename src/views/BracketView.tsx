@@ -112,20 +112,25 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
               <thead>
                 <tr className="border-b border-gray-300 bg-gray-50">
                   <th className="text-left text-xs py-2 pl-2 md:py-3 md:pl-3 font-medium geist-mono text-gray-400 uppercase">
+                  Seed
                   </th>
                   <th className="text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase min-w-[120px]">
                     Team
                   </th>
-                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-amber-50/50">
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-amber-50/50"
+                    title="Weighted average of predictive, resume, and NET metrics">
                     Composite
                   </th>
-                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
-                    Predictive Avg
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50"
+                    title="Average of KenPom, Torvik, and BPI metrics">
+                    Predictive
                   </th>
-                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
-                    Resume Avg
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50"
+                    title="Average of WAB, KPI, and SOR metrics">
+                    Resume
                   </th>
-                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-gray-50"
+                    title="NCAA sorting tool for quadrants">
                     NET
                   </th>
                   <th className="text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase min-w-[80px]">
@@ -202,7 +207,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                         </td>
                         <td className="py-2 px-2 md:py-3 md:px-4">
                           <div className="flex flex-col gap-0.5">
-                            <span className="text-xs font-medium text-gray-500 geist-mono">
+                            <span className="text-xs font-regular text-gray-400">
                               {bidType}
                             </span>
                             {indicator && (
@@ -226,6 +231,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
 
           {/* Sidebar with bubble teams */}
           <div className="lg:sticky lg:top-6 lg:self-start">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 ibm-plex-sans">Bubble Teams</h2>
             <BubbleSidebar
               lastFourByesList={lastFourByesList}
               lastFourInList={lastFourInList}

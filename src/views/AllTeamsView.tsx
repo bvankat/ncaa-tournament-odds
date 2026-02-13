@@ -31,6 +31,17 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
     return validValues.reduce((sum, val) => sum + val, 0) / validValues.length;
   };
 
+  // Helper to format a list of rankings
+  const formatRankings = (labels: string[], values: (number | string | null | undefined)[]): string => {
+    const formatted = labels.map((label, i) => {
+      const val = values[i];
+      if (val === null || val === undefined) return null;
+      return `${label}: ${val}`;
+    }).filter(Boolean);
+    
+    return formatted.join(', ') || 'N/A';
+  };
+
   // Sort teams
   const sortedTeams = useMemo(() => {
     return [...teams].sort((a, b) => {
@@ -163,7 +174,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                 <th 
                   className={`text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'odds' ? 'bg-amber-50' : ''}`}
                   onClick={() => handleSort('odds')}
-                  title="Chance team makes tournament without winning conference tournament"
+                  title="Chance team gets bid without winning conference tournament"
                 >
                   At-Large Odds {sortField === 'odds' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
@@ -213,6 +224,14 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                 const composite = calculateCompositeRanking(team);
                 const seed = teamSeedMap.get(team.espnId || team.slug);
                 const rank = teamRanks[team.espnId || team.slug];
+                const predictiveTooltip = formatRankings(
+                  ['KenPom', 'Torvik', 'BPI'],
+                  [team.kenpom, team.torvik, team.bpi]
+                );
+                const resumeTooltip = formatRankings(
+                  ['WAB', 'KPI', 'SOR'],
+                  [team.wab, team.kpi, team.sor]
+                );
                 
                 return (
                   <tr
@@ -246,10 +265,16 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'composite' ? 'bg-amber-50' : ''}`}>
                       {composite !== Infinity ? composite.toFixed(1) : '—'}
                     </td>
-                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}>
+                    <td 
+                      className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'predictive' ? 'bg-amber-50' : ''}`}
+                      title={predictiveTooltip}
+                    >
                       {predictiveAvg !== null ? predictiveAvg.toFixed(1) : '—'}
                     </td>
-                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'resume' ? 'bg-amber-50' : ''}`}>
+                    <td 
+                      className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'resume' ? 'bg-amber-50' : ''}`}
+                      title={resumeTooltip}
+                    >
                       {resumeAvg !== null ? resumeAvg.toFixed(1) : '—'}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'net' ? 'bg-amber-50' : ''}`}>
