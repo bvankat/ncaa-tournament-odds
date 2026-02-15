@@ -213,13 +213,13 @@ export function LandingView({
 
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12 my-8 md:my-20">
 
-          <div className="grid grid-cols-1 md:grid-cols-8 gap-8">
-            <div className="md:col-span-3">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div className="md:col-span-4">
               <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">On the Bubble</h2>
-              <p className="text-gray-600 mb-6 text-sm">Tournament seed projections based on current team-sheet metrics.</p>
+              <p className="text-gray-600 mb-6 text-sm text-balance">Tournament seed projections based on current team-sheet metrics.</p>
               <p className="text-gray-600 mb-6 text-sm"><a onClick={onBubbleWatch} className="underline cursor-pointer">Bubble Watch »</a></p>
           </div>
-          <div className="md:col-span-5" id="bubble-projection">
+          <div className="md:col-span-8" id="bubble-projection">
             <BubbleSidebar
               lastFourByesList={lastFourByesList}
               lastFourInList={lastFourInList}
