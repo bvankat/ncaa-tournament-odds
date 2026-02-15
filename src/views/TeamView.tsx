@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Speedometer } from '@/components/Speedometer';
 import { PulseRings } from '@/components/PulseRings';
 import { RankingSparkline } from '@/components/RankingSparkline';
 import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import type { Team, TeamSchedule } from '@/types/team';
 import { formatPercent } from '@/lib/utils';
+import { calculateBracket } from '@/lib/bracketProjection';
 
 type TeamViewProps = {
   team: Team;
@@ -24,6 +25,52 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
   const oddsChangeLabel = oddsChange !== null
     ? formatPercent(Math.abs(oddsChange), { decimals: 0 })
     : null;
+
+  // Calculate bracket projection and team status
+  const teamStatus = useMemo(() => {
+    const projection = calculateBracket(allTeams);
+    const teamId = team.espnId || team.slug;
+    
+    // Get seed
+    const seed = projection.teamSeedMap.get(teamId);
+    
+    // Determine bid type
+    const isAutoBid = projection.autoBidTeams.has(teamId);
+    const bidType = isAutoBid ? 'Automatic bid' : seed ? 'At-large bid' : null;
+    
+    // Determine bubble status
+    let bubbleStatus: string | null = null;
+    if (projection.lastFourByes.has(teamId)) {
+      bubbleStatus = 'Last Four Byes';
+    } else if (projection.lastFourIn.has(teamId)) {
+      bubbleStatus = 'Last Four In';
+    } else {
+      // Check if team is in First Four Out or Next Four Out
+      const bubbleIndex = projection.bubbleTeams.findIndex(t => (t.espnId || t.slug) === teamId);
+      if (bubbleIndex >= 0 && bubbleIndex < 4) {
+        bubbleStatus = 'First Four Out';
+      } else if (bubbleIndex >= 4 && bubbleIndex < 8) {
+        bubbleStatus = 'Next Four Out';
+      }
+    }
+    
+    // Determine dashboard status
+    let dashboardStatus: string | null = null;
+    if (tournamentOdds > 90) {
+      dashboardStatus = 'Lock';
+    } else if (tournamentOdds > 70) {
+      dashboardStatus = 'Safe For Now';
+    } else if (tournamentOdds > 25) {
+      dashboardStatus = 'Bubble';
+    }
+    
+    return {
+      seed,
+      bidType,
+      bubbleStatus,
+      dashboardStatus
+    };
+  }, [allTeams, team, tournamentOdds]);
 
   // Helper function to get win probability for a game (Nebraska-specific)
   const getWinProbability = (gameDate: Date): number | null => {
@@ -96,34 +143,39 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
         <div className="max-w-screen-xl mx-auto px-2 py-12 lg:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3 md:px-12">
             <div className="flex flex-col justify-center gap-4 text-center md:text-left items-center md:items-start">
+              <div>
               {lastUpdated && (
-                <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-black/10 rounded-full border border-white/15 mb-2 lg:mb-6">
+                <div id="updates-pill" className="inline-flex items-center w-fit mb-2 lg:mb-6">
                   <span className="relative size-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
                     <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
                   </span>
-                  <p className="text-gray-200 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
+                  <p className="text-white/70 text-[11px] font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
                     <span className="">UPDATED </span>
                     <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
                   </p>
                 </div>
               )}
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
-                <h1 className="text-3xl lg:text-5xl px-6 md:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white ibm-plex-sans">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl px-6 md:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white ibm-plex-sans">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
                   At-large bid chances for {team.shortName} based on its current team-sheet ranks
                 </p>
               </div>
+              </div>
+
+               
+
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-2">
               <div style={{ position: 'relative', width: 340, height: 340 }}>                
               <Speedometer value={tournamentOdds} />
               </div>
               {oddsChange !== null && (
-                <div className="flex items-center gap-2 text-sm font-semibold geist-mono">
+                <div className="flex items-center gap-2 text-xs font-semibold geist-mono">
                   {Math.abs(oddsChange) < 1 ? (
                     <>
                       <span className="text-gray-400 font-normal">No change today</span>
@@ -139,14 +191,70 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                   )}
                 </div>
               )}
-            </div>
+
+                          </div>
           </div>
-        </div>
+</div>
+            
+            {(teamStatus.seed || teamStatus.bidType || teamStatus.bubbleStatus || teamStatus.dashboardStatus) && (
+                <div id="current-status" className="flex flex-col md:flex-row gap-4 md:gap-12 p-8 md:px-14 mx-auto bg-black/10">
+                  
+                  <div className="gap-2">
+                  <p className="text-[11px] text-white/70 font-normal tracking-wide uppercase geist-mono mb-1">Current projection</p>
+                  {teamStatus.seed && (
+                    <div className="text-white text-xl font-medium">
+                        <a href="/bracket" className="hover:opacity-70 transition-opacity">{teamStatus.seed} seed</a>
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex flex-row flex-wrap gap-2 items-end">
+                    {teamStatus.dashboardStatus && (
+                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium ${
+                        teamStatus.dashboardStatus === 'Auto-bid' ? 'bg-blue-500/20 text-blue-100 border border-blue-400/30' :
+                        teamStatus.dashboardStatus === 'Lock' ? 'bg-green-500/20 text-green-100 border border-green-400/30' :
+                        teamStatus.dashboardStatus === 'Safe For Now' ? 'bg-green-400/20 text-green-100 border border-green-300/30' :
+                        'bg-yellow-500/20 text-yellow-100 border border-yellow-400/30'
+                      }`}>
+                        Status: {teamStatus.dashboardStatus}
+                      </div>
+                    )}
+                    
+                    
+                    {teamStatus.bubbleStatus && (
+                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium ${
+                        teamStatus.bubbleStatus === 'Last Four Byes' ? 'bg-orange-500/20 text-orange-100 border border-orange-400/30' :
+                        teamStatus.bubbleStatus === 'Last Four In' ? 'bg-purple-500/20 text-purple-100 border border-purple-400/30' :
+                        'bg-red-500/20 text-red-100 border border-red-400/30'
+                      }`}>
+                        {teamStatus.bubbleStatus}
+                      </div>
+                    )}
+                    {teamStatus.bidType && (
+                      <div className="inline-flex items-center px-3 py-1 rounded-full border border-white/30 text-white/70 text-[11px] font-regular">
+                        {teamStatus.bidType}
+                      </div>
+                    )}
+                  </div>
+                  </div>
+              )}
+            
+        
+
+       
+
       </div>
 
+
       <div id="ratings" className="bg-white px-6 py-6 md:px-12 md:py-12">
+
+               
+
+
         <div className="grid grid-cols-1 md:grid-cols-8 gap-12">
           <div className="md:col-span-5">
+
+              
+
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-300 uppercase">
@@ -265,6 +373,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
             </table>
           </div>
           <div className="md:col-span-3 md:col-start-6">
+
+            
 
             <div className="bg-white flex flex-row rounded-lg shadow-xs border border-gray-200 mb-6">
               <div className="border-r border-gray-200 px-6 py-6 text-center flex-1">
