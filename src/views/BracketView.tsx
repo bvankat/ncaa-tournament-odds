@@ -111,7 +111,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-300 bg-gray-50">
-                  <th className="text-left text-xs py-2 pl-2 md:py-3 md:pl-3 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-left text-xs py-3 pl-3 md:py-3 md:pl-3 font-medium geist-mono text-gray-400 uppercase">
                   Seed
                   </th>
                   <th className="text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase min-w-[120px]">
