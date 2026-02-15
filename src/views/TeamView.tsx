@@ -215,7 +215,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         teamStatus.dashboardStatus === 'Safe For Now' ? 'bg-green-400/20 text-green-100 border border-green-300/30' :
                         'bg-yellow-500/20 text-yellow-100 border border-yellow-400/30'
                       }`}>
-                        Status: {teamStatus.dashboardStatus}
+                        Status — {teamStatus.dashboardStatus}
                       </div>
                     )}
                     
