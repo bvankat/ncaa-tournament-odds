@@ -128,9 +128,13 @@ export function BubbleGames({ teams, allSchedules, onTeamSelect }: BubbleGamesPr
     });
     const formattedTime = timeString.replace(/:00\s/, ' ');
     
-    // Add day indicator if it's tomorrow
+    // Add date prefix if it's tomorrow
     if (gameDay.getTime() === tomorrow.getTime()) {
-      return `Tomorrow, ${formattedTime}`;
+      const dateString = date.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric'
+      });
+      return `${dateString}, ${formattedTime}`;
     }
     return formattedTime;
   };
@@ -162,53 +166,65 @@ export function BubbleGames({ teams, allSchedules, onTeamSelect }: BubbleGamesPr
                   >
     
                     <td className="py-3 pr-4">
-                      <div className="space-y-2 flex flex-row items-start gap-2">
+                      <div className="space-y-1">
                         {/* Away Team */}
-                        <div className="flex items-center gap-1">
-                          {awayComp.logo && (
-                            <img
-                              src={awayComp.logo}
-                              alt={awayComp.team_nickname}
-                              className="w-5 h-5 object-contain"
-                            />
-                          )}
-                          {awayTeam ? (
-                            <button
-                              onClick={() => onTeamSelect?.(awayTeam.slug)}
-                              className="text-gray-900 font-medium text-sm hover:underline cursor-pointer"
-                            >
-                              {awayComp.team_nickname}
-                            </button>
-                          ) : (
-                            <span className="text-gray-900 font-medium text-sm">
-                              {awayComp.team_nickname}
+                        <div className="flex items-center justify-between gap-4">
+                          <div className="flex items-center gap-2">
+                            {awayComp.logo && (
+                              <img
+                                src={awayComp.logo}
+                                alt={awayComp.team_nickname}
+                                className="w-5 h-5 object-contain"
+                              />
+                            )}
+                            {awayTeam ? (
+                              <button
+                                onClick={() => onTeamSelect?.(awayTeam.slug)}
+                                className="text-gray-900 font-medium text-sm hover:underline cursor-pointer"
+                              >
+                                {awayComp.team_nickname}
+                              </button>
+                            ) : (
+                              <span className="text-gray-900 font-medium text-sm">
+                                {awayComp.team_nickname}
+                              </span>
+                            )}
+                          </div>
+                          {isCompleted && (
+                            <span className="text-gray-900 font-semibold text-sm geist-mono">
+                              {awayComp.score?.displayValue}
                             </span>
                           )}
-                          
                         </div>
                         
-                        {/* @ symbol */}
-                        <div className="text-xs text-gray-400">@</div>
-                        
                         {/* Home Team */}
-                        <div className="flex items-center gap-2">
-                          {homeComp.logo && (
-                            <img
-                              src={homeComp.logo}
-                              alt={homeComp.team_nickname}
-                              className="w-5 h-5 object-contain"
-                            />
-                          )}
-                          {homeTeam ? (
-                            <button
-                              onClick={() => onTeamSelect?.(homeTeam.slug)}
-                              className="text-gray-900 font-medium text-sm hover:underline cursor-pointer"
-                            >
-                              {homeComp.team_nickname}
-                            </button>
-                          ) : (
-                            <span className="text-gray-900 font-medium text-sm">
-                              {homeComp.team_nickname}
+                        <div className="flex items-center justify-between gap-4">
+                          <div className="flex items-center gap-2">
+                            {homeComp.logo && (
+                              <img
+                                src={homeComp.logo}
+                                alt={homeComp.team_nickname}
+                                className="w-5 h-5 object-contain"
+                              />
+                            )}
+                            {homeTeam ? (
+                              <button
+                                onClick={() => onTeamSelect?.(homeTeam.slug)}
+                                className="text-gray-900 font-medium text-sm hover:underline cursor-pointer"
+                              >
+                                <span className="text-gray-500 font-light text-sm">at </span>
+                                {homeComp.team_nickname}
+                              </button>
+                            ) : (
+                              <span className="text-gray-900 font-medium text-sm">
+                                <span className="text-gray-500 font-light text-sm">at </span>
+                                {homeComp.team_nickname}
+                              </span>
+                            )}
+                          </div>
+                          {isCompleted && (
+                            <span className="text-gray-900 font-semibold text-sm geist-mono">
+                              {homeComp.score?.displayValue}
                             </span>
                           )}
                         </div>

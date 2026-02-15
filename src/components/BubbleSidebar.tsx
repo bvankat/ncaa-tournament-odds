@@ -90,14 +90,14 @@ export function BubbleSidebar({
         <table className="w-full">
           <thead>
             <tr className="border-b border-gray-300 bg-gray-50">
-              <th className="text-left text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase">
+              <th className="text-left text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase min-w-[120px]">
                 Team
               </th>
               <th className="text-center text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase"                   
                 title="Expected seed based on current rankings">
                 Seed
               </th>
-              <th className="text-left text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase">
+              <th className="text-left text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase min-w-[100px]">
                 Status
               </th>
             
