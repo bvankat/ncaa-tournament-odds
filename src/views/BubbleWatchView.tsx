@@ -70,7 +70,7 @@ export function BubbleWatchView({
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
-            <div className='col-span-1 md:col-span-7'>
+            <div className='col-span-1 md:col-span-8'>
                 <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">
                 Bracket projection
                 </h2>
@@ -91,7 +91,7 @@ export function BubbleWatchView({
             
             </div>
             {/* Bubble Games Today */}
-            <div className='col-span-1 md:col-span-5'>
+            <div className='col-span-1 md:col-span-4'>
               <BubbleGames 
                 teams={teams} 
                 allSchedules={allSchedules}
