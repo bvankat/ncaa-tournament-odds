@@ -148,12 +148,12 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </p>
-        <div className="rounded-lg border border-gray-200 overflow-x-auto">
+        <div className="rounded-lg border border-gray-200 overflow-x-auto mb-12">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-300 bg-gray-50">
                 <th className="sticky top-0 z-10 text-left text-xs px-4 py-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase bg-gray-50">
-                  Rank
+                
                 </th>
                 <th 
                   className={`sticky top-0 z-10 text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 min-w-[150px] ${sortField === 'name' ? 'bg-amber-50' : 'bg-gray-50'}`}
@@ -162,63 +162,63 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                   Team {sortField === 'name' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'odds' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 min-w-[100px] ${sortField === 'odds' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('odds')}
                   title="Chance team gets bid without winning conference tournament"
                 >
-                  At-Large Odds {sortField === 'odds' && (sortDirection === 'asc' ? '↑' : '↓')}
+                  At-Large {sortField === 'odds' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'seed' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('seed')}
                   title="Expected seed based on current rankings"
                 >
                   Proj. Seed {sortField === 'seed' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('net')}
                   title="NCAA sorting tool for quadrants"
                 >
                   NET {sortField === 'net' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'kenpom' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'kenpom' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('kenpom')}
                   title="Ken Pomeroy - predictive metric"
                 >
                   KenPom {sortField === 'kenpom' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'torvik' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'torvik' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('torvik')}
                   title="Bart Torvik - predictive metric"
                 >
                   Torvik {sortField === 'torvik' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'bpi' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'bpi' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('bpi')}
                   title="ESPN Basketball Power Index - predictive metric"
                 >
                   BPI {sortField === 'bpi' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'wab' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'wab' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('wab')}
                   title="Wins Above Bubble - resume metric"
                 >
                   WAB {sortField === 'wab' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'kpi' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'kpi' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('kpi')}
                   title="Kevin Pauga Index - resume metric"
                 >
                   KPI {sortField === 'kpi' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
-                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'sor' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'sor' ? 'bg-amber-50' : 'bg-gray-50'}`}
                   onClick={() => handleSort('sor')}
                   title="ESPN Strength of Record - resume metric"
                 >
