@@ -1,35 +1,15 @@
 {
-  "lastUpdated": "2026-02-15T00:47:54.542194",
+  "lastUpdated": "2026-02-15T10:37:25.475355",
   "biggestRisers": [
-    {
-      "espnId": "2440",
-      "slug": "nevada-wolf-pack",
-      "displayName": "Nevada Wolf Pack",
-      "shortName": "Nevada",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
-      "currentOdds": 19.98078,
-      "previousOdds": 14.92042,
-      "change": 5.060359999999999
-    },
-    {
-      "espnId": "2628",
-      "slug": "tcu-horned-frogs",
-      "displayName": "TCU Horned Frogs",
-      "shortName": "TCU",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-      "currentOdds": 38.56927,
-      "previousOdds": 34.02711,
-      "change": 4.542160000000003
-    },
     {
       "espnId": "277",
       "slug": "west-virginia-mountaineers",
       "displayName": "West Virginia Mountaineers",
       "shortName": "West Virginia",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
-      "currentOdds": 15.88764,
+      "currentOdds": 30.27097,
       "previousOdds": 11.68205,
-      "change": 4.205589999999999
+      "change": 18.588919999999998
     },
     {
       "espnId": "251",
@@ -37,9 +17,29 @@
       "displayName": "Texas Longhorns",
       "shortName": "Texas",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
-      "currentOdds": 62.28865,
+      "currentOdds": 66.482,
       "previousOdds": 58.34542,
-      "change": 3.94323
+      "change": 8.136580000000002
+    },
+    {
+      "espnId": "2628",
+      "slug": "tcu-horned-frogs",
+      "displayName": "TCU Horned Frogs",
+      "shortName": "TCU",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+      "currentOdds": 41.33089,
+      "previousOdds": 34.02711,
+      "change": 7.303779999999996
+    },
+    {
+      "espnId": "2390",
+      "slug": "miami-hurricanes",
+      "displayName": "Miami Hurricanes",
+      "shortName": "Miami",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+      "currentOdds": 78.67515,
+      "previousOdds": 71.57825,
+      "change": 7.096900000000005
     }
   ],
   "biggestFallers": [
@@ -49,96 +49,9 @@
       "displayName": "Virginia Tech Hokies",
       "shortName": "Virginia Tech",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
-      "currentOdds": 34.08758,
+      "currentOdds": 21.03602,
       "previousOdds": 44.44724,
-      "change": -10.359659999999998
-    },
-    {
-      "espnId": "202",
-      "slug": "tulsa-golden-hurricane",
-      "displayName": "Tulsa Golden Hurricane",
-      "shortName": "Tulsa",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
-      "currentOdds": 14.31827,
-      "previousOdds": 18.67224,
-      "change": -4.353969999999999
-    },
-    {
-      "espnId": "2116",
-      "slug": "ucf-knights",
-      "displayName": "UCF Knights",
-      "shortName": "UCF",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
-      "currentOdds": 67.04681,
-      "previousOdds": 70.6571,
-      "change": -3.610290000000006
-    },
-    {
-      "espnId": "61",
-      "slug": "georgia-bulldogs",
-      "displayName": "Georgia Bulldogs",
-      "shortName": "Georgia",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
-      "currentOdds": 70.95776,
-      "previousOdds": 73.50906,
-      "change": -2.551300000000012
-    }
-  ],
-  "bubbleTeams": [
-    {
-      "espnId": "2670",
-      "slug": "vcu-rams",
-      "displayName": "VCU Rams",
-      "shortName": "VCU",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
-      "currentOdds": 46.33989,
-      "previousOdds": 45.58727,
-      "change": 0.7526200000000003,
-      "distanceFrom50": 1.339889999999997
-    },
-    {
-      "espnId": "2628",
-      "slug": "tcu-horned-frogs",
-      "displayName": "TCU Horned Frogs",
-      "shortName": "TCU",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-      "currentOdds": 38.56927,
-      "previousOdds": 34.02711,
-      "change": 4.542160000000003,
-      "distanceFrom50": 6.430729999999997
-    },
-    {
-      "espnId": "167",
-      "slug": "new-mexico-lobos",
-      "displayName": "New Mexico Lobos",
-      "shortName": "New Mexico",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
-      "currentOdds": 53.05679,
-      "previousOdds": 53.05679,
-      "change": 0.0,
-      "distanceFrom50": 8.05679
-    },
-    {
-      "espnId": "259",
-      "slug": "virginia-tech-hokies",
-      "displayName": "Virginia Tech Hokies",
-      "shortName": "Virginia Tech",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
-      "currentOdds": 34.08758,
-      "previousOdds": 44.44724,
-      "change": -10.359659999999998,
-      "distanceFrom50": 10.912419999999997
-    },
-    {
-      "espnId": "2550",
-      "slug": "seton-hall-pirates",
-      "displayName": "Seton Hall Pirates",
-      "shortName": "Seton Hall",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
-      "currentOdds": 32.20771,
-      "previousOdds": 31.91728,
-      "change": 0.2904299999999971,
-      "distanceFrom50": 12.792290000000001
+      "change": -23.41122
     },
     {
       "espnId": "142",
@@ -146,76 +59,19 @@
       "displayName": "Missouri Tigers",
       "shortName": "Missouri",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
-      "currentOdds": 31.74279,
+      "currentOdds": 25.76326,
       "previousOdds": 33.68547,
-      "change": -1.9426800000000028,
-      "distanceFrom50": 13.25721
+      "change": -7.922210000000003
     },
     {
-      "espnId": "193",
-      "slug": "miami-oh-redhawks",
-      "displayName": "Miami (OH) RedHawks",
-      "shortName": "Miami OH",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
-      "currentOdds": 30.12796,
-      "previousOdds": 30.97663,
-      "change": -0.8486699999999985,
-      "distanceFrom50": 14.872039999999998
-    },
-    {
-      "espnId": "21",
-      "slug": "san-diego-state-aztecs",
-      "displayName": "San Diego State Aztecs",
-      "shortName": "San Diego St",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
-      "currentOdds": 59.927,
-      "previousOdds": 56.98434,
-      "change": 2.9426599999999965,
-      "distanceFrom50": 14.927
-    },
-    {
-      "espnId": "239",
-      "slug": "baylor-bears",
-      "displayName": "Baylor Bears",
-      "shortName": "Baylor",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
-      "currentOdds": 27.91843,
-      "previousOdds": 26.76485,
-      "change": 1.1535800000000016,
-      "distanceFrom50": 17.08157
-    },
-    {
-      "espnId": "251",
-      "slug": "texas-longhorns",
-      "displayName": "Texas Longhorns",
-      "shortName": "Texas",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
-      "currentOdds": 62.28865,
-      "previousOdds": 58.34542,
-      "change": 3.94323,
-      "distanceFrom50": 17.288649999999997
-    },
-    {
-      "espnId": "194",
-      "slug": "ohio-state-buckeyes",
-      "displayName": "Ohio State Buckeyes",
-      "shortName": "Ohio State",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
-      "currentOdds": 63.70133,
-      "previousOdds": 62.77145,
-      "change": 0.9298799999999972,
-      "distanceFrom50": 18.70133
-    },
-    {
-      "espnId": "30",
-      "slug": "usc-trojans",
-      "displayName": "USC Trojans",
-      "shortName": "USC",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
-      "currentOdds": 65.14581,
-      "previousOdds": 64.06489,
-      "change": 1.0809199999999919,
-      "distanceFrom50": 20.145809999999997
+      "espnId": "61",
+      "slug": "georgia-bulldogs",
+      "displayName": "Georgia Bulldogs",
+      "shortName": "Georgia",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "currentOdds": 66.45498,
+      "previousOdds": 73.50906,
+      "change": -7.054079999999999
     },
     {
       "espnId": "2116",
@@ -223,10 +79,132 @@
       "displayName": "UCF Knights",
       "shortName": "UCF",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
-      "currentOdds": 67.04681,
+      "currentOdds": 63.75736,
       "previousOdds": 70.6571,
-      "change": -3.610290000000006,
-      "distanceFrom50": 22.046809999999994
+      "change": -6.899740000000001
+    }
+  ],
+  "bubbleTeams": [
+    {
+      "espnId": "2628",
+      "slug": "tcu-horned-frogs",
+      "displayName": "TCU Horned Frogs",
+      "shortName": "TCU",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+      "currentOdds": 41.33089,
+      "previousOdds": 34.02711,
+      "change": 7.303779999999996,
+      "distanceFrom50": 3.6691100000000034
+    },
+    {
+      "espnId": "2670",
+      "slug": "vcu-rams",
+      "displayName": "VCU Rams",
+      "shortName": "VCU",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
+      "currentOdds": 51.21188,
+      "previousOdds": 45.58727,
+      "change": 5.624610000000004,
+      "distanceFrom50": 6.211880000000001
+    },
+    {
+      "espnId": "167",
+      "slug": "new-mexico-lobos",
+      "displayName": "New Mexico Lobos",
+      "shortName": "New Mexico",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+      "currentOdds": 53.90115,
+      "previousOdds": 53.05679,
+      "change": 0.8443600000000018,
+      "distanceFrom50": 8.901150000000001
+    },
+    {
+      "espnId": "2550",
+      "slug": "seton-hall-pirates",
+      "displayName": "Seton Hall Pirates",
+      "shortName": "Seton Hall",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
+      "currentOdds": 32.12837,
+      "previousOdds": 31.91728,
+      "change": 0.21108999999999511,
+      "distanceFrom50": 12.871630000000003
+    },
+    {
+      "espnId": "193",
+      "slug": "miami-oh-redhawks",
+      "displayName": "Miami (OH) RedHawks",
+      "shortName": "Miami OH",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+      "currentOdds": 31.99635,
+      "previousOdds": 30.97663,
+      "change": 1.0197199999999995,
+      "distanceFrom50": 13.00365
+    },
+    {
+      "espnId": "277",
+      "slug": "west-virginia-mountaineers",
+      "displayName": "West Virginia Mountaineers",
+      "shortName": "West Virginia",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+      "currentOdds": 30.27097,
+      "previousOdds": 11.68205,
+      "change": 18.588919999999998,
+      "distanceFrom50": 14.729030000000002
+    },
+    {
+      "espnId": "194",
+      "slug": "ohio-state-buckeyes",
+      "displayName": "Ohio State Buckeyes",
+      "shortName": "Ohio State",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "currentOdds": 62.74312,
+      "previousOdds": 62.77145,
+      "change": -0.028330000000003963,
+      "distanceFrom50": 17.743119999999998
+    },
+    {
+      "espnId": "21",
+      "slug": "san-diego-state-aztecs",
+      "displayName": "San Diego State Aztecs",
+      "shortName": "San Diego St",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+      "currentOdds": 63.533,
+      "previousOdds": 56.98434,
+      "change": 6.548659999999998,
+      "distanceFrom50": 18.533
+    },
+    {
+      "espnId": "2116",
+      "slug": "ucf-knights",
+      "displayName": "UCF Knights",
+      "shortName": "UCF",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+      "currentOdds": 63.75736,
+      "previousOdds": 70.6571,
+      "change": -6.899740000000001,
+      "distanceFrom50": 18.75736
+    },
+    {
+      "espnId": "142",
+      "slug": "missouri-tigers",
+      "displayName": "Missouri Tigers",
+      "shortName": "Missouri",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "currentOdds": 25.76326,
+      "previousOdds": 33.68547,
+      "change": -7.922210000000003,
+      "distanceFrom50": 19.23674
+    },
+    {
+      "espnId": "30",
+      "slug": "usc-trojans",
+      "displayName": "USC Trojans",
+      "shortName": "USC",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+      "currentOdds": 65.0632,
+      "previousOdds": 64.06489,
+      "change": 0.9983099999999894,
+      "distanceFrom50": 20.063199999999995
     },
     {
       "espnId": "26",
@@ -234,21 +212,43 @@
       "displayName": "UCLA Bruins",
       "shortName": "UCLA",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-      "currentOdds": 68.00365,
+      "currentOdds": 65.44794,
       "previousOdds": 67.02003,
-      "change": 0.9836199999999877,
-      "distanceFrom50": 23.003649999999993
+      "change": -1.5720900000000029,
+      "distanceFrom50": 20.447940000000003
     },
     {
-      "espnId": "245",
-      "slug": "texas-am-aggies",
-      "displayName": "Texas A&M Aggies",
-      "shortName": "Texas A&M",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
-      "currentOdds": 68.68545,
-      "previousOdds": 68.97151,
-      "change": -0.286059999999992,
-      "distanceFrom50": 23.685450000000003
+      "espnId": "239",
+      "slug": "baylor-bears",
+      "displayName": "Baylor Bears",
+      "shortName": "Baylor",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+      "currentOdds": 24.40157,
+      "previousOdds": 26.76485,
+      "change": -2.3632799999999996,
+      "distanceFrom50": 20.59843
+    },
+    {
+      "espnId": "61",
+      "slug": "georgia-bulldogs",
+      "displayName": "Georgia Bulldogs",
+      "shortName": "Georgia",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "currentOdds": 66.45498,
+      "previousOdds": 73.50906,
+      "change": -7.054079999999999,
+      "distanceFrom50": 21.454980000000006
+    },
+    {
+      "espnId": "251",
+      "slug": "texas-longhorns",
+      "displayName": "Texas Longhorns",
+      "shortName": "Texas",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "currentOdds": 66.482,
+      "previousOdds": 58.34542,
+      "change": 8.136580000000002,
+      "distanceFrom50": 21.482
     }
   ]
 }
