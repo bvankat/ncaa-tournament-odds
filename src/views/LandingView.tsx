@@ -22,6 +22,7 @@ type LandingViewProps = {
   onConferences?: () => void;
   onBracket?: () => void;
   onBubbleWatch?: () => void;
+  onResumeCompare?: () => void;
 };
 
 export function LandingView({
@@ -38,6 +39,7 @@ export function LandingView({
   onConferences,
   onBracket,
   onBubbleWatch,
+  onResumeCompare,
 }: LandingViewProps) {
   // Calculate bracket projection for bubble teams
   const {
@@ -76,7 +78,7 @@ export function LandingView({
             <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Bubble chances and projected seeds for all 360+ Division I teams</p>
           </div>
           <div className="w-full max-w-xl">
-          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} />
+          <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} onCompareResumes={onResumeCompare} />
 
           </div>
         </div>
@@ -217,7 +219,9 @@ export function LandingView({
             <div className="md:col-span-4">
               <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">On the Bubble</h2>
               <p className="text-gray-600 mb-6 text-sm text-balance">Tournament seed projections based on current team-sheet metrics.</p>
-              <p className="text-gray-600 mb-6 text-sm"><a onClick={onBubbleWatch} className="underline cursor-pointer">Bubble Watch »</a></p>
+              <p className="text-gray-600 mb-3 text-sm"><a onClick={onBubbleWatch} className="underline cursor-pointer">Bubble Watch »</a></p>
+              <p className="text-gray-600 mb-3 text-sm"><a onClick={onBracket} className="underline cursor-pointer">Projected Bracket »</a></p>
+              <p className="text-gray-600 mb-3 text-sm"><a onClick={onResumeCompare} className="underline cursor-pointer">Compare Resumes »</a></p>
           </div>
           <div className="md:col-span-8" id="bubble-projection">
             <BubbleSidebar
