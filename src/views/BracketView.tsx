@@ -239,6 +239,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
               nextFourOut={bubbleTeams.slice(4, 8)}
               onTeamSelect={onTeamSelect}
             />
+            <p className="mt-8 text-xs text-gray-600"><a href="/bubble-watch">View full Bubble Watch »</a></p>
           </div>
         </div>
       </div>
