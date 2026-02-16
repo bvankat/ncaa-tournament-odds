@@ -1,18 +1,19 @@
 import type { Team } from '@/types/team';
 
-/**
- * Calculate composite ranking for a team based on weighted metrics
- * Returns a lower-is-better ranking (like 1.2, 2.5, etc.)
- * Weighting: 40% Predictive Average, 30% NET, 30% Resume Average
- */
-export function calculateCompositeRanking(team: Team): number {
-  // Convert string values to numbers
-  const toNumber = (val: number | string | null | undefined): number | null => {
-    if (val == null) return null;
-    const num = typeof val === 'string' ? parseFloat(val) : val;
-    return isNaN(num) ? null : num;
-  };
+// Helper function to convert values to numbers
+const toNumber = (val: number | string | null | undefined): number | null => {
+  if (val == null) return null;
+  const num = typeof val === 'string' ? parseFloat(val) : val;
+  return isNaN(num) ? null : num;
+};
 
+// Helper function to calculate weighted ranking
+function calculateWeightedRanking(
+  team: Team,
+  resumeWeight: number,
+  predictiveWeight: number,
+  netWeight: number
+): number {
   // Get predictive metrics (KenPom, Torvik, BPI)
   const predictiveValues = [
     toNumber(team.kenpom),
@@ -38,27 +39,26 @@ export function calculateCompositeRanking(team: Team): number {
     ? resumeValues.reduce((sum, val) => sum + val, 0) / resumeValues.length
     : null;
 
-  // Weighted composite: 40% predictive, 25% NET, 35% resume
-  // Calculate with whatever metrics are available
+  // Calculate weighted composite with whatever metrics are available
   const components: number[] = [];
   const weights: number[] = [];
 
+  if (resumeAvg !== null) {
+    components.push(resumeAvg);
+    weights.push(resumeWeight);
+  }
   if (predictiveAvg !== null) {
     components.push(predictiveAvg);
-    weights.push(0.40);
+    weights.push(predictiveWeight);
   }
   if (netValue !== null) {
     components.push(netValue);
-    weights.push(0.25);
-  }
-  if (resumeAvg !== null) {
-    components.push(resumeAvg);
-    weights.push(0.35);
+    weights.push(netWeight);
   }
 
-  // If no metrics available, return null (will be handled by caller)
+  // If no metrics available, sort to bottom
   if (components.length === 0) {
-    return Infinity; // Sorts to bottom
+    return Infinity;
   }
 
   // Calculate weighted average (normalize weights if some metrics missing)
@@ -66,6 +66,32 @@ export function calculateCompositeRanking(team: Team): number {
   const composite = components.reduce((sum, val, i) => sum + (val * weights[i]), 0) / totalWeight;
 
   return composite;
+}
+
+/**
+ * Calculate selection ranking
+ * Resume-focused: 50% resume, 35% predictive, 15% NET
+ * Returns a lower-is-better ranking
+ */
+export function calculateSelectionRanking(team: Team): number {
+  return calculateWeightedRanking(team, 0.50, 0.35, 0.15);
+}
+
+/**
+ * Calculate seeding ranking
+ * Predictive-focused: 50% predictive, 30% resume, 20% NET
+ * Returns a lower-is-better ranking
+ */
+export function calculateSeedingRanking(team: Team): number {
+  return calculateWeightedRanking(team, 0.30, 0.50, 0.20);
+}
+
+/**
+ * Calculate composite ranking (uses seeding formula for display)
+ * Returns a lower-is-better ranking
+ */
+export function calculateCompositeRanking(team: Team): number {
+  return calculateSeedingRanking(team);
 }
 
 export type BracketProjection = {
@@ -86,7 +112,7 @@ export type BracketProjection = {
  * Returns 68-team bracket (31 auto-bids + 37 at-large) with seed assignments
  */
 export function calculateBracket(teams: Team[]): BracketProjection {
-  // Determine auto-bids: one per conference, first place team with best (lowest) composite ranking
+  // Determine auto-bids: one per conference, first place team with best (lowest) selection ranking
   const conferenceLeaders = new Map<string, Team>();
   
   teams.forEach(team => {
@@ -97,7 +123,7 @@ export function calculateBracket(teams: Team[]): BracketProjection {
     if (!isFirstPlace) return;
     
     const existing = conferenceLeaders.get(team.conference);
-    if (!existing || calculateCompositeRanking(team) < calculateCompositeRanking(existing)) {
+    if (!existing || calculateSelectionRanking(team) < calculateSelectionRanking(existing)) {
       conferenceLeaders.set(team.conference, team);
     }
   });
@@ -106,25 +132,29 @@ export function calculateBracket(teams: Team[]): BracketProjection {
   const autoBidTeams = new Set(autoBidList.map(t => t.espnId || t.slug));
 
   // Build the 68-team bracket: 31 auto-bids + 37 best at-large teams
-  // Get all non-auto-bid teams sorted by tournamentOdds
+  // Get all non-auto-bid teams sorted by SELECTION ranking (resume-focused)
   const atLargePool = teams
     .filter(team => !autoBidTeams.has(team.espnId || team.slug))
-    .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+    .sort((a, b) => {
+      const scoreA = calculateSelectionRanking(a);
+      const scoreB = calculateSelectionRanking(b);
+      return scoreA - scoreB;
+    });
   
-  // Take top 37 at-large teams
+  // Take top 37 at-large teams based on selection ranking
   const atLargeTeams = atLargePool.slice(0, 37);
   
   // Combine auto-bids and at-large teams
   const bracketTeams = [...autoBidList, ...atLargeTeams];
   
-  // Sort bracket by composite ranking (lower is better)
+  // Sort bracket by SEEDING ranking (predictive-focused) to assign seeds
   bracketTeams.sort((a, b) => {
-    const scoreA = calculateCompositeRanking(a);
-    const scoreB = calculateCompositeRanking(b);
+    const scoreA = calculateSeedingRanking(a);
+    const scoreB = calculateSeedingRanking(b);
     return scoreA - scoreB;
   });
   
-  // Get bubble teams (next 8 teams after the bracket)
+  // Get bubble teams (next 8 teams after the bracket based on selection ranking)
   const bubbleTeams = atLargePool.slice(37, 45);
 
   // Create seed map for O(1) lookups
