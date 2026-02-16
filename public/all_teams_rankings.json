@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-16T08:33:20.153143",
+  "lastUpdated": "2026-02-16T14:27:10.197349",
   "teams": [
     {
       "slug": "duke-blue-devils",
@@ -714,13 +714,13 @@
       "quad3": "5-0",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Illinois",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
-        "home_team_id": "356",
-        "away_team": "Indiana",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-        "away_team_id": "84",
-        "date": "2026-02-15T18:00Z"
+        "home_team": "USC",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+        "home_team_id": "30",
+        "away_team": "Illinois",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+        "away_team_id": "356",
+        "date": "2026-02-19T03:00Z"
       },
       "confStandingsPosition": "2nd in Big Ten",
       "confRecord": "12-3",
@@ -812,13 +812,13 @@
       "quad3": "6-0",
       "quad4": "7-0",
       "nextGame": {
-        "home_team": "Illinois",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
-        "home_team_id": "356",
+        "home_team": "Purdue",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+        "home_team_id": "2509",
         "away_team": "Indiana",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
         "away_team_id": "84",
-        "date": "2026-02-15T18:00Z"
+        "date": "2026-02-21T01:00Z"
       },
       "confStandingsPosition": "10th in Big Ten",
       "confRecord": "8-7",
@@ -1498,13 +1498,13 @@
       "quad3": "5-1",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Butler",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
-        "home_team_id": "2086",
-        "away_team": "Seton Hall",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
-        "away_team_id": "2550",
-        "date": "2026-02-15T23:00Z"
+        "home_team": "Georgetown",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png",
+        "home_team_id": "46",
+        "away_team": "Butler",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
+        "away_team_id": "2086",
+        "date": "2026-02-18T23:30Z"
       },
       "confStandingsPosition": "9th in Big East",
       "confRecord": "4-11",
@@ -1709,13 +1709,16 @@
         "BRCT_rank": "8"
       },
       "evanmiya": {
-        "miya_rating": "NA",
+        "miya_rating": 13,
         "miya_resume_category": "1-2 Seed",
         "miya_resume_rank": 7
       },
       "haslametrics": {
         "haslam_rating": "9",
         "seed": "2"
+      },
+      "shot_quality": {
+        "sq_ranking": 24
       },
       "sports_reference": {
         "SRS_rank": 18
@@ -1735,11 +1738,11 @@
       },
       "warrennolan": {
         "current_conf_record": "11-3",
-        "elo": "20",
+        "elo": "16",
         "nolan_net": "11",
         "quadrant_1": "5-3",
-        "quadrant_2": "5-0",
-        "quadrant_3": "6-0",
+        "quadrant_2": "6-0",
+        "quadrant_3": "5-0",
         "quadrant_4": "6-0",
         "record": "22-3",
         "rpi": "17"
@@ -1783,25 +1786,25 @@
           },
           {
             "date": "11/15",
-            "kenpom_win_prob": 0.6283757696930987,
+            "kenpom_win_prob": 0.6232367936705506,
             "opponent": "Oklahoma",
-            "team_win_prob": 0.7323592691237483
+            "team_win_prob": 0.7237982871695179
           },
           {
             "date": "11/20",
-            "kenpom_win_prob": 0.5911024595443407,
+            "kenpom_win_prob": 0.5898161154488596,
             "opponent": "New Mexico",
-            "team_win_prob": 0.6950859589749903
+            "team_win_prob": 0.6903776089478267
           },
           {
             "date": "11/21",
-            "kenpom_win_prob": 0.7726994844782105,
+            "kenpom_win_prob": 0.7762899491592483,
             "opponent": "Kansas State",
-            "team_win_prob": 0.87668298390886
+            "team_win_prob": 0.8768514426582157
           },
           {
             "date": "11/25",
-            "kenpom_win_prob": 0.9709996796500028,
+            "kenpom_win_prob": 0.9743550894578484,
             "opponent": "Winthrop",
             "team_win_prob": 0.99
           },
@@ -1813,21 +1816,21 @@
           },
           {
             "date": "12/07",
-            "kenpom_win_prob": 0.7893115664019268,
+            "kenpom_win_prob": 0.7954697426712913,
             "opponent": "Creighton",
-            "team_win_prob": 0.8932950658325763
+            "team_win_prob": 0.8960312361702586
           },
           {
             "date": "12/10",
-            "kenpom_win_prob": 0.5795741488905738,
+            "kenpom_win_prob": 0.5838943747227731,
             "opponent": "Wisconsin",
-            "team_win_prob": 0.6835576483212233
+            "team_win_prob": 0.6844558682217403
           },
           {
             "date": "12/13",
-            "kenpom_win_prob": 0.2291397453039558,
+            "kenpom_win_prob": 0.2323009502128162,
             "opponent": "Illinois",
-            "team_win_prob": 0.3331232447346054
+            "team_win_prob": 0.3328624437117835
           },
           {
             "date": "12/21",
@@ -1843,116 +1846,148 @@
           },
           {
             "date": "01/02",
-            "kenpom_win_prob": 0.4954346946670085,
+            "kenpom_win_prob": 0.501287549514939,
             "opponent": "Michigan State",
-            "team_win_prob": 0.5994181940976582
+            "team_win_prob": 0.6018490430139063
           },
           {
             "date": "01/05",
-            "kenpom_win_prob": 0.4316756430271787,
+            "kenpom_win_prob": 0.4314318751266642,
             "opponent": "Ohio State",
-            "team_win_prob": 0.5356591424578283
+            "team_win_prob": 0.5319933686256315
           },
           {
             "date": "01/10",
-            "kenpom_win_prob": 0.408195540495197,
+            "kenpom_win_prob": 0.4164925936108824,
             "opponent": "Indiana",
-            "team_win_prob": 0.5121790399258466
+            "team_win_prob": 0.5170540871098497
           },
           {
             "date": "01/13",
-            "kenpom_win_prob": 0.8548411176302297,
+            "kenpom_win_prob": 0.8541364082649123,
             "opponent": "Oregon",
-            "team_win_prob": 0.9588246170608792
+            "team_win_prob": 0.9546979017638796
           },
           {
             "date": "01/17",
-            "kenpom_win_prob": 0.5854209941144441,
+            "kenpom_win_prob": 0.5903677979320208,
             "opponent": "Northwestern",
-            "team_win_prob": 0.6894044935450936
+            "team_win_prob": 0.690929291430988
           },
           {
             "date": "01/21",
-            "kenpom_win_prob": 0.692963816925007,
+            "kenpom_win_prob": 0.6941462498017908,
             "opponent": "Washington",
-            "team_win_prob": 0.7969473163556565
+            "team_win_prob": 0.7947077433007581
           },
           {
             "date": "01/24",
-            "kenpom_win_prob": 0.5999803567891827,
+            "kenpom_win_prob": 0.6054669392040717,
             "opponent": "Minnesota",
-            "team_win_prob": 0.7039638562198323
+            "team_win_prob": 0.7060284327030388
           },
           {
             "date": "01/27",
-            "kenpom_win_prob": 0.1305064150257544,
+            "kenpom_win_prob": 0.1320588816226255,
             "opponent": "Michigan",
-            "team_win_prob": 0.2344899144564039
+            "team_win_prob": 0.2326203751215928
           },
           {
             "date": "02/01",
-            "kenpom_win_prob": 0.4171397453039558,
+            "kenpom_win_prob": 0.4203009502128162,
             "opponent": "Illinois",
-            "team_win_prob": 0.5211232447346054
+            "team_win_prob": 0.5208624437117835
           },
           {
             "date": "02/07",
-            "kenpom_win_prob": 0.8169266125194234,
+            "kenpom_win_prob": 0.8088850925195658,
             "opponent": "Rutgers",
-            "team_win_prob": 0.9209101119500732
+            "team_win_prob": 0.9094465860185328
           },
           {
             "date": "02/10",
-            "kenpom_win_prob": 0.4236486473094068,
+            "kenpom_win_prob": 0.4205314345867719,
             "opponent": "Purdue",
-            "team_win_prob": 0.5276321467400564
+            "team_win_prob": 0.521092928085739
           },
           {
             "date": "02/14",
-            "kenpom_win_prob": 0.7734209941144441,
+            "kenpom_win_prob": 0.7783677979320207,
             "opponent": "Northwestern",
-            "team_win_prob": 0.8774044935450935
+            "team_win_prob": 0.878929291430988
           },
           {
             "date": "02/17",
-            "kenpom_win_prob": 0.3775685833004644,
+            "kenpom_win_prob": 0.3959319143842555,
             "opponent": "Iowa",
-            "team_win_prob": 0.4815520827311139
+            "team_win_prob": 0.4964934078832227
           },
           {
             "date": "02/21",
-            "kenpom_win_prob": 0.9333826254704656,
+            "kenpom_win_prob": 0.9416520161859478,
             "opponent": "Penn State",
             "team_win_prob": 0.99
           },
           {
             "date": "02/25",
-            "kenpom_win_prob": 0.9218235702919908,
+            "kenpom_win_prob": 0.934326918438728,
             "opponent": "Maryland",
             "team_win_prob": 0.99
           },
           {
             "date": "02/28",
-            "kenpom_win_prob": 0.5116493037331384,
+            "kenpom_win_prob": 0.5167031666999042,
             "opponent": "USC",
-            "team_win_prob": 0.615632803163788
+            "team_win_prob": 0.6172646601988715
           },
           {
             "date": "03/03",
-            "kenpom_win_prob": 0.4296976932694669,
+            "kenpom_win_prob": 0.4389862705971319,
             "opponent": "UCLA",
-            "team_win_prob": 0.5336811927001165
+            "team_win_prob": 0.5395477640960991
           },
           {
             "date": "03/08",
-            "kenpom_win_prob": 0.5655685833004643,
+            "kenpom_win_prob": 0.5839319143842555,
             "opponent": "Iowa",
-            "team_win_prob": 0.6695520827311139
+            "team_win_prob": 0.6844934078832227
           }
         ],
-        "proj_record": "27.3-5.6",
+        "proj_record": "27.4-5.6",
         "seed": "2"
       },
+      "kenpom_remaining_games": [
+        {
+          "date": "Tue Feb 17",
+          "opponent": "Iowa",
+          "prob": "52%"
+        },
+        {
+          "date": "Sat Feb 21",
+          "opponent": "Penn St.",
+          "prob": "96%"
+        },
+        {
+          "date": "Wed Feb 25",
+          "opponent": "Maryland",
+          "prob": "97%"
+        },
+        {
+          "date": "Sat Feb 28",
+          "opponent": "USC",
+          "prob": "70%"
+        },
+        {
+          "date": "Tue Mar 3",
+          "opponent": "UCLA",
+          "prob": "60%"
+        },
+        {
+          "date": "Sun Mar 8",
+          "opponent": "Iowa",
+          "prob": "74%"
+        }
+      ],
       "tournamentOdds": 98.7944,
       "previousTournamentOdds": 98.79872,
       "oddsChange": -0.004320000000006985,
@@ -2677,13 +2712,13 @@
       "quad3": "2-3",
       "quad4": "5-0",
       "nextGame": {
-        "home_team": "Rutgers",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
-        "home_team_id": "164",
+        "home_team": "Northwestern",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+        "home_team_id": "77",
         "away_team": "Maryland",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
         "away_team_id": "120",
-        "date": "2026-02-15T17:00Z"
+        "date": "2026-02-19T01:00Z"
       },
       "confStandingsPosition": "14th in Big Ten",
       "confRecord": "3-11",
@@ -2971,13 +3006,13 @@
       "quad3": "2-0",
       "quad4": "7-1",
       "nextGame": {
-        "home_team": "Cincinnati",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
-        "home_team_id": "2132",
-        "away_team": "Utah",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
-        "away_team_id": "254",
-        "date": "2026-02-15T17:00Z"
+        "home_team": "Kansas",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+        "home_team_id": "2305",
+        "away_team": "Cincinnati",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+        "away_team_id": "2132",
+        "date": "2026-02-21T18:00Z"
       },
       "confStandingsPosition": "10th in Big 12",
       "confRecord": "6-7",
@@ -3412,13 +3447,13 @@
       "quad3": "5-2",
       "quad4": "8-1",
       "nextGame": {
-        "home_team": "Dayton",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png",
-        "home_team_id": "2168",
-        "away_team": "Davidson",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
-        "away_team_id": "2166",
-        "date": "2026-02-15T21:00Z"
+        "home_team": "George Mason",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
+        "home_team_id": "2244",
+        "away_team": "Dayton",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png",
+        "away_team_id": "2168",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "4th in A-10",
       "confRecord": "7-5",
@@ -3951,13 +3986,13 @@
       "quad3": "5-2",
       "quad4": "6-3",
       "nextGame": {
-        "home_team": "San Diego",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png",
-        "home_team_id": "301",
-        "away_team": "San Francisco",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
-        "away_team_id": "2539",
-        "date": "2026-02-15T23:00Z"
+        "home_team": "San Francisco",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
+        "home_team_id": "2539",
+        "away_team": "Gonzaga",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2250.png",
+        "away_team_id": "2250",
+        "date": "2026-02-19T04:00Z"
       },
       "confStandingsPosition": "5th in WCC",
       "confRecord": "7-8",
@@ -4049,13 +4084,13 @@
       "quad3": "6-1",
       "quad4": "6-0",
       "nextGame": {
-        "home_team": "Butler",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
-        "home_team_id": "2086",
-        "away_team": "Seton Hall",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
-        "away_team_id": "2550",
-        "date": "2026-02-15T23:00Z"
+        "home_team": "Seton Hall",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2550.png",
+        "home_team_id": "2550",
+        "away_team": "DePaul",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/305.png",
+        "away_team_id": "305",
+        "date": "2026-02-19T01:00Z"
       },
       "confStandingsPosition": "4th in Big East",
       "confRecord": "8-7",
@@ -4196,13 +4231,13 @@
       "quad3": "5-3",
       "quad4": "6-0",
       "nextGame": {
-        "home_team": "FAU",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
-        "home_team_id": "2226",
-        "away_team": "South Florida",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
-        "away_team_id": "58",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "South Florida",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+        "home_team_id": "58",
+        "away_team": "Memphis",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+        "away_team_id": "235",
+        "date": "2026-02-20T00:00Z"
       },
       "confStandingsPosition": "1st in American",
       "confRecord": "10-3",
@@ -4588,13 +4623,13 @@
       "quad3": "4-5",
       "quad4": "8-2",
       "nextGame": {
-        "home_team": "UAB",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
-        "home_team_id": "5",
-        "away_team": "Tulane",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
-        "away_team_id": "2655",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Temple",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+        "home_team_id": "218",
+        "away_team": "UAB",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+        "away_team_id": "5",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "7th in American",
       "confRecord": "7-6",
@@ -4833,13 +4868,13 @@
       "quad3": "3-3",
       "quad4": "10-0",
       "nextGame": {
-        "home_team": "Northern Iowa",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
-        "home_team_id": "2460",
-        "away_team": "Drake",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
-        "away_team_id": "2181",
-        "date": "2026-02-15T20:00Z"
+        "home_team": "Indiana St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png",
+        "home_team_id": "282",
+        "away_team": "Northern Iowa",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
+        "away_team_id": "2460",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "5th in MVC",
       "confRecord": "9-7",
@@ -5372,13 +5407,13 @@
       "quad3": "6-5",
       "quad4": "8-1",
       "nextGame": {
-        "home_team": "UIC",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
-        "home_team_id": "82",
-        "away_team": "Illinois St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
-        "away_team_id": "2287",
-        "date": "2026-02-15T20:00Z"
+        "home_team": "Illinois St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
+        "home_team_id": "2287",
+        "away_team": "Murray St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
+        "away_team_id": "93",
+        "date": "2026-02-19T02:00Z"
       },
       "confStandingsPosition": "5th in MVC",
       "confRecord": "9-7",
@@ -5470,13 +5505,13 @@
       "quad3": "4-0",
       "quad4": "6-1",
       "nextGame": {
-        "home_team": "Rutgers",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
-        "home_team_id": "164",
-        "away_team": "Maryland",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
-        "away_team_id": "120",
-        "date": "2026-02-15T17:00Z"
+        "home_team": "Penn State",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+        "home_team_id": "213",
+        "away_team": "Rutgers",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+        "away_team_id": "164",
+        "date": "2026-02-18T23:00Z"
       },
       "confStandingsPosition": "14th in Big Ten",
       "confRecord": "3-11",
@@ -5519,13 +5554,13 @@
       "quad3": "2-0",
       "quad4": "5-1",
       "nextGame": {
-        "home_team": "Cincinnati",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
-        "home_team_id": "2132",
+        "home_team": "West Virginia",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+        "home_team_id": "277",
         "away_team": "Utah",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
         "away_team_id": "254",
-        "date": "2026-02-15T17:00Z"
+        "date": "2026-02-19T01:30Z"
       },
       "confStandingsPosition": "15th in Big 12",
       "confRecord": "1-11",
@@ -5568,13 +5603,13 @@
       "quad3": "5-4",
       "quad4": "10-0",
       "nextGame": {
-        "home_team": "Murray St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
-        "home_team_id": "93",
-        "away_team": "Belmont",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
-        "away_team_id": "2057",
-        "date": "2026-02-15T23:00Z"
+        "home_team": "Illinois St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
+        "home_team_id": "2287",
+        "away_team": "Murray St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
+        "away_team_id": "93",
+        "date": "2026-02-19T02:00Z"
       },
       "confStandingsPosition": "3rd in MVC",
       "confRecord": "11-6",
@@ -5764,13 +5799,13 @@
       "quad3": "5-3",
       "quad4": "9-1",
       "nextGame": {
-        "home_team": "S Illinois",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
-        "home_team_id": "79",
+        "home_team": "Valparaiso",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2674.png",
+        "home_team_id": "2674",
         "away_team": "Bradley",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/71.png",
         "away_team_id": "71",
-        "date": "2026-02-15T19:00Z"
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "2nd in MVC",
       "confRecord": "11-5",
@@ -5813,13 +5848,13 @@
       "quad3": "4-2",
       "quad4": "8-2",
       "nextGame": {
-        "home_team": "Temple",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
-        "home_team_id": "218",
-        "away_team": "North Texas",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
-        "away_team_id": "249",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "North Texas",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+        "home_team_id": "249",
+        "away_team": "Tulane",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+        "away_team_id": "2655",
+        "date": "2026-02-20T02:00Z"
       },
       "confStandingsPosition": "9th in American",
       "confRecord": "6-7",
@@ -5914,10 +5949,10 @@
         "home_team": "Temple",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
         "home_team_id": "218",
-        "away_team": "North Texas",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
-        "away_team_id": "249",
-        "date": "2026-02-15T19:00Z"
+        "away_team": "UAB",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+        "away_team_id": "5",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "4th in American",
       "confRecord": "7-5",
@@ -5960,13 +5995,13 @@
       "quad3": "3-5",
       "quad4": "8-3",
       "nextGame": {
-        "home_team": "Monmouth",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
-        "home_team_id": "2405",
+        "home_team": "Drexel",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2182.png",
+        "home_team_id": "2182",
         "away_team": "Towson",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png",
         "away_team_id": "119",
-        "date": "2026-02-16T00:00Z"
+        "date": "2026-02-22T19:00Z"
       },
       "confStandingsPosition": "10th in CAA",
       "confRecord": "6-8",
@@ -6303,13 +6338,13 @@
       "quad3": "3-4",
       "quad4": "12-3",
       "nextGame": {
-        "home_team": "Cleveland St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
-        "home_team_id": "325",
-        "away_team": "Wright St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
-        "away_team_id": "2750",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Wright St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
+        "home_team_id": "2750",
+        "away_team": "IU Indy",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/85.png",
+        "away_team_id": "85",
+        "date": "2026-02-20T00:00Z"
       },
       "confStandingsPosition": "1st in Horizon",
       "confRecord": "12-4",
@@ -6352,13 +6387,13 @@
       "quad3": "2-7",
       "quad4": "6-1",
       "nextGame": {
-        "home_team": "S Illinois",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
-        "home_team_id": "79",
-        "away_team": "Bradley",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/71.png",
-        "away_team_id": "71",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Drake",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
+        "home_team_id": "2181",
+        "away_team": "S Illinois",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
+        "away_team_id": "79",
+        "date": "2026-02-19T00:30Z"
       },
       "confStandingsPosition": "8th in MVC",
       "confRecord": "6-10",
@@ -6401,13 +6436,13 @@
       "quad3": "7-2",
       "quad4": "4-2",
       "nextGame": {
-        "home_team": "FAU",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
-        "home_team_id": "2226",
-        "away_team": "South Florida",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
-        "away_team_id": "58",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "UTSA",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+        "home_team_id": "2636",
+        "away_team": "FAU",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+        "away_team_id": "2226",
+        "date": "2026-02-19T01:00Z"
       },
       "confStandingsPosition": "9th in American",
       "confRecord": "6-7",
@@ -6450,13 +6485,13 @@
       "quad3": "6-2",
       "quad4": "6-1",
       "nextGame": {
-        "home_team": "Dayton",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png",
-        "home_team_id": "2168",
-        "away_team": "Davidson",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
-        "away_team_id": "2166",
-        "date": "2026-02-15T21:00Z"
+        "home_team": "Davidson",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
+        "home_team_id": "2166",
+        "away_team": "Richmond",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
+        "away_team_id": "257",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "7th in A-10",
       "confRecord": "6-6",
@@ -6842,13 +6877,13 @@
       "quad3": "10-3",
       "quad4": "8-0",
       "nextGame": {
-        "home_team": "Murray St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
-        "home_team_id": "93",
-        "away_team": "Belmont",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
-        "away_team_id": "2057",
-        "date": "2026-02-15T23:00Z"
+        "home_team": "Belmont",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
+        "home_team_id": "2057",
+        "away_team": "Indiana St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png",
+        "away_team_id": "282",
+        "date": "2026-02-22T01:00Z"
       },
       "confStandingsPosition": "1st in MVC",
       "confRecord": "14-3",
@@ -6992,10 +7027,10 @@
         "home_team": "Seattle U",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2547.png",
         "home_team_id": "2547",
-        "away_team": "Oregon St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
-        "away_team_id": "204",
-        "date": "2026-02-16T01:00Z"
+        "away_team": "Saint Mary's",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2608.png",
+        "away_team_id": "2608",
+        "date": "2026-02-19T02:00Z"
       },
       "confStandingsPosition": "8th in WCC",
       "confRecord": "5-9",
@@ -7038,13 +7073,13 @@
       "quad3": "3-6",
       "quad4": "6-1",
       "nextGame": {
-        "home_team": "UIC",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
-        "home_team_id": "82",
-        "away_team": "Illinois St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
-        "away_team_id": "2287",
-        "date": "2026-02-15T20:00Z"
+        "home_team": "Evansville",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/339.png",
+        "home_team_id": "339",
+        "away_team": "UIC",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
+        "away_team_id": "82",
+        "date": "2026-02-19T01:00Z"
       },
       "confStandingsPosition": "4th in MVC",
       "confRecord": "10-6",
@@ -7479,13 +7514,13 @@
       "quad3": "4-5",
       "quad4": "5-3",
       "nextGame": {
-        "home_team": "Northern Iowa",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
-        "home_team_id": "2460",
-        "away_team": "Drake",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
-        "away_team_id": "2181",
-        "date": "2026-02-15T20:00Z"
+        "home_team": "Drake",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
+        "home_team_id": "2181",
+        "away_team": "S Illinois",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
+        "away_team_id": "79",
+        "date": "2026-02-19T00:30Z"
       },
       "confStandingsPosition": "9th in MVC",
       "confRecord": "6-11",
@@ -7577,13 +7612,13 @@
       "quad3": "3-5",
       "quad4": "9-1",
       "nextGame": {
-        "home_team": "UAB",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
-        "home_team_id": "5",
+        "home_team": "North Texas",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+        "home_team_id": "249",
         "away_team": "Tulane",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
         "away_team_id": "2655",
-        "date": "2026-02-15T19:00Z"
+        "date": "2026-02-20T02:00Z"
       },
       "confStandingsPosition": "8th in American",
       "confRecord": "6-6",
@@ -7626,13 +7661,13 @@
       "quad3": "9-5",
       "quad4": "3-2",
       "nextGame": {
-        "home_team": "Seattle U",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2547.png",
-        "home_team_id": "2547",
-        "away_team": "Oregon St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
-        "away_team_id": "204",
-        "date": "2026-02-16T01:00Z"
+        "home_team": "Oregon St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+        "home_team_id": "204",
+        "away_team": "Pepperdine",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2492.png",
+        "away_team_id": "2492",
+        "date": "2026-02-22T01:00Z"
       },
       "confStandingsPosition": "5th in WCC",
       "confRecord": "7-8",
@@ -8116,13 +8151,13 @@
       "quad3": "1-7",
       "quad4": "9-5",
       "nextGame": {
-        "home_team": "Milwaukee",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
-        "home_team_id": "270",
-        "away_team": "Green Bay",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
-        "away_team_id": "2739",
-        "date": "2026-02-15T20:00Z"
+        "home_team": "Detroit Mercy",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
+        "home_team_id": "2174",
+        "away_team": "Milwaukee",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
+        "away_team_id": "270",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "8th in Horizon",
       "confRecord": "7-10",
@@ -8168,10 +8203,10 @@
         "home_team": "Quinnipiac",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2514.png",
         "home_team_id": "2514",
-        "away_team": "Merrimack",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png",
-        "away_team_id": "2771",
-        "date": "2026-02-15T19:00Z"
+        "away_team": "Fairfield",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2217.png",
+        "away_team_id": "2217",
+        "date": "2026-02-22T19:00Z"
       },
       "confStandingsPosition": "4th in MAAC",
       "confRecord": "11-6",
@@ -8361,13 +8396,13 @@
       "quad3": "4-4",
       "quad4": "9-3",
       "nextGame": {
-        "home_team": "Robert Morris",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
-        "home_team_id": "2523",
-        "away_team": "Oakland",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
-        "away_team_id": "2473",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Oakland",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
+        "home_team_id": "2473",
+        "away_team": "Green Bay",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
+        "away_team_id": "2739",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "2nd in Horizon",
       "confRecord": "10-6",
@@ -8606,13 +8641,13 @@
       "quad3": "3-3",
       "quad4": "12-7",
       "nextGame": {
-        "home_team": "Niagara",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/315.png",
-        "home_team_id": "315",
-        "away_team": "Iona",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/314.png",
-        "away_team_id": "314",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Iona",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/314.png",
+        "home_team_id": "314",
+        "away_team": "Saint Peter's",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2612.png",
+        "away_team_id": "2612",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "10th in MAAC",
       "confRecord": "7-9",
@@ -8802,13 +8837,13 @@
       "quad3": "5-5",
       "quad4": "10-1",
       "nextGame": {
-        "home_team": "Campbell",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png",
-        "home_team_id": "2097",
+        "home_team": "NC A&T",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2448.png",
+        "home_team_id": "2448",
         "away_team": "Charleston",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/232.png",
         "away_team_id": "232",
-        "date": "2026-02-15T22:00Z"
+        "date": "2026-02-20T00:00Z"
       },
       "confStandingsPosition": "2nd in CAA",
       "confRecord": "10-4",
@@ -9096,13 +9131,13 @@
       "quad3": "2-6",
       "quad4": "1-8",
       "nextGame": {
-        "home_team": "Charlotte",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
-        "home_team_id": "2429",
-        "away_team": "UTSA",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
-        "away_team_id": "2636",
-        "date": "2026-02-15T17:00Z"
+        "home_team": "UTSA",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+        "home_team_id": "2636",
+        "away_team": "FAU",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+        "away_team_id": "2226",
+        "date": "2026-02-19T01:00Z"
       },
       "confStandingsPosition": "13th in American",
       "confRecord": "1-12",
@@ -9635,13 +9670,13 @@
       "quad3": "5-2",
       "quad4": "8-7",
       "nextGame": {
-        "home_team": "Monmouth",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
-        "home_team_id": "2405",
-        "away_team": "Towson",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png",
-        "away_team_id": "119",
-        "date": "2026-02-16T00:00Z"
+        "home_team": "UNC Wilmington",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/350.png",
+        "home_team_id": "350",
+        "away_team": "Monmouth",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
+        "away_team_id": "2405",
+        "date": "2026-02-20T00:00Z"
       },
       "confStandingsPosition": "3rd in CAA",
       "confRecord": "8-5",
@@ -9880,13 +9915,13 @@
       "quad3": "2-4",
       "quad4": "9-4",
       "nextGame": {
-        "home_team": "Purdue FW",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
-        "home_team_id": "2870",
-        "away_team": "IU Indy",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/85.png",
-        "away_team_id": "85",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "N Kentucky",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
+        "home_team_id": "94",
+        "away_team": "Purdue FW",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
+        "away_team_id": "2870",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "5th in Horizon",
       "confRecord": "9-7",
@@ -10370,13 +10405,13 @@
       "quad3": "2-6",
       "quad4": "7-7",
       "nextGame": {
-        "home_team": "Detroit Mercy",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
-        "home_team_id": "2174",
-        "away_team": "Youngstown St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
-        "away_team_id": "2754",
-        "date": "2026-02-15T18:00Z"
+        "home_team": "Youngstown St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
+        "home_team_id": "2754",
+        "away_team": "Cleveland St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
+        "away_team_id": "325",
+        "date": "2026-02-18T23:30Z"
       },
       "confStandingsPosition": "9th in Horizon",
       "confRecord": "6-10",
@@ -10664,13 +10699,13 @@
       "quad3": "0-6",
       "quad4": "15-3",
       "nextGame": {
-        "home_team": "Marist",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2368.png",
-        "home_team_id": "2368",
-        "away_team": "Siena",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2561.png",
-        "away_team_id": "2561",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Manhattan",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2363.png",
+        "home_team_id": "2363",
+        "away_team": "Marist",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2368.png",
+        "away_team_id": "2368",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "5th in MAAC",
       "confRecord": "10-7",
@@ -10961,10 +10996,10 @@
         "home_team": "Campbell",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png",
         "home_team_id": "2097",
-        "away_team": "Charleston",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/232.png",
-        "away_team_id": "232",
-        "date": "2026-02-15T22:00Z"
+        "away_team": "William & Mary",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png",
+        "away_team_id": "2729",
+        "date": "2026-02-20T00:00Z"
       },
       "confStandingsPosition": "9th in CAA",
       "confRecord": "6-7",
@@ -11157,10 +11192,10 @@
         "home_team": "Valparaiso",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2674.png",
         "home_team_id": "2674",
-        "away_team": "Indiana St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png",
-        "away_team_id": "282",
-        "date": "2026-02-15T19:00Z"
+        "away_team": "Bradley",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/71.png",
+        "away_team_id": "71",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "7th in MVC",
       "confRecord": "8-8",
@@ -11252,13 +11287,13 @@
       "quad3": "7-3",
       "quad4": "9-6",
       "nextGame": {
-        "home_team": "Robert Morris",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
-        "home_team_id": "2523",
-        "away_team": "Oakland",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
-        "away_team_id": "2473",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Wright St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
+        "home_team_id": "2750",
+        "away_team": "Robert Morris",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
+        "away_team_id": "2523",
+        "date": "2026-02-22T19:00Z"
       },
       "confStandingsPosition": "3rd in Horizon",
       "confRecord": "10-7",
@@ -11402,10 +11437,10 @@
         "home_team": "San Diego",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png",
         "home_team_id": "301",
-        "away_team": "San Francisco",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2539.png",
-        "away_team_id": "2539",
-        "date": "2026-02-15T23:00Z"
+        "away_team": "LMU",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2351.png",
+        "away_team_id": "2351",
+        "date": "2026-02-21T23:00Z"
       },
       "confStandingsPosition": "10th in WCC",
       "confRecord": "5-10",
@@ -11497,13 +11532,13 @@
       "quad3": "1-7",
       "quad4": "6-6",
       "nextGame": {
-        "home_team": "North Alabama",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png",
-        "home_team_id": "2453",
-        "away_team": "E Kentucky",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
-        "away_team_id": "2198",
-        "date": "2026-02-15T21:00Z"
+        "home_team": "E Kentucky",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
+        "home_team_id": "2198",
+        "away_team": "West Georgia",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png",
+        "away_team_id": "2698",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "8th in ASUN",
       "confRecord": "5-9",
@@ -11742,13 +11777,13 @@
       "quad3": "3-4",
       "quad4": "9-2",
       "nextGame": {
-        "home_team": "Charlotte",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
-        "home_team_id": "2429",
-        "away_team": "UTSA",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
-        "away_team_id": "2636",
-        "date": "2026-02-15T17:00Z"
+        "home_team": "Tulsa",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+        "home_team_id": "202",
+        "away_team": "Charlotte",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+        "away_team_id": "2429",
+        "date": "2026-02-19T01:00Z"
       },
       "confStandingsPosition": "4th in American",
       "confRecord": "7-5",
@@ -12183,13 +12218,13 @@
       "quad3": "1-6",
       "quad4": "6-5",
       "nextGame": {
-        "home_team": "Valparaiso",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2674.png",
-        "home_team_id": "2674",
-        "away_team": "Indiana St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png",
-        "away_team_id": "282",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Indiana St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png",
+        "home_team_id": "282",
+        "away_team": "Northern Iowa",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
+        "away_team_id": "2460",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "10th in MVC",
       "confRecord": "3-13",
@@ -12232,13 +12267,13 @@
       "quad3": "1-4",
       "quad4": "17-4",
       "nextGame": {
-        "home_team": "Marist",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2368.png",
-        "home_team_id": "2368",
+        "home_team": "Merrimack",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png",
+        "home_team_id": "2771",
         "away_team": "Siena",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2561.png",
         "away_team_id": "2561",
-        "date": "2026-02-15T19:00Z"
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "3rd in MAAC",
       "confRecord": "11-5",
@@ -12477,13 +12512,13 @@
       "quad3": "1-4",
       "quad4": "14-5",
       "nextGame": {
-        "home_team": "Saint Peter's",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2612.png",
-        "home_team_id": "2612",
-        "away_team": "Fairfield",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2217.png",
-        "away_team_id": "2217",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Fairfield",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2217.png",
+        "home_team_id": "2217",
+        "away_team": "Sacred Heart",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
+        "away_team_id": "2529",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "6th in MAAC",
       "confRecord": "8-8",
@@ -12526,13 +12561,13 @@
       "quad3": "3-6",
       "quad4": "15-1",
       "nextGame": {
-        "home_team": "Quinnipiac",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2514.png",
-        "home_team_id": "2514",
-        "away_team": "Merrimack",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png",
-        "away_team_id": "2771",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Merrimack",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png",
+        "home_team_id": "2771",
+        "away_team": "Siena",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2561.png",
+        "away_team_id": "2561",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "1st in MAAC",
       "confRecord": "14-2",
@@ -12673,13 +12708,13 @@
       "quad3": "2-3",
       "quad4": "9-10",
       "nextGame": {
-        "home_team": "Sacred Heart",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
-        "home_team_id": "2529",
-        "away_team": "Rider",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2520.png",
-        "away_team_id": "2520",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Fairfield",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2217.png",
+        "home_team_id": "2217",
+        "away_team": "Sacred Heart",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
+        "away_team_id": "2529",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "8th in MAAC",
       "confRecord": "8-9",
@@ -13117,10 +13152,10 @@
         "home_team": "Omaha",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2437.png",
         "home_team_id": "2437",
-        "away_team": "Denver",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2172.png",
-        "away_team_id": "2172",
-        "date": "2026-02-15T18:00Z"
+        "away_team": "Oral Roberts",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
+        "away_team_id": "198",
+        "date": "2026-02-19T01:00Z"
       },
       "confStandingsPosition": "4th in Summit",
       "confRecord": "7-6",
@@ -13310,13 +13345,13 @@
       "quad3": "2-3",
       "quad4": "6-6",
       "nextGame": {
-        "home_team": "Omaha",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2437.png",
-        "home_team_id": "2437",
-        "away_team": "Denver",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2172.png",
-        "away_team_id": "2172",
-        "date": "2026-02-15T18:00Z"
+        "home_team": "Denver",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2172.png",
+        "home_team_id": "2172",
+        "away_team": "South Dakota",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png",
+        "away_team_id": "233",
+        "date": "2026-02-20T02:00Z"
       },
       "confStandingsPosition": "6th in Summit",
       "confRecord": "6-7",
@@ -13653,13 +13688,13 @@
       "quad3": "1-5",
       "quad4": "10-8",
       "nextGame": {
-        "home_team": "Canisius",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2099.png",
-        "home_team_id": "2099",
-        "away_team": "Manhattan",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2363.png",
-        "away_team_id": "2363",
-        "date": "2026-02-15T18:00Z"
+        "home_team": "Manhattan",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2363.png",
+        "home_team_id": "2363",
+        "away_team": "Marist",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2368.png",
+        "away_team_id": "2368",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "8th in MAAC",
       "confRecord": "8-9",
@@ -13950,10 +13985,10 @@
         "home_team": "North Alabama",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png",
         "home_team_id": "2453",
-        "away_team": "E Kentucky",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
-        "away_team_id": "2198",
-        "date": "2026-02-15T21:00Z"
+        "away_team": "Queens",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2511.png",
+        "away_team_id": "2511",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "12th in ASUN",
       "confRecord": "3-11",
@@ -14048,10 +14083,10 @@
         "home_team": "Loyola MD",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2352.png",
         "home_team_id": "2352",
-        "away_team": "Holy Cross",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
-        "away_team_id": "107",
-        "date": "2026-02-15T18:00Z"
+        "away_team": "Army",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+        "away_team_id": "349",
+        "date": "2026-02-19T00:00Z"
       },
       "confStandingsPosition": "4th in Patriot",
       "confRecord": "7-7",
@@ -14682,13 +14717,13 @@
       "quad3": "4-6",
       "quad4": "9-3",
       "nextGame": {
-        "home_team": "Milwaukee",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
-        "home_team_id": "270",
+        "home_team": "Oakland",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
+        "home_team_id": "2473",
         "away_team": "Green Bay",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
         "away_team_id": "2739",
-        "date": "2026-02-15T20:00Z"
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "3rd in Horizon",
       "confRecord": "10-7",
@@ -14878,13 +14913,13 @@
       "quad3": "3-5",
       "quad4": "4-9",
       "nextGame": {
-        "home_team": "Cleveland St",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
-        "home_team_id": "325",
-        "away_team": "Wright St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
-        "away_team_id": "2750",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Youngstown St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
+        "home_team_id": "2754",
+        "away_team": "Cleveland St",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
+        "away_team_id": "325",
+        "date": "2026-02-18T23:30Z"
       },
       "confStandingsPosition": "9th in Horizon",
       "confRecord": "6-10",
@@ -15368,13 +15403,13 @@
       "quad3": "1-1",
       "quad4": "13-5",
       "nextGame": {
-        "home_team": "Saint Peter's",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2612.png",
-        "home_team_id": "2612",
-        "away_team": "Fairfield",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2217.png",
-        "away_team_id": "2217",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Iona",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/314.png",
+        "home_team_id": "314",
+        "away_team": "Saint Peter's",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2612.png",
+        "away_team_id": "2612",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "2nd in MAAC",
       "confRecord": "12-4",
@@ -15515,13 +15550,13 @@
       "quad3": "2-5",
       "quad4": "3-13",
       "nextGame": {
-        "home_team": "Purdue FW",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
-        "home_team_id": "2870",
+        "home_team": "Wright St",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
+        "home_team_id": "2750",
         "away_team": "IU Indy",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/85.png",
         "away_team_id": "85",
-        "date": "2026-02-15T19:00Z"
+        "date": "2026-02-20T00:00Z"
       },
       "confStandingsPosition": "11th in Horizon",
       "confRecord": "3-14",
@@ -16250,13 +16285,13 @@
       "quad3": "1-4",
       "quad4": "6-11",
       "nextGame": {
-        "home_team": "Loyola MD",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2352.png",
-        "home_team_id": "2352",
-        "away_team": "Holy Cross",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
-        "away_team_id": "107",
-        "date": "2026-02-15T18:00Z"
+        "home_team": "Holy Cross",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png",
+        "home_team_id": "107",
+        "away_team": "Lafayette",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/322.png",
+        "away_team_id": "322",
+        "date": "2026-02-18T23:00Z"
       },
       "confStandingsPosition": "9th in Patriot",
       "confRecord": "4-10",
@@ -16351,10 +16386,10 @@
         "home_team": "Detroit Mercy",
         "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
         "home_team_id": "2174",
-        "away_team": "Youngstown St",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
-        "away_team_id": "2754",
-        "date": "2026-02-15T18:00Z"
+        "away_team": "Milwaukee",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
+        "away_team_id": "270",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "5th in Horizon",
       "confRecord": "9-7",
@@ -17132,13 +17167,13 @@
       "quad3": "0-4",
       "quad4": "6-12",
       "nextGame": {
-        "home_team": "Niagara",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/315.png",
-        "home_team_id": "315",
-        "away_team": "Iona",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/314.png",
-        "away_team_id": "314",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Mount St Marys",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/116.png",
+        "home_team_id": "116",
+        "away_team": "Niagara",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/315.png",
+        "away_team_id": "315",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "11th in MAAC",
       "confRecord": "4-12",
@@ -17230,13 +17265,13 @@
       "quad3": "0-6",
       "quad4": "7-10",
       "nextGame": {
-        "home_team": "Canisius",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2099.png",
-        "home_team_id": "2099",
-        "away_team": "Manhattan",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2363.png",
-        "away_team_id": "2363",
-        "date": "2026-02-15T18:00Z"
+        "home_team": "Rider",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2520.png",
+        "home_team_id": "2520",
+        "away_team": "Canisius",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2099.png",
+        "away_team_id": "2099",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "12th in MAAC",
       "confRecord": "3-13",
@@ -17285,7 +17320,7 @@
         "away_team": "Coppin St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2154.png",
         "away_team_id": "2154",
-        "date": "2026-02-17T00:00Z"
+        "date": "2026-02-16T21:30Z"
       },
       "confStandingsPosition": "4th in MEAC",
       "confRecord": "4-3",
@@ -17622,13 +17657,13 @@
       "quad3": "0-5",
       "quad4": "2-13",
       "nextGame": {
-        "home_team": "Sacred Heart",
-        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
-        "home_team_id": "2529",
-        "away_team": "Rider",
-        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2520.png",
-        "away_team_id": "2520",
-        "date": "2026-02-15T19:00Z"
+        "home_team": "Rider",
+        "home_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2520.png",
+        "home_team_id": "2520",
+        "away_team": "Canisius",
+        "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2099.png",
+        "away_team_id": "2099",
+        "date": "2026-02-21T00:00Z"
       },
       "confStandingsPosition": "13th in MAAC",
       "confRecord": "2-14",
@@ -17922,7 +17957,7 @@
         "away_team": "Coppin St",
         "away_team_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2154.png",
         "away_team_id": "2154",
-        "date": "2026-02-17T00:00Z"
+        "date": "2026-02-16T21:30Z"
       },
       "confStandingsPosition": "7th in MEAC",
       "confRecord": "3-6",
