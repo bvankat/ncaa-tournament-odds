@@ -13,9 +13,10 @@ type CommandPaletteProps = {
   onConferences: () => void;
   onBracket: () => void;
   onBubbleWatch?: () => void;
+  onCompareResumes?: () => void;
 };
 
-export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome, onAllTeams, onConferences, onBracket, onBubbleWatch }: CommandPaletteProps) {
+export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome, onAllTeams, onConferences, onBracket, onBubbleWatch, onCompareResumes }: CommandPaletteProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -117,6 +118,23 @@ export function CommandPalette({ open, onOpenChange, teams, onSelectTeam, onHome
                     </svg>
                   </span>
                   Bubble watch
+                </CommandItem>
+              )}
+              {onCompareResumes && (
+                <CommandItem
+                  value="Compare Resumes"
+                  keywords={["compare", "resumes", "metrics", "quadrant", "comparison"]}
+                  onSelect={() => {
+                    onCompareResumes();
+                    onOpenChange(false);
+                  }}
+                >
+                  <span className="mr-2 w-6 h-6 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                    </svg>
+                  </span>
+                  Compare resumes
                 </CommandItem>
               )}
               <CommandItem

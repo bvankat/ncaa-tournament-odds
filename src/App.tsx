@@ -6,6 +6,7 @@ import { AllTeamsView } from '@/views/AllTeamsView';
 import { ConferenceListView } from '@/views/ConferenceListView';
 import { BracketView } from '@/views/BracketView';
 import { BubbleWatchView } from '@/views/BubbleWatchView';
+import { ResumeCompareView } from '@/views/ResumeCompareView';
 import { formatRelativeTime } from '@/lib/utils';
 import type { Team, OddsMovers } from '@/types/team';
 
@@ -149,6 +150,14 @@ function App() {
     trackPageView(newPath);
   };
 
+  const goCompareResumes = () => {
+    const newPath = '/compare-resumes';
+    window.history.pushState({}, '', newPath);
+    setSelectedSlugs(['compare-resumes']);
+    window.scrollTo(0, 0);
+    trackPageView(newPath);
+  };
+
   const handleTeamSelect = (slug: string) => {
     if (slug) {
       const newPath = `/${slug}`;
@@ -176,15 +185,16 @@ function App() {
   const isConferencesPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'conferences';
   const isBracketPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'bracket';
   const isBubbleWatchPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'bubble-watch';
+  const isCompareResumesPage = selectedSlugs.length === 1 && selectedSlugs[0] === 'compare-resumes';
 
   const selectedTeams = selectedSlugs
-    .filter(slug => slug !== 'latest-rankings' && slug !== 'conferences' && slug !== 'bracket' && slug !== 'bubble-watch')
+    .filter(slug => slug !== 'latest-rankings' && slug !== 'conferences' && slug !== 'bracket' && slug !== 'bubble-watch' && slug !== 'compare-resumes')
     .map((slug) => getTeamBySlug(slug))
     .filter(Boolean) as Team[];
 
   return (
     <div className="min-h-screen bg-white">
-      <Layout onHome={goHome} onAllTeams={goAllTeams} onConferences={goConferences} onBracket={goBracket} onBubbleWatch={goBubbleWatch} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
+      <Layout onHome={goHome} onAllTeams={goAllTeams} onConferences={goConferences} onBracket={goBracket} onBubbleWatch={goBubbleWatch} onCompareResumes={goCompareResumes} teams={allTeams} selectedSlug={selectedSlugs[0] || ''} onTeamSelect={handleTeamSelect}>
         {isLanding ? (
           <LandingView
             teams={allTeams}
@@ -226,6 +236,13 @@ function App() {
             teams={allTeams}
             oddsMovers={oddsMovers}
             allSchedules={allSchedules}
+            onTeamSelect={handleTeamSelect}
+            lastUpdated={lastUpdated}
+            formatRelativeTime={formatRelativeTime}
+          />
+        ) : isCompareResumesPage ? (
+          <ResumeCompareView
+            teams={allTeams}
             onTeamSelect={handleTeamSelect}
             lastUpdated={lastUpdated}
             formatRelativeTime={formatRelativeTime}

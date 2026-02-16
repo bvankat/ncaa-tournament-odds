@@ -11,19 +11,20 @@ type LayoutProps = {
   onConferences?: () => void;
   onBracket?: () => void;
   onBubbleWatch?: () => void;
+  onCompareResumes?: () => void;
   teams: Team[];
   selectedSlug?: string;
   onTeamSelect: (slug: string) => void;
 };
 
-export function Layout({ children, onHome, onAllTeams, onConferences, onBracket, onBubbleWatch, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
+export function Layout({ children, onHome, onAllTeams, onConferences, onBracket, onBubbleWatch, onCompareResumes, teams, selectedSlug = '', onTeamSelect }: LayoutProps) {
   const [paletteOpen, setPaletteOpen] = useState(false);
 
   return (
     <>
-      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} />
+      <Header onHome={onHome} teams={teams} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} onCompareResumes={onCompareResumes} />
       {children}
-      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} />
+      <Footer onHome={onHome} teams={teams} selectedSlug={selectedSlug} onTeamSelect={onTeamSelect} onOpenPalette={() => setPaletteOpen(true)} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} onCompareResumes={onCompareResumes} />
       <CommandPalette
         open={paletteOpen}
         onOpenChange={setPaletteOpen}
@@ -47,6 +48,10 @@ export function Layout({ children, onHome, onAllTeams, onConferences, onBracket,
         }}
         onBubbleWatch={() => {
           onBubbleWatch?.();
+          setPaletteOpen(false);
+        }}
+        onCompareResumes={() => {
+          onCompareResumes?.();
           setPaletteOpen(false);
         }}
       />

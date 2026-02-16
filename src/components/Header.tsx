@@ -10,9 +10,10 @@ type HeaderProps = {
   onConferences?: () => void;
   onBracket?: () => void;
   onBubbleWatch?: () => void;
+  onCompareResumes?: () => void;
 };
 
-export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket, onBubbleWatch }: HeaderProps) {
+export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllTeams, onConferences, onBracket, onBubbleWatch, onCompareResumes }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -123,6 +124,22 @@ export function Header({ onHome, teams = [], onTeamSelect, onOpenPalette, onAllT
                     </svg>
                   </span>
                   <span className="font-normal text-gray-600"><a href="/bubble-watch">Bubble Watch</a></span>
+                </button>
+              )}
+              {onCompareResumes && (
+                <button
+                onClick={() => {
+                  onCompareResumes();
+                  setMenuOpen(false);
+                }}
+                className="w-full flex items-center gap-3 p-2 hover:bg-gray-100 transition-colors text-left cursor-pointer font-semibold"
+                >
+                  <span className="w-8 h-8 rounded-md bg-black inline-flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                    </svg>
+                  </span>
+                  <span className="font-normal text-gray-600"><a href="/compare-resumes">Compare Resumes</a></span>
                 </button>
               )}
               {onConferences && (
