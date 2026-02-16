@@ -79,11 +79,11 @@ export function calculateSelectionRanking(team: Team): number {
 
 /**
  * Calculate seeding ranking
- * Predictive-focused: 50% predictive, 30% resume, 20% NET
+ * Predictive-focused: 50% predictive, 40% resume, 10% NET
  * Returns a lower-is-better ranking
  */
 export function calculateSeedingRanking(team: Team): number {
-  return calculateWeightedRanking(team, 0.30, 0.50, 0.20);
+  return calculateWeightedRanking(team, 0.40, 0.55, 0.05);
 }
 
 /**
