@@ -209,30 +209,30 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                   </div>
                   <div className="flex flex-row flex-wrap gap-2 items-end">
                     {teamStatus.dashboardStatus && (
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium ${
+                      <a href="/bracket" className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium hover:opacity-70 transition-opacity ${
                         teamStatus.dashboardStatus === 'Auto-bid' ? 'bg-blue-500/20 text-blue-100 border border-blue-400/30' :
                         teamStatus.dashboardStatus === 'Lock' ? 'bg-green-500/20 text-green-100 border border-green-400/30' :
                         teamStatus.dashboardStatus === 'Safe For Now' ? 'bg-green-400/20 text-green-100 border border-green-300/30' :
                         'bg-yellow-500/20 text-yellow-100 border border-yellow-400/30'
                       }`}>
-                        Status — {teamStatus.dashboardStatus}
-                      </div>
+                        <span className="font-light">Status —&nbsp;</span> {teamStatus.dashboardStatus}
+                      </a>
                     )}
                     
                     
                     {teamStatus.bubbleStatus && (
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium ${
+                      <a href="/bracket" className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium hover:opacity-70 transition-opacity ${
                         teamStatus.bubbleStatus === 'Last Four Byes' ? 'bg-orange-500/20 text-orange-100 border border-orange-400/30' :
                         teamStatus.bubbleStatus === 'Last Four In' ? 'bg-purple-500/20 text-purple-100 border border-purple-400/30' :
                         'bg-red-500/20 text-red-100 border border-red-400/30'
                       }`}>
                         {teamStatus.bubbleStatus}
-                      </div>
+                      </a>
                     )}
                     {teamStatus.bidType && (
-                      <div className="inline-flex items-center px-3 py-1 rounded-full border border-white/30 text-white/70 text-[11px] font-regular">
+                      <a href="/bracket" className="inline-flex items-center px-3 py-1 rounded-full border border-white/30 text-white/70 text-[11px] font-regular hover:opacity-70 transition-opacity">
                         {teamStatus.bidType}
-                      </div>
+                      </a>
                     )}
                   </div>
                   </div>
