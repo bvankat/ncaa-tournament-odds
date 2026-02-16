@@ -261,8 +261,8 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
 
         {/* Comparison Table */}
         {selectedTeams.length === 0 ? (
-          <div className="text-center p-8 bg-gray-50 rounded-lg border border-gray-200">
-            <p className="text-gray-500 text-sm">Select teams above to begin comparing their resumes</p>
+          <div className="text-center p-8 bg-gray-50/50 border-dashed rounded-lg border border-gray-200">
+            <p className="text-gray-400 text-sm">Select teams to compare</p>
           </div>
         ) : (
           <div className="overflow-x-auto rounded-lg border border-gray-200">
