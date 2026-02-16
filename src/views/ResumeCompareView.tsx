@@ -165,9 +165,6 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* Team Selection */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 geist-mono uppercase">
-                Search for Teams
-              </label>
               <Combobox
                 teams={teams}
                 value={comboboxValue}
@@ -184,34 +181,34 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
 
             {/* Preset Groups */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 geist-mono uppercase">
+              <label className="block text-[11px] font-regular text-gray-700 mb-2 geist-mono uppercase">
                 Quick Add
               </label>
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => addPresetGroup(getTeamsBySeed(1))}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-blue-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={selectedTeams.length >= 8}
                 >
                   1 Seeds
                 </button>
                 <button
                   onClick={() => addPresetGroup(getTeamsBySeed(2))}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-blue-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={selectedTeams.length >= 8}
                 >
                   2 Seeds
                 </button>
                 <button
                   onClick={() => addPresetGroup(bracketProjection.lastFourInList)}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-blue-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={selectedTeams.length >= 8}
                 >
                   Last Four In
                 </button>
                 <button
                   onClick={() => addPresetGroup(bracketProjection.bubbleTeams.slice(0, 4))}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-blue-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={selectedTeams.length >= 8}
                 >
                   First Four Out
@@ -224,7 +221,7 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
           {selectedTeams.length > 0 && (
             <div className="mb-8 mt-12">
               <label className="block text-sm font-medium text-gray-700 mb-3 geist-mono uppercase">
-                Selected Teams ({selectedTeams.length}/8)
+                Select up to eight teams ({selectedTeams.length}/8)
               </label>
               <div className="flex flex-wrap gap-2 items-center">
               {selectedTeams.map((team) => (
@@ -236,7 +233,7 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                     <img
                       src={team.logo}
                       alt={team.shortName}
-                      className="w-5 h-5 object-contain"
+                      className="w-4 h-4 object-contain"
                     />
                   )}
                   <span className="text-xs font-medium text-gray-900">
@@ -253,7 +250,7 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
               ))}
               <button
                 onClick={() => setSelectedTeams([])}
-                className="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                className="text-xs text-gray-400 hover:text-gray-800 font-regular cursor-pointer transition-colors"
               >
                 Clear All
               </button>
@@ -264,15 +261,15 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
 
         {/* Comparison Table */}
         {selectedTeams.length === 0 ? (
-          <div className="text-center py-12 bg-gray-50 rounded-lg border border-gray-200">
-            <p className="text-gray-500 text-lg">Select teams above to begin comparing their resumes</p>
+          <div className="text-center p-8 bg-gray-50 rounded-lg border border-gray-200">
+            <p className="text-gray-500 text-sm">Select teams above to begin comparing their resumes</p>
           </div>
         ) : (
           <div className="overflow-x-auto rounded-lg border border-gray-200">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-300 bg-gray-50">
-                  <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase sticky left-0 bg-gray-50 z-10">
+                  <th className="text-left text-xs py-3 px-4 font-medium geist-mono text-gray-400 uppercase sticky left-0 bg-gray-50 z-10 min-w-[130px]">
                     Team
                   </th>
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
@@ -296,16 +293,16 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
                     WAB
                   </th>
-                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase border-l-2 border-gray-300">
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase border-l-2 border-gray-300 min-w-[80px]">
                     Q1
                   </th>
-                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase min-w-[80px]">
                     Q2
                   </th>
-                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase min-w-[80px]">
                     Q3
                   </th>
-                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase min-w-[80px]">
                     Q4
                   </th>
                 </tr>
@@ -323,45 +320,45 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                           <img
                             src={team.logo}
                             alt={team.shortName}
-                            className="w-6 h-6 object-contain"
+                            className="w-4 h-4 object-contain"
                           />
                         )}
-                        <span className="text-sm font-medium text-gray-900">
+                        <span className="text-xs font-medium text-gray-900">
                           {team.shortName}
                         </span>
                       </div>
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestNet.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestNet.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.net || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestBpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestBpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.bpi || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestSor.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestSor.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.sor || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestKpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestKpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.kpi || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestKenpom.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestKenpom.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.kenpom || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestTorvik.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestTorvik.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.torvik || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestWab.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestWab.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.wab || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm border-l-2 border-gray-300 ${bestQuad1.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestQuad1.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.quad1 || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestQuad2.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad2.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.quad2 || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestQuad3.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad3.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.quad3 || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-sm ${bestQuad4.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad4.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.quad4 || '—'}
                     </td>
                   </tr>
@@ -372,11 +369,9 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
         )}
 
         {selectedTeams.length > 0 && (
-          <div className="mt-4 text-xs text-gray-500 geist-mono">
-            <p>* Green highlighting indicates the best value in each column</p>
-            <p>* Lower rankings are better for metric columns</p>
-            <p>* Higher win percentages are better for quadrant records</p>
-          </div>
+          <div className="mt-4 text-[11px] text-gray-500 geist-mono">
+            <p>Green highlight indicates the best value in each column</p>
+            </div>
         )}
       </div>
     </div>
