@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-17T23:11:01.120884",
+  "lastUpdated": "2026-02-17T23:37:13.198830",
   "biggestRisers": [
     {
       "espnId": "2116",
@@ -44,16 +44,6 @@
   ],
   "biggestFallers": [
     {
-      "espnId": "2628",
-      "slug": "tcu-horned-frogs",
-      "displayName": "TCU Horned Frogs",
-      "shortName": "TCU",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-      "currentOdds": 38.22521,
-      "previousOdds": 42.57056,
-      "change": -4.345350000000003
-    },
-    {
       "espnId": "239",
       "slug": "baylor-bears",
       "displayName": "Baylor Bears",
@@ -64,24 +54,34 @@
       "change": -4.060639999999999
     },
     {
+      "espnId": "2628",
+      "slug": "tcu-horned-frogs",
+      "displayName": "TCU Horned Frogs",
+      "shortName": "TCU",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+      "currentOdds": 38.54055,
+      "previousOdds": 42.57056,
+      "change": -4.030009999999997
+    },
+    {
+      "espnId": "2440",
+      "slug": "nevada-wolf-pack",
+      "displayName": "Nevada Wolf Pack",
+      "shortName": "Nevada",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+      "currentOdds": 5.99857,
+      "previousOdds": 9.73455,
+      "change": -3.7359800000000005
+    },
+    {
       "espnId": "26",
       "slug": "ucla-bruins",
       "displayName": "UCLA Bruins",
       "shortName": "UCLA",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-      "currentOdds": 60.76812,
+      "currentOdds": 61.08554,
       "previousOdds": 64.39907,
-      "change": -3.6309499999999915
-    },
-    {
-      "espnId": "96",
-      "slug": "kentucky-wildcats",
-      "displayName": "Kentucky Wildcats",
-      "shortName": "Kentucky",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
-      "currentOdds": 89.20174,
-      "previousOdds": 90.75127,
-      "change": -1.5495300000000043
+      "change": -3.313529999999993
     }
   ],
   "bubbleTeams": [
@@ -102,10 +102,10 @@
       "displayName": "TCU Horned Frogs",
       "shortName": "TCU",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
-      "currentOdds": 38.22521,
+      "currentOdds": 38.54055,
       "previousOdds": 42.57056,
-      "change": -4.345350000000003,
-      "distanceFrom50": 6.774790000000003
+      "change": -4.030009999999997,
+      "distanceFrom50": 6.459449999999997
     },
     {
       "espnId": "2670",
@@ -113,10 +113,10 @@
       "displayName": "VCU Rams",
       "shortName": "VCU",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
-      "currentOdds": 52.54326,
+      "currentOdds": 52.21068,
       "previousOdds": 50.69692,
-      "change": 1.8463399999999979,
-      "distanceFrom50": 7.5432599999999965
+      "change": 1.5137600000000049,
+      "distanceFrom50": 7.2106800000000035
     },
     {
       "espnId": "167",
@@ -124,10 +124,10 @@
       "displayName": "New Mexico Lobos",
       "shortName": "New Mexico",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
-      "currentOdds": 55.3132,
+      "currentOdds": 55.64253,
       "previousOdds": 55.73226,
-      "change": -0.41905999999999466,
-      "distanceFrom50": 10.313200000000002
+      "change": -0.08972999999999587,
+      "distanceFrom50": 10.64253
     },
     {
       "espnId": "193",
@@ -135,10 +135,10 @@
       "displayName": "Miami (OH) RedHawks",
       "shortName": "Miami OH",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
-      "currentOdds": 31.49734,
+      "currentOdds": 31.21036,
       "previousOdds": 30.05146,
-      "change": 1.4458800000000025,
-      "distanceFrom50": 13.502659999999999
+      "change": 1.1589000000000027,
+      "distanceFrom50": 13.789639999999999
     },
     {
       "espnId": "277",
@@ -157,10 +157,10 @@
       "displayName": "UCLA Bruins",
       "shortName": "UCLA",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
-      "currentOdds": 60.76812,
+      "currentOdds": 61.08554,
       "previousOdds": 64.39907,
-      "change": -3.6309499999999915,
-      "distanceFrom50": 15.768120000000003
+      "change": -3.313529999999993,
+      "distanceFrom50": 16.08554
     },
     {
       "espnId": "21",
@@ -168,10 +168,10 @@
       "displayName": "San Diego State Aztecs",
       "shortName": "San Diego St",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
-      "currentOdds": 62.43091,
+      "currentOdds": 62.11766,
       "previousOdds": 63.84135,
-      "change": -1.4104400000000012,
-      "distanceFrom50": 17.430909999999997
+      "change": -1.7236899999999977,
+      "distanceFrom50": 17.11766
     },
     {
       "espnId": "30",
