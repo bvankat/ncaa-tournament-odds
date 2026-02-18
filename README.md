@@ -1,10 +1,18 @@
 # NCAA Tournament Odds
 
-A web application that displays NCAA Men's Basketball Tournament selection probabilities for all 362 Division I teams, based on current team-sheet metrics and rankings.
+NCAA Men's Basketball Tournament selection probabilities for all 360+ Division I teams, based on current team-sheet metrics and rankings.
 
 ## Overview
 
-This app provides NCAA tournament odds calculated from key metrics (NET, BPI, SOR, KPI, KenPom, Torvik) by scraping official data sources. Users can view detailed team profiles including rankings, schedule information, and record breakdowns.
+This app provides NCAA tournament odds calculated from key metrics (NET, BPI, SOR, KPI, WAB, KenPom, Torvik) by scraping official data sources. Features include:
+
+- **Team Profiles** - Dedicated page for all 365 D1 teams with rankings, schedules, records, and projected seeds
+- **Bracket Projection** - Full 68-team field with seeds, auto-bids, and play-in games
+- **Bubble Watch** - Live tracker for teams on the tournament bubble with critical upcoming games
+- **Resume Comparison** - Side-by-side comparison tool for analyzing team resumes
+- **Conference View** - Multi-bid breakdown with full conference standings and odds
+- **Odds Tracking** - Daily updates with biggest movers and historical comparisons
+- **SEO Optimized** - Prerendered pages for fast loading and search engine visibility
 
 ## Tech Stack
 
@@ -39,15 +47,23 @@ This app provides NCAA tournament odds calculated from key metrics (NET, BPI, SO
   - `backfill_tournament_odds.py` - Backfills historical tournament odds data
 
 ### Custom Components
-- **Speedometer** - SVG-based gauge displaying tournament odds percentage
+- **CommandPalette** - Global keyboard-accessible team search (⌘K)
+- **Speedometer** - SVG-based gauge displaying tournament odds percentage with animated needle
 - **RankingSparkline** - Visual ranking indicator with color coding
+- **TournamentDashboard** - Overview cards showing key tournament selection metrics
+- **OddsMovers** - Component displaying biggest risers, fallers, and bubble teams
+- **BubbleSidebar** - Sidebar showing Last Four In, Last Four Byes, and First Four Out
+- **BubbleGames** - Display of important upcoming games for bubble teams
 - **Combobox** - Searchable team selector with keyboard navigation
-- **Layout** - App shell with navigation and routing
 
 ### Views
 - **LandingView** - Homepage with scrolling logo grid, team search, random odds gauge, and biggest odds movers
-- **TeamView** - Detailed team page with rankings table, schedule, and record breakdowns
-- **AllTeamsView** - Comprehensive table of all 362 teams with sortable rankings and tournament odds
+- **TeamView** - Detailed team page with rankings table, schedule, record breakdowns, and projected seed
+- **AllTeamsView** - Comprehensive sortable table of all 362 teams with rankings and tournament odds
+- **BracketView** - Full 68-team bracket projection with seeds, auto-bids, and play-in games
+- **BubbleWatchView** - Dedicated bubble team tracker with odds movers and critical upcoming games
+- **ConferenceListView** - Conference-by-conference breakdown with tournament odds and standings
+- **ResumeCompareView** - Side-by-side resume comparison tool (up to 8 teams) with all key metrics
 
 ## Project Structure
 
@@ -57,14 +73,27 @@ ncaa-tournament-odds/
 │   ├── components/        # Reusable UI components
 │   │   ├── ui/           # shadcn/ui-style primitives
 │   │   ├── Layout.tsx
-│   │   ├── Speedometer.tsx
-│   │   └── RankingSparkline.tsx
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── CommandPalette.tsx
+│   │   ├── Speedometer.jsx
+│   │   ├── RankingSparkline.tsx
+│   │   ├── TournamentDashboard.tsx
+│   │   ├── OddsMovers.tsx
+│   │   ├── BubbleSidebar.tsx
+│   │   └── BubbleGames.tsx
 │   ├── views/            # Page-level components
 │   │   ├── LandingView.tsx
 │   │   ├── TeamView.tsx
-│   │   └── AllTeamsView.tsx
+│   │   ├── AllTeamsView.tsx
+│   │   ├── BracketView.tsx
+│   │   ├── BubbleWatchView.tsx
+│   │   ├── ConferenceListView.tsx
+│   │   └── ResumeCompareView.tsx
 │   ├── lib/              # Utility functions
-│   │   └── utils.ts
+│   │   ├── utils.ts
+│   │   ├── cn.ts
+│   │   └── bracketProjection.ts
 │   ├── types/            # TypeScript type definitions
 │   │   └── team.ts
 │   ├── App.tsx           # Main app component with routing
@@ -114,36 +143,70 @@ ncaa-tournament-odds/
 
 4. **Display** - Component hierarchy renders views
    - `LandingView` - Homepage with team search, odds movers, and scrolling logos
-   - `TeamView` - Detailed team page with rankings, schedule, and records
+   - `TeamView` - Detailed team page with rankings, schedule, records, and projected seed
    - `AllTeamsView` - Sortable table of all 362 teams
+   - `BracketView` - Full 68-team bracket projection based on current data
+   - `BubbleWatchView` - Bubble team tracker with odds movers and critical games
+   - `ConferenceListView` - Conference standings with tournament odds
+   - `ResumeCompareView` - Side-by-side team resume comparison
 
 ## Key Features
 
 ### Tournament Odds Calculation
 Tournament odds are calculated using a weighted algorithm:
 - NET ranking
-- BPI, SOR, KPI rankings
-- KenPom and Torvik rankings
+- BPI, SOR, KPI, WAB, KenPom and Torvik rankings
 - Quadrant records (Q1-Q4)
 - Overall record and strength of schedule
 - Day-over-day odds changes tracked via `previousTournamentOdds`
+
+### Bracket Projection
+- Full 68-team field projection based on composite rankings
+- Automatic bid tracking for conference tournament winners
+- Play-in game assignments (First Four)
+- Seed line calculations (1-16) with proper distribution
+- Last Four In, Last Four Byes, and First Four Out indicators
+- Bubble team rankings with composite scores
 
 ### Odds Movers
 - **Biggest Risers** - Teams with largest positive odds changes
 - **Biggest Fallers** - Teams with largest negative odds changes
 - **Bubble Teams** - Teams closest to 50% tournament odds threshold
 - Real-time tracking via `odds_movers.json`
+- Integrated into LandingView and BubbleWatchView
+
+### Bubble Watch
+- Dedicated page for tracking bubble teams
+- Live tournament dashboard with key metrics
+- Critical upcoming games for bubble teams with opponent odds
+- Sidebar showing Last Four In, Last Four Byes, First Four Out
+- Integration with schedule data to highlight important games
+
+### Resume Comparison
+- Side-by-side comparison of up to 8 teams
+- All key metrics in one view (NET, BPI, SOR, KPI, WAB, KenPom, Torvik)
+- Quadrant records comparison
+- Conference standings comparison
+- Preset groups (e.g., Last Four Byes, First Four Out)
+
+### Conference View
+- Conference-by-conference breakdown of all D1 teams
+- Conference standings with tournament odds
+- Projected seeds and bids per conference
+- Sortable and filterable by conference
 
 ### Team Search
-- Command palette (cmdk) with instant search across 362 teams
+- Global command palette (⌘K) with instant search across 362 teams
+- Header and footer team selectors
 - Keyboard navigation support
 - Logo previews in dropdown
 - Accessible and fast
 
 ### All Teams Table
-- Sortable by any tourney odds or team name
+- Sortable by tournament odds, seed, or any ranking metric
 - Responsive design with horizontal scroll
 - Direct links to team pages
+- Color-coded tournament odds indicators
 
 
 ## Development
@@ -179,20 +242,22 @@ Google Analytics tracks:
 - Team selection events
 - User navigation patterns
 - Single-page application (SPA) route changes
+- Navigation between different views
 
-## Performance Optimizations
+## SEO & Prerendering
 
-### Future Improvements
-- [ ] Code splitting for route-based chunks
-- [ ] Image optimization (WebP, lazy loading improvements)
-- [ ] Service worker for offline support
-
-## Possible Roadmap
-
-### UI/UX Improvements
-- [ ] Dark mode toggle
-- [ ] Customizable dashboard (pin favorite teams)
-- [ ] Share team cards on social media
-- [ ] Historical trend charts (odds over time)
-- [ ] Mobile app wrapper (PWA)
-- [ ] Accessibility audit and WCAG compliance
+The app uses prerendering to optimize SEO and initial load times:
+- **@prerenderer/rollup-plugin** - Vite plugin for static prerendering
+- **Puppeteer** - Headless browser for rendering routes
+- **Dynamic route generation** - Prerenders all team pages, views, and key routes
+- **Meta tag injection** - Custom title, description, and Open Graph tags per route
+- **Environment-specific config** - Uses @sparticuz/chromium on Vercel, local Chrome in development
+- **Sitemap generation** - Automated sitemap.xml creation for search engines
+- Routes prerendered:
+  - Home page (`/`)
+  - All 362 team pages (`/team-slug`)
+  - Latest rankings (`/latest-rankings`)
+  - Conferences (`/conferences`)
+  - Bracket view (`/bracket`)
+  - Bubble watch (`/bubble-watch`)
+  - Resume compare (`/compare-resumes`)
