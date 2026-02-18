@@ -157,7 +157,7 @@ export function BubbleGames({ teams, allSchedules, onTeamSelect }: BubbleGamesPr
                 const { game, homeTeam, awayTeam, gameTime } = gameDisplay;
                 const homeComp = game.competitors[0];
                 const awayComp = game.competitors[1];
-                const isCompleted = homeComp.score !== null && awayComp.score !== null;
+                const isCompleted = homeComp.winner === true || awayComp.winner === true;
 
                 return (
                   <tr
