@@ -57,7 +57,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
     // Determine dashboard status
     let dashboardStatus: string | null = null;
     if (tournamentOdds > 90) {
-      dashboardStatus = 'Lock';
+      dashboardStatus = 'Tournament Lock';
     } else if (tournamentOdds > 70) {
       dashboardStatus = 'Safe For Now';
     } else if (tournamentOdds > 25) {
@@ -215,7 +215,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         teamStatus.dashboardStatus === 'Safe For Now' ? 'bg-green-400/20 text-green-100 border border-green-300/30' :
                         'bg-yellow-500/20 text-yellow-100 border border-yellow-400/30'
                       }`}>
-                        <span className="font-light">Status —&nbsp;</span> {teamStatus.dashboardStatus}
+                        {teamStatus.dashboardStatus}
                       </a>
                     )}
                     
