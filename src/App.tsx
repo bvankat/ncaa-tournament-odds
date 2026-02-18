@@ -209,6 +209,7 @@ function App() {
             onConferences={goConferences}
             onBracket={goBracket}
             onBubbleWatch={goBubbleWatch}
+            onResumeCompare={goCompareResumes}
           />
         ) : isAllTeamsPage ? (
           <AllTeamsView

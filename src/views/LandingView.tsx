@@ -220,8 +220,8 @@ export function LandingView({
               <h2 className="text-3xl font-extrabold text-gray-900 mb-2 ibm-plex-sans">On the Bubble</h2>
               <p className="text-gray-600 mb-6 text-sm text-balance">Tournament seed projections based on current team-sheet metrics.</p>
               <p className="text-gray-600 mb-3 text-sm"><a onClick={onBubbleWatch} className="underline cursor-pointer">Bubble Watch »</a></p>
-              <p className="text-gray-600 mb-3 text-sm"><a onClick={onBracket} className="underline cursor-pointer">Projected Bracket »</a></p>
-              <p className="text-gray-600 mb-3 text-sm"><a onClick={onResumeCompare} className="underline cursor-pointer">Compare Resumes »</a></p>
+              <p className="text-gray-600 mb-3 text-sm"><a onClick={onBracket} className="underline cursor-pointer">Projected bracket »</a></p>
+              <p className="text-gray-600 mb-3 text-sm"><a onClick={onResumeCompare} className="underline cursor-pointer">Compare resumes »</a></p>
           </div>
           <div className="md:col-span-8" id="bubble-projection">
             <BubbleSidebar
