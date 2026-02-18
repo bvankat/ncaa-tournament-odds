@@ -45,7 +45,7 @@ function loadTeamData() {
 
 // Generate routes from team data
 function getRoutes() {
-  const routes = ['/', '/latest-rankings', '/bracket', '/bubble-watch', '/conferences']
+  const routes = ['/', '/latest-rankings', '/bracket', '/bubble-watch', '/conferences', '/compare-resumes']
   const data = loadTeamData()
   
   if (data.teams) {
@@ -68,8 +68,8 @@ function getSeoMetaTags(route) {
   // Default/homepage meta
   if (route === '/') {
     return {
-      title: 'NCAA Tournament Odds Machine',
-      description: "On the bubble? Track NCAA men's basketball tournament selection odds and current team-sheet metrics for all 360+ Division I teams. Updated daily.",
+      title: 'NCAA Basketball Tournament Odds Machine',
+      description: "Latest rankings, bubble chances and projected seeds for all 360+ Division I teams. Updated daily.",
       url: baseUrl
     }
   }
@@ -110,6 +110,15 @@ function getSeoMetaTags(route) {
     }
   }
   
+  // Compare resumes page
+  if (route === '/compare-resumes') {
+    return {
+      title: 'Compare Resumes — NCAA Basketball Tournament Odds Machine',
+      description: 'Side-by-side team resumes. Compare rankings, metrics, quadrant records, and tournament odds for up to 8 teams.',
+      url: `${baseUrl}/compare-resumes`
+    }
+  }
+  
   // Team page
   const slug = route.replace('/', '')
   const team = data.teams?.find(t => t.slug === slug)
@@ -133,7 +142,7 @@ function getSeoMetaTags(route) {
   // Fallback
   return {
     title: 'NCAA Basketball Tournament Odds Machine',
-    description: "Track NCAA men's basketball tournament selection odds for all 360+ Division I teams.",
+    description: "Latest rankings, bubble chances and projected seeds for all 360+ Division I teams. Updated daily.",
     url: baseUrl + route
   }
 }
