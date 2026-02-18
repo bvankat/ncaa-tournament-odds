@@ -75,7 +75,7 @@ export function LandingView({
           )}
           <div className="flex flex-col mb-3 px-4 lg:px-0">
             <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Basketball Tournament Odds Machine</h1>
-            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Bubble chances and projected seeds for all 360+ Division I teams</p>
+            <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Latest rankings, bubble chances and projected seeds for all 360+ Division I teams</p>
           </div>
           <div className="w-full max-w-xl">
           <Combobox teams={teams} value={selectedSlug} onValueChange={onTeamSelect} placeholder="Select a team" onHome={onHome} onAllTeams={onAllTeams} onConferences={onConferences} onBracket={onBracket} onBubbleWatch={onBubbleWatch} onCompareResumes={onResumeCompare} />
