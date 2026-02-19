@@ -7,83 +7,63 @@ const toNumber = (val: number | string | null | undefined): number | null => {
   return isNaN(num) ? null : num;
 };
 
-// Helper function to calculate weighted ranking
+// Helper function to calculate weighted ranking with direct multipliers
 function calculateWeightedRanking(
   team: Team,
-  resumeWeight: number,
-  predictiveWeight: number,
-  netWeight: number
+  weights: { wab: number; kpi: number; sor: number; kenpom: number; torvik: number; bpi: number; net: number }
 ): number {
-  // Get predictive metrics (KenPom, Torvik, BPI)
-  const predictiveValues = [
-    toNumber(team.kenpom),
-    toNumber(team.torvik), 
-    toNumber(team.bpi)
-  ].filter(v => v !== null) as number[];
-
-  // Get resume metrics (WAB, KPI, SOR)
-  const resumeValues = [
-    toNumber(team.wab),
-    toNumber(team.kpi),
-    toNumber(team.sor)
-  ].filter(v => v !== null) as number[];
-
-  const netValue = toNumber(team.net);
-
-  // Calculate averages
-  const predictiveAvg = predictiveValues.length > 0
-    ? predictiveValues.reduce((sum, val) => sum + val, 0) / predictiveValues.length
-    : null;
-
-  const resumeAvg = resumeValues.length > 0
-    ? resumeValues.reduce((sum, val) => sum + val, 0) / resumeValues.length
-    : null;
-
-  // Calculate weighted composite with whatever metrics are available
-  const components: number[] = [];
-  const weights: number[] = [];
-
-  if (resumeAvg !== null) {
-    components.push(resumeAvg);
-    weights.push(resumeWeight);
-  }
-  if (predictiveAvg !== null) {
-    components.push(predictiveAvg);
-    weights.push(predictiveWeight);
-  }
-  if (netValue !== null) {
-    components.push(netValue);
-    weights.push(netWeight);
-  }
+  const metrics = [
+    { value: toNumber(team.wab), weight: weights.wab },
+    { value: toNumber(team.kpi), weight: weights.kpi },
+    { value: toNumber(team.sor), weight: weights.sor },
+    { value: toNumber(team.kenpom), weight: weights.kenpom },
+    { value: toNumber(team.torvik), weight: weights.torvik },
+    { value: toNumber(team.bpi), weight: weights.bpi },
+    { value: toNumber(team.net), weight: weights.net }
+  ].filter(m => m.value !== null) as { value: number; weight: number }[];
 
   // If no metrics available, sort to bottom
-  if (components.length === 0) {
+  if (metrics.length === 0) {
     return Infinity;
   }
 
   // Calculate weighted average (normalize weights if some metrics missing)
-  const totalWeight = weights.reduce((sum, w) => sum + w, 0);
-  const composite = components.reduce((sum, val, i) => sum + (val * weights[i]), 0) / totalWeight;
-
-  return composite;
+  const totalWeight = metrics.reduce((sum, m) => sum + m.weight, 0);
+  return metrics.reduce((sum, m) => sum + m.value * m.weight, 0) / totalWeight;
 }
 
 /**
  * Calculate selection ranking
- * Resume-focused: 50% resume, 35% predictive, 15% NET
+ * Resume-focused: WAB 22%, KPI 16.5%, SOR 16.5%, Predictive 10% each, NET 15%
  * Returns a lower-is-better ranking
  */
 export function calculateSelectionRanking(team: Team): number {
-  return calculateWeightedRanking(team, 0.50, 0.35, 0.15);
+  return calculateWeightedRanking(team, {
+    wab: 0.22,
+    kpi: 0.165,
+    sor: 0.165,
+    kenpom: 0.10,
+    torvik: 0.10,
+    bpi: 0.10,
+    net: 0.15
+  });
 }
 
 /**
  * Calculate seeding ranking
- * Predictive-focused: 50% predictive, 40% resume, 10% NET
+ * Predictive-focused: Predictive 18% each, Resume 10.33% each, NET 15%
  * Returns a lower-is-better ranking
  */
 export function calculateSeedingRanking(team: Team): number {
-  return calculateWeightedRanking(team, 0.40, 0.55, 0.05);
+  return calculateWeightedRanking(team, {
+    wab: 0.1033,
+    kpi: 0.1033,
+    sor: 0.1033,
+    kenpom: 0.18,
+    torvik: 0.18,
+    bpi: 0.18,
+    net: 0.15
+  });
 }
 
 /**
