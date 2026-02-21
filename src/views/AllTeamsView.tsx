@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import type { Team } from '@/types/team';
 import { formatPercent } from '@/lib/utils';
-import { calculateBracket, calculateCompositeRanking } from '@/lib/bracketProjection';
+import { calculateBracket } from '@/lib/bracketProjection';
 
 type AllTeamsViewProps = {
   teams: Team[];
@@ -137,7 +137,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
               Latest rankings
             </h1>
             <p className="text-gray-600 text-lg text-balance">
-              Current NCAA Tournament at-large bid odds, projected seeds and updated metrics for all {teams.length} Division I teams.</p>
+              Current NCAA Tournament at-large bid odds, projected seeds and updated metrics for every Division I team.</p>
           </div>
         </div>
       </div>
