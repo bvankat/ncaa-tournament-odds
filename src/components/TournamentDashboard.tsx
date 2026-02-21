@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Team } from '@/types/team';
+import { TOURNAMENT_STATUS_THRESHOLDS } from '@/lib/utils';
 
 type TournamentDashboardProps = {
   teams: Team[];
@@ -40,15 +41,15 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
     .sort((a, b) => a.shortName.localeCompare(b.shortName));
   
   const locksTeams = teams
-    .filter(t => (t.tournamentOdds ?? 0) > 90 && !conferenceLeaders.has(t.slug))
+    .filter(t => (t.tournamentOdds ?? 0) > TOURNAMENT_STATUS_THRESHOLDS.LOCK && !conferenceLeaders.has(t.slug))
     .sort((a, b) => a.shortName.localeCompare(b.shortName));
   
   const likelyInTeams = teams
-    .filter(t => (t.tournamentOdds ?? 0) > 65 && (t.tournamentOdds ?? 0) <= 90 && !conferenceLeaders.has(t.slug))
+    .filter(t => (t.tournamentOdds ?? 0) > TOURNAMENT_STATUS_THRESHOLDS.SAFE && (t.tournamentOdds ?? 0) <= TOURNAMENT_STATUS_THRESHOLDS.LOCK && !conferenceLeaders.has(t.slug))
     .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
   
   const bubbleTeams = teams
-    .filter(t => (t.tournamentOdds ?? 0) > 15 && (t.tournamentOdds ?? 0) <= 65 && !conferenceLeaders.has(t.slug))
+    .filter(t => (t.tournamentOdds ?? 0) > TOURNAMENT_STATUS_THRESHOLDS.BUBBLE && (t.tournamentOdds ?? 0) <= TOURNAMENT_STATUS_THRESHOLDS.SAFE && !conferenceLeaders.has(t.slug))
     .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
   
   const locks = locksTeams.length;

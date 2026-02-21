@@ -1,3 +1,16 @@
+export const TOURNAMENT_STATUS_THRESHOLDS = {
+  LOCK: 90,
+  SAFE: 65,
+  BUBBLE: 15,
+} as const;
+
+export function getDashboardStatus(tournamentOdds: number): string | null {
+  if (tournamentOdds > TOURNAMENT_STATUS_THRESHOLDS.LOCK) return 'Tournament Lock';
+  if (tournamentOdds > TOURNAMENT_STATUS_THRESHOLDS.SAFE) return 'Safe For Now';
+  if (tournamentOdds > TOURNAMENT_STATUS_THRESHOLDS.BUBBLE) return 'Bubble';
+  return null;
+}
+
 export function formatRelativeTime(dateString: string | number) {
   if (!dateString) return '';
 
@@ -44,7 +57,7 @@ export function formatPercent(
 
   const numeric = Number(value);
 
-  if (showLessThanOne && numeric >= 0 && numeric < 1) {
+  if (showLessThanOne && numeric > 0 && numeric < 1) {
     if (includeSymbol) {
       return lessThanOneLabel;
     }

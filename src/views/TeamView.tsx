@@ -4,7 +4,7 @@ import { PulseRings } from '@/components/PulseRings';
 import { RankingSparkline } from '@/components/RankingSparkline';
 import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import type { Team, TeamSchedule } from '@/types/team';
-import { formatPercent } from '@/lib/utils';
+import { formatPercent, getDashboardStatus } from '@/lib/utils';
 import { calculateBracket } from '@/lib/bracketProjection';
 
 type TeamViewProps = {
@@ -55,14 +55,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
     }
     
     // Determine dashboard status
-    let dashboardStatus: string | null = null;
-    if (tournamentOdds > 90) {
-      dashboardStatus = 'Tournament Lock';
-    } else if (tournamentOdds > 70) {
-      dashboardStatus = 'Safe For Now';
-    } else if (tournamentOdds > 25) {
-      dashboardStatus = 'Bubble';
-    }
+    const dashboardStatus = getDashboardStatus(tournamentOdds);
     
     return {
       seed,
