@@ -51,18 +51,18 @@ export function calculateSelectionRanking(team: Team): number {
 
 /**
  * Calculate seeding ranking
- * Predictive-focused: Predictive 18% each, Resume 10.33% each, NET 15%
+ * Predictive-focused: Predictive 18% each, Resume 12% each, NET 10%
  * Returns a lower-is-better ranking
  */
 export function calculateSeedingRanking(team: Team): number {
   return calculateWeightedRanking(team, {
-    wab: 0.1033,
-    kpi: 0.1033,
-    sor: 0.1033,
+    wab: 0.12,
+    kpi: 0.12,
+    sor: 0.12,
     kenpom: 0.18,
     torvik: 0.18,
     bpi: 0.18,
-    net: 0.15
+    net: 0.10
   });
 }
 
