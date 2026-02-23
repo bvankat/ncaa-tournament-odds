@@ -103,6 +103,17 @@ const INTANGIBLES: IntangibleRule[] = [
     enabled: true,
     value: (t) => parseRecord(t.quad1).wins === 0 ? 1 : 0,
   },
+  {
+    name: 'Overall win percentage below .575',
+    type: 'penalty',
+    enabled: true,
+    value: (t) => {
+      const rec = parseRecord(t.record);
+      const total = rec.wins + rec.losses;
+      if (total === 0) return 0;
+      return rec.wins / total < 0.575 ? 1 : 0;
+    },
+  },
 ];
 
 // Calculate composite intangible multiplier (>1.0 = worse bid, <1.0 = better bid)
