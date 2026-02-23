@@ -145,6 +145,8 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
   const bestQuad2 = findBestQuadRecord('quad2');
   const bestQuad3 = findBestQuadRecord('quad3');
   const bestQuad4 = findBestQuadRecord('quad4');
+  const bestSos = findBestRanking('sos');
+  const bestNonconSos = findBestRanking('nonconsos');
 
   const bestResumeAvg = (() => {
     const values = selectedTeams.map(t => ({ slug: t.slug, value: getResumeAvg(t) })).filter(v => v.value !== null) as { slug: string; value: number }[];
@@ -346,6 +348,12 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase min-w-[80px]">
                     Q4
                   </th>
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase border-l-2 border-gray-300">
+                    SOS
+                  </th>
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
+                    NCSOS
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -407,6 +415,12 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad4.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.quad4 || '—'}
+                    </td>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestSos.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {team.sos || '—'}
+                    </td>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestNonconSos.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {team.nonconsos || '—'}
                     </td>
                   </tr>
                 ))}
