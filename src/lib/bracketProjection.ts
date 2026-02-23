@@ -183,18 +183,19 @@ export function calculateSelectionRanking(team: Team): number {
 
 /**
  * Calculate seeding ranking
- * Predictive-focused: Predictive 18% each, Resume 12% each, NET 10%
+ * Thought to be predictive-focused
+ * Dave Ommen says 2025 committe seemed to weight WAB, SOR and NET higher.
  * Returns a lower-is-better ranking
  */
 export function calculateSeedingRanking(team: Team): number {
   return calculateWeightedRanking(team, {
-    wab: 0.12,
-    kpi: 0.12,
-    sor: 0.12,
-    kenpom: 0.18,
-    torvik: 0.18,
-    bpi: 0.18,
-    net: 0.10
+    wab: 0.16,
+    kpi: 0.10,
+    sor: 0.16,
+    kenpom: 0.14,
+    torvik: 0.14,
+    bpi: 0.14,
+    net: 0.16
   });
 }
 
