@@ -1,6 +1,6 @@
 export const TOURNAMENT_STATUS_THRESHOLDS = {
   LOCK: 90,
-  SAFE: 65,
+  SAFE: 70,
   BUBBLE: 15,
 } as const;
 
