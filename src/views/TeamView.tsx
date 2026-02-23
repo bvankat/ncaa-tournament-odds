@@ -1,11 +1,11 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { Speedometer } from '@/components/Speedometer';
 import { PulseRings } from '@/components/PulseRings';
 import { RankingSparkline } from '@/components/RankingSparkline';
 import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import type { Team, TeamSchedule } from '@/types/team';
 import { formatPercent, getDashboardStatus } from '@/lib/utils';
-import { calculateBracket } from '@/lib/bracketProjection';
+import { calculateBracket, getIntangibleBreakdown, calculateSelectionRanking, calculateSeedingRanking } from '@/lib/bracketProjection';
 
 type TeamViewProps = {
   team: Team;
@@ -64,6 +64,27 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
       dashboardStatus
     };
   }, [allTeams, team, tournamentOdds]);
+
+  // Log intangible breakdown to console for debugging
+  useEffect(() => {
+    const bidScore = calculateSelectionRanking(team);
+    const seedScore = calculateSeedingRanking(team);
+    const breakdown = getIntangibleBreakdown(team).filter(i => i.pctDelta !== 0);
+    const netMultiplier = breakdown.reduce((m, i) => m * (1 + i.pctDelta), 1.0);
+    const bidBase = breakdown.length > 0 ? bidScore / netMultiplier : bidScore;
+    console.group(`[Intangibles] ${team.shortName}`);
+    console.log(`Bid score:  ${bidScore.toFixed(2)}${breakdown.length > 0 ? ` (base: ${bidBase.toFixed(2)}, adj: ${((netMultiplier - 1) * 100).toFixed(1)}%)` : ''}`);
+    console.log(`Seed score: ${seedScore.toFixed(2)}`);
+    if (breakdown.length > 0) {
+      breakdown.forEach(i => {
+        const pct = (i.pctDelta * 100).toFixed(1);
+        console.log(`  ${i.type === 'bonus' ? '✅' : '❌'} ${i.name}: ${i.pctDelta >= 0 ? '+' : ''}${pct}%`);
+      });
+    } else {
+      console.log('  No intangibles applied');
+    }
+    console.groupEnd();
+  }, [team]);
 
   // Helper function to get win probability for a game (Nebraska-specific)
   const getWinProbability = (gameDate: Date): number | null => {

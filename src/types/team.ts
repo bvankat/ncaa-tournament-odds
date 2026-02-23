@@ -11,6 +11,7 @@ export type NcaaNetData = {
   quad2?: string | null;
   quad3?: string | null;
   quad4?: string | null;
+  nonconsos?: number | string | null;
 };
 
 

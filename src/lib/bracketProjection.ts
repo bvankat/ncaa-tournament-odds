@@ -7,6 +7,136 @@ const toNumber = (val: number | string | null | undefined): number | null => {
   return isNaN(num) ? null : num;
 };
 
+// Parse a "W-L" record string into wins and losses
+function parseRecord(record: string | null | undefined): { wins: number; losses: number } {
+  if (!record) return { wins: 0, losses: 0 };
+  const parts = record.split('-');
+  return {
+    wins: parseInt(parts[0] ?? '0', 10) || 0,
+    losses: parseInt(parts[1] ?? '0', 10) || 0,
+  };
+}
+
+// ─── INTANGIBLES CONFIG ────────────────────────────────────────────────────────
+// INTANGIBLE_UNIT: ranking points added/subtracted per qualifying hit.
+// Bonuses subtract from the score (lower = better bid).
+// Penalties add to the score.
+// Set enabled: false to quickly toggle any rule off without deleting it.
+
+const INTANGIBLE_UNIT = 0.05; // 5% per qualifying hit
+
+type IntangibleRule = {
+  name: string;
+  type: 'bonus' | 'penalty';
+  enabled: boolean;
+  // Return 1 for binary rules, or a count for per-occurrence rules
+  value: (team: Team) => number;
+};
+
+const INTANGIBLES: IntangibleRule[] = [
+  // ── BONUSES (subtract from composite score) ──
+  {
+    name: 'Undefeated in Q3+Q4 combined',
+    type: 'bonus',
+    enabled: true,
+    value: (t) => {
+      const q3 = parseRecord(t.quad3);
+      const q4 = parseRecord(t.quad4);
+      return q3.losses === 0 && q4.losses === 0 ? 1 : 0;
+    },
+  },
+  {
+    name: 'Above .500 in Q1+Q2 combined',
+    type: 'bonus',
+    enabled: true,
+    value: (t) => {
+      const q1 = parseRecord(t.quad1);
+      const q2 = parseRecord(t.quad2);
+      return (q1.wins + q2.wins) > (q1.losses + q2.losses) ? 1 : 0;
+    },
+  },
+  {
+    name: 'Above .500 road record',
+    type: 'bonus',
+    enabled: true,
+    value: (t) => {
+      const road = parseRecord(t.road);
+      return road.wins > road.losses ? 1 : 0;
+    },
+  },
+
+  // ── PENALTIES (add to composite score) ──
+  {
+    name: 'Each Q4 loss',
+    type: 'penalty',
+    enabled: true,
+    value: (t) => parseRecord(t.quad4).losses,
+  },
+  {
+    name: 'Nonconference SOS above 250',
+    type: 'penalty',
+    enabled: true,
+    value: (t) => {
+      const sos = toNumber(t.nonconsos);
+      return sos !== null && sos > 250 ? 1 : 0;
+    },
+  },
+  {
+    name: 'Below .500 in Q1+Q2 combined',
+    type: 'penalty',
+    enabled: true,
+    value: (t) => {
+      const q1 = parseRecord(t.quad1);
+      const q2 = parseRecord(t.quad2);
+      return (q1.wins + q2.wins) < (q1.losses + q2.losses) ? 1 : 0;
+    },
+  },
+  {
+    name: 'Each Q3 loss',
+    type: 'penalty',
+    enabled: true,
+    value: (t) => parseRecord(t.quad3).losses,
+  },
+  {
+    name: 'Zero Quad 1 wins',
+    type: 'penalty',
+    enabled: true,
+    value: (t) => parseRecord(t.quad1).wins === 0 ? 1 : 0,
+  },
+];
+
+// Calculate composite intangible multiplier (>1.0 = worse bid, <1.0 = better bid)
+function calculateIntangibleMultiplier(team: Team): number {
+  return INTANGIBLES
+    .filter(rule => rule.enabled)
+    .reduce((multiplier, rule) => {
+      const count = rule.value(team);
+      if (count === 0) return multiplier;
+      const factor = rule.type === 'bonus' ? (1 - INTANGIBLE_UNIT) : (1 + INTANGIBLE_UNIT);
+      return multiplier * Math.pow(factor, count);
+    }, 1.0);
+}
+
+export type IntangibleBreakdownItem = {
+  name: string;
+  type: 'bonus' | 'penalty';
+  count: number;
+  pctDelta: number; // e.g. -0.05 = -5% (bonus), +0.10 = +10% (2 Q4 losses)
+};
+
+// Returns per-rule breakdown for display in UI
+export function getIntangibleBreakdown(team: Team): IntangibleBreakdownItem[] {
+  return INTANGIBLES
+    .filter(rule => rule.enabled)
+    .map(rule => {
+      const count = rule.value(team);
+      const factor = rule.type === 'bonus' ? (1 - INTANGIBLE_UNIT) : (1 + INTANGIBLE_UNIT);
+      const pctDelta = count === 0 ? 0 : Math.pow(factor, count) - 1;
+      return { name: rule.name, type: rule.type, count, pctDelta };
+    });
+}
+// ──────────────────────────────────────────────────────────────────────────────
+
 // Helper function to calculate weighted ranking with direct multipliers
 function calculateWeightedRanking(
   team: Team,
@@ -35,10 +165,11 @@ function calculateWeightedRanking(
 /**
  * Calculate selection ranking
  * Resume-focused: WAB 22%, KPI 16.5%, SOR 16.5%, Predictive 10% each, NET 15%
+ * Intangible adjustments applied after base score.
  * Returns a lower-is-better ranking
  */
 export function calculateSelectionRanking(team: Team): number {
-  return calculateWeightedRanking(team, {
+  const base = calculateWeightedRanking(team, {
     wab: 0.22,
     kpi: 0.165,
     sor: 0.165,
@@ -47,6 +178,7 @@ export function calculateSelectionRanking(team: Team): number {
     bpi: 0.10,
     net: 0.15
   });
+  return base * calculateIntangibleMultiplier(team);
 }
 
 /**

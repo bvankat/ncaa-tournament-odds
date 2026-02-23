@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import type { Team } from '@/types/team';
-import { calculateBracket, getSeedDisplay, shouldAddSeparator, calculateCompositeRanking } from '@/lib/bracketProjection';
+import { calculateBracket, getSeedDisplay, shouldAddSeparator, calculateCompositeRanking, calculateSelectionRanking, calculateSeedingRanking, getIntangibleBreakdown } from '@/lib/bracketProjection';
 import { BubbleSidebar } from '@/components/BubbleSidebar';
 
 type BracketViewProps = {
@@ -187,7 +187,28 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                             </span>
                           </div>
                         </td>
-                        <td className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-amber-50/50 font-semibold">
+                        <td
+                          className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-amber-50/50 font-semibold"
+                          title={(() => {
+                            const bidBase = calculateSelectionRanking(team);
+                            const seedScore = calculateSeedingRanking(team);
+                            const breakdown = getIntangibleBreakdown(team).filter(i => i.pctDelta !== 0);
+                            const multiplier = breakdown.reduce((m, i) => m * (1 + i.pctDelta), 1.0);
+                            const bidAdj = bidBase; // already includes multiplier
+                            const bidPreAdj = breakdown.length > 0 ? bidBase / multiplier : bidBase;
+                            const lines = [
+                              `Bid score:   ${bidBase.toFixed(2)}${breakdown.length > 0 ? ` (base: ${bidPreAdj.toFixed(2)}, adj: ${((multiplier - 1) * 100).toFixed(1)}%)` : ''}`,
+                              `Seed score:  ${seedScore.toFixed(2)}`,
+                              ...(breakdown.length > 0 ? [
+                                '',
+                                ...breakdown.map(i =>
+                                  `- ${i.name}: ${i.pctDelta >= 0 ? '+' : ''}${(i.pctDelta * 100).toFixed(1)}%`
+                                )
+                              ] : [])
+                            ];
+                            return lines.join('\n');
+                          })()}
+                        >
                           {calculateCompositeRanking(team).toFixed(1)}
                         </td>
                         <td 
