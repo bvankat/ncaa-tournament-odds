@@ -66,6 +66,20 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
     return isNaN(num) ? null : num;
   };
 
+  // Resume average: mean of WAB, KPI, SOR (lower = better)
+  const getResumeAvg = (team: Team): number | null => {
+    const vals = [toNumber(team.wab), toNumber(team.kpi), toNumber(team.sor)].filter(v => v !== null) as number[];
+    if (vals.length === 0) return null;
+    return vals.reduce((s, v) => s + v, 0) / vals.length;
+  };
+
+  // Predictive average: mean of KenPom, Torvik, BPI (lower = better)
+  const getPredAvg = (team: Team): number | null => {
+    const vals = [toNumber(team.kenpom), toNumber(team.torvik), toNumber(team.bpi)].filter(v => v !== null) as number[];
+    if (vals.length === 0) return null;
+    return vals.reduce((s, v) => s + v, 0) / vals.length;
+  };
+
   // Helper to parse quad records (e.g., "5-2" -> { wins: 5, total: 7 })
   const parseQuadRecord = (record: string | null | undefined): { wins: number; total: number } | null => {
     if (!record) return null;
@@ -131,6 +145,20 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
   const bestQuad2 = findBestQuadRecord('quad2');
   const bestQuad3 = findBestQuadRecord('quad3');
   const bestQuad4 = findBestQuadRecord('quad4');
+
+  const bestResumeAvg = (() => {
+    const values = selectedTeams.map(t => ({ slug: t.slug, value: getResumeAvg(t) })).filter(v => v.value !== null) as { slug: string; value: number }[];
+    if (values.length === 0) return new Set<string>();
+    const min = Math.min(...values.map(v => v.value));
+    return new Set(values.filter(v => v.value === min).map(v => v.slug));
+  })();
+
+  const bestPredAvg = (() => {
+    const values = selectedTeams.map(t => ({ slug: t.slug, value: getPredAvg(t) })).filter(v => v.value !== null) as { slug: string; value: number }[];
+    if (values.length === 0) return new Set<string>();
+    const min = Math.min(...values.map(v => v.value));
+    return new Set(values.filter(v => v.value === min).map(v => v.slug));
+  })();
 
   return (
     <div className="min-h-screen">
@@ -259,6 +287,13 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
           )}
         </div>
 
+        <p className="lg:hidden text-[10px] text-gray-400 text-right mb-2 flex items-center justify-end gap-1">
+          Scroll for more
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </p>
+
         {/* Comparison Table */}
         {selectedTeams.length === 0 ? (
           <div className="text-center p-8 bg-gray-50/50 border-dashed rounded-lg border border-gray-200">
@@ -273,16 +308,13 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                     Team
                   </th>
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
-                    NET
-                  </th>
-                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
-                    BPI
-                  </th>
-                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
-                    SOR
+                    WAB
                   </th>
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
                     KPI
+                  </th>
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
+                    SOR
                   </th>
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
                     KenPom
@@ -291,7 +323,16 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                     Torvik
                   </th>
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
-                    WAB
+                    BPI
+                  </th>
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase">
+                    NET
+                  </th>
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase border-l-2 border-gray-300">
+                    Res Avg
+                  </th>
+                  <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase border-r-2 border-gray-300">
+                    Pred Avg
                   </th>
                   <th className="text-center text-xs py-3 px-3 font-medium geist-mono text-gray-400 uppercase border-l-2 border-gray-300 min-w-[80px]">
                     Q1
@@ -328,17 +369,14 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                         </span>
                       </div>
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestNet.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.net || '—'}
-                    </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestBpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.bpi || '—'}
-                    </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestSor.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.sor || '—'}
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestWab.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {team.wab || '—'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestKpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.kpi || '—'}
+                    </td>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestSor.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {team.sor || '—'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestKenpom.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.kenpom || '—'}
@@ -346,8 +384,17 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestTorvik.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.torvik || '—'}
                     </td>
-                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestWab.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.wab || '—'}
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestBpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {team.bpi || '—'}
+                    </td>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs ${bestNet.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {team.net || '—'}
+                    </td>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestResumeAvg.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {(() => { const v = getResumeAvg(team); return v !== null ? v.toFixed(1) : '—'; })()}
+                    </td>
+                    <td className={`py-3 px-3 text-center geist-mono text-xs border-r-2 border-gray-300 ${bestPredAvg.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
+                      {(() => { const v = getPredAvg(team); return v !== null ? v.toFixed(1) : '—'; })()}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestQuad1.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {team.quad1 || '—'}
