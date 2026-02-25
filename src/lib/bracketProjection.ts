@@ -98,10 +98,10 @@ const INTANGIBLES: IntangibleRule[] = [
     value: (t) => parseRecord(t.quad3).losses,
   },
   {
-    name: 'Zero Quad 1 wins',
+    name: 'Fewer than 2 Quad 1 wins',
     type: 'penalty',
     enabled: true,
-    value: (t) => parseRecord(t.quad1).wins === 0 ? 1 : 0,
+    value: (t) => parseRecord(t.quad1).wins < 2 ? 1 : 0,
   },
   {
     name: 'Overall win percentage below .575',
