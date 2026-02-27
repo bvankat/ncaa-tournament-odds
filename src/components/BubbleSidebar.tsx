@@ -113,7 +113,7 @@ export function BubbleSidebar({
               title="NCAA sorting tool for quadrants">
                 NET
               </th>
-              <th className="text-center text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase"
+              <th className="text-center text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase min-w-[60px]"
                 title="Quadrant 1 wins-losses">
                 Q1
               </th>
