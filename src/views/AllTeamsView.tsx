@@ -11,8 +11,19 @@ type AllTeamsViewProps = {
 };
 
 export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeTime }: AllTeamsViewProps) {
-  const [sortField, setSortField] = useState<'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor'>('odds');
+  const [sortField, setSortField] = useState<'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor' | 'resumeAvg' | 'predictiveAvg'>('odds');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
+
+  const calculateAverage = (values: (number | string | null | undefined)[]): number | null => {
+    const validValues = values
+      .map(v => {
+        if (v === null || v === undefined) return null;
+        const num = typeof v === 'string' ? parseFloat(v) : v;
+        return isNaN(num) ? null : num;
+      })
+      .filter(v => v !== null) as number[];
+    return validValues.length > 0 ? validValues.reduce((a, b) => a + b, 0) / validValues.length : null;
+  };
 
   // Calculate bracket projection to get seeds
   const { teamSeedMap } = useMemo(() => calculateBracket(teams), [teams]);
@@ -68,6 +79,16 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
           const sorB = typeof b.sor === 'string' ? parseFloat(b.sor) : (b.sor ?? 999);
           compareValue = sorA - sorB; // Lower is better
           break;
+        case 'resumeAvg':
+          const resumeAvgA = calculateAverage([a.wab, a.kpi, a.sor]) ?? 999;
+          const resumeAvgB = calculateAverage([b.wab, b.kpi, b.sor]) ?? 999;
+          compareValue = resumeAvgA - resumeAvgB; // Lower is better
+          break;
+        case 'predictiveAvg':
+          const predictiveAvgA = calculateAverage([a.kenpom, a.torvik, a.bpi]) ?? 999;
+          const predictiveAvgB = calculateAverage([b.kenpom, b.torvik, b.bpi]) ?? 999;
+          compareValue = predictiveAvgA - predictiveAvgB; // Lower is better
+          break;
         case 'name':
           compareValue = a.displayName.localeCompare(b.displayName);
           break;
@@ -94,7 +115,7 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
     return ranks;
   }, [sortedTeams, sortField]);
 
-  const handleSort = (field: 'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor') => {
+  const handleSort = (field: 'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor' | 'resumeAvg' | 'predictiveAvg') => {
     if (sortField === field) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
@@ -174,6 +195,20 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                   title="Expected seed based on current rankings"
                 >
                   Proj. Seed {sortField === 'seed' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 border-l-2 border-gray-300 ${sortField === 'resumeAvg' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('resumeAvg')}
+                  title="Average of resume metrics (WAB, KPI, SOR) — lower rank is better"
+                >
+                  Resume Avg {sortField === 'resumeAvg' && (sortDirection === 'asc' ? '↑' : '↓')}
+                </th>
+                <th 
+                  className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 border-r-2 border-gray-300 ${sortField === 'predictiveAvg' ? 'bg-amber-50' : 'bg-gray-50'}`}
+                  onClick={() => handleSort('predictiveAvg')}
+                  title="Average of predictive metrics (KenPom, Torvik, BPI) — lower rank is better"
+                >
+                  Pred. Avg {sortField === 'predictiveAvg' && (sortDirection === 'asc' ? '↑' : '↓')}
                 </th>
                 <th 
                   className={`sticky top-0 z-10 text-right text-xs py-2 px-2 md:py-3 md:px-3 font-medium geist-mono text-gray-400 uppercase cursor-pointer hover:text-gray-600 ${sortField === 'net' ? 'bg-amber-50' : 'bg-gray-50'}`}
@@ -261,6 +296,12 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'seed' ? 'bg-amber-50' : ''}`}>
                       {seed || '—'}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs border-l-2 border-gray-200 ${sortField === 'resumeAvg' ? 'bg-amber-50' : ''}`}>
+                      {(() => { const v = calculateAverage([team.wab, team.kpi, team.sor]); return v !== null ? v.toFixed(1) : '—'; })()}
+                    </td>
+                    <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs border-r-2 border-gray-200 ${sortField === 'predictiveAvg' ? 'bg-amber-50' : ''}`}>
+                      {(() => { const v = calculateAverage([team.kenpom, team.torvik, team.bpi]); return v !== null ? v.toFixed(1) : '—'; })()}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'net' ? 'bg-amber-50' : ''}`}>
                       {team.net || '—'}
