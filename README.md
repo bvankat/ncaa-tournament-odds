@@ -1,6 +1,6 @@
 # NCAA Tournament Odds
 
-NCAA Men's Basketball Tournament selection probabilities for all 360+ Division I teams, based on current team-sheet metrics and rankings.
+NCAA Men's Basketball Tournament selection probabilities for all 365 Division I teams, based on current team-sheet metrics and rankings.
 
 ## Overview
 
@@ -12,7 +12,7 @@ This app provides NCAA tournament odds calculated from key metrics (NET, BPI, SO
 - **Resume Comparison** - Side-by-side comparison tool for analyzing team resumes
 - **Conference View** - Multi-bid breakdown with full conference standings and odds
 - **Odds Tracking** - Daily updates with biggest movers and historical comparisons
-- **SEO Optimized** - Prerendered pages for fast loading and search engine visibility
+
 
 ## Tech Stack
 
