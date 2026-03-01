@@ -117,7 +117,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                   <th className="text-left text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase min-w-[120px]">
                     Team
                   </th>
-                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-amber-50/50"
+                  <th className="text-right text-xs py-2 px-2 md:py-3 md:px-4 font-medium geist-mono text-gray-400 uppercase bg-amber-50/50 border-l-1 border-gray-200 border-r-1 border-gray-200"
                     title="Weighted average of predictive, resume, and NET metrics">
                     Composite
                   </th>
@@ -188,7 +188,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                           </div>
                         </td>
                         <td
-                          className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-amber-50/50 font-semibold"
+                          className="py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs bg-amber-50/50 font-semibold border-l-1 border-gray-200 border-r-1 border-gray-200"
                           title={(() => {
                             const bidBase = calculateSelectionRanking(team);
                             const seedScore = calculateSeedingRanking(team);
