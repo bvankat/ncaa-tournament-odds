@@ -31,6 +31,8 @@ export type Team = NcaaNetData & {
   kenpom?: number | string | null; // mapped in App to kenpomRank
   torvik?: number | string | null; // mapped in App to torvikRank
   wab?: number | string | null;
+  wabRaw?: number | string | null;
+  torvikWab?: number | string | null;
   nextGame?: NextGame | null;
   tournamentOdds?: number | null; // percentage stored with up to two decimals
   previousTournamentOdds?: number | null; // previous percentage snapshot
