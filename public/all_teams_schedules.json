@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-04T11:45:03.578659",
+  "lastUpdated": "2026-03-04T14:15:33.555428",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -199743,12 +199743,15 @@
           "date": "2026-03-04T17:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "91",
               "team_nickname": "Bellarmine",
               "slug": "bellarmine-knights",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
-              "score": null,
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
               "gameRank": 99
             },
             {
@@ -199757,7 +199760,10 @@
               "team_nickname": "Jacksonville",
               "slug": "jacksonville-dolphins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/294.png",
-              "score": null,
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
               "gameRank": 99
             }
           ]
@@ -277640,10 +277646,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "91",
+              "team_nickname": "Bellarmine",
+              "slug": "bellarmine-knights",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
               "score": null,
               "gameRank": 99
             }
@@ -303191,12 +303197,15 @@
           "date": "2026-03-04T17:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "91",
               "team_nickname": "Bellarmine",
               "slug": "bellarmine-knights",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
-              "score": null,
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
               "gameRank": 99
             },
             {
@@ -303205,6 +303214,32 @@
               "team_nickname": "Jacksonville",
               "slug": "jacksonville-dolphins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/294.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T17:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2110",
+              "team_nickname": "C Arkansas",
+              "slug": "central-arkansas-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "91",
+              "team_nickname": "Bellarmine",
+              "slug": "bellarmine-knights",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/91.png",
               "score": null,
               "gameRank": 99
             }
