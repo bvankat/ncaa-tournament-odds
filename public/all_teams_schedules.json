@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-04T14:15:33.555428",
+  "lastUpdated": "2026-03-05T09:46:28.489534",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -3576,12 +3576,15 @@
           "date": "2026-03-05T02:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "248",
               "team_nickname": "Houston",
               "slug": "houston-cougars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 7
             },
             {
@@ -3590,7 +3593,10 @@
               "team_nickname": "Baylor",
               "slug": "baylor-bears",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
-              "score": null,
+              "score": {
+                "value": 64.0,
+                "displayValue": "64"
+              },
               "gameRank": 99
             }
           ]
@@ -8064,16 +8070,22 @@
               "team_nickname": "Northwestern",
               "slug": "northwestern-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
-              "score": null,
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2509",
               "team_nickname": "Purdue",
               "slug": "purdue-boilermakers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 15
             }
           ]
@@ -15245,12 +15257,15 @@
           "date": "2026-03-04T23:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "84",
               "team_nickname": "Indiana",
               "slug": "indiana-hoosiers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 99
             },
             {
@@ -15259,7 +15274,10 @@
               "team_nickname": "Minnesota",
               "slug": "minnesota-golden-gophers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
-              "score": null,
+              "score": {
+                "value": 47.0,
+                "displayValue": "47"
+              },
               "gameRank": 99
             }
           ]
@@ -24223,12 +24241,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "275",
               "team_nickname": "Wisconsin",
               "slug": "wisconsin-badgers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             },
             {
@@ -24237,7 +24258,10 @@
               "team_nickname": "Maryland",
               "slug": "maryland-terrapins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
-              "score": null,
+              "score": {
+                "value": 45.0,
+                "displayValue": "45"
+              },
               "gameRank": 99
             }
           ]
@@ -25121,16 +25145,22 @@
               "team_nickname": "Penn State",
               "slug": "penn-state-nittany-lions",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
-              "score": null,
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "194",
               "team_nickname": "Ohio State",
               "slug": "ohio-state-buckeyes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
-              "score": null,
+              "score": {
+                "value": 94.0,
+                "displayValue": "94"
+              },
               "gameRank": 99
             }
           ]
@@ -27812,16 +27842,22 @@
               "team_nickname": "Butler",
               "slug": "butler-bulldogs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
-              "score": null,
+              "score": {
+                "value": 59.0,
+                "displayValue": "59"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "156",
               "team_nickname": "Creighton",
               "slug": "creighton-bluejays",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/156.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
@@ -29628,12 +29664,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "8",
               "team_nickname": "Arkansas",
               "slug": "arkansas-razorbacks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
-              "score": null,
+              "score": {
+                "value": 105.0,
+                "displayValue": "105"
+              },
               "gameRank": 20
             },
             {
@@ -29642,7 +29681,10 @@
               "team_nickname": "Texas",
               "slug": "texas-longhorns",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
-              "score": null,
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
               "gameRank": 99
             }
           ]
@@ -30521,12 +30563,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "8",
               "team_nickname": "Arkansas",
               "slug": "arkansas-razorbacks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
-              "score": null,
+              "score": {
+                "value": 105.0,
+                "displayValue": "105"
+              },
               "gameRank": 20
             },
             {
@@ -30535,7 +30580,10 @@
               "team_nickname": "Texas",
               "slug": "texas-longhorns",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
-              "score": null,
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
               "gameRank": 99
             }
           ]
@@ -33212,12 +33260,15 @@
           "date": "2026-03-05T03:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "264",
               "team_nickname": "Washington",
               "slug": "washington-huskies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
-              "score": null,
+              "score": {
+                "value": 91.0,
+                "displayValue": "91"
+              },
               "gameRank": 99
             },
             {
@@ -33226,7 +33277,10 @@
               "team_nickname": "USC",
               "slug": "usc-trojans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
-              "score": null,
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
               "gameRank": 99
             }
           ]
@@ -35004,12 +35058,15 @@
           "date": "2026-03-05T02:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "248",
               "team_nickname": "Houston",
               "slug": "houston-cougars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 7
             },
             {
@@ -35018,7 +35075,10 @@
               "team_nickname": "Baylor",
               "slug": "baylor-bears",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
-              "score": null,
+              "score": {
+                "value": 64.0,
+                "displayValue": "64"
+              },
               "gameRank": 99
             }
           ]
@@ -38599,16 +38659,22 @@
               "team_nickname": "SMU",
               "slug": "smu-mustangs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
-              "score": null,
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2390",
               "team_nickname": "Miami",
               "slug": "miami-hurricanes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 22
             }
           ]
@@ -40391,16 +40457,22 @@
               "team_nickname": "DePaul",
               "slug": "depaul-blue-demons",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/305.png",
-              "score": null,
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "222",
               "team_nickname": "Villanova",
               "slug": "villanova-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
@@ -42178,12 +42250,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "139",
               "team_nickname": "Saint Louis",
               "slug": "saint-louis-billikens",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png",
-              "score": null,
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
               "gameRank": 25
             },
             {
@@ -42192,7 +42267,10 @@
               "team_nickname": "Loyola Chicago",
               "slug": "loyola-chicago-ramblers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
-              "score": null,
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
               "gameRank": 99
             }
           ]
@@ -43105,16 +43183,22 @@
               "team_nickname": "Butler",
               "slug": "butler-bulldogs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png",
-              "score": null,
+              "score": {
+                "value": 59.0,
+                "displayValue": "59"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "156",
               "team_nickname": "Creighton",
               "slug": "creighton-bluejays",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/156.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
@@ -43975,16 +44059,22 @@
               "team_nickname": "Northwestern",
               "slug": "northwestern-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
-              "score": null,
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2509",
               "team_nickname": "Purdue",
               "slug": "purdue-boilermakers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 15
             }
           ]
@@ -44863,12 +44953,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "275",
               "team_nickname": "Wisconsin",
               "slug": "wisconsin-badgers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             },
             {
@@ -44877,7 +44970,10 @@
               "team_nickname": "Maryland",
               "slug": "maryland-terrapins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
-              "score": null,
+              "score": {
+                "value": 45.0,
+                "displayValue": "45"
+              },
               "gameRank": 99
             }
           ]
@@ -48452,16 +48548,22 @@
               "team_nickname": "SMU",
               "slug": "smu-mustangs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
-              "score": null,
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2390",
               "team_nickname": "Miami",
               "slug": "miami-hurricanes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 22
             }
           ]
@@ -53869,16 +53971,22 @@
               "team_nickname": "Providence",
               "slug": "providence-friars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2507.png",
-              "score": null,
+              "score": {
+                "value": 56.0,
+                "displayValue": "56"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "269",
               "team_nickname": "Marquette",
               "slug": "marquette-golden-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/269.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             }
           ]
@@ -54762,16 +54870,22 @@
               "team_nickname": "New Mexico",
               "slug": "new-mexico-lobos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "36",
               "team_nickname": "Colorado St",
               "slug": "colorado-state-rams",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
-              "score": null,
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
               "gameRank": 99
             }
           ]
@@ -55655,16 +55769,22 @@
               "team_nickname": "Providence",
               "slug": "providence-friars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2507.png",
-              "score": null,
+              "score": {
+                "value": 56.0,
+                "displayValue": "56"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "269",
               "team_nickname": "Marquette",
               "slug": "marquette-golden-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/269.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             }
           ]
@@ -57447,16 +57567,22 @@
               "team_nickname": "Pitt",
               "slug": "pittsburgh-panthers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "52",
               "team_nickname": "Florida St",
               "slug": "florida-state-seminoles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
-              "score": null,
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
               "gameRank": 99
             }
           ]
@@ -59234,12 +59360,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "45",
               "team_nickname": "G Washington",
               "slug": "george-washington-revolutionaries",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/45.png",
-              "score": null,
+              "score": {
+                "value": 91.0,
+                "displayValue": "91"
+              },
               "gameRank": 99
             },
             {
@@ -59248,7 +59377,10 @@
               "team_nickname": "St Bonaventure",
               "slug": "st-bonaventure-bonnies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
-              "score": null,
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
               "gameRank": 99
             }
           ]
@@ -60132,16 +60264,22 @@
               "team_nickname": "Notre Dame",
               "slug": "notre-dame-fighting-irish",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "24",
               "team_nickname": "Stanford",
               "slug": "stanford-cardinal",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
-              "score": null,
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
               "gameRank": 99
             }
           ]
@@ -61088,10 +61226,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "2241",
+              "team_nickname": "Gardner-Webb",
+              "slug": "gardner-webb-runnin-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
               "score": null,
               "gameRank": 99
             }
@@ -61948,12 +62086,15 @@
           "date": "2026-03-05T03:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "264",
               "team_nickname": "Washington",
               "slug": "washington-huskies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
-              "score": null,
+              "score": {
+                "value": 91.0,
+                "displayValue": "91"
+              },
               "gameRank": 99
             },
             {
@@ -61962,7 +62103,10 @@
               "team_nickname": "USC",
               "slug": "usc-trojans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
-              "score": null,
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
               "gameRank": 99
             }
           ]
@@ -64638,16 +64782,22 @@
               "team_nickname": "Georgia Tech",
               "slug": "georgia-tech-yellow-jackets",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
-              "score": null,
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "25",
               "team_nickname": "California",
               "slug": "california-golden-bears",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
@@ -74538,16 +74688,22 @@
               "team_nickname": "Pitt",
               "slug": "pittsburgh-panthers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "52",
               "team_nickname": "Florida St",
               "slug": "florida-state-seminoles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
-              "score": null,
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
               "gameRank": 99
             }
           ]
@@ -75426,12 +75582,15 @@
           "date": "2026-03-04T23:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "84",
               "team_nickname": "Indiana",
               "slug": "indiana-hoosiers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 99
             },
             {
@@ -75440,7 +75599,10 @@
               "team_nickname": "Minnesota",
               "slug": "minnesota-golden-gophers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
-              "score": null,
+              "score": {
+                "value": 47.0,
+                "displayValue": "47"
+              },
               "gameRank": 99
             }
           ]
@@ -77244,7 +77406,7 @@
           ]
         },
         {
-          "date": "2026-03-07T00:00Z",
+          "date": "2026-03-06T23:00Z",
           "competitors": [
             {
               "winner": false,
@@ -79891,16 +80053,22 @@
               "team_nickname": "Charlotte",
               "slug": "charlotte-49ers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "5",
               "team_nickname": "UAB",
               "slug": "uab-blazers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
-              "score": null,
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
               "gameRank": 99
             }
           ]
@@ -82577,12 +82745,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "227",
               "team_nickname": "Rhode Island",
               "slug": "rhode-island-rams",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png",
-              "score": null,
+              "score": {
+                "value": 64.0,
+                "displayValue": "64"
+              },
               "gameRank": 99
             },
             {
@@ -82591,7 +82762,10 @@
               "team_nickname": "Duquesne",
               "slug": "duquesne-dukes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": null,
+              "score": {
+                "value": 52.0,
+                "displayValue": "52"
+              },
               "gameRank": 99
             }
           ]
@@ -83475,16 +83649,22 @@
               "team_nickname": "Penn State",
               "slug": "penn-state-nittany-lions",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
-              "score": null,
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "194",
               "team_nickname": "Ohio State",
               "slug": "ohio-state-buckeyes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
-              "score": null,
+              "score": {
+                "value": 94.0,
+                "displayValue": "94"
+              },
               "gameRank": 99
             }
           ]
@@ -86195,16 +86375,22 @@
               "team_nickname": "New Mexico",
               "slug": "new-mexico-lobos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "36",
               "team_nickname": "Colorado St",
               "slug": "colorado-state-rams",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
-              "score": null,
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
               "gameRank": 99
             }
           ]
@@ -88880,16 +89066,22 @@
               "team_nickname": "Notre Dame",
               "slug": "notre-dame-fighting-irish",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "24",
               "team_nickname": "Stanford",
               "slug": "stanford-cardinal",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
-              "score": null,
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
               "gameRank": 99
             }
           ]
@@ -100607,16 +100799,22 @@
               "team_nickname": "Georgia Tech",
               "slug": "georgia-tech-yellow-jackets",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
-              "score": null,
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "25",
               "team_nickname": "California",
               "slug": "california-golden-bears",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
@@ -102452,12 +102650,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "249",
               "team_nickname": "North Texas",
               "slug": "north-texas-mean-green",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
-              "score": null,
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
               "gameRank": 99
             },
             {
@@ -102466,7 +102667,10 @@
               "team_nickname": "Rice",
               "slug": "rice-owls",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
-              "score": null,
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
               "gameRank": 99
             }
           ]
@@ -103327,16 +103531,22 @@
               "team_nickname": "DePaul",
               "slug": "depaul-blue-demons",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/305.png",
-              "score": null,
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "222",
               "team_nickname": "Villanova",
               "slug": "villanova-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             }
           ]
@@ -109684,12 +109894,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "45",
               "team_nickname": "G Washington",
               "slug": "george-washington-revolutionaries",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/45.png",
-              "score": null,
+              "score": {
+                "value": 91.0,
+                "displayValue": "91"
+              },
               "gameRank": 99
             },
             {
@@ -109698,7 +109911,10 @@
               "team_nickname": "St Bonaventure",
               "slug": "st-bonaventure-bonnies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
-              "score": null,
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
               "gameRank": 99
             }
           ]
@@ -111528,6 +111744,35 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
+              "winner": true,
+              "team_id": "2750",
+              "team_nickname": "Wright St",
+              "slug": "wright-state-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "325",
+              "team_nickname": "Cleveland St",
+              "slug": "cleveland-state-vikings",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-09T23:00Z",
+          "competitors": [
+            {
               "winner": false,
               "team_id": "2750",
               "team_nickname": "Wright St",
@@ -111538,10 +111783,10 @@
             },
             {
               "winner": false,
-              "team_id": "325",
-              "team_nickname": "Cleveland St",
-              "slug": "cleveland-state-vikings",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
+              "team_id": "-2",
+              "team_nickname": "TBD",
+              "slug": null,
+              "logo": null,
               "score": null,
               "gameRank": 99
             }
@@ -114259,16 +114504,22 @@
               "team_nickname": "Davidson",
               "slug": "davidson-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
-              "score": null,
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2603",
               "team_nickname": "Saint Joseph's",
               "slug": "saint-josephs-hawks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2603.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             }
           ]
@@ -117887,7 +118138,7 @@
           ]
         },
         {
-          "date": "2026-03-07T21:00Z",
+          "date": "2026-03-07T20:00Z",
           "competitors": [
             {
               "winner": false,
@@ -121517,899 +121768,6 @@
               "team_nickname": "TBD",
               "slug": null,
               "logo": null,
-              "score": null,
-              "gameRank": 99
-            }
-          ]
-        }
-      ]
-    },
-    "duquesne-dukes": {
-      "espn_id": "2184",
-      "team_name": "Duquesne Dukes",
-      "schedule": [
-        {
-          "date": "2025-11-04T00:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 83.0,
-                "displayValue": "83"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "315",
-              "team_nickname": "Niagara",
-              "slug": "niagara-purple-eagles",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/315.png",
-              "score": {
-                "value": 63.0,
-                "displayValue": "63"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-11-08T00:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 92.0,
-                "displayValue": "92"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2529",
-              "team_nickname": "Sacred Heart",
-              "slug": "sacred-heart-pioneers",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png",
-              "score": {
-                "value": 80.0,
-                "displayValue": "80"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-11-12T01:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 87.0,
-                "displayValue": "87"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2511",
-              "team_nickname": "Queens",
-              "slug": "queens-university-royals",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2511.png",
-              "score": {
-                "value": 81.0,
-                "displayValue": "81"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-11-16T01:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "222",
-              "team_nickname": "Villanova",
-              "slug": "villanova-wildcats",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png",
-              "score": {
-                "value": 87.0,
-                "displayValue": "87"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 77.0,
-                "displayValue": "77"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-11-20T00:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 92.0,
-                "displayValue": "92"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2352",
-              "team_nickname": "Loyola MD",
-              "slug": "loyola-maryland-greyhounds",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2352.png",
-              "score": {
-                "value": 78.0,
-                "displayValue": "78"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-11-22T21:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 86.0,
-                "displayValue": "86"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "111",
-              "team_nickname": "Northeastern",
-              "slug": "northeastern-huskies",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/111.png",
-              "score": {
-                "value": 93.0,
-                "displayValue": "93"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-11-26T23:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 101.0,
-                "displayValue": "101"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2119",
-              "team_nickname": "Cent St OH",
-              "slug": null,
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2119.png",
-              "score": {
-                "value": 80.0,
-                "displayValue": "80"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-12-03T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 79.0,
-                "displayValue": "79"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2729",
-              "team_nickname": "William & Mary",
-              "slug": "william-mary-tribe",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png",
-              "score": {
-                "value": 83.0,
-                "displayValue": "83"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-12-06T19:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 84.0,
-                "displayValue": "84"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2619",
-              "team_nickname": "Stony Brook",
-              "slug": "stony-brook-seawolves",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png",
-              "score": {
-                "value": 75.0,
-                "displayValue": "75"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-12-11T02:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "68",
-              "team_nickname": "Boise St",
-              "slug": "boise-state-broncos",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
-              "score": {
-                "value": 86.0,
-                "displayValue": "86"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 64.0,
-                "displayValue": "64"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-12-14T03:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2440",
-              "team_nickname": "Nevada",
-              "slug": "nevada-wolf-pack",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
-              "score": {
-                "value": 78.0,
-                "displayValue": "78"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 75.0,
-                "displayValue": "75"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-12-23T00:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 103.0,
-                "displayValue": "103"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2099",
-              "team_nickname": "Canisius",
-              "slug": "canisius-golden-griffins",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2099.png",
-              "score": {
-                "value": 59.0,
-                "displayValue": "59"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-12-27T19:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 99.0,
-                "displayValue": "99"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "128438",
-              "team_nickname": "Cleary",
-              "slug": null,
-              "logo": null,
-              "score": {
-                "value": 49.0,
-                "displayValue": "49"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2025-12-31T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2166",
-              "team_nickname": "Davidson",
-              "slug": "davidson-wildcats",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
-              "score": {
-                "value": 83.0,
-                "displayValue": "83"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 89.0,
-                "displayValue": "89"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-01-03T17:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 80.0,
-                "displayValue": "80"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2670",
-              "team_nickname": "VCU",
-              "slug": "vcu-rams",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
-              "score": {
-                "value": 93.0,
-                "displayValue": "93"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-01-08T00:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2603",
-              "team_nickname": "Saint Joseph's",
-              "slug": "saint-josephs-hawks",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2603.png",
-              "score": {
-                "value": 97.0,
-                "displayValue": "97"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 90.0,
-                "displayValue": "90"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-01-14T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 65.0,
-                "displayValue": "65"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2168",
-              "team_nickname": "Dayton",
-              "slug": "dayton-flyers",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png",
-              "score": {
-                "value": 71.0,
-                "displayValue": "71"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-01-17T17:30Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2230",
-              "team_nickname": "Fordham",
-              "slug": "fordham-rams",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png",
-              "score": {
-                "value": 63.0,
-                "displayValue": "63"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 74.0,
-                "displayValue": "74"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-01-21T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 77.0,
-                "displayValue": "77"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "139",
-              "team_nickname": "Saint Louis",
-              "slug": "saint-louis-billikens",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png",
-              "score": {
-                "value": 81.0,
-                "displayValue": "81"
-              },
-              "gameRank": 24
-            }
-          ]
-        },
-        {
-          "date": "2026-01-24T19:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2350",
-              "team_nickname": "Loyola Chicago",
-              "slug": "loyola-chicago-ramblers",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
-              "score": {
-                "value": 59.0,
-                "displayValue": "59"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 71.0,
-                "displayValue": "71"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-01-29T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 79.0,
-                "displayValue": "79"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "179",
-              "team_nickname": "St Bonaventure",
-              "slug": "st-bonaventure-bonnies",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
-              "score": {
-                "value": 87.0,
-                "displayValue": "87"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-02-01T17:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 76.0,
-                "displayValue": "76"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "227",
-              "team_nickname": "Rhode Island",
-              "slug": "rhode-island-rams",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png",
-              "score": {
-                "value": 61.0,
-                "displayValue": "61"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-02-05T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2244",
-              "team_nickname": "George Mason",
-              "slug": "george-mason-patriots",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
-              "score": {
-                "value": 65.0,
-                "displayValue": "65"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 71.0,
-                "displayValue": "71"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-02-07T19:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 88.0,
-                "displayValue": "88"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "45",
-              "team_nickname": "G Washington",
-              "slug": "george-washington-revolutionaries",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/45.png",
-              "score": {
-                "value": 86.0,
-                "displayValue": "86"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-02-14T21:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "179",
-              "team_nickname": "St Bonaventure",
-              "slug": "st-bonaventure-bonnies",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
-              "score": {
-                "value": 73.0,
-                "displayValue": "73"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 78.0,
-                "displayValue": "78"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-02-19T00:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 62.0,
-                "displayValue": "62"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2325",
-              "team_nickname": "La Salle",
-              "slug": "la-salle-explorers",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2325.png",
-              "score": {
-                "value": 61.0,
-                "displayValue": "61"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-02-21T19:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "2168",
-              "team_nickname": "Dayton",
-              "slug": "dayton-flyers",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png",
-              "score": {
-                "value": 78.0,
-                "displayValue": "78"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 66.0,
-                "displayValue": "66"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-02-26T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 56.0,
-                "displayValue": "56"
-              },
-              "gameRank": 99
-            },
-            {
-              "winner": true,
-              "team_id": "2166",
-              "team_nickname": "Davidson",
-              "slug": "davidson-wildcats",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
-              "score": {
-                "value": 67.0,
-                "displayValue": "67"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-03-01T01:00Z",
-          "competitors": [
-            {
-              "winner": true,
-              "team_id": "139",
-              "team_nickname": "Saint Louis",
-              "slug": "saint-louis-billikens",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png",
-              "score": {
-                "value": 91.0,
-                "displayValue": "91"
-              },
-              "gameRank": 23
-            },
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": {
-                "value": 76.0,
-                "displayValue": "76"
-              },
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-03-05T00:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "227",
-              "team_nickname": "Rhode Island",
-              "slug": "rhode-island-rams",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png",
-              "score": null,
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": null,
-              "gameRank": 99
-            }
-          ]
-        },
-        {
-          "date": "2026-03-07T19:00Z",
-          "competitors": [
-            {
-              "winner": false,
-              "team_id": "2184",
-              "team_nickname": "Duquesne",
-              "slug": "duquesne-dukes",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png",
-              "score": null,
-              "gameRank": 99
-            },
-            {
-              "winner": false,
-              "team_id": "257",
-              "team_nickname": "Richmond",
-              "slug": "richmond-spiders",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
               "score": null,
               "gameRank": 99
             }
@@ -127875,10 +127233,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "290",
+              "team_nickname": "GA Southern",
+              "slug": "georgia-southern-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
               "score": null,
               "gameRank": 99
             }
@@ -130538,16 +129896,22 @@
               "team_nickname": "Davidson",
               "slug": "davidson-wildcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png",
-              "score": null,
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2603",
               "team_nickname": "Saint Joseph's",
               "slug": "saint-josephs-hawks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2603.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             }
           ]
@@ -136953,12 +136317,15 @@
           "date": "2026-03-04T19:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "526",
               "team_nickname": "FGCU",
               "slug": "florida-gulf-coast-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
-              "score": null,
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
               "gameRank": 99
             },
             {
@@ -136967,6 +136334,32 @@
               "team_nickname": "North Alabama",
               "slug": "north-alabama-lions",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png",
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T19:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "288",
+              "team_nickname": "Lipscomb",
+              "slug": "lipscomb-bisons",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/288.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "526",
+              "team_nickname": "FGCU",
+              "slug": "florida-gulf-coast-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
               "score": null,
               "gameRank": 99
             }
@@ -138790,10 +138183,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "198",
+              "team_nickname": "Oral Roberts",
+              "slug": "oral-roberts-golden-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
               "score": null,
               "gameRank": 99
             }
@@ -139708,12 +139101,15 @@
           "date": "2026-03-04T23:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "256",
               "team_nickname": "James Madison",
               "slug": "james-madison-dukes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
-              "score": null,
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
               "gameRank": 99
             },
             {
@@ -139722,6 +139118,32 @@
               "team_nickname": "Louisiana",
               "slug": "louisiana-ragin-cajuns",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-05T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2572",
+              "team_nickname": "Southern Miss",
+              "slug": "southern-miss-golden-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "256",
+              "team_nickname": "James Madison",
+              "slug": "james-madison-dukes",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
               "score": null,
               "gameRank": 99
             }
@@ -142405,12 +141827,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "249",
               "team_nickname": "North Texas",
               "slug": "north-texas-mean-green",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
-              "score": null,
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
               "gameRank": 99
             },
             {
@@ -142419,7 +141844,10 @@
               "team_nickname": "Rice",
               "slug": "rice-owls",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
-              "score": null,
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
               "gameRank": 99
             }
           ]
@@ -145067,12 +144495,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2174",
               "team_nickname": "Detroit Mercy",
               "slug": "detroit-mercy-titans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             },
             {
@@ -145081,7 +144512,10 @@
               "team_nickname": "Milwaukee",
               "slug": "milwaukee-panthers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
-              "score": null,
+              "score": {
+                "value": 63.0,
+                "displayValue": "63"
+              },
               "gameRank": 99
             }
           ]
@@ -147832,10 +147266,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "56",
+              "team_nickname": "Stetson",
+              "slug": "stetson-hatters",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png",
               "score": null,
               "gameRank": 99
             }
@@ -149654,16 +149088,22 @@
               "team_nickname": "Oakland",
               "slug": "oakland-golden-grizzlies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "94",
               "team_nickname": "N Kentucky",
               "slug": "northern-kentucky-norse",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
-              "score": null,
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
               "gameRank": 99
             }
           ]
@@ -165825,12 +165265,15 @@
           "date": "2026-03-04T23:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2325",
               "team_nickname": "La Salle",
               "slug": "la-salle-explorers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2325.png",
-              "score": null,
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
               "gameRank": 99
             },
             {
@@ -165839,7 +165282,10 @@
               "team_nickname": "Fordham",
               "slug": "fordham-rams",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             }
           ]
@@ -166718,12 +166164,15 @@
           "date": "2026-03-04T23:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2325",
               "team_nickname": "La Salle",
               "slug": "la-salle-explorers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2325.png",
-              "score": null,
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
               "gameRank": 99
             },
             {
@@ -166732,7 +166181,10 @@
               "team_nickname": "Fordham",
               "slug": "fordham-rams",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             }
           ]
@@ -174971,12 +174423,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "139",
               "team_nickname": "Saint Louis",
               "slug": "saint-louis-billikens",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png",
-              "score": null,
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
               "gameRank": 25
             },
             {
@@ -174985,7 +174440,10 @@
               "team_nickname": "Loyola Chicago",
               "slug": "loyola-chicago-ramblers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
-              "score": null,
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
               "gameRank": 99
             }
           ]
@@ -178722,10 +178180,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "526",
+              "team_nickname": "FGCU",
+              "slug": "florida-gulf-coast-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
               "score": null,
               "gameRank": 99
             }
@@ -185149,6 +184607,35 @@
               "team_nickname": "Oakland",
               "slug": "oakland-golden-grizzlies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png",
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "94",
+              "team_nickname": "N Kentucky",
+              "slug": "northern-kentucky-norse",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-08T19:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2739",
+              "team_nickname": "Green Bay",
+              "slug": "green-bay-phoenix",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
               "score": null,
               "gameRank": 99
             },
@@ -186971,12 +186458,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2523",
               "team_nickname": "Robert Morris",
               "slug": "robert-morris-colonials",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
-              "score": null,
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
               "gameRank": 99
             },
             {
@@ -186985,7 +186475,10 @@
               "team_nickname": "Youngstown St",
               "slug": "youngstown-state-penguins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
-              "score": null,
+              "score": {
+                "value": 53.0,
+                "displayValue": "53"
+              },
               "gameRank": 99
             }
           ]
@@ -189784,12 +189277,15 @@
           "date": "2026-03-05T01:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "290",
               "team_nickname": "GA Southern",
               "slug": "georgia-southern-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
-              "score": null,
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
               "gameRank": 99
             },
             {
@@ -189798,7 +189294,10 @@
               "team_nickname": "Old Dominion",
               "slug": "old-dominion-monarchs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             }
           ]
@@ -203403,6 +202902,35 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
+              "winner": true,
+              "team_id": "2523",
+              "team_nickname": "Robert Morris",
+              "slug": "robert-morris-colonials",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2754",
+              "team_nickname": "Youngstown St",
+              "slug": "youngstown-state-penguins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
+              "score": {
+                "value": 53.0,
+                "displayValue": "53"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-10T01:30Z",
+          "competitors": [
+            {
               "winner": false,
               "team_id": "2523",
               "team_nickname": "Robert Morris",
@@ -203413,10 +202941,10 @@
             },
             {
               "winner": false,
-              "team_id": "2754",
-              "team_nickname": "Youngstown St",
-              "slug": "youngstown-state-penguins",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png",
+              "team_id": "2174",
+              "team_nickname": "Detroit Mercy",
+              "slug": "detroit-mercy-titans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
               "score": null,
               "gameRank": 99
             }
@@ -208013,16 +207541,22 @@
               "team_nickname": "E Kentucky",
               "slug": "eastern-kentucky-colonels",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
-              "score": null,
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "56",
               "team_nickname": "Stetson",
               "slug": "stetson-hatters",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png",
-              "score": null,
+              "score": {
+                "value": 92.0,
+                "displayValue": "92"
+              },
               "gameRank": 99
             }
           ]
@@ -209869,16 +209403,22 @@
               "team_nickname": "SIUE",
               "slug": "siu-edwardsville-cougars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2565.png",
-              "score": null,
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2197",
               "team_nickname": "E Illinois",
               "slug": "eastern-illinois-panthers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png",
-              "score": null,
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
               "gameRank": 99
             }
           ]
@@ -212566,16 +212106,22 @@
               "team_nickname": "Charlotte",
               "slug": "charlotte-49ers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
-              "score": null,
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "5",
               "team_nickname": "UAB",
               "slug": "uab-blazers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
-              "score": null,
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
               "gameRank": 99
             }
           ]
@@ -213541,12 +213087,15 @@
           "date": "2026-03-05T01:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "290",
               "team_nickname": "GA Southern",
               "slug": "georgia-southern-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
-              "score": null,
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
               "gameRank": 99
             },
             {
@@ -213555,6 +213104,32 @@
               "team_nickname": "Old Dominion",
               "slug": "old-dominion-monarchs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T01:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2032",
+              "team_nickname": "Arkansas St",
+              "slug": "arkansas-state-red-wolves",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "290",
+              "team_nickname": "GA Southern",
+              "slug": "georgia-southern-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
               "score": null,
               "gameRank": 99
             }
@@ -215344,16 +214919,22 @@
               "team_nickname": "C Connecticut",
               "slug": "central-connecticut-blue-devils",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png",
-              "score": null,
+              "score": {
+                "value": 60.0,
+                "displayValue": "60"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2681",
               "team_nickname": "Wagner",
               "slug": "wagner-seahawks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2681.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             }
           ]
@@ -222709,10 +222290,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "2197",
+              "team_nickname": "E Illinois",
+              "slug": "eastern-illinois-panthers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png",
               "score": null,
               "gameRank": 99
             }
@@ -225470,10 +225051,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "2815",
+              "team_nickname": "Lindenwood",
+              "slug": "lindenwood-lions",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2815.png",
               "score": null,
               "gameRank": 99
             }
@@ -228206,7 +227787,7 @@
           ]
         },
         {
-          "date": "2026-03-07T21:00Z",
+          "date": "2026-03-07T20:00Z",
           "competitors": [
             {
               "winner": false,
@@ -235479,7 +235060,7 @@
           ]
         },
         {
-          "date": "2026-03-07T00:00Z",
+          "date": "2026-03-06T23:00Z",
           "competitors": [
             {
               "winner": false,
@@ -242970,6 +242551,35 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
+              "winner": true,
+              "team_id": "112358",
+              "team_nickname": "Long Island",
+              "slug": "long-island-university-sharks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/112358.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2130",
+              "team_nickname": "Chicago St",
+              "slug": "chicago-state-cougars",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T19:00Z",
+          "competitors": [
+            {
               "winner": false,
               "team_id": "112358",
               "team_nickname": "Long Island",
@@ -242980,10 +242590,10 @@
             },
             {
               "winner": false,
-              "team_id": "2130",
-              "team_nickname": "Chicago St",
-              "slug": "chicago-state-cougars",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
+              "team_id": "2681",
+              "team_nickname": "Wagner",
+              "slug": "wagner-seahawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2681.png",
               "score": null,
               "gameRank": 99
             }
@@ -243898,6 +243508,35 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
+              "winner": true,
+              "team_id": "2385",
+              "team_nickname": "Mercyhurst",
+              "slug": "mercyhurst-lakers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2385.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "161",
+              "team_nickname": "FDU",
+              "slug": "fairleigh-dickinson-knights",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/161.png",
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T17:00Z",
+          "competitors": [
+            {
               "winner": false,
               "team_id": "2385",
               "team_nickname": "Mercyhurst",
@@ -243908,10 +243547,10 @@
             },
             {
               "winner": false,
-              "team_id": "161",
-              "team_nickname": "FDU",
-              "slug": "fairleigh-dickinson-knights",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/161.png",
+              "team_id": "284",
+              "team_nickname": "Stonehill",
+              "slug": "stonehill-skyhawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/284.png",
               "score": null,
               "gameRank": 99
             }
@@ -245764,10 +245403,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "256",
+              "team_nickname": "James Madison",
+              "slug": "james-madison-dukes",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
               "score": null,
               "gameRank": 99
             }
@@ -247616,12 +247255,15 @@
           "date": "2026-03-05T02:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2815",
               "team_nickname": "Lindenwood",
               "slug": "lindenwood-lions",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2815.png",
-              "score": null,
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
               "gameRank": 99
             },
             {
@@ -247630,7 +247272,10 @@
               "team_nickname": "Little Rock",
               "slug": "little-rock-trojans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2031.png",
-              "score": null,
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
               "gameRank": 99
             }
           ]
@@ -254007,12 +253652,15 @@
           "date": "2026-03-04T19:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "526",
               "team_nickname": "FGCU",
               "slug": "florida-gulf-coast-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
-              "score": null,
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
               "gameRank": 99
             },
             {
@@ -254021,7 +253669,10 @@
               "team_nickname": "North Alabama",
               "slug": "north-alabama-lions",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png",
-              "score": null,
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
               "gameRank": 99
             }
           ]
@@ -267510,6 +267161,29 @@
               "gameRank": 99
             }
           ]
+        },
+        {
+          "date": "2026-03-08T19:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2739",
+              "team_nickname": "Green Bay",
+              "slug": "green-bay-phoenix",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2739.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "94",
+              "team_nickname": "N Kentucky",
+              "slug": "northern-kentucky-norse",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/94.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
         }
       ]
     },
@@ -269318,16 +268992,22 @@
               "team_nickname": "SC Upstate",
               "slug": "south-carolina-upstate-spartans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2908.png",
-              "score": null,
+              "score": {
+                "value": 64.0,
+                "displayValue": "64"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2241",
               "team_nickname": "Gardner-Webb",
               "slug": "gardner-webb-runnin-bulldogs",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
-              "score": null,
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
               "gameRank": 99
             }
           ]
@@ -271227,12 +270907,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2750",
               "team_nickname": "Wright St",
               "slug": "wright-state-raiders",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2750.png",
-              "score": null,
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
               "gameRank": 99
             },
             {
@@ -271241,7 +270924,10 @@
               "team_nickname": "Cleveland St",
               "slug": "cleveland-state-vikings",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/325.png",
-              "score": null,
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
               "gameRank": 99
             }
           ]
@@ -272155,12 +271841,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "198",
               "team_nickname": "Oral Roberts",
               "slug": "oral-roberts-golden-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             },
             {
@@ -272169,6 +271858,32 @@
               "team_nickname": "Kansas City",
               "slug": "kansas-city-roos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/140.png",
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T00:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2449",
+              "team_nickname": "N Dakota St",
+              "slug": "north-dakota-state-bison",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "198",
+              "team_nickname": "Oral Roberts",
+              "slug": "oral-roberts-golden-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
               "score": null,
               "gameRank": 99
             }
@@ -273088,6 +272803,35 @@
               "team_nickname": "Le Moyne",
               "slug": "le-moyne-dolphins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2330.png",
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "284",
+              "team_nickname": "Stonehill",
+              "slug": "stonehill-skyhawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/284.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T17:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2385",
+              "team_nickname": "Mercyhurst",
+              "slug": "mercyhurst-lakers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2385.png",
               "score": null,
               "gameRank": 99
             },
@@ -276708,12 +276452,15 @@
           "date": "2026-03-05T00:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2698",
               "team_nickname": "West Georgia",
               "slug": "west-georgia-wolves",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png",
-              "score": null,
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
               "gameRank": 99
             },
             {
@@ -276722,7 +276469,10 @@
               "team_nickname": "North Florida",
               "slug": "north-florida-ospreys",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2454.png",
-              "score": null,
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
               "gameRank": 99
             }
           ]
@@ -289503,12 +289253,15 @@
           "date": "2026-03-04T23:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "256",
               "team_nickname": "James Madison",
               "slug": "james-madison-dukes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
-              "score": null,
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
               "gameRank": 99
             },
             {
@@ -289517,7 +289270,10 @@
               "team_nickname": "Louisiana",
               "slug": "louisiana-ragin-cajuns",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
-              "score": null,
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
               "gameRank": 99
             }
           ]
@@ -290431,12 +290187,15 @@
           "date": "2026-03-05T01:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "198",
               "team_nickname": "Oral Roberts",
               "slug": "oral-roberts-golden-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/198.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             },
             {
@@ -290445,7 +290204,10 @@
               "team_nickname": "Kansas City",
               "slug": "kansas-city-roos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/140.png",
-              "score": null,
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
               "gameRank": 99
             }
           ]
@@ -293186,12 +292948,15 @@
           "date": "2026-03-05T00:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2698",
               "team_nickname": "West Georgia",
               "slug": "west-georgia-wolves",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png",
-              "score": null,
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
               "gameRank": 99
             },
             {
@@ -293200,6 +292965,32 @@
               "team_nickname": "North Florida",
               "slug": "north-florida-ospreys",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2454.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T00:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2511",
+              "team_nickname": "Queens",
+              "slug": "queens-university-royals",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2511.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2698",
+              "team_nickname": "West Georgia",
+              "slug": "west-georgia-wolves",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png",
               "score": null,
               "gameRank": 99
             }
@@ -295024,6 +294815,35 @@
               "team_nickname": "C Connecticut",
               "slug": "central-connecticut-blue-devils",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png",
+              "score": {
+                "value": 60.0,
+                "displayValue": "60"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2681",
+              "team_nickname": "Wagner",
+              "slug": "wagner-seahawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2681.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T19:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "112358",
+              "team_nickname": "Long Island",
+              "slug": "long-island-university-sharks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/112358.png",
               "score": null,
               "gameRank": 99
             },
@@ -297803,12 +297623,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2385",
               "team_nickname": "Mercyhurst",
               "slug": "mercyhurst-lakers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2385.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             },
             {
@@ -297817,7 +297640,10 @@
               "team_nickname": "FDU",
               "slug": "fairleigh-dickinson-knights",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/161.png",
-              "score": null,
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
               "gameRank": 99
             }
           ]
@@ -298673,12 +298499,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2174",
               "team_nickname": "Detroit Mercy",
               "slug": "detroit-mercy-titans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             },
             {
@@ -298687,6 +298516,32 @@
               "team_nickname": "Milwaukee",
               "slug": "milwaukee-panthers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/270.png",
+              "score": {
+                "value": 63.0,
+                "displayValue": "63"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-10T01:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2523",
+              "team_nickname": "Robert Morris",
+              "slug": "robert-morris-colonials",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2174",
+              "team_nickname": "Detroit Mercy",
+              "slug": "detroit-mercy-titans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png",
               "score": null,
               "gameRank": 99
             }
@@ -305951,16 +305806,22 @@
               "team_nickname": "Le Moyne",
               "slug": "le-moyne-dolphins",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2330.png",
-              "score": null,
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "284",
               "team_nickname": "Stonehill",
               "slug": "stonehill-skyhawks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/284.png",
-              "score": null,
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
               "gameRank": 99
             }
           ]
@@ -307744,12 +307605,15 @@
           "date": "2026-03-05T00:00Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "112358",
               "team_nickname": "Long Island",
               "slug": "long-island-university-sharks",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/112358.png",
-              "score": null,
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
               "gameRank": 99
             },
             {
@@ -307758,7 +307622,10 @@
               "team_nickname": "Chicago St",
               "slug": "chicago-state-cougars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png",
-              "score": null,
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
               "gameRank": 99
             }
           ]
@@ -311432,6 +311299,35 @@
               "team_nickname": "E Kentucky",
               "slug": "eastern-kentucky-colonels",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "56",
+              "team_nickname": "Stetson",
+              "slug": "stetson-hatters",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png",
+              "score": {
+                "value": 92.0,
+                "displayValue": "92"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T22:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2046",
+              "team_nickname": "Austin Peay",
+              "slug": "austin-peay-governors",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png",
               "score": null,
               "gameRank": 99
             },
@@ -314164,6 +314060,35 @@
               "team_nickname": "SIUE",
               "slug": "siu-edwardsville-cougars",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2565.png",
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2197",
+              "team_nickname": "E Illinois",
+              "slug": "eastern-illinois-panthers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T00:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2630",
+              "team_nickname": "UT Martin",
+              "slug": "ut-martin-skyhawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2630.png",
               "score": null,
               "gameRank": 99
             },
@@ -325980,6 +325905,35 @@
               "team_nickname": "SC Upstate",
               "slug": "south-carolina-upstate-spartans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2908.png",
+              "score": {
+                "value": 64.0,
+                "displayValue": "64"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2241",
+              "team_nickname": "Gardner-Webb",
+              "slug": "gardner-webb-runnin-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T17:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2272",
+              "team_nickname": "High Point",
+              "slug": "high-point-panthers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2272.png",
               "score": null,
               "gameRank": 99
             },
@@ -329697,10 +329651,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "2698",
+              "team_nickname": "West Georgia",
+              "slug": "west-georgia-wolves",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png",
               "score": null,
               "gameRank": 99
             }
@@ -330615,12 +330569,15 @@
           "date": "2026-03-05T02:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2815",
               "team_nickname": "Lindenwood",
               "slug": "lindenwood-lions",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2815.png",
-              "score": null,
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
               "gameRank": 99
             },
             {
@@ -330629,6 +330586,32 @@
               "team_nickname": "Little Rock",
               "slug": "little-rock-trojans",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2031.png",
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T02:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2546",
+              "team_nickname": "SE Missouri",
+              "slug": "southeast-missouri-state-redhawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2546.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2815",
+              "team_nickname": "Lindenwood",
+              "slug": "lindenwood-lions",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2815.png",
               "score": null,
               "gameRank": 99
             }
