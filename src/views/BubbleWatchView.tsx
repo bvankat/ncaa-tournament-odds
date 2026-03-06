@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
-import type { Team, OddsMovers, TeamSchedule } from '@/types/team';
+import type { Team, OddsMovers as OddsMoversType, TeamSchedule } from '@/types/team';
 import { TournamentDashboard } from '@/components/TournamentDashboard';
-import { OddsMovers as OddsMoversComponent } from '@/components/OddsMovers';
+import { OddsMovers } from '@/components/OddsMovers';
 import { BubbleSidebar } from '@/components/BubbleSidebar';
 import { BubbleGames } from '@/components/BubbleGames';
 import { calculateBracket } from '@/lib/bracketProjection';
 
 type BubbleWatchViewProps = {
   teams: Team[];
-  oddsMovers?: OddsMovers;
+  oddsMovers?: OddsMoversType;
   allSchedules: Record<string, TeamSchedule>;
   onTeamSelect: (slug: string) => void;
   lastUpdated?: number | string | null;
@@ -102,6 +102,10 @@ export function BubbleWatchView({
             </div>
 
             
+          </div>
+
+          <div className="py-12 lg:py-16 px-6 lg:px-12 max-w-screen-xl mx-auto">
+            <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
           </div>
 
       </div>
