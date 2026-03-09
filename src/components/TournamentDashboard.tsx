@@ -5,9 +5,10 @@ import { TOURNAMENT_STATUS_THRESHOLDS } from '@/lib/utils';
 type TournamentDashboardProps = {
   teams: Team[];
   onTeamSelect?: (slug: string) => void;
+  hideSections?: Array<'autobids' | 'locks'>;
 };
 
-export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboardProps) {
+export function TournamentDashboard({ teams, onTeamSelect, hideSections = [] }: TournamentDashboardProps) {
   // Get all conference leaders (one per conference)
   const conferenceLeaders = new Set<string>();
   const conferenceGroups: Record<string, Team[]> = {};
@@ -63,12 +64,18 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
   const bubble = bubbleTeams.length;
   const spotsAvailable = 68 - autobids - locks - likelyIn;
 
+  const hideAutobids = hideSections.includes('autobids');
+  const hideLocks = hideSections.includes('locks');
+  const hideColumn1 = hideAutobids && hideLocks;
+
   return (
     <div className="border border-gray-200 rounded-lg overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className={`grid grid-cols-1 ${hideColumn1 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
         {/* Column 1 - Autobids and Locks */}
+        {!hideColumn1 && (
         <div className="md:border-r border-gray-200">
           {/* Autobids */}
+          {!hideAutobids && (
           <div className="bg-white border-b border-gray-200 p-6">
             <div className="text-xs font-medium geist-mono text-gray-500 uppercase mb-1">
               Automatic bids
@@ -98,8 +105,10 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
               })}
             </div>
           </div>
+          )}
 
           {/* Locks */}
+          {!hideLocks && (
           <div className="bg-white p-6">
             <div className="text-xs font-medium geist-mono text-gray-500 uppercase mb-1">
               Locks
@@ -126,7 +135,9 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
               ))}
             </div>
           </div>
+          )}
         </div>
+        )}
 
         {/* Column 2 - Safe for now */}
         <div className="bg-white border-t md:border-t-0 md:border-r border-gray-200 p-6">

@@ -65,7 +65,7 @@ export function BubbleWatchView({
           <div className="space-y-12 lg:space-y-16">
             {/* Tournament Dashboard */}
             <div>
-              <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
+              <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} hideSections={['autobids', 'locks']} />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
