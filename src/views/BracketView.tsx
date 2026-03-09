@@ -183,7 +183,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                               />
                             )}
                             <span className="text-gray-900 font-medium text-sm md:text-md">
-                              {team.shortName}
+                              {team.shortName}{team.autoBid ? ' *' : ''}
                             </span>
                           </div>
                         </td>
@@ -248,6 +248,9 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
               </tbody>
             </table>
           </div>
+          {bracketTeams.some(t => t.autoBid) && (
+            <p className="mt-3 text-xs text-gray-400 geist-mono">* Automatic bid — Conference tournament winner</p>
+          )}
           </div>
 
           {/* Sidebar with bubble teams */}
