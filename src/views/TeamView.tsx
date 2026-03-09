@@ -190,7 +190,11 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
               <div style={{ position: 'relative', width: 340, height: 340 }}>                
               <Speedometer value={displayOdds} />
               </div>
-              {!team.autoBid && oddsChange !== null && (
+              {team.autoBid ? (
+                <div className="flex items-center gap-2 text-xs font-medium geist-mono">
+                  <span className="text-gray-500">Automatic bid — Conference tournament winner</span>
+                </div>
+              ) : oddsChange !== null && (
                 <div className="flex items-center gap-2 text-xs font-semibold geist-mono">
                   {Math.abs(oddsChange) < 1 ? (
                     <>
