@@ -71,28 +71,31 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
           {/* Autobids */}
           <div className="bg-white border-b border-gray-200 p-6">
             <div className="text-xs font-medium geist-mono text-gray-500 uppercase mb-1">
-              Autobids
+              Automatic bids
             </div>
             <div className="text-4xl font-bold text-gray-900 ibm-plex-sans mb-3">
               {autobids}
             </div>
             <div className="flex flex-wrap gap-1.5">
-              {autobidTeams.map((team) => (
-                <button
-                  key={team.espnId || team.slug}
-                  onClick={() => onTeamSelect?.(team.slug)}
-                  className="hover:opacity-80 transition-opacity cursor-pointer"
-                  title={`${team.shortName}: Tournament odds: ${(team.tournamentOdds ?? 0).toFixed(0)}%`}
-                >
-                  {team.logo && (
-                    <img 
-                      src={team.logo} 
-                      alt={`${team.shortName}: Tournament odds: ${(team.tournamentOdds ?? 0).toFixed(0)}%`}
-                      className="w-5 h-5 object-contain" 
-                    />
-                  )}
-                </button>
-              ))}
+              {autobidTeams.map((team) => {
+                const oddsDisplay = team.autoBid ? '100' : (team.tournamentOdds ?? 0).toFixed(0);
+                return (
+                  <button
+                    key={team.espnId || team.slug}
+                    onClick={() => onTeamSelect?.(team.slug)}
+                    className="hover:opacity-80 transition-opacity cursor-pointer"
+                    title={`${team.shortName}: Tournament odds: ${oddsDisplay}%`}
+                  >
+                    {team.logo && (
+                      <img 
+                        src={team.logo} 
+                        alt={`${team.shortName}: Tournament odds: ${oddsDisplay}%`}
+                        className="w-5 h-5 object-contain" 
+                      />
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
