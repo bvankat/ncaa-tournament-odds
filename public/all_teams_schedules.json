@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08T22:11:40.259110",
+  "lastUpdated": "2026-03-08T22:46:27.543875",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -109670,10 +109670,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "290",
+              "team_nickname": "GA Southern",
+              "slug": "georgia-southern-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
               "score": null,
               "gameRank": 99
             }
@@ -136851,16 +136851,22 @@
               "team_nickname": "Marshall",
               "slug": "marshall-thundering-herd",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
-              "score": null,
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "290",
               "team_nickname": "GA Southern",
               "slug": "georgia-southern-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
-              "score": null,
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
               "gameRank": 99
             }
           ]
@@ -158354,10 +158360,7 @@
               "team_nickname": "Montana St",
               "slug": "montana-state-bobcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
-              "score": {
-                "value": 40.0,
-                "displayValue": "40"
-              },
+              "score": null,
               "gameRank": 99
             },
             {
@@ -158366,10 +158369,7 @@
               "team_nickname": "Idaho",
               "slug": "idaho-vandals",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-              "score": {
-                "value": 36.0,
-                "displayValue": "36"
-              },
+              "score": null,
               "gameRank": 99
             }
           ]
@@ -189996,10 +189996,7 @@
               "team_nickname": "Montana St",
               "slug": "montana-state-bobcats",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
-              "score": {
-                "value": 40.0,
-                "displayValue": "40"
-              },
+              "score": null,
               "gameRank": 99
             },
             {
@@ -190008,10 +190005,7 @@
               "team_nickname": "Idaho",
               "slug": "idaho-vandals",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-              "score": {
-                "value": 36.0,
-                "displayValue": "36"
-              },
+              "score": null,
               "gameRank": 99
             }
           ]
@@ -220085,6 +220079,35 @@
               "team_nickname": "Marshall",
               "slug": "marshall-thundering-herd",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "290",
+              "team_nickname": "GA Southern",
+              "slug": "georgia-southern-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-09T23:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2653",
+              "team_nickname": "Troy",
+              "slug": "troy-trojans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
               "score": null,
               "gameRank": 99
             },
