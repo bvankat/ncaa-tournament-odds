@@ -203,10 +203,10 @@ export function calculateSeedingRanking(team: Team): number {
     wab: 0.16,
     kpi: 0.10,
     sor: 0.16,
-    kenpom: 0.14,
-    torvik: 0.14,
-    bpi: 0.14,
-    net: 0.16
+    kenpom: 0.13,
+    torvik: 0.13,
+    bpi: 0.13,
+    net: 0.19
   });
 }
 
