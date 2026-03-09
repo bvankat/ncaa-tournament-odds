@@ -272,7 +272,9 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
         <div className="space-y-12">
           {sortedConferences.map(conference => {
             const teams = conferenceGroups[conference];
-            const leader = teams[0];
+            const confirmedWinner = teams.find(t => t.autoBid === true);
+            const leader = confirmedWinner ?? teams[0];
+            const isConfirmedWinner = !!confirmedWinner;
             const locks = teams.filter(t => (t.tournamentOdds ?? 0) > 90 && t.slug !== leader?.slug)
               .sort((a, b) => a.shortName.localeCompare(b.shortName));
             const likelyIn = teams.filter(t => (t.tournamentOdds ?? 0) > 70 && (t.tournamentOdds ?? 0) <= 90 && t.slug !== leader?.slug)
@@ -295,7 +297,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                     {leader && (
                       <div>
                         <h3 className="text-xs font-medium geist-mono text-gray-500 uppercase mb-2">
-                          Conf. leader (Auto-bid)
+                          {isConfirmedWinner ? 'Conf. winner (Auto-bid)' : 'Conf. leader (Auto-bid)'}
                         </h3>
                         <button
                           onClick={() => onTeamSelect(leader.slug)}

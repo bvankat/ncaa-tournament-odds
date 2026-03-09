@@ -19,6 +19,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
   const primaryColor = team.primaryColor ? `#${team.primaryColor}` : '#000000';
   const secondaryColor = team.secondaryColor ? `#${team.secondaryColor}` : '#ffffff';
   const tournamentOdds = team.tournamentOdds ?? 0;
+  // Override display odds to 100% for confirmed auto-bid teams; do not modify underlying data
+  const displayOdds = team.autoBid ? 100 : tournamentOdds;
 
   // Get odds change directly from team data
   const oddsChange = team.oddsChange ?? null;
@@ -186,9 +188,9 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
 
             <div className="flex flex-col items-center justify-center gap-2">
               <div style={{ position: 'relative', width: 340, height: 340 }}>                
-              <Speedometer value={tournamentOdds} />
+              <Speedometer value={displayOdds} />
               </div>
-              {oddsChange !== null && (
+              {!team.autoBid && oddsChange !== null && (
                 <div className="flex items-center gap-2 text-xs font-semibold geist-mono">
                   {Math.abs(oddsChange) < 1 ? (
                     <>

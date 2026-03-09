@@ -46,6 +46,7 @@ export type Team = NcaaNetData & {
   previousNet?: number | string | null;
   confRecord?: string | null;
   confStandingsPosition?: string | null;
+  autoBid: boolean;
 };
 
 export type NextGame = {

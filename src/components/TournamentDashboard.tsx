@@ -22,6 +22,12 @@ export function TournamentDashboard({ teams, onTeamSelect }: TournamentDashboard
 
   // Sort teams within each conference by confStandingsPosition to find leaders
   Object.keys(conferenceGroups).forEach(conf => {
+    // Prefer a confirmed auto-bid winner; fall back to standings leader
+    const confirmedWinner = conferenceGroups[conf].find(t => t.autoBid === true);
+    if (confirmedWinner) {
+      conferenceLeaders.add(confirmedWinner.slug);
+      return;
+    }
     conferenceGroups[conf].sort((a, b) => {
       const aPos = parseInt(a.confStandingsPosition?.match(/^\d+/)?.[0] || '999');
       const bPos = parseInt(b.confStandingsPosition?.match(/^\d+/)?.[0] || '999');
