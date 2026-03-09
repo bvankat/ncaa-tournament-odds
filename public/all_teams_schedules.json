@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08T23:31:58.640386",
+  "lastUpdated": "2026-03-09T10:02:19.702723",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -29686,10 +29686,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "2541",
+              "team_nickname": "Santa Clara",
+              "slug": "santa-clara-broncos",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
               "score": null,
               "gameRank": 99
             }
@@ -73339,14 +73339,14 @@
           "date": "2026-03-09T03:20Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2541",
               "team_nickname": "Santa Clara",
               "slug": "santa-clara-broncos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
               "score": {
-                "value": 45.0,
-                "displayValue": "45"
+                "value": 76.0,
+                "displayValue": "76"
               },
               "gameRank": 99
             },
@@ -73357,9 +73357,32 @@
               "slug": "pacific-tigers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
               "score": {
-                "value": 38.0,
-                "displayValue": "38"
+                "value": 68.0,
+                "displayValue": "68"
               },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-10T03:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2608",
+              "team_nickname": "Saint Mary's",
+              "slug": "saint-marys-gaels",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2608.png",
+              "score": null,
+              "gameRank": 21
+            },
+            {
+              "winner": false,
+              "team_id": "2541",
+              "team_nickname": "Santa Clara",
+              "slug": "santa-clara-broncos",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
+              "score": null,
               "gameRank": 99
             }
           ]
@@ -138807,14 +138830,14 @@
           "date": "2026-03-09T03:20Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2541",
               "team_nickname": "Santa Clara",
               "slug": "santa-clara-broncos",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
               "score": {
-                "value": 45.0,
-                "displayValue": "45"
+                "value": 76.0,
+                "displayValue": "76"
               },
               "gameRank": 99
             },
@@ -138825,8 +138848,8 @@
               "slug": "pacific-tigers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
               "score": {
-                "value": 38.0,
-                "displayValue": "38"
+                "value": 68.0,
+                "displayValue": "68"
               },
               "gameRank": 99
             }
@@ -190030,6 +190053,29 @@
                 "value": 78.0,
                 "displayValue": "78"
               },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-11T03:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "-1",
+              "team_nickname": "TBD",
+              "slug": null,
+              "logo": null,
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "70",
+              "team_nickname": "Idaho",
+              "slug": "idaho-vandals",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+              "score": null,
               "gameRank": 99
             }
           ]
