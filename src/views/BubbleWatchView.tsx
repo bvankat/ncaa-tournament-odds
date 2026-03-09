@@ -104,7 +104,7 @@ export function BubbleWatchView({
             
           </div>
 
-          <div className="py-12 lg:py-16 px-6 lg:px-12 max-w-screen-xl mx-auto">
+          <div className="py-12 lg:py-16max-w-screen-xl mx-auto">
             <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
           </div>
 
