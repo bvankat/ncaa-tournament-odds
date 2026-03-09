@@ -230,6 +230,13 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                   2 Seeds
                 </button>
                 <button
+                  onClick={() => addPresetGroup(getTeamsBySeed(3))}
+                  className="px-4 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-blue-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={selectedTeams.length >= 8}
+                >
+                  3 Seeds
+                </button>
+                <button
                   onClick={() => addPresetGroup(bracketProjection.lastFourInList)}
                   className="px-4 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-blue-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={selectedTeams.length >= 8}
