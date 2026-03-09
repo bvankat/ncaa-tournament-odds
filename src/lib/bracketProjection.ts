@@ -203,10 +203,10 @@ export function calculateSeedingRanking(team: Team): number {
     wab: 0.16,
     kpi: 0.10,
     sor: 0.16,
-    kenpom: 0.14,
-    torvik: 0.14,
-    bpi: 0.14,
-    net: 0.16
+    kenpom: 0.13,
+    torvik: 0.13,
+    bpi: 0.13,
+    net: 0.19
   });
 }
 
@@ -236,22 +236,31 @@ export type BracketProjection = {
  * Returns 68-team bracket (31 auto-bids + 37 at-large) with seed assignments
  */
 export function calculateBracket(teams: Team[]): BracketProjection {
-  // Determine auto-bids: one per conference, first place team with best (lowest) selection ranking
+  // Step 1: Collect confirmed auto-bid winners (autoBid === true from data)
   const conferenceLeaders = new Map<string, Team>();
-  
+
+  teams.forEach(team => {
+    if (team.autoBid === true && team.conference) {
+      if (!conferenceLeaders.has(team.conference)) {
+        conferenceLeaders.set(team.conference, team);
+      }
+    }
+  });
+
+  // Step 2: For conferences without a confirmed auto-bid, fall back to standings leader
   teams.forEach(team => {
     if (!team.conference || !team.confStandingsPosition) return;
-    
-    // Check if team is in first place
+    if (conferenceLeaders.has(team.conference)) return; // already have a confirmed winner
+
     const isFirstPlace = team.confStandingsPosition.toLowerCase().includes('1st');
     if (!isFirstPlace) return;
-    
+
     const existing = conferenceLeaders.get(team.conference);
     if (!existing || calculateSelectionRanking(team) < calculateSelectionRanking(existing)) {
       conferenceLeaders.set(team.conference, team);
     }
   });
-  
+
   const autoBidList = Array.from(conferenceLeaders.values());
   const autoBidTeams = new Set(autoBidList.map(t => t.espnId || t.slug));
 
