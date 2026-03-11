@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-10T23:31:56.804721",
+  "lastUpdated": "2026-03-11T09:00:58.265969",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -54965,12 +54965,15 @@
           "date": "2026-03-11T01:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2377",
               "team_nickname": "McNeese",
               "slug": "mcneese-cowboys",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             },
             {
@@ -54979,6 +54982,32 @@
               "team_nickname": "UT Rio Grande",
               "slug": "ut-rio-grande-valley-vaqueros",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-11T21:00Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2617",
+              "team_nickname": "SF Austin",
+              "slug": "stephen-f-austin-lumberjacks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2377",
+              "team_nickname": "McNeese",
+              "slug": "mcneese-cowboys",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
               "score": null,
               "gameRank": 99
             }
@@ -152406,10 +152435,10 @@
             },
             {
               "winner": false,
-              "team_id": "-2",
-              "team_nickname": "TBD",
-              "slug": null,
-              "logo": null,
+              "team_id": "2377",
+              "team_nickname": "McNeese",
+              "slug": "mcneese-cowboys",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
               "score": null,
               "gameRank": 99
             }
@@ -156149,12 +156178,15 @@
           "date": "2026-03-11T01:30Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2377",
               "team_nickname": "McNeese",
               "slug": "mcneese-cowboys",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
-              "score": null,
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
               "gameRank": 99
             },
             {
@@ -156163,7 +156195,10 @@
               "team_nickname": "UT Rio Grande",
               "slug": "ut-rio-grande-valley-vaqueros",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png",
-              "score": null,
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
               "gameRank": 99
             }
           ]
@@ -175536,6 +175571,29 @@
               "gameRank": 99
             }
           ]
+        },
+        {
+          "date": "2026-03-12T03:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "149",
+              "team_nickname": "Montana",
+              "slug": "montana-grizzlies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
+              "score": null,
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "70",
+              "team_nickname": "Idaho",
+              "slug": "idaho-vandals",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+              "score": null,
+              "gameRank": 99
+            }
+          ]
         }
       ]
     },
@@ -190761,6 +190819,35 @@
               "team_nickname": "E Washington",
               "slug": "eastern-washington-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "70",
+              "team_nickname": "Idaho",
+              "slug": "idaho-vandals",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-12T03:30Z",
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "149",
+              "team_nickname": "Montana",
+              "slug": "montana-grizzlies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
               "score": null,
               "gameRank": 99
             },
@@ -253192,16 +253279,22 @@
               "team_nickname": "E Washington",
               "slug": "eastern-washington-eagles",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
-              "score": null,
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "70",
               "team_nickname": "Idaho",
               "slug": "idaho-vandals",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-              "score": null,
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
               "gameRank": 99
             }
           ]
