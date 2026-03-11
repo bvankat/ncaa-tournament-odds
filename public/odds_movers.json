@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-10T12:33:06.358665",
+  "lastUpdated": "2026-03-10T23:06:32.635026",
   "biggestRisers": [
     {
       "espnId": "2541",
@@ -7,9 +7,9 @@
       "displayName": "Santa Clara Broncos",
       "shortName": "Santa Clara",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2541.png",
-      "currentOdds": 77.48599,
+      "currentOdds": 77.62665,
       "previousOdds": 70.27029,
-      "change": 7.215699999999998
+      "change": 7.356359999999995
     },
     {
       "espnId": "2132",
@@ -17,19 +17,9 @@
       "displayName": "Cincinnati Bearcats",
       "shortName": "Cincinnati",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
-      "currentOdds": 35.2847,
+      "currentOdds": 34.99883,
       "previousOdds": 33.11692,
-      "change": 2.1677800000000005
-    },
-    {
-      "espnId": "193",
-      "slug": "miami-oh-redhawks",
-      "displayName": "Miami (OH) RedHawks",
-      "shortName": "Miami OH",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
-      "currentOdds": 33.55403,
-      "previousOdds": 32.4818,
-      "change": 1.0722299999999976
+      "change": 1.8819099999999978
     },
     {
       "espnId": "108",
@@ -40,9 +30,29 @@
       "currentOdds": 1,
       "previousOdds": 0,
       "change": 1
+    },
+    {
+      "espnId": "193",
+      "slug": "miami-oh-redhawks",
+      "displayName": "Miami (OH) RedHawks",
+      "shortName": "Miami OH",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+      "currentOdds": 33.28432,
+      "previousOdds": 32.4818,
+      "change": 0.8025200000000012
     }
   ],
   "biggestFallers": [
+    {
+      "espnId": "259",
+      "slug": "virginia-tech-hokies",
+      "displayName": "Virginia Tech Hokies",
+      "shortName": "Virginia Tech",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "currentOdds": 36.49509,
+      "previousOdds": 39.34753,
+      "change": -2.8524400000000014
+    },
     {
       "espnId": "2294",
       "slug": "iowa-hawkeyes",
@@ -54,24 +64,14 @@
       "change": -1.3235800000000069
     },
     {
-      "espnId": "278",
-      "slug": "fresno-state-bulldogs",
-      "displayName": "Fresno State Bulldogs",
-      "shortName": "Fresno St",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
-      "currentOdds": 0,
-      "previousOdds": 1,
-      "change": -1
-    },
-    {
-      "espnId": "58",
-      "slug": "south-florida-bulls",
-      "displayName": "South Florida Bulls",
-      "shortName": "South Florida",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
-      "currentOdds": 38.81846,
-      "previousOdds": 39.63717,
-      "change": -0.8187099999999958
+      "espnId": "2608",
+      "slug": "saint-marys-gaels",
+      "displayName": "Saint Mary's Gaels",
+      "shortName": "Saint Mary's",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2608.png",
+      "currentOdds": 93.76555,
+      "previousOdds": 94.85707,
+      "change": -1.0915199999999885
     },
     {
       "espnId": "2",
@@ -79,9 +79,9 @@
       "displayName": "Auburn Tigers",
       "shortName": "Auburn",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
-      "currentOdds": 66.56298,
+      "currentOdds": 66.29266,
       "previousOdds": 67.36738,
-      "change": -0.8044000000000011
+      "change": -1.0747199999999992
     }
   ],
   "bubbleTeams": [
@@ -91,10 +91,10 @@
       "displayName": "San Diego State Aztecs",
       "shortName": "San Diego St",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
-      "currentOdds": 41.38969,
+      "currentOdds": 41.09596,
       "previousOdds": 40.85166,
-      "change": 0.5380299999999991,
-      "distanceFrom50": 3.6103099999999984
+      "change": 0.24429999999999552,
+      "distanceFrom50": 3.904040000000002
     },
     {
       "espnId": "167",
@@ -113,21 +113,10 @@
       "displayName": "South Florida Bulls",
       "shortName": "South Florida",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
-      "currentOdds": 38.81846,
+      "currentOdds": 39.10673,
       "previousOdds": 39.63717,
-      "change": -0.8187099999999958,
-      "distanceFrom50": 6.181539999999998
-    },
-    {
-      "espnId": "259",
-      "slug": "virginia-tech-hokies",
-      "displayName": "Virginia Tech Hokies",
-      "shortName": "Virginia Tech",
-      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
-      "currentOdds": 38.77049,
-      "previousOdds": 39.34753,
-      "change": -0.5770399999999967,
-      "distanceFrom50": 6.229509999999998
+      "change": -0.5304399999999987,
+      "distanceFrom50": 5.893270000000001
     },
     {
       "espnId": "142",
@@ -141,15 +130,26 @@
       "distanceFrom50": 7.923650000000002
     },
     {
+      "espnId": "259",
+      "slug": "virginia-tech-hokies",
+      "displayName": "Virginia Tech Hokies",
+      "shortName": "Virginia Tech",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "currentOdds": 36.49509,
+      "previousOdds": 39.34753,
+      "change": -2.8524400000000014,
+      "distanceFrom50": 8.504910000000002
+    },
+    {
       "espnId": "2132",
       "slug": "cincinnati-bearcats",
       "displayName": "Cincinnati Bearcats",
       "shortName": "Cincinnati",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
-      "currentOdds": 35.2847,
+      "currentOdds": 34.99883,
       "previousOdds": 33.11692,
-      "change": 2.1677800000000005,
-      "distanceFrom50": 9.7153
+      "change": 1.8819099999999978,
+      "distanceFrom50": 10.001170000000002
     },
     {
       "espnId": "193",
@@ -157,10 +157,10 @@
       "displayName": "Miami (OH) RedHawks",
       "shortName": "Miami OH",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
-      "currentOdds": 33.55403,
+      "currentOdds": 33.28432,
       "previousOdds": 32.4818,
-      "change": 1.0722299999999976,
-      "distanceFrom50": 11.445970000000003
+      "change": 0.8025200000000012,
+      "distanceFrom50": 11.715679999999999
     },
     {
       "espnId": "84",
@@ -201,10 +201,10 @@
       "displayName": "UCF Knights",
       "shortName": "UCF",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
-      "currentOdds": 61.44988,
+      "currentOdds": 61.21032,
       "previousOdds": 61.44988,
-      "change": 0.0,
-      "distanceFrom50": 16.44988
+      "change": -0.23955999999999733,
+      "distanceFrom50": 16.210320000000003
     },
     {
       "espnId": "2567",
@@ -212,10 +212,10 @@
       "displayName": "SMU Mustangs",
       "shortName": "SMU",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
-      "currentOdds": 61.68888,
+      "currentOdds": 62.54456,
       "previousOdds": 62.21269,
-      "change": -0.5238100000000045,
-      "distanceFrom50": 16.688879999999997
+      "change": 0.331869999999995,
+      "distanceFrom50": 17.544559999999997
     },
     {
       "espnId": "2670",
@@ -234,10 +234,10 @@
       "displayName": "Auburn Tigers",
       "shortName": "Auburn",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
-      "currentOdds": 66.56298,
+      "currentOdds": 66.29266,
       "previousOdds": 67.36738,
-      "change": -0.8044000000000011,
-      "distanceFrom50": 21.562979999999996
+      "change": -1.0747199999999992,
+      "distanceFrom50": 21.292659999999998
     },
     {
       "espnId": "24",
@@ -245,10 +245,10 @@
       "displayName": "Stanford Cardinal",
       "shortName": "Stanford",
       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
-      "currentOdds": 21.2746,
+      "currentOdds": 20.56349,
       "previousOdds": 21.60511,
-      "change": -0.3305100000000003,
-      "distanceFrom50": 23.7254
+      "change": -1.0416199999999982,
+      "distanceFrom50": 24.43651
     }
   ]
 }
