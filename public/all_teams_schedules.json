@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-11T23:32:08.327146",
+  "lastUpdated": "2026-03-11T23:32:14.603842",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -176556,7 +176556,10 @@
               "team_nickname": "Montana",
               "slug": "montana-grizzlies",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
-              "score": null,
+              "score": {
+                "value": 31.0,
+                "displayValue": "31"
+              },
               "gameRank": 99
             },
             {
@@ -176565,7 +176568,10 @@
               "team_nickname": "Idaho",
               "slug": "idaho-vandals",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-              "score": null,
+              "score": {
+                "value": 30.0,
+                "displayValue": "30"
+              },
               "gameRank": 99
             }
           ]
