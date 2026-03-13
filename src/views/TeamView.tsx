@@ -300,17 +300,17 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
-                  <td className="py-3 pr-4 text-gray-900 font-semibold">BPI</td>
-                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.bpi} color={primaryColor} /></td>
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">WAB</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.wab} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
                     <div className="flex items-center justify-end gap-4">
                       {(() => {
-                        const change = getRankingChange(team.bpi, team.previousBpi);
+                        const change = getRankingChange(team.wab, team.previousWab);
                         if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.bpi || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{team.wab || '—'}</span>
                     </div>
                   </td>
                 </tr>
@@ -374,21 +374,22 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                     </div>
                   </td>
                 </tr>
-                <tr className="">
-                  <td className="py-3 pr-4 text-gray-900 font-semibold">WAB</td>
-                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.wab} color={primaryColor} /></td>
+                <tr>
+                  <td className="py-3 pr-4 text-gray-900 font-semibold">BPI</td>
+                  <td className="py-3 px-4 flex justify-center"><RankingSparkline rank={team.bpi} color={primaryColor} /></td>
                   <td className="py-3 pl-4 text-right">
                     <div className="flex items-center justify-end gap-4">
                       {(() => {
-                        const change = getRankingChange(team.wab, team.previousWab);
+                        const change = getRankingChange(team.bpi, team.previousBpi);
                         if (change?.direction === 'up') return <span className="flex items-center text-green-800/40 text-xs font-medium"><ArrowUp className="w-3 h-3" />{change.delta}</span>;
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.wab || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{team.bpi || '—'}</span>
                     </div>
                   </td>
                 </tr>
+                
               </tbody>
             </table>
           </div>
