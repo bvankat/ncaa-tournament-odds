@@ -64,6 +64,15 @@ const INTANGIBLES: IntangibleRule[] = [
       return road.wins > road.losses ? 1 : 0;
     },
   },
+  {
+    name: '25+ wins with 2 or fewer losses',
+    type: 'bonus',
+    enabled: true,
+    value: (t) => {
+      const rec = parseRecord(t.record);
+      return rec.wins >= 25 && rec.losses <= 2 ? 1 : 0;
+    },
+  },
 
   // ── PENALTIES (add to composite score) ──
   {
