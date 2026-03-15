@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-15T16:31:51.982406",
+  "lastUpdated": "2026-03-15T17:01:35.667758",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -6865,16 +6865,22 @@
               "team_nickname": "Michigan",
               "slug": "michigan-wolverines",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
-              "score": null,
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
               "gameRank": 3
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2509",
               "team_nickname": "Purdue",
               "slug": "purdue-boilermakers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
-              "score": null,
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
               "gameRank": 18
             }
           ]
@@ -8843,16 +8849,22 @@
               "team_nickname": "Michigan",
               "slug": "michigan-wolverines",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
-              "score": null,
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
               "gameRank": 3
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "2509",
               "team_nickname": "Purdue",
               "slug": "purdue-boilermakers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
-              "score": null,
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
               "gameRank": 18
             }
           ]
@@ -77849,12 +77861,15 @@
           "date": "2026-03-15T19:15Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "58",
               "team_nickname": "South Florida",
               "slug": "south-florida-bulls",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             },
             {
@@ -77863,7 +77878,10 @@
               "team_nickname": "Wichita St",
               "slug": "wichita-state-shockers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
-              "score": null,
+              "score": {
+                "value": 55.0,
+                "displayValue": "55"
+              },
               "gameRank": 99
             }
           ]
@@ -81637,12 +81655,15 @@
           "date": "2026-03-15T19:15Z",
           "competitors": [
             {
-              "winner": false,
+              "winner": true,
               "team_id": "58",
               "team_nickname": "South Florida",
               "slug": "south-florida-bulls",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
-              "score": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
               "gameRank": 99
             },
             {
@@ -81651,7 +81672,10 @@
               "team_nickname": "Wichita St",
               "slug": "wichita-state-shockers",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
-              "score": null,
+              "score": {
+                "value": 55.0,
+                "displayValue": "55"
+              },
               "gameRank": 99
             }
           ]
