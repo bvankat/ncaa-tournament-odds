@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-15T15:37:22.344445",
+  "lastUpdated": "2026-03-15T16:26:55.538094",
   "teams": [
     {
       "slug": "duke-blue-devils",
@@ -464,7 +464,7 @@
       },
       "confStandingsPosition": "6th in Big Ten",
       "confRecord": "13-7",
-      "autoBid": false,
+      "autoBid": true,
       "sos": 4.0,
       "nonconsos": 7.0,
       "tournamentOdds": 99.09379,
@@ -1857,6 +1857,9 @@
         "haslam_rating": "17",
         "seed": "4"
       },
+      "sports_reference": {
+        "SRS_rank": 20
+      },
       "teamrankings": {
         "make_tournament": "100.0%",
         "most_likely_seed": "4",
@@ -1882,12 +1885,12 @@
         "rpi": "22"
       },
       "espn_bracketology": {
-        "seed": "3"
+        "seed": "4"
       },
       "bracketproject": {
-        "matrix_count": 125,
+        "matrix_count": 129,
         "matrix_seed": 3,
-        "total_brackets": 125
+        "total_brackets": 129
       },
       "jthom_analytics": {
         "games": [
@@ -4522,7 +4525,7 @@
       },
       "confStandingsPosition": "1st in American",
       "confRecord": "15-3",
-      "autoBid": false,
+      "autoBid": true,
       "sos": 95.0,
       "nonconsos": 62.0,
       "tournamentOdds": 47.5172,
