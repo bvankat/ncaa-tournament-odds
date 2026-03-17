@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og';
 
-export const config = { runtime: 'nodejs' };
+export const config = { runtime: 'edge' };
 
 // ─── Minimal Team type ───────────────────────────────────────────────────────
 interface Team {
