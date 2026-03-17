@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { formatPercent } from '@/lib/utils';
+import { IS_OFFSEASON } from '@/lib/config';
 
 export function Speedometer({ value, className = '' }) {
   const needleContainerRef = useRef(null);
@@ -92,6 +93,8 @@ export function Speedometer({ value, className = '' }) {
       if (bounceIntervalIdRef.current) {
         clearInterval(bounceIntervalIdRef.current);
       }
+
+      if (IS_OFFSEASON) return;
 
       bounceIntervalIdRef.current = setInterval(() => {
         if (isAnimating) return;

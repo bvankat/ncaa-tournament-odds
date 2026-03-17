@@ -7,6 +7,7 @@ import { TournamentDashboard } from '@/components/TournamentDashboard';
 import { BubbleSidebar } from '@/components/BubbleSidebar';
 import { calculateBracket } from '@/lib/bracketProjection';
 import type { Team, OddsMovers as OddsMoversType } from '@/types/team';
+import { UpdatesPill } from '@/components/UpdatesPill';
 
 type LandingViewProps = {
   teams?: Team[];
@@ -61,18 +62,7 @@ export function LandingView({
       }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 lg:px-16 xl:px-24 mb-12">
         <div className="flex flex-col px-4 justify-center gap-6 items-center md:items-start text-center md:text-left">
-          {lastUpdated && (
-            <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-2">
-              <span className="relative size-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
-                <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
-              </span>
-              <p className="opacity-60 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
-                <span>UPDATED </span>
-                <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
-              </p>
-            </div>
-          )}
+          <UpdatesPill lastUpdated={lastUpdated} />
           <div className="flex flex-col mb-3 px-4 lg:px-0">
             <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance ibm-plex-sans">NCAA Basketball Tournament Odds Machine</h1>
             <p className="text-center md:text-left text-lg lg:text-xl opacity-70 text-balance">Latest rankings, bubble chances and projected seeds for all 365 Division I men's basketball teams</p>

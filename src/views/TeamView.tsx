@@ -6,6 +6,7 @@ import { ArrowUp, ArrowDown, Minus } from 'lucide-react';
 import type { Team, TeamSchedule } from '@/types/team';
 import { formatPercent, getDashboardStatus } from '@/lib/utils';
 import { calculateBracket, getIntangibleBreakdown, calculateSelectionRanking, calculateSeedingRanking } from '@/lib/bracketProjection';
+import { UpdatesPill } from '@/components/UpdatesPill';
 
 type TeamViewProps = {
   team: Team;
@@ -160,18 +161,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-3 md:px-12">
             <div className="flex flex-col justify-center gap-4 text-center md:text-left items-center md:items-start">
               <div>
-              {lastUpdated && (
-                <div id="updates-pill" className="inline-flex items-center w-fit mb-2 lg:mb-6">
-                  <span className="relative size-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
-                    <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
-                  </span>
-                  <p className="text-white/70 text-[11px] font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
-                    <span className="">UPDATED </span>
-                    <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
-                  </p>
-                </div>
-              )}
+              <UpdatesPill lastUpdated={lastUpdated} variant="teamview" />
               <div className="flex flex-col mb-0 lg:mb-6 items-center lg:items-start">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl px-6 md:px-0 font-extrabold mb-0 lg:mb-4 text-balance text-white ibm-plex-sans">
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>

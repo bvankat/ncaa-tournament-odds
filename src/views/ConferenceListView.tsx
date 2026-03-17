@@ -3,6 +3,7 @@ import type { Team } from '@/types/team';
 import { formatPercent } from '@/lib/utils';
 import { calculateBracket } from '@/lib/bracketProjection';
 import { TournamentDashboard } from '@/components/TournamentDashboard';
+import { UpdatesPill } from '@/components/UpdatesPill';
 
 type ConferenceListViewProps = {
   teams: Team[];
@@ -107,18 +108,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
       }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <div className="mb-8">
-            {lastUpdated && formatRelativeTime && (
-              <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-4">
-                <span className="relative size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
-                  <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
-                </span>
-                <p className="opacity-60 text-xs font-light tracking-wider pl-4 lg:inline-block geist-mono uppercase">
-                  <span>UPDATED </span>
-                  <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
-                </p>
-              </div>
-            )}
+            <UpdatesPill lastUpdated={lastUpdated} />
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
               Conference Breakdown
             </h1>

@@ -3,6 +3,7 @@ import { X } from 'lucide-react';
 import { Combobox } from '@/components/ui/combobox';
 import { calculateBracket } from '@/lib/bracketProjection';
 import type { Team } from '@/types/team';
+import { UpdatesPill } from '@/components/UpdatesPill';
 
 type ResumeCompareViewProps = {
   teams: Team[];
@@ -169,18 +170,7 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
       }}>
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <div className="mb-8">
-            {lastUpdated && (
-              <div id="updates-pill" className="inline-flex items-center w-fit px-4 py-2 shadow-sm bg-white/40 rounded-full border border-white/15 mb-4">
-                <span className="relative size-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-80"></span>
-                  <span className="absolute inline-flex size-2 rounded-full bg-green-500"></span>
-                </span>
-                <p className="opacity-60 text-xs font-light tracking-wider pl-4 geist-mono uppercase">
-                  <span>UPDATED </span>
-                  <span>{formatRelativeTime(lastUpdated)}</span>
-                </p>
-              </div>
-            )}
+            <UpdatesPill lastUpdated={lastUpdated} />
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mt-4 mb-2 ibm-plex-sans">
               Compare Tournament Resumes
             </h1>
