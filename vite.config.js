@@ -60,6 +60,14 @@ function getRoutes() {
   return routes
 }
 
+// Determine OG image URL per route
+function getOgImage(route) {
+  const baseUrl = 'https://www.tourneyodds.info'
+  if (route === '/bracket') return `${baseUrl}/api/og-bracket`
+  if (route === '/bubble-watch') return `${baseUrl}/api/og-bubble`
+  return `${baseUrl}/open-graph-image.png`
+}
+
 // Generate SEO meta tags for a route
 function getSeoMetaTags(route) {
   const baseUrl = 'https://www.tourneyodds.info'
@@ -204,6 +212,17 @@ export default defineConfig(async () => {
           `<meta name="twitter:description" content="${seo.description}">`
         )
         
+        // Replace OG image (dynamic for bracket + bubble-watch, static otherwise)
+        const ogImage = getOgImage(renderedRoute.route)
+        html = html.replace(
+          /<meta property="og:image" content="[^"]*">/,
+          `<meta property="og:image" content="${ogImage}">`
+        )
+        html = html.replace(
+          /<meta name="twitter:image" content="[^"]*">/,
+          `<meta name="twitter:image" content="${ogImage}">`
+        )
+
         // Add canonical URL
         html = html.replace(
           '</head>',
