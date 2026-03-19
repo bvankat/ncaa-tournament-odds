@@ -74,6 +74,7 @@ export type GameCompetitor = {
 
 export type ScheduleGame = {
   date: string;
+  seasontype?: number;
   competitors: GameCompetitor[];
 };
 

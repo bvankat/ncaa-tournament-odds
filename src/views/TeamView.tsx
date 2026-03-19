@@ -488,6 +488,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
 
                     // Check if opponent is competitors[0] to determine if it's a road game
                     const isRoadGame = game.competitors[0].team_nickname === opponentComp.team_nickname;
+                    const isTournamentGame = game.seasontype === 3;
                     // Use pre-computed slug from schedule data, fallback to lookup if not available
                     const opponentSlug = opponentComp.slug || getTeamSlug(opponentComp.team_id);
                     const opponentDisplay = opponentSlug ? (
@@ -502,10 +503,13 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         )}
                         <span>
                           {isRoadGame && <span className="text-gray-500 font-light text-sm">at </span>}
-                          {opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 25 && (
+                          {!isTournamentGame && opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 25 && (
                             <span className="mx-1 text-xs font-medium text-gray-600">#{opponentComp.gameRank}</span>
                           )}
                           {opponentComp.team_nickname}
+                          {isTournamentGame && opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 16 && (
+                            <span className="ml-1 text-xs font-normal text-gray-400">{opponentComp.gameRank}-seed</span>
+                          )}
                         </span>
                       </a>
                     ) : (
@@ -520,10 +524,13 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         )}
                         <span>
                           {isRoadGame && <span className="text-gray-500 font-light text-sm">at </span>}
-                          {opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 25 && (
+                          {!isTournamentGame && opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 25 && (
                             <span className="mx-1 text-xs font-medium text-gray-600">#{opponentComp.gameRank}</span>
                           )}
                           {opponentComp.team_nickname}
+                          {isTournamentGame && opponentComp.gameRank && opponentComp.gameRank >= 1 && opponentComp.gameRank <= 16 && (
+                            <span className="ml-1 text-xs font-normal text-gray-400">{opponentComp.gameRank}-seed</span>
+                          )}
                         </span>
                       </div>
                     );
