@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T16:36:27.728510",
+  "lastUpdated": "2026-04-01T23:33:29.108337",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -40677,6 +40677,36 @@
               "team_nickname": "Colorado",
               "slug": "colorado-buffaloes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "201",
+              "team_nickname": "Oklahoma",
+              "slug": "oklahoma-sooners",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-04-04T17:30Z",
+          "seasontype": 3,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "-1",
+              "team_nickname": "TBD",
+              "slug": null,
+              "logo": null,
               "score": null,
               "gameRank": 99
             },
@@ -41658,7 +41688,7 @@
           ]
         },
         {
-          "date": "2026-04-02T02:30Z",
+          "date": "2026-04-02T03:15Z",
           "seasontype": 3,
           "competitors": [
             {
@@ -87360,7 +87390,7 @@
           ]
         },
         {
-          "date": "2026-04-02T02:30Z",
+          "date": "2026-04-02T03:15Z",
           "seasontype": 3,
           "competitors": [
             {
@@ -98379,16 +98409,22 @@
               "team_nickname": "Colorado",
               "slug": "colorado-buffaloes",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
-              "score": null,
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
               "gameRank": 99
             },
             {
-              "winner": false,
+              "winner": true,
               "team_id": "201",
               "team_nickname": "Oklahoma",
               "slug": "oklahoma-sooners",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
-              "score": null,
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
               "gameRank": 99
             }
           ]
@@ -174504,6 +174540,972 @@
               "score": {
                 "value": 91.0,
                 "displayValue": "91"
+              },
+              "gameRank": 99
+            }
+          ]
+        }
+      ]
+    },
+    "samford-bulldogs": {
+      "espn_id": "2535",
+      "team_name": "Samford Bulldogs",
+      "schedule": [
+        {
+          "date": "2025-11-04T01:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2655",
+              "team_nickname": "Tulane",
+              "slug": "tulane-green-wave",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-08T01:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2569",
+              "team_nickname": "SC State",
+              "slug": "south-carolina-state-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-13T01:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2640",
+              "team_nickname": "Texas Southern",
+              "slug": "texas-southern-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2640.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-15T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "8",
+              "team_nickname": "Arkansas",
+              "slug": "arkansas-razorbacks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 21
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-16T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2110",
+              "team_nickname": "C Arkansas",
+              "slug": "central-arkansas-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-20T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "526",
+              "team_nickname": "FGCU",
+              "slug": "florida-gulf-coast-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-22T02:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "166",
+              "team_nickname": "New Mexico St",
+              "slug": "new-mexico-state-aggies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-25T20:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2247",
+              "team_nickname": "Georgia St",
+              "slug": "georgia-state-panthers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+              "score": {
+                "value": 63.0,
+                "displayValue": "63"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-26T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "3084",
+              "team_nickname": "Utah Valley",
+              "slug": "utah-valley-wolverines",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3084.png",
+              "score": {
+                "value": 89.0,
+                "displayValue": "89"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 45.0,
+                "displayValue": "45"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-06T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2670",
+              "team_nickname": "VCU",
+              "slug": "vcu-rams",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-08T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "172",
+              "team_nickname": "Cornell",
+              "slug": "cornell-big-red",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-15T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 106.0,
+                "displayValue": "106"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2081",
+              "team_nickname": "Bryan (TN)",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 51.0,
+                "displayValue": "51"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-19T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2890",
+              "team_nickname": "Reinhardt",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 49.0,
+                "displayValue": "49"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-01T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2678",
+              "team_nickname": "VMI",
+              "slug": "vmi-keydets",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png",
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-03T21:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2430",
+              "team_nickname": "UNC Greensboro",
+              "slug": "unc-greensboro-spartans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2430.png",
+              "score": {
+                "value": 89.0,
+                "displayValue": "89"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-08T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2717",
+              "team_nickname": "W Carolina",
+              "slug": "western-carolina-catamounts",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-10T21:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "236",
+              "team_nickname": "Chattanooga",
+              "slug": "chattanooga-mocs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-15T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "231",
+              "team_nickname": "Furman",
+              "slug": "furman-paladins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-17T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2193",
+              "team_nickname": "ETSU",
+              "slug": "east-tennessee-state-buccaneers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-21T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-24T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "236",
+              "team_nickname": "Chattanooga",
+              "slug": "chattanooga-mocs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png",
+              "score": {
+                "value": 64.0,
+                "displayValue": "64"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-29T22:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "231",
+              "team_nickname": "Furman",
+              "slug": "furman-paladins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-01T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2717",
+              "team_nickname": "W Carolina",
+              "slug": "western-carolina-catamounts",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-06T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2643",
+              "team_nickname": "The Citadel",
+              "slug": "the-citadel-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2643.png",
+              "score": {
+                "value": 64.0,
+                "displayValue": "64"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-07T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2382",
+              "team_nickname": "Mercer",
+              "slug": "mercer-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png",
+              "score": {
+                "value": 49.0,
+                "displayValue": "49"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-12T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 97.0,
+                "displayValue": "97"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2747",
+              "team_nickname": "Wofford",
+              "slug": "wofford-terriers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-14T17:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2193",
+              "team_nickname": "ETSU",
+              "slug": "east-tennessee-state-buccaneers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-20T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2643",
+              "team_nickname": "The Citadel",
+              "slug": "the-citadel-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2643.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-21T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2382",
+              "team_nickname": "Mercer",
+              "slug": "mercer-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png",
+              "score": {
+                "value": 89.0,
+                "displayValue": "89"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-27T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2678",
+              "team_nickname": "VMI",
+              "slug": "vmi-keydets",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png",
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-28T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2430",
+              "team_nickname": "UNC Greensboro",
+              "slug": "unc-greensboro-spartans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2430.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2535",
+              "team_nickname": "Samford",
+              "slug": "samford-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "231",
+              "team_nickname": "Furman",
+              "slug": "furman-paladins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
               },
               "gameRank": 99
             }
