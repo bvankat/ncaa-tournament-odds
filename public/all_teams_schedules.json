@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-14T05:47:56.745375",
+  "lastUpdated": "2026-04-14T11:33:37.017238",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -267266,6 +267266,66 @@
                 "displayValue": "63"
               },
               "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-17T22:40Z",
+          "seasontype": 3,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "47",
+              "team_nickname": "Howard",
+              "slug": "howard-bison",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 16
+            },
+            {
+              "winner": false,
+              "team_id": "2378",
+              "team_nickname": "UMBC",
+              "slug": "umbc-retrievers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2378.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 16
+            }
+          ]
+        },
+        {
+          "date": "2026-03-19T23:30Z",
+          "seasontype": 3,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "130",
+              "team_nickname": "Michigan",
+              "slug": "michigan-wolverines",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+              "score": {
+                "value": 101.0,
+                "displayValue": "101"
+              },
+              "gameRank": 1
+            },
+            {
+              "winner": false,
+              "team_id": "47",
+              "team_nickname": "Howard",
+              "slug": "howard-bison",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 16
             }
           ]
         }
