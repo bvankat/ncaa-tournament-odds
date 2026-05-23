@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-22T11:41:34.658982",
+  "lastUpdated": "2026-05-22T23:34:40.430187",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -218061,6 +218061,972 @@
               "team_nickname": "Portland",
               "slug": "portland-pilots",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2501.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            }
+          ]
+        }
+      ]
+    },
+    "uc-riverside-highlanders": {
+      "espn_id": "27",
+      "team_name": "UC Riverside Highlanders",
+      "schedule": [
+        {
+          "date": "2025-11-04T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "3167",
+              "team_nickname": "La Sierra",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 49.0,
+                "displayValue": "49"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-07T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "155",
+              "team_nickname": "North Dakota",
+              "slug": "north-dakota-fighting-hawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-12T02:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "167",
+              "team_nickname": "New Mexico",
+              "slug": "new-mexico-lobos",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-15T22:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "155",
+              "team_nickname": "North Dakota",
+              "slug": "north-dakota-fighting-hawks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-19T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2856",
+              "team_nickname": "CA Baptist",
+              "slug": "california-baptist-lancers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2856.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 57.0,
+                "displayValue": "57"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-22T02:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "301",
+              "team_nickname": "San Diego",
+              "slug": "san-diego-toreros",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png",
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-24T20:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2755",
+              "team_nickname": "Grambling",
+              "slug": "grambling-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-29T22:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "3101",
+              "team_nickname": "Utah Tech",
+              "slug": "utah-tech-trailblazers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-05T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "300",
+              "team_nickname": "UC Irvine",
+              "slug": "uc-irvine-anteaters",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 60.0,
+                "displayValue": "60"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-07T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "13",
+              "team_nickname": "Cal Poly",
+              "slug": "cal-poly-mustangs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png",
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-14T02:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "252",
+              "team_nickname": "BYU",
+              "slug": "byu-cougars",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+              "score": {
+                "value": 100.0,
+                "displayValue": "100"
+              },
+              "gameRank": 10
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 53.0,
+                "displayValue": "53"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-17T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 95.0,
+                "displayValue": "95"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "128501",
+              "team_nickname": "Stanton",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-21T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2900",
+              "team_nickname": "St Thomas (MN)",
+              "slug": "st-thomas-minnesota-tommies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2900.png",
+              "score": {
+                "value": 92.0,
+                "displayValue": "92"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-23T21:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "26",
+              "team_nickname": "UCLA",
+              "slug": "ucla-bruins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+              "score": {
+                "value": 97.0,
+                "displayValue": "97"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-02T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 45.0,
+                "displayValue": "45"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "62",
+              "team_nickname": "Hawai'i",
+              "slug": "hawaii-rainbow-warriors",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-09T02:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2934",
+              "team_nickname": "Bakersfield",
+              "slug": "cal-state-bakersfield-roadrunners",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2934.png",
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-11T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "28",
+              "team_nickname": "UC San Diego",
+              "slug": "uc-san-diego-tritons",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/28.png",
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-16T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "299",
+              "team_nickname": "Long Beach St",
+              "slug": "long-beach-state-beach",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/299.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-18T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2239",
+              "team_nickname": "Fullerton",
+              "slug": "cal-state-fullerton-titans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2239.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-23T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "300",
+              "team_nickname": "UC Irvine",
+              "slug": "uc-irvine-anteaters",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-24T22:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "302",
+              "team_nickname": "UC Davis",
+              "slug": "uc-davis-aggies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-30T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "299",
+              "team_nickname": "Long Beach St",
+              "slug": "long-beach-state-beach",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/299.png",
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-01T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "13",
+              "team_nickname": "Cal Poly",
+              "slug": "cal-poly-mustangs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png",
+              "score": {
+                "value": 94.0,
+                "displayValue": "94"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-06T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2239",
+              "team_nickname": "Fullerton",
+              "slug": "cal-state-fullerton-titans",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2239.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-07T21:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2463",
+              "team_nickname": "CSU Northridge",
+              "slug": "cal-state-northridge-matadors",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2463.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-13T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2540",
+              "team_nickname": "Santa Barbara",
+              "slug": "uc-santa-barbara-gauchos",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2540.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-15T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "28",
+              "team_nickname": "UC San Diego",
+              "slug": "uc-san-diego-tritons",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/28.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-20T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2934",
+              "team_nickname": "Bakersfield",
+              "slug": "cal-state-bakersfield-roadrunners",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2934.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-21T22:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "302",
+              "team_nickname": "UC Davis",
+              "slug": "uc-davis-aggies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-27T02:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2540",
+              "team_nickname": "Santa Barbara",
+              "slug": "uc-santa-barbara-gauchos",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2540.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 59.0,
+                "displayValue": "59"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-01T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
+              "score": {
+                "value": 95.0,
+                "displayValue": "95"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2463",
+              "team_nickname": "CSU Northridge",
+              "slug": "cal-state-northridge-matadors",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2463.png",
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T04:59Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "62",
+              "team_nickname": "Hawai'i",
+              "slug": "hawaii-rainbow-warriors",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+              "score": {
+                "value": 93.0,
+                "displayValue": "93"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "27",
+              "team_nickname": "UC Riverside",
+              "slug": "uc-riverside-highlanders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/27.png",
               "score": {
                 "value": 74.0,
                 "displayValue": "74"
