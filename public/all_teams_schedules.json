@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T16:48:18.440644",
+  "lastUpdated": "2026-07-02T16:32:32.312298",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -45914,6 +45914,66 @@
                 "displayValue": "62"
               },
               "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-21T02:07Z",
+          "seasontype": 3,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2390",
+              "team_nickname": "Miami",
+              "slug": "miami-hurricanes",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 7
+            },
+            {
+              "winner": false,
+              "team_id": "142",
+              "team_nickname": "Missouri",
+              "slug": "missouri-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 10
+            }
+          ]
+        },
+        {
+          "date": "2026-03-22T16:10Z",
+          "seasontype": 3,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2509",
+              "team_nickname": "Purdue",
+              "slug": "purdue-boilermakers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 2
+            },
+            {
+              "winner": false,
+              "team_id": "2390",
+              "team_nickname": "Miami",
+              "slug": "miami-hurricanes",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
+              "gameRank": 7
             }
           ]
         }
@@ -129264,6 +129324,1002 @@
               "score": {
                 "value": 67.0,
                 "displayValue": "67"
+              },
+              "gameRank": 99
+            }
+          ]
+        }
+      ]
+    },
+    "florida-atlantic-owls": {
+      "espn_id": "2226",
+      "team_name": "Florida Atlantic Owls",
+      "schedule": [
+        {
+          "date": "2025-11-04T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "103",
+              "team_nickname": "Boston College",
+              "slug": "boston-college-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-08T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "232",
+              "team_nickname": "Charleston",
+              "slug": "charleston-cougars",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/232.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 94.0,
+                "displayValue": "94"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-09T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2335",
+              "team_nickname": "Liberty",
+              "slug": "liberty-flames",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-18T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 92.0,
+                "displayValue": "92"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "3189",
+              "team_nickname": "Coastal GA",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 63.0,
+                "displayValue": "63"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-21T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "279",
+              "team_nickname": "Pacific",
+              "slug": "pacific-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
+              "score": {
+                "value": 59.0,
+                "displayValue": "59"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-25T01:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2351",
+              "team_nickname": "LMU",
+              "slug": "loyola-marymount-lions",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2351.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-26T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2244",
+              "team_nickname": "George Mason",
+              "slug": "george-mason-patriots",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2244.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-30T20:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "179",
+              "team_nickname": "St Bonaventure",
+              "slug": "st-bonaventure-bonnies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/179.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-07T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "526",
+              "team_nickname": "FGCU",
+              "slug": "florida-gulf-coast-eagles",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/526.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-11T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 112.0,
+                "displayValue": "112"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2605",
+              "team_nickname": "Saint Leo",
+              "slug": null,
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2605.png",
+              "score": {
+                "value": 55.0,
+                "displayValue": "55"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-13T17:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 105.0,
+                "displayValue": "105"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "399",
+              "team_nickname": "UAlbany",
+              "slug": "ualbany-great-danes",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-20T03:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2608",
+              "team_nickname": "Saint Mary's",
+              "slug": "saint-marys-gaels",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2608.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-23T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2116",
+              "team_nickname": "UCF",
+              "slug": "ucf-knights",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-31T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 110.0,
+                "displayValue": "110"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2636",
+              "team_nickname": "UTSA",
+              "slug": "utsa-roadrunners",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-04T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2655",
+              "team_nickname": "Tulane",
+              "slug": "tulane-green-wave",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-08T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "5",
+              "team_nickname": "UAB",
+              "slug": "uab-blazers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+              "score": {
+                "value": 71.0,
+                "displayValue": "71"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-11T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 89.0,
+                "displayValue": "89"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "235",
+              "team_nickname": "Memphis",
+              "slug": "memphis-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-16T02:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2724",
+              "team_nickname": "Wichita St",
+              "slug": "wichita-state-shockers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-18T17:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "218",
+              "team_nickname": "Temple",
+              "slug": "temple-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-22T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2655",
+              "team_nickname": "Tulane",
+              "slug": "tulane-green-wave",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-25T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "58",
+              "team_nickname": "South Florida",
+              "slug": "south-florida-bulls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+              "score": {
+                "value": 89.0,
+                "displayValue": "89"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-30T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "235",
+              "team_nickname": "Memphis",
+              "slug": "memphis-tigers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+              "score": {
+                "value": 92.0,
+                "displayValue": "92"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-01T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "151",
+              "team_nickname": "East Carolina",
+              "slug": "east-carolina-pirates",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-05T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "202",
+              "team_nickname": "Tulsa",
+              "slug": "tulsa-golden-hurricane",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-12T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "242",
+              "team_nickname": "Rice",
+              "slug": "rice-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-15T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "58",
+              "team_nickname": "South Florida",
+              "slug": "south-florida-bulls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-19T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2636",
+              "team_nickname": "UTSA",
+              "slug": "utsa-roadrunners",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+              "score": {
+                "value": 52.0,
+                "displayValue": "52"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 60.0,
+                "displayValue": "60"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-22T21:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "249",
+              "team_nickname": "North Texas",
+              "slug": "north-texas-mean-green",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-27T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "218",
+              "team_nickname": "Temple",
+              "slug": "temple-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-01T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2429",
+              "team_nickname": "Charlotte",
+              "slug": "charlotte-49ers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T21:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2724",
+              "team_nickname": "Wichita St",
+              "slug": "wichita-state-shockers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-12T01:40Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 63.0,
+                "displayValue": "63"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "218",
+              "team_nickname": "Temple",
+              "slug": "temple-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+              "score": {
+                "value": 59.0,
+                "displayValue": "59"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-13T01:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "249",
+              "team_nickname": "North Texas",
+              "slug": "north-texas-mean-green",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2226",
+              "team_nickname": "FAU",
+              "slug": "florida-atlantic-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
               },
               "gameRank": 99
             }
