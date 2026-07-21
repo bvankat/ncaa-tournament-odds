@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-20T16:51:29.483298",
+  "lastUpdated": "2026-07-21T11:40:27.115876",
   "teams": {
     "duke-blue-devils": {
       "espn_id": "150",
@@ -144384,6 +144384,972 @@
               "score": {
                 "value": 61.0,
                 "displayValue": "61"
+              },
+              "gameRank": 99
+            }
+          ]
+        }
+      ]
+    },
+    "middle-tennessee-blue-raiders": {
+      "espn_id": "2393",
+      "team_name": "Middle Tennessee Blue Raiders",
+      "schedule": [
+        {
+          "date": "2025-11-05T16:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 100.0,
+                "displayValue": "100"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2397",
+              "team_nickname": "Milligan",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 51.0,
+                "displayValue": "51"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-09T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 109.0,
+                "displayValue": "109"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2693",
+              "team_nickname": "Webster",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 56.0,
+                "displayValue": "56"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-13T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "339",
+              "team_nickname": "Evansville",
+              "slug": "evansville-purple-aces",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/339.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-19T23:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "130",
+              "team_nickname": "Michigan",
+              "slug": "michigan-wolverines",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 7
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-24T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "93",
+              "team_nickname": "Murray St",
+              "slug": "murray-state-racers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png",
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-24T22:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 79.0,
+                "displayValue": "79"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "45",
+              "team_nickname": "G Washington",
+              "slug": "george-washington-revolutionaries",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/45.png",
+              "score": {
+                "value": 92.0,
+                "displayValue": "92"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-11-25T22:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2377",
+              "team_nickname": "McNeese",
+              "slug": "mcneese-cowboys",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png",
+              "score": {
+                "value": 72.0,
+                "displayValue": "72"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-02T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 76.0,
+                "displayValue": "76"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "5",
+              "team_nickname": "UAB",
+              "slug": "uab-blazers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+              "score": {
+                "value": 61.0,
+                "displayValue": "61"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-07T21:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 62.0,
+                "displayValue": "62"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2057",
+              "team_nickname": "Belmont",
+              "slug": "belmont-bruins",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-18T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "338",
+              "team_nickname": "Kennesaw St",
+              "slug": "kennesaw-state-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-21T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 74.0,
+                "displayValue": "74"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2161",
+              "team_nickname": "Cumberland",
+              "slug": null,
+              "logo": null,
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2025-12-30T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "248",
+              "team_nickname": "Houston",
+              "slug": "houston-cougars",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
+              },
+              "gameRank": 8
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 60.0,
+                "displayValue": "60"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-03T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2348",
+              "team_nickname": "Louisiana Tech",
+              "slug": "louisiana-tech-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+              "score": {
+                "value": 51.0,
+                "displayValue": "51"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-04T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 68.0,
+                "displayValue": "68"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2534",
+              "team_nickname": "Sam Houston",
+              "slug": "sam-houston-bearkats",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-09T02:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2638",
+              "team_nickname": "UTEP",
+              "slug": "utep-miners",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+              "score": {
+                "value": 83.0,
+                "displayValue": "83"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-11T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "166",
+              "team_nickname": "New Mexico St",
+              "slug": "new-mexico-state-aggies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+              "score": {
+                "value": 55.0,
+                "displayValue": "55"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 59.0,
+                "displayValue": "59"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-15T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2348",
+              "team_nickname": "Louisiana Tech",
+              "slug": "louisiana-tech-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+              "score": {
+                "value": 59.0,
+                "displayValue": "59"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-17T23:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2623",
+              "team_nickname": "Missouri St",
+              "slug": "missouri-state-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-24T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "55",
+              "team_nickname": "Jax State",
+              "slug": "jacksonville-state-gamecocks",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 58.0,
+                "displayValue": "58"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-30T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2335",
+              "team_nickname": "Liberty",
+              "slug": "liberty-flames",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+              "score": {
+                "value": 81.0,
+                "displayValue": "81"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-01-31T21:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 60.0,
+                "displayValue": "60"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "98",
+              "team_nickname": "Western KY",
+              "slug": "western-kentucky-hilltoppers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+              "score": {
+                "value": 65.0,
+                "displayValue": "65"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-05T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 84.0,
+                "displayValue": "84"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2229",
+              "team_nickname": "FIU",
+              "slug": "florida-international-panthers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-07T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "48",
+              "team_nickname": "Delaware",
+              "slug": "delaware-blue-hens",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+              "score": {
+                "value": 89.0,
+                "displayValue": "89"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 88.0,
+                "displayValue": "88"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-12T23:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "338",
+              "team_nickname": "Kennesaw St",
+              "slug": "kennesaw-state-owls",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+              "score": {
+                "value": 87.0,
+                "displayValue": "87"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 90.0,
+                "displayValue": "90"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-15T01:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "98",
+              "team_nickname": "Western KY",
+              "slug": "western-kentucky-hilltoppers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+              "score": {
+                "value": 82.0,
+                "displayValue": "82"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-19T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2534",
+              "team_nickname": "Sam Houston",
+              "slug": "sam-houston-bearkats",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 70.0,
+                "displayValue": "70"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-21T19:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 78.0,
+                "displayValue": "78"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "48",
+              "team_nickname": "Delaware",
+              "slug": "delaware-blue-hens",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+              "score": {
+                "value": 66.0,
+                "displayValue": "66"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-27T00:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 77.0,
+                "displayValue": "77"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2638",
+              "team_nickname": "UTEP",
+              "slug": "utep-miners",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-02-28T18:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 86.0,
+                "displayValue": "86"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "166",
+              "team_nickname": "New Mexico St",
+              "slug": "new-mexico-state-aggies",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+              "score": {
+                "value": 85.0,
+                "displayValue": "85"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-06T00:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2229",
+              "team_nickname": "FIU",
+              "slug": "florida-international-panthers",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+              "score": {
+                "value": 67.0,
+                "displayValue": "67"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 73.0,
+                "displayValue": "73"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-07T20:00Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": false,
+              "team_id": "2623",
+              "team_nickname": "Missouri St",
+              "slug": "missouri-state-bears",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+              "score": {
+                "value": 63.0,
+                "displayValue": "63"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": true,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 75.0,
+                "displayValue": "75"
+              },
+              "gameRank": 99
+            }
+          ]
+        },
+        {
+          "date": "2026-03-12T22:30Z",
+          "seasontype": 2,
+          "competitors": [
+            {
+              "winner": true,
+              "team_id": "2348",
+              "team_nickname": "Louisiana Tech",
+              "slug": "louisiana-tech-bulldogs",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+              "score": {
+                "value": 80.0,
+                "displayValue": "80"
+              },
+              "gameRank": 99
+            },
+            {
+              "winner": false,
+              "team_id": "2393",
+              "team_nickname": "MTSU",
+              "slug": "middle-tennessee-blue-raiders",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+              "score": {
+                "value": 69.0,
+                "displayValue": "69"
               },
               "gameRank": 99
             }
