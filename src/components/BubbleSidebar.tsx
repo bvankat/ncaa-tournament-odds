@@ -74,7 +74,7 @@ export function BubbleSidebar({
     type TeamWithStatus = Team & { status: string; bgClass: string };
     const allTeams: TeamWithStatus[] = [
       ...lastFourByesList.map(team => ({ ...team, status: 'Last Four Byes', bgClass: 'bg-orange-50' })),
-      ...lastFourInList.map(team => ({ ...team, status: 'Play-In Game', bgClass: 'bg-purple-50' })),
+      ...lastFourInList.map(team => ({ ...team, status: 'Opening Round Game', bgClass: 'bg-purple-50' })),
       ...firstFourOut.map(team => ({ ...team, status: 'First Four Out', bgClass: 'bg-white' })),
       ...nextFourOut.map(team => ({ ...team, status: 'Next Four Out', bgClass: 'bg-white' }))
     ];
@@ -137,7 +137,7 @@ export function BubbleSidebar({
               
               const getStatusColor = (status: string) => {
                 if (status === 'Last Four Byes') return 'text-orange-800';
-                if (status === 'Play-In Game') return 'text-purple-800';
+                if (status === 'Opening Round Game') return 'text-purple-800';
                 return 'text-gray-600';
               };
 

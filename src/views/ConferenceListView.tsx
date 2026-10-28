@@ -4,6 +4,8 @@ import { formatPercent } from '@/lib/utils';
 import { calculateBracket } from '@/lib/bracketProjection';
 import { TournamentDashboard } from '@/components/TournamentDashboard';
 import { UpdatesPill } from '@/components/UpdatesPill';
+import { SectionGate, ComingSoon } from '@/components/SectionGate';
+import { sectionState, PHASE } from '@/lib/config';
 
 type ConferenceListViewProps = {
   teams: Team[];
@@ -17,6 +19,10 @@ type ConferenceTeams = {
 };
 
 export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRelativeTime }: ConferenceListViewProps) {
+  // When standings data isn't live, drop the per-conference leader/odds sidebar and show N/A in standings columns
+  const standingsState = sectionState('conf.standings');
+  const standingsOn = standingsState === 'on';
+  const standingsHidden = standingsState === 'hidden';
   // Group teams by conference and sort by conference standings
   const conferenceGroups = useMemo(() => {
     const groups: ConferenceTeams = {};
@@ -35,7 +41,9 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
         // Extract position number from "1st in ACC" format
         const aPos = parseInt(a.confStandingsPosition?.match(/^\d+/)?.[0] || '999');
         const bPos = parseInt(b.confStandingsPosition?.match(/^\d+/)?.[0] || '999');
-        return aPos - bPos;
+        if (aPos !== bPos) return aPos - bPos;
+        // No standings yet (preseason): order by KenPom
+        return Number(a.kenpom ?? 999) - Number(b.kenpom ?? 999);
       });
     });
 
@@ -113,7 +121,9 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
               Conference Breakdown
             </h1>
             <p className="text-gray-600 text-lg mb-6">
-              Updated tournament projections and current standings for all 31 Division I conferences.
+              {PHASE === 'preseason'
+                ? 'Every Division I conference for 2026-27, ordered by preseason ratings. Standings and bid projections fill in as the season gets under way.'
+                : 'Updated tournament projections and current standings for all 32 Division I conferences.'}
             </p>
           </div>
         </div>
@@ -141,8 +151,10 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
       </div>
       
       {/* Multi-bid Conferences Grid */}
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <SectionGate id="conf.multibid" title="Multi-Bid Conferences" className="mb-12">
       {multiBidGrid.conferences.length > 0 && (
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 mb-12">
+        <div className="mb-12">
           <div className="mb-4">
             <h2 className="text-2xl font-bold text-gray-900 ibm-plex-sans">Multi-Bid Conferences</h2>
             <p className="text-sm text-gray-600 mt-1">
@@ -256,6 +268,9 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
           </div>
         </div>
       )}
+        </SectionGate>
+        {standingsState === 'soon' && <ComingSoon id="conf.standings" title="Standings and bid projections" className="mb-8" />}
+      </div>
       
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
 
@@ -280,8 +295,9 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                   </a>
                 </h2>
                 
-                <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-12">
+                <div className={`grid grid-cols-1 ${standingsOn ? 'md:grid-cols-[300px_1fr]' : ''} gap-12`}>
                   {/* Sidebar - Tournament Context */}
+                  {standingsOn && (
                   <div className="space-y-4">
                     {/* Conference Leader */}
                     {leader && (
@@ -391,6 +407,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                     )}
 
                   </div>
+                  )}
 
                   {/* Main Content - Standings Table */}
                   <div className="rounded-lg border border-gray-200 overflow-hidden">
@@ -403,15 +420,21 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                           <th className="text-left text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase">
                             Team
                           </th>
+                          {!standingsHidden && (<>
                           <th className="text-center text-xs py-2 px-2 font-medium geist-mono text-gray-400 uppercase">
                             Overall
                           </th>
                           <th className="text-center text-xs py-2 px-2 font-medium geist-mono text-gray-400 uppercase">
                             Conf
                           </th>
+                          </>)}
+                          <th className="text-right text-xs py-2 px-2 font-medium geist-mono text-gray-400 uppercase">KenPom</th>
+                          <th className="text-right text-xs py-2 px-2 font-medium geist-mono text-gray-400 uppercase">Torvik</th>
+                          {!standingsHidden && (
                           <th className="text-right text-xs py-2 px-3 font-medium geist-mono text-gray-400 uppercase">
                             At-large bid
                           </th>
+                          )}
                         </tr>
                       </thead>
                       <tbody>
@@ -442,17 +465,23 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                                   </span>
                                 </div>
                               </td>
+                              {!standingsHidden && (<>
                               <td className="py-2 px-2 text-center text-gray-600 geist-mono text-xs">
-                                {team.record || '—'}
+                                {standingsOn ? (team.record || '—') : 'N/A'}
                               </td>
                               <td className="py-2 px-2 text-center text-gray-900 geist-mono text-xs font-medium">
-                                {team.confRecord || '—'}
+                                {standingsOn ? (team.confRecord || '—') : 'N/A'}
                               </td>
+                              </>)}
+                              <td className="py-2 px-2 text-right text-gray-600 geist-mono text-xs">{team.kenpom || '—'}</td>
+                              <td className="py-2 px-2 text-right text-gray-600 geist-mono text-xs">{team.torvik || '—'}</td>
+                              {!standingsHidden && (
                               <td className="py-2 px-3 text-right text-xs">
                                 <span className="font-medium geist-mono">
-                                  {formattedOdds}
+                                  {standingsOn ? formattedOdds : 'N/A'}
                                 </span>
                               </td>
+                              )}
                             </tr>
                           );
                         })}

@@ -8,6 +8,7 @@ import { BracketView } from '@/views/BracketView';
 import { BubbleWatchView } from '@/views/BubbleWatchView';
 import { ResumeCompareView } from '@/views/ResumeCompareView';
 import { formatRelativeTime } from '@/lib/utils';
+import { applySourceFilter } from '@/lib/sourceFilter';
 import type { Team, OddsMovers } from '@/types/team';
 
 function App() {
@@ -91,11 +92,14 @@ function App() {
       const teamsMap: Record<string, Team> = {};
 
       rankingsData.teams.forEach((team: any) => {
+        // Null out fields from sources disabled in config/site-config.json so every
+        // calculation downstream only sees the enabled sources.
+        const filtered = applySourceFilter(team);
         teamsMap[team.slug] = {
-          ...team, // Spread all team properties to preserve Nebraska-specific data
+          ...filtered, // Spread all team properties to preserve Nebraska-specific data
           id: team.slug,
-          kenpom: team.kenpomRank,
-          torvik: team.torvikRank,
+          kenpom: filtered.kenpomRank,
+          torvik: filtered.torvikRank,
         } as Team;
       });
       const teams = Object.values(teamsMap).sort((a, b) => a.displayName.localeCompare(b.displayName));

@@ -7,7 +7,7 @@ NCAA Men's Basketball Tournament selection probabilities for all 365 Division I 
 This app provides NCAA tournament odds calculated from key metrics (NET, BPI, SOR, KPI, WAB, KenPom, Torvik) by scraping official data sources. Features include:
 
 - **Team Profiles** - Dedicated page for all 365 D1 teams with rankings, schedules, records, and projected seeds
-- **Bracket Projection** - Full 68-team field with seeds, auto-bids, and play-in games
+- **Bracket Projection** - Full 76-team field with seeds, auto-bids, and Opening Round games
 - **Bubble Watch** - Live tracker for teams on the tournament bubble with critical upcoming games
 - **Resume Comparison** - Side-by-side comparison tool for analyzing team resumes
 - **Conference View** - Multi-bid breakdown with full conference standings and odds
@@ -60,7 +60,7 @@ This app provides NCAA tournament odds calculated from key metrics (NET, BPI, SO
 - **LandingView** - Homepage with scrolling logo grid, team search, random odds gauge, and biggest odds movers
 - **TeamView** - Detailed team page with rankings table, schedule, record breakdowns, and projected seed
 - **AllTeamsView** - Comprehensive sortable table of all 362 teams with rankings and tournament odds
-- **BracketView** - Full 68-team bracket projection with seeds, auto-bids, and play-in games
+- **BracketView** - Full 76-team bracket projection with seeds, auto-bids, and Opening Round games
 - **BubbleWatchView** - Dedicated bubble team tracker with odds movers and critical upcoming games
 - **ConferenceListView** - Conference-by-conference breakdown with tournament odds and standings
 - **ResumeCompareView** - Side-by-side resume comparison tool (up to 8 teams) with all key metrics
@@ -145,7 +145,7 @@ ncaa-tournament-odds/
    - `LandingView` - Homepage with team search, odds movers, and scrolling logos
    - `TeamView` - Detailed team page with rankings, schedule, records, and projected seed
    - `AllTeamsView` - Sortable table of all 362 teams
-   - `BracketView` - Full 68-team bracket projection based on current data
+   - `BracketView` - Full 76-team bracket projection based on current data
    - `BubbleWatchView` - Bubble team tracker with odds movers and critical games
    - `ConferenceListView` - Conference standings with tournament odds
    - `ResumeCompareView` - Side-by-side team resume comparison
@@ -161,9 +161,9 @@ Tournament odds are calculated using a weighted algorithm:
 - Day-over-day odds changes tracked via `previousTournamentOdds`
 
 ### Bracket Projection
-- Full 68-team field projection based on composite rankings
+- Full 76-team field projection based on composite rankings
 - Automatic bid tracking for conference tournament winners
-- Play-in game assignments (First Four)
+- Opening Round game assignments (24 teams / 12 games)
 - Seed line calculations (1-16) with proper distribution
 - Last Four In, Last Four Byes, and First Four Out indicators
 - Bubble team rankings with composite scores
@@ -231,9 +231,32 @@ npm run preview
 python3 scrape/all_teams_scrape.py
 python3 scrape/schedule_scraper.py
 
-# Or use the automated script:
+# Or use the automated script (scrapes, commits AND pushes — run it only when the
+# code and config on main are ready for the new data):
 sh scrape/git-push.sh
 ```
+
+### Season Config (early-season mode)
+`config/site-config.json` controls which rating sources are used and which parts of
+each page are live. It is bundled at build time, read by the Python scrapers, and
+edited from a local-only page that is never deployed:
+
+```bash
+npm run admin   # http://127.0.0.1:4321
+```
+
+- **Data sources** — toggle KenPom, Torvik, ESPN BPI, ESPN SOR, KPI, NCAA NET, NCAA WAB
+  and records/quads/standings. Disabled sources are not scraped, show as `N/A`, and are
+  excluded from every calculation (site, scraper, OG images).
+- **Page sections** — per section: `On`, `Soon` (a "coming soon" notice naming the data it
+  is waiting on) or `Hidden`. Table columns toggle between values and `N/A`.
+- Presets: *Preseason* (KenPom + Torvik only) and *Full season*.
+- Preview the fully-on layout without changing anything: add `?preview=full` to any URL.
+- Section/source definitions live in `config/registry.json`.
+
+Season rollover checklist: set `season` and `phase` in the admin page, blank
+`scrape/auto_bids.json`, scrape, then turn sources/sections on as each rating is released.
+Odds are `null` (shown as N/A) until NET plus at least one resume metric is enabled.
 
 ## Analytics
 

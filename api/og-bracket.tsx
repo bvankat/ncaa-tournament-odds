@@ -1,4 +1,5 @@
 import { ImageResponse } from '@vercel/og';
+import { sectionIsOn, comingSoonImage } from './_comingSoon';
 
 export const config = { runtime: 'edge' };
 
@@ -106,7 +107,7 @@ function getTop16Seeds(teams: Team[]): [Team[], Team[], Team[], Team[]] {
   const atLarge = teams
     .filter(t => !autoBidIds.has(t.espnId || t.slug))
     .sort((a, b) => selectionRank(a) - selectionRank(b))
-    .slice(0, 37);
+    .slice(0, 44);
 
   const bracket = [...autoBidList, ...atLarge];
   bracket.sort((a, b) => seedingRank(a) - seedingRank(b));
@@ -145,12 +146,15 @@ const SEED_COLORS = [
 ];
 
 export default async function handler(_req: Request): Promise<Response> {
+  if (!sectionIsOn('bracket.table')) return comingSoonImage('Projected Bracket');
+
   const [fontData, data] = await Promise.all([
     loadFont(),
     fetch('https://www.tourneyodds.info/all_teams_rankings.json').then(r => r.json()).catch(() => ({ teams: [] })),
   ]);
 
-  const teams: Team[] = data.teams ?? [];
+  // The raw JSON stores these as kenpomRank/torvikRank; the site maps them in App.tsx
+  const teams: Team[] = (data.teams ?? []).map((t: any) => ({ ...t, kenpom: t.kenpomRank, torvik: t.torvikRank }));
   const [seed1, seed2, seed3, seed4] = getTop16Seeds(teams);
   const seedGroups = [seed1, seed2, seed3, seed4];
 

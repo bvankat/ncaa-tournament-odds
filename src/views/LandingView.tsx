@@ -8,6 +8,7 @@ import { BubbleSidebar } from '@/components/BubbleSidebar';
 import { calculateBracket } from '@/lib/bracketProjection';
 import type { Team, OddsMovers as OddsMoversType } from '@/types/team';
 import { UpdatesPill } from '@/components/UpdatesPill';
+import { SectionGate } from '@/components/SectionGate';
 
 type LandingViewProps = {
   teams?: Team[];
@@ -122,7 +123,7 @@ export function LandingView({
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Latest Rankings</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">NET, Kenpom, Torvik, BPI, SOR, KPI, WAB — all in one place</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">NET, Kenpom, Torvik, BPI, SOR, KPI, WAB — all in one place, added as each is released</p>
                   </div>
                 </div>
               </button>
@@ -141,7 +142,7 @@ export function LandingView({
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Projected Bracket</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Updated seed list and play-in games</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">Updated seed list and Opening Round games</p>
                   </div>
                 </div>
               </button>
@@ -171,7 +172,7 @@ export function LandingView({
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 ibm-plex-sans">Conference Breakdown</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Current standings and bid status for all 31 conferences</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">Current standings and bid status for all 32 conferences</p>
                   </div>
                 </div>
               </button>
@@ -192,7 +193,9 @@ export function LandingView({
           <p className="text-gray-600 mb-6 text-sm">
                 Bracket status based on the latest metrics. <a onClick={onBracket} className="underline cursor-pointer">Full projected bracket »</a>
               </p>
-          <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
+          <SectionGate id="landing.glance" title="Bracket status">
+            <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} />
+          </SectionGate>
           
           <div className="mt-4 flex gap-5 justify-start">
             <button onClick={onConferences} className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer">
@@ -214,22 +217,26 @@ export function LandingView({
               <p className="text-gray-600 mb-3 text-sm"><a onClick={onResumeCompare} className="underline cursor-pointer">Compare resumes »</a></p>
           </div>
           <div className="md:col-span-8" id="bubble-projection">
-            <BubbleSidebar
-              lastFourByesList={lastFourByesList}
-              lastFourInList={lastFourInList}
-              firstFourOut={firstFourOut}
-              nextFourOut={nextFourOut}
-              onTeamSelect={onTeamSelect}
-              variant="list"
-              teamSeedMap={teamSeedMap}
-            />
+            <SectionGate id="landing.bubble" title="Bubble projection">
+              <BubbleSidebar
+                lastFourByesList={lastFourByesList}
+                lastFourInList={lastFourInList}
+                firstFourOut={firstFourOut}
+                nextFourOut={nextFourOut}
+                onTeamSelect={onTeamSelect}
+                variant="list"
+                teamSeedMap={teamSeedMap}
+              />
+            </SectionGate>
           </div>
         </div>
 
         </div>
 
         <div className="py-12 lg:py-16 px-6 lg:px-12 max-w-screen-xl mx-auto">
-            <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
+            <SectionGate id="landing.movers" title="Odds movers">
+              <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
+            </SectionGate>
         </div>
 
 

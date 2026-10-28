@@ -7,6 +7,9 @@ import type { Team, TeamSchedule } from '@/types/team';
 import { formatPercent, getDashboardStatus } from '@/lib/utils';
 import { calculateBracket, getIntangibleBreakdown, calculateSelectionRanking, calculateSeedingRanking } from '@/lib/bracketProjection';
 import { UpdatesPill } from '@/components/UpdatesPill';
+import { BlurOverlay, pendingSourcesText } from '@/components/SectionGate';
+import { sectionState, PHASE, SEASON } from '@/lib/config';
+import { metricCell } from '@/lib/sourceFilter';
 
 type TeamViewProps = {
   team: Team;
@@ -19,6 +22,15 @@ type TeamViewProps = {
 export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allTeams }: TeamViewProps) {
   const primaryColor = team.primaryColor ? `#${team.primaryColor}` : '#000000';
   const secondaryColor = team.secondaryColor ? `#${team.secondaryColor}` : '#ffffff';
+  // Each section is 'on' (show), 'soon' (blurred/notice) or 'hidden' (removed entirely)
+  const oddsState = sectionState('team.odds');
+  const projectionState = sectionState('team.projection');
+  const recordsState = sectionState('team.records');
+  const quadsState = sectionState('team.quads');
+  const oddsOn = oddsState === 'on';
+  const projectionOn = projectionState === 'on';
+  const recordsOn = recordsState === 'on';
+  const quadsOn = quadsState === 'on';
   const tournamentOdds = team.tournamentOdds ?? 0;
   // Override display odds to 100% for confirmed auto-bid teams; do not modify underlying data
   const displayOdds = team.autoBid ? 100 : tournamentOdds;
@@ -167,7 +179,11 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                   {team.displayName} <span className="font-normal">NCAA Tournament Odds</span>
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
-                  At-large bid chances for {team.shortName} based on its current team-sheet ranks
+                  {oddsOn
+                    ? `At-large bid chances for ${team.shortName} based on its current team-sheet ranks`
+                    : oddsState === 'hidden'
+                      ? `${team.shortName} ratings and schedule`
+                      : `${team.shortName} preseason ratings. At-large bid odds appear once team-sheet metrics are released this season.`}
                 </p>
               </div>
               </div>
@@ -176,11 +192,23 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
 
             </div>
 
+            {oddsState !== 'hidden' && (
             <div className="flex flex-col items-center justify-center gap-2">
               <div style={{ position: 'relative', width: 340, height: 340 }}>                
-              <Speedometer value={displayOdds} />
+              {oddsOn ? (
+                <Speedometer value={displayOdds} />
+              ) : (
+                <BlurOverlay
+                  tone="dark"
+                  title="At-large odds"
+                  message={`Coming soon — updates once ${pendingSourcesText('team.odds')} data is released for ${SEASON}.`}
+                  className="absolute inset-0 !max-h-none !overflow-visible"
+                >
+                  <Speedometer value={55} />
+                </BlurOverlay>
+              )}
               </div>
-              {team.autoBid ? (
+              {!oddsOn ? null : team.autoBid ? (
                 <div className="flex items-center gap-2 text-xs font-medium geist-mono">
                   <span className="text-gray-500">Automatic bid — Conference tournament winner</span>
                 </div>
@@ -203,10 +231,17 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
               )}
 
                           </div>
+            )}
           </div>
 </div>
             
-            {(teamStatus.seed || teamStatus.bidType || teamStatus.bubbleStatus || teamStatus.dashboardStatus) && (
+            {projectionState === 'soon' && (
+              <div id="current-status" className="p-6 md:px-14 mx-auto bg-black/10">
+                <p className="text-[11px] text-white/70 font-normal tracking-wide uppercase geist-mono mb-1">Current projection</p>
+                <p className="text-sm text-white/70">Seed and bubble status are coming soon — they update once {pendingSourcesText('team.projection')} data is released.</p>
+              </div>
+            )}
+            {projectionOn && (teamStatus.seed || teamStatus.bidType || teamStatus.bubbleStatus || teamStatus.dashboardStatus) && (
                 <div id="current-status" className="flex flex-col md:flex-row gap-4 md:gap-12 p-8 md:px-14 mx-auto bg-black/10">
                   
                   <div className="gap-2">
@@ -285,7 +320,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.net || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{metricCell('net', team.net)}</span>
                     </div>
                   </td>
                 </tr>
@@ -300,7 +335,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.wab || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{metricCell('wab', team.wab)}</span>
                     </div>
                   </td>
                 </tr>
@@ -315,7 +350,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.sor || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{metricCell('sor', team.sor)}</span>
                     </div>
                   </td>
                 </tr>
@@ -330,7 +365,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.kpi || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{metricCell('kpi', team.kpi)}</span>
                     </div>
                   </td>
                 </tr>
@@ -345,7 +380,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.kenpom || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{metricCell('kenpom', team.kenpom)}</span>
                     </div>
                   </td>
                 </tr>
@@ -360,7 +395,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.torvik || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{metricCell('torvik', team.torvik)}</span>
                     </div>
                   </td>
                 </tr>
@@ -375,7 +410,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         if (change?.direction === 'down') return <span className="flex items-center text-red-800/40 text-xs font-medium"><ArrowDown className="w-3 h-3" />{change.delta}</span>;
                         return null;
                       })()}
-                      <span className="text-gray-800 font-semibold geist-mono">{team.bpi || '—'}</span>
+                      <span className="text-gray-800 font-semibold geist-mono">{metricCell('bpi', team.bpi)}</span>
                     </div>
                   </td>
                 </tr>
@@ -387,24 +422,26 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
 
             
 
+            {recordsState !== 'hidden' && (
             <div className="bg-white flex flex-row rounded-lg shadow-xs border border-gray-200 mb-6">
               <div className="border-r border-gray-200 px-6 py-6 text-center flex-1">
-                {team.record && (
+                {(recordsOn ? team.record : 'N/A') && (
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">{team.record}</div>
+                    <div className={`text-2xl font-bold ${recordsOn ? 'text-gray-900' : 'text-gray-300'}`}>{recordsOn ? team.record : 'N/A'}</div>
                   </div>
                 )}
                 <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">OVERALL</h3>
               </div>
               <a href={`/conferences#${(team.conference || '').toLowerCase().replace(/\s+/g, '-')}`} className="py-6 px-6 text-center flex-1 hover:bg-gray-50 transition-colors">
-                {team.confRecord && (
+                {(recordsOn ? team.confRecord : 'N/A') && (
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">{team.confRecord}</div>
+                    <div className={`text-2xl font-bold ${recordsOn ? 'text-gray-900' : 'text-gray-300'}`}>{recordsOn ? team.confRecord : 'N/A'}</div>
                   </div>
                 )}
-                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{team.confStandingsPosition}</h3>
+                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{recordsOn ? team.confStandingsPosition : team.conference}</h3>
               </a>
             </div>
+            )}
             
             <div className="bg-white rounded-lg shadow-xs border border-gray-200 p-6 mb-6">
               <h3 className="text-xs geist-mono text-gray-400 uppercase mb-1">NEXT GAME</h3>
@@ -460,7 +497,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
         </div>
       </div>
 
-      {(team.record || team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
+      {(team.record || team.quad1 || team.quad2 || team.quad3 || team.quad4 || (schedule?.schedule?.length ?? 0) > 0) && (
         <div id="schedule-details" className="bg-gray-50">
           <div className="px-6 py-12 lg:px-12 lg:py-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 ibm-plex-sans">{ team.shortName } schedule</h2>
@@ -481,8 +518,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 <tbody>
                   {schedule.schedule.map((game, idx) => {
                     // Find current team and opponent
-                    const currentTeamComp = game.competitors.find(c => c.team_nickname === team.shortName);
-                    const opponentComp = game.competitors.find(c => c.team_nickname !== team.shortName);
+                    const isCurrentTeam = (c: { team_id?: string | null; team_nickname: string }) =>
+                      c.team_id ? c.team_id === team.espnId : c.team_nickname === team.shortName;
+                    const currentTeamComp = game.competitors.find(isCurrentTeam);
+                    const opponentComp = game.competitors.find(c => !isCurrentTeam(c));
                     
                     if (!opponentComp) return null;
 
@@ -608,6 +647,22 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
           </div>
 
             <div id="record-details" className="order-1 lg:order-2 lg:col-span-3 lg:col-start-6">
+              {recordsState === 'hidden' ? null : !(team.record || team.home || team.road || team.neutral) ? (
+                <BlurOverlay
+                  title="Records"
+                  message={`Coming soon — this updates once ${pendingSourcesText('team.records')} data is released for ${SEASON}.`}
+                  className="mb-6"
+                >
+                  <div className="bg-white rounded-lg border border-gray-200 grid grid-cols-4 gap-2">
+                    {['RECORD', 'HOME', 'AWAY', 'NEUTRAL'].map(l => (
+                      <div key={l} className="text-center p-3">
+                        <div className="text-xs text-gray-400 mb-1 geist-mono">{l}</div>
+                        <div className="text-xl font-medium text-gray-700">00-00</div>
+                      </div>
+                    ))}
+                  </div>
+                </BlurOverlay>
+              ) : (
               <div className="bg-white rounded-lg shadow-xs border border-gray-200 mb-6">
               <div className="grid grid-cols-4 gap-2">
                 {team.record && (
@@ -636,8 +691,24 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 )}
               </div>
             </div>
+              )}
             
-            {(team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
+            {!(team.quad1 || team.quad2 || team.quad3 || team.quad4) && quadsState === 'soon' && (
+              <BlurOverlay
+                title="Quad records"
+                message={`Coming soon — this updates once ${pendingSourcesText('team.quads')} data is released for ${SEASON}.`}
+              >
+                <div className="bg-white rounded-lg border border-gray-200 grid grid-cols-4 gap-2">
+                  {[1, 2, 3, 4].map(q => (
+                    <div key={q} className="text-center p-3">
+                      <div className="text-xs text-gray-400 mb-1 geist-mono">QUAD {q}</div>
+                      <div className="text-xl font-medium text-gray-700">0-0</div>
+                    </div>
+                  ))}
+                </div>
+              </BlurOverlay>
+            )}
+            {quadsState !== 'hidden' && (team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
               
               <div className="bg-white rounded-lg shadow-xs border border-gray-200">
 

@@ -62,7 +62,7 @@ export function TournamentDashboard({ teams, onTeamSelect, hideSections = [] }: 
   const locks = locksTeams.length;
   const likelyIn = likelyInTeams.length;
   const bubble = bubbleTeams.length;
-  const spotsAvailable = 68 - autobids - locks - likelyIn;
+  const spotsAvailable = 76 - autobids - locks - likelyIn;
 
   const hideAutobids = hideSections.includes('autobids');
   const hideLocks = hideSections.includes('locks');

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Config Admin</title>
+<style>
+  :root { --bg:#f7f7f5; --card:#fff; --ink:#1c1c1a; --muted:#6b6b66; --line:#e2e2dc; --accent:#2f5d3a; --warn:#a4561a; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161614; --card:#1f1f1c; --ink:#ececE6; --muted:#9a9a92; --line:#33332f; --accent:#7fb48a; --warn:#e0a060; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui,sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:24px 16px 96px; }
+  h1 { font-size:22px; margin:0 0 4px; } h2 { font-size:16px; margin:28px 0 8px; }
+  p.sub { color:var(--muted); margin:0 0 16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:4px 16px; margin-bottom:12px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); }
+  .row:last-child { border-bottom:0; }
+  .label { font-weight:600; } .note { color:var(--muted); font-size:13px; }
+  .page { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); padding:12px 0 2px; }
+  .seg { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; flex:none; }
+  .seg button { border:0; background:transparent; color:var(--ink); padding:6px 12px; font:inherit; cursor:pointer; }
+  .seg button + button { border-left:1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background:var(--accent); color:#fff; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+  .btn { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:8px; padding:8px 14px; font:inherit; cursor:pointer; }
+  .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .bar { position:fixed; left:0; right:0; bottom:0; background:var(--card); border-top:1px solid var(--line); padding:12px 16px; display:flex; gap:12px; align-items:center; justify-content:center; }
+  .status { font-size:13px; color:var(--muted); } .status.dirty { color:var(--warn); }
+  .hint { font-size:12px; color:var(--warn); }
+  input[type=text] { font:inherit; padding:6px 8px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); width:110px; }
+  .sw { width:44px; height:26px; border-radius:13px; border:0; background:var(--line); position:relative; cursor:pointer; flex:none; }
+  .sw::after { content:""; position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:#fff; transition:left .15s; }
+  .sw[aria-checked="true"] { background:var(--accent); } .sw[aria-checked="true"]::after { left:21px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Site config</h1>
+  <p class="sub">Writes <code>config/site-config.json</code>. Changes reach the site only after you rebuild and push. Nothing here is deployed.</p>
+
+  <h2>General</h2>
+  <div class="card">
+    <div class="row"><div><div class="label">Season</div><div class="note">Stamped on scraper output; a different season disables the old-baseline comparison.</div></div><input id="season" type="text"></div>
+    <div class="row"><div><div class="label">Phase</div><div class="note">Controls the Updates pill label and needle bounce.</div></div><div class="seg" id="phase"></div></div>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn" id="preseason">Preseason preset</button>
+    <button class="btn" id="full">Full season preset</button>
+  </div>
+
+  <h2>Data sources</h2>
+  <p class="sub">Disabled sources aren't scraped, show as N/A, and are excluded from every calculation.</p>
+  <div class="card" id="sources"></div>
+
+  <h2>Page sections</h2>
+  <p class="sub"><b>On</b> shows the section. <b>Soon</b> shows a "coming soon" notice naming the missing data. <b>Hidden</b> removes it. Table columns just toggle between values and <b>N/A</b>.</p>
+  <div id="sections"></div>
+</main>
+<div class="bar"><span class="status" id="status">Loaded</span><button class="btn primary" id="save">Save</button></div>
+<script>
+let registry, config, saved;
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+function seg(options, value, onPick) {
+  const wrap = el('div', 'seg');
+  options.forEach(([val, label]) => {
+    const b = el('button', null, label); b.type = 'button';
+    b.setAttribute('aria-pressed', String(val === value));
+    b.onclick = () => { onPick(val); };
+    wrap.append(b);
+  });
+  return wrap;
+}
+
+function render() {
+  $('season').value = config.season;
+  $('season').oninput = e => { config.season = e.target.value.trim(); dirty(); };
+  $('phase').replaceWith(Object.assign(seg([['preseason','Preseason'],['season','In season'],['offseason','Offseason']], config.phase, v => { config.phase = v; render(); dirty(); }), { id: 'phase' }));
+
+  const src = $('sources'); src.replaceChildren();
+  registry.sources.forEach(s => {
+    const row = el('div', 'row'); const left = el('div');
+    left.append(el('div', 'label', s.label), el('div', 'note', s.note));
+    const sw = el('button', 'sw'); sw.type = 'button'; sw.setAttribute('role', 'switch');
+    sw.setAttribute('aria-checked', String(config.sources[s.id])); sw.setAttribute('aria-label', s.label);
+    sw.onclick = () => { config.sources[s.id] = !config.sources[s.id]; render(); dirty(); };
+    row.append(left, sw); src.append(row);
+  });
+
+  const secs = $('sections'); secs.replaceChildren();
+  const pages = [...new Set(registry.sections.map(s => s.page))];
+  pages.forEach(page => {
+    secs.append(el('div', 'page', page));
+    const card = el('div', 'card');
+    registry.sections.filter(s => s.page === page).forEach(s => {
+      const row = el('div', 'row'); const left = el('div');
+      left.append(el('div', 'label', s.label));
+      const missing = s.requires.filter(r => !config.sources[r]);
+      const state = config.sections[s.id];
+      if (state === 'on' && missing.length) {
+        const names = missing.map(m => registry.sources.find(x => x.id === m).label).join(', ');
+        left.append(el('div', 'hint', `On, but waiting on disabled source(s): ${names}`));
+      } else {
+        left.append(el('div', 'note', 'Needs: ' + s.requires.map(r => registry.sources.find(x => x.id === r).label).join(', ')));
+      }
+      const opts = s.kind === 'column' ? [['on','On'],['soon','N/A']] : [['on','On'],['soon','Soon'],['hidden','Hidden']];
+      row.append(left, seg(opts, state === 'hidden' && s.kind === 'column' ? 'soon' : state, v => { config.sections[s.id] = v; render(); dirty(); }));
+      card.append(row);
+    });
+    secs.append(card);
+  });
+}
+
+function dirty() {
+  const d = JSON.stringify(config) !== JSON.stringify(saved);
+  $('status').textContent = d ? 'Unsaved changes' : 'Saved'; $('status').className = 'status' + (d ? ' dirty' : '');
+}
+
+function preset(name) {
+  const p = registry.presets[name];
+  config.sources = { ...p.sources };
+  registry.sections.forEach(s => { config.sections[s.id] = p.defaultSection; });
+  config.phase = name === 'full' ? 'season' : 'preseason';
+  render(); dirty();
+}
+
+$('preseason').onclick = () => preset('preseason');
+$('full').onclick = () => preset('full');
+$('save').onclick = async () => {
+  $('status').textContent = 'Saving…';
+  const res = await fetch('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin': '1' }, body: JSON.stringify(config) });
+  const data = await res.json();
+  if (!res.ok) { $('status').textContent = 'Error: ' + data.error; $('status').className = 'status dirty'; return; }
+  saved = JSON.parse(JSON.stringify(data.config)); config = JSON.parse(JSON.stringify(saved)); render(); dirty();
+};
+window.addEventListener('beforeunload', e => { if (JSON.stringify(config) !== JSON.stringify(saved)) { e.preventDefault(); e.returnValue = ''; } });
+
+fetch('/api/state').then(r => r.json()).then(d => {
+  registry = d.registry; config = d.config; saved = JSON.parse(JSON.stringify(config)); render(); dirty();
+});
+</script>
+</body>
+</html>

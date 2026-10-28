@@ -1,0 +1,289 @@
+{
+  "sources": [
+    {
+      "id": "kenpom",
+      "label": "KenPom",
+      "fields": [
+        "kenpomRank",
+        "previousKenpom"
+      ],
+      "note": "Published for 2026-27 (preseason ratings out)"
+    },
+    {
+      "id": "torvik",
+      "label": "Torvik",
+      "fields": [
+        "torvikRank",
+        "previousTorvik",
+        "torvikWab"
+      ],
+      "note": "Published for 2026-27 (T-Rank posted)"
+    },
+    {
+      "id": "bpi",
+      "label": "ESPN BPI",
+      "fields": [
+        "bpi",
+        "previousBpi"
+      ],
+      "note": "Starts once games are played"
+    },
+    {
+      "id": "sor",
+      "label": "ESPN SOR",
+      "fields": [
+        "sor",
+        "previousSor"
+      ],
+      "note": "Comes from the same ESPN feed as BPI"
+    },
+    {
+      "id": "kpi",
+      "label": "KPI",
+      "fields": [
+        "kpi",
+        "previousKpi"
+      ],
+      "note": "Expected in December"
+    },
+    {
+      "id": "net",
+      "label": "NCAA NET",
+      "fields": [
+        "net",
+        "previousNet"
+      ],
+      "note": "Starts once games are played"
+    },
+    {
+      "id": "wab",
+      "label": "NCAA WAB",
+      "fields": [
+        "wab",
+        "wabRaw",
+        "previousWab"
+      ],
+      "note": "Starts once games are played"
+    },
+    {
+      "id": "records",
+      "label": "Records, quads and standings",
+      "fields": [
+        "record",
+        "confRecord",
+        "confStandingsPosition",
+        "road",
+        "neutral",
+        "home",
+        "nonDiv1",
+        "quad1",
+        "quad2",
+        "quad3",
+        "quad4",
+        "sos",
+        "nonconsos"
+      ],
+      "note": "Scraped from the NCAA NET page"
+    }
+  ],
+  "sections": [
+    {
+      "id": "landing.glance",
+      "page": "Landing",
+      "label": "At A Glance dashboard",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "landing.bubble",
+      "page": "Landing",
+      "label": "On the Bubble sidebar",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "landing.movers",
+      "page": "Landing",
+      "label": "Odds movers",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "rankings.odds",
+      "page": "Latest Rankings",
+      "label": "At-Large odds column",
+      "requires": [
+        "net",
+        "records"
+      ],
+      "kind": "column"
+    },
+    {
+      "id": "rankings.seed",
+      "page": "Latest Rankings",
+      "label": "Projected seed column",
+      "requires": [
+        "net",
+        "records"
+      ],
+      "kind": "column"
+    },
+    {
+      "id": "bracket.table",
+      "page": "Bracket",
+      "label": "Bracket projection table",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "bracket.bubble",
+      "page": "Bracket",
+      "label": "Bubble sidebar",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "bubble.dashboard",
+      "page": "Bubble Watch",
+      "label": "Tournament dashboard",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "bubble.projection",
+      "page": "Bubble Watch",
+      "label": "Bracket projection sidebar",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "bubble.games",
+      "page": "Bubble Watch",
+      "label": "Critical games",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "bubble.movers",
+      "page": "Bubble Watch",
+      "label": "Odds movers",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "conf.multibid",
+      "page": "Conferences",
+      "label": "Multi-bid grid",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "conf.standings",
+      "page": "Conferences",
+      "label": "Leaders, odds pills and standings tables",
+      "requires": [
+        "records"
+      ]
+    },
+    {
+      "id": "compare.presets",
+      "page": "Compare Resumes",
+      "label": "Quick-add presets (seeds, bubble)",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "compare.quads",
+      "page": "Compare Resumes",
+      "label": "Quad and record rows",
+      "requires": [
+        "records"
+      ],
+      "kind": "column"
+    },
+    {
+      "id": "team.odds",
+      "page": "Team",
+      "label": "Odds gauge and daily change",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "team.projection",
+      "page": "Team",
+      "label": "Current projection banner",
+      "requires": [
+        "net",
+        "records"
+      ]
+    },
+    {
+      "id": "team.records",
+      "page": "Team",
+      "label": "Records card",
+      "requires": [
+        "records"
+      ]
+    },
+    {
+      "id": "team.quads",
+      "page": "Team",
+      "label": "Quad records",
+      "requires": [
+        "records"
+      ]
+    }
+  ],
+  "presets": {
+    "preseason": {
+      "sources": {
+        "kenpom": true,
+        "torvik": true,
+        "bpi": false,
+        "sor": false,
+        "kpi": false,
+        "net": false,
+        "wab": false,
+        "records": false
+      },
+      "defaultSection": "soon"
+    },
+    "full": {
+      "sources": {
+        "kenpom": true,
+        "torvik": true,
+        "bpi": true,
+        "sor": true,
+        "kpi": true,
+        "net": true,
+        "wab": true,
+        "records": true
+      },
+      "defaultSection": "on"
+    }
+  }
+}

@@ -4,6 +4,9 @@ import { Combobox } from '@/components/ui/combobox';
 import { calculateBracket } from '@/lib/bracketProjection';
 import type { Team } from '@/types/team';
 import { UpdatesPill } from '@/components/UpdatesPill';
+import { SectionGate } from '@/components/SectionGate';
+import { sectionState } from '@/lib/config';
+import { metricCell } from '@/lib/sourceFilter';
 
 type ResumeCompareViewProps = {
   teams: Team[];
@@ -13,6 +16,7 @@ type ResumeCompareViewProps = {
 };
 
 export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRelativeTime }: ResumeCompareViewProps) {
+  const quadsOn = sectionState('compare.quads') === 'on';
   const [selectedTeams, setSelectedTeams] = useState<Team[]>([]);
   const [comboboxValue, setComboboxValue] = useState('');
 
@@ -200,6 +204,7 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
             </div>
 
             {/* Preset Groups */}
+            <SectionGate id="compare.presets" title="Quick add" variant="inline">
             <div>
               <label className="block text-[11px] font-regular text-gray-700 mb-2 geist-mono uppercase">
                 Quick Add
@@ -242,6 +247,7 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                 </button>
               </div>
             </div>
+            </SectionGate>
           </div>
 
           {/* Selected Teams Pills */}
@@ -375,25 +381,25 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                       </div>
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestWab.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.wab || '—'}
+                      {metricCell('wab', team.wab)}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestKpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.kpi || '—'}
+                      {metricCell('kpi', team.kpi)}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestSor.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.sor || '—'}
+                      {metricCell('sor', team.sor)}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestKenpom.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.kenpom || '—'}
+                      {metricCell('kenpom', team.kenpom)}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestTorvik.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.torvik || '—'}
+                      {metricCell('torvik', team.torvik)}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestBpi.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.bpi || '—'}
+                      {metricCell('bpi', team.bpi)}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestNet.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.net || '—'}
+                      {metricCell('net', team.net)}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestResumeAvg.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
                       {(() => { const v = getResumeAvg(team); return v !== null ? v.toFixed(1) : '—'; })()}
@@ -402,22 +408,22 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                       {(() => { const v = getPredAvg(team); return v !== null ? v.toFixed(1) : '—'; })()}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestQuad1.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.quad1 || '—'}
+                      {quadsOn ? metricCell('records', team.quad1) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad2.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.quad2 || '—'}
+                      {quadsOn ? metricCell('records', team.quad2) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad3.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.quad3 || '—'}
+                      {quadsOn ? metricCell('records', team.quad3) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad4.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.quad4 || '—'}
+                      {quadsOn ? metricCell('records', team.quad4) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestSos.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.sos || '—'}
+                      {quadsOn ? metricCell('records', team.sos) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestNonconSos.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {team.nonconsos || '—'}
+                      {quadsOn ? metricCell('records', team.nonconsos) : 'N/A'}
                     </td>
                   </tr>
                 ))}

@@ -6,6 +6,8 @@ import { BubbleSidebar } from '@/components/BubbleSidebar';
 import { BubbleGames } from '@/components/BubbleGames';
 import { calculateBracket } from '@/lib/bracketProjection';
 import { UpdatesPill } from '@/components/UpdatesPill';
+import { SectionGate } from '@/components/SectionGate';
+import { PHASE } from '@/lib/config';
 
 type BubbleWatchViewProps = {
   teams: Team[];
@@ -45,7 +47,9 @@ export function BubbleWatchView({
               Bubble Watch
             </h1>
             <p className="text-gray-600 text-lg">
-              Updated projections and critical upcoming games for teams chasing at-large bids
+              {PHASE === 'preseason'
+                ? 'Bubble tracking, projections and critical games switch on as the season gets under way.'
+                : 'Updated projections and critical upcoming games for teams chasing at-large bids'}
             </p>
           </div>
         </div>
@@ -55,7 +59,9 @@ export function BubbleWatchView({
           <div className="space-y-12 lg:space-y-16">
             {/* Tournament Dashboard */}
             <div>
-              <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} hideSections={['autobids', 'locks']} />
+              <SectionGate id="bubble.dashboard" title="Tournament dashboard">
+                <TournamentDashboard teams={teams} onTeamSelect={onTeamSelect} hideSections={['autobids', 'locks']} />
+              </SectionGate>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -65,15 +71,17 @@ export function BubbleWatchView({
                 Bracket projection
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm">Which bubble teams are currently in the field?</p>
-                <BubbleSidebar
-                lastFourByesList={lastFourByesList}
-                lastFourInList={lastFourInList}
-                firstFourOut={bubbleTeams.slice(0, 4)}
-                nextFourOut={bubbleTeams.slice(4, 8)}
-                onTeamSelect={onTeamSelect}
-                variant="list"
-                teamSeedMap={teamSeedMap}
-                />
+                <SectionGate id="bubble.projection" title="Bubble projection">
+                  <BubbleSidebar
+                  lastFourByesList={lastFourByesList}
+                  lastFourInList={lastFourInList}
+                  firstFourOut={bubbleTeams.slice(0, 4)}
+                  nextFourOut={bubbleTeams.slice(4, 8)}
+                  onTeamSelect={onTeamSelect}
+                  variant="list"
+                  teamSeedMap={teamSeedMap}
+                  />
+                </SectionGate>
                 
                 <a href="/bracket" className="text-xs text-gray-500 hover:text-gray-800 underline cursor-pointer mt-4 inline-block">
                     Full projected bracket »
@@ -82,11 +90,13 @@ export function BubbleWatchView({
             </div>
             {/* Bubble Games Today */}
             <div className='col-span-1 md:col-span-4'>
-              <BubbleGames 
-                teams={teams} 
-                allSchedules={allSchedules}
-                onTeamSelect={onTeamSelect}
-              />
+              <SectionGate id="bubble.games" title="Critical games">
+                <BubbleGames 
+                  teams={teams} 
+                  allSchedules={allSchedules}
+                  onTeamSelect={onTeamSelect}
+                />
+              </SectionGate>
             </div>
 
             </div>
@@ -95,7 +105,9 @@ export function BubbleWatchView({
           </div>
 
           <div className="py-12 lg:py-16max-w-screen-xl mx-auto">
-            <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
+            <SectionGate id="bubble.movers" title="Odds movers">
+              <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
+            </SectionGate>
           </div>
 
       </div>

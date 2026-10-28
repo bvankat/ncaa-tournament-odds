@@ -3,6 +3,8 @@ import type { Team } from '@/types/team';
 import { calculateBracket, getSeedDisplay, shouldAddSeparator, calculateCompositeRanking, calculateSelectionRanking, calculateSeedingRanking, getIntangibleBreakdown } from '@/lib/bracketProjection';
 import { BubbleSidebar } from '@/components/BubbleSidebar';
 import { UpdatesPill } from '@/components/UpdatesPill';
+import { SectionGate } from '@/components/SectionGate';
+import { PHASE } from '@/lib/config';
 
 type BracketViewProps = {
   teams: Team[];
@@ -15,8 +17,9 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
   // Calculate bracket projection
   const {
     bracketTeams,
+    seedByIndex,
     autoBidTeams,
-    playInTeams,
+    openingRoundTeams,
     lastFourIn,
     lastFourByes,
     lastFourInList,
@@ -50,24 +53,24 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
   };
 
   // Get bid type and special indicators
-  const getBidTypeInfo = (team: Team): { bidType: string; indicator: string | null; isPlayIn: boolean; isLastFourByes: boolean } => {
+  const getBidTypeInfo = (team: Team): { bidType: string; indicator: string | null; isOpeningRound: boolean; isLastFourByes: boolean } => {
     const teamId = team.espnId || team.slug;
     const isAutoBid = autoBidTeams.has(teamId);
-    const isPlayIn = playInTeams.has(teamId);
+    const isOpeningRound = openingRoundTeams.has(teamId);
     const isLastFourByes = lastFourByes.has(teamId);
     
     let bidType = isAutoBid ? 'Auto bid' : 'At-Large';
     
     let indicator = null;
-    if (isPlayIn) {
-      indicator = 'Play-In Game';
+    if (isOpeningRound) {
+      indicator = 'Opening Round Game';
     } else if (lastFourIn.has(teamId)) {
       indicator = 'Last Four In';
     } else if (isLastFourByes) {
       indicator = 'Last 4 Byes';
     }
     
-    return { bidType, indicator, isPlayIn, isLastFourByes };
+    return { bidType, indicator, isOpeningRound, isLastFourByes };
   };
 
   return (
@@ -82,7 +85,9 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
               Projected Bracket
             </h1>
             <p className="text-gray-600 text-lg">
-              Tournament seed projections based on current team-sheet metrics
+              {PHASE === 'preseason'
+                ? 'Seed projections begin once the season is under way and team-sheet metrics are released.'
+                : 'Tournament seed projections based on current team-sheet metrics'}
             </p>
           </div>
         </div>
@@ -90,6 +95,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12">
           {/* Main bracket table */}
+          <SectionGate id="bracket.table" title="Bracket projection">
           <div>
             <p className="lg:hidden text-[10px] text-gray-400 text-right mb-2 flex items-center justify-end gap-1">
               Scroll for more
@@ -130,7 +136,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
               </thead>
               <tbody>
                 {bracketTeams.map((team, index) => {
-                  const seedDisplay = getSeedDisplay(index);
+                  const seedDisplay = getSeedDisplay(seedByIndex, index);
                   const predictiveAvg = calculateAverage([team.kenpom, team.torvik, team.bpi]);
                   const resumeAvg = calculateAverage([team.wab, team.kpi, team.sor]);
                   const predictiveTooltip = formatRankings(
@@ -141,12 +147,12 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                     ['WAB', 'KPI', 'SOR'],
                     [team.wab, team.kpi, team.sor]
                   );
-                  const { bidType, indicator, isPlayIn, isLastFourByes } = getBidTypeInfo(team);
-                  const addSeparator = shouldAddSeparator(index);
+                  const { bidType, indicator, isOpeningRound, isLastFourByes } = getBidTypeInfo(team);
+                  const addSeparator = shouldAddSeparator(seedByIndex, index);
                   
                   // Determine row background color
                   let rowBgClass = 'bg-white';
-                  if (isPlayIn) {
+                  if (isOpeningRound) {
                     rowBgClass = 'bg-purple-50';
                   } else if (isLastFourByes) {
                     rowBgClass = 'bg-orange-50';
@@ -223,7 +229,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                             </span>
                             {indicator && (
                               <span className={`text-[10px] font-medium ${
-                                isPlayIn ? 'text-purple-800' :
+                                isOpeningRound ? 'text-purple-800' :
                                 isLastFourByes ? 'text-orange-800' : 'text-orange-600'
                               }`}>
                                 {indicator}
@@ -242,17 +248,20 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
             <p className="mt-3 text-xs text-gray-400 geist-mono">* Automatic bid — Conference tournament winner</p>
           )}
           </div>
+          </SectionGate>
 
           {/* Sidebar with bubble teams */}
           <div className="lg:sticky lg:top-6 lg:self-start">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 ibm-plex-sans">Bubble Teams</h2>
-            <BubbleSidebar
-              lastFourByesList={lastFourByesList}
-              lastFourInList={lastFourInList}
-              firstFourOut={bubbleTeams.slice(0, 4)}
-              nextFourOut={bubbleTeams.slice(4, 8)}
-              onTeamSelect={onTeamSelect}
-            />
+            <SectionGate id="bracket.bubble" title="Bubble teams">
+              <BubbleSidebar
+                lastFourByesList={lastFourByesList}
+                lastFourInList={lastFourInList}
+                firstFourOut={bubbleTeams.slice(0, 4)}
+                nextFourOut={bubbleTeams.slice(4, 8)}
+                onTeamSelect={onTeamSelect}
+              />
+            </SectionGate>
             <p className="mt-8 text-xs text-gray-600"><a href="/bubble-watch">View full Bubble Watch »</a></p>
           </div>
         </div>

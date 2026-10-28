@@ -3,6 +3,8 @@ import type { Team } from '@/types/team';
 import { formatPercent } from '@/lib/utils';
 import { calculateBracket } from '@/lib/bracketProjection';
 import { UpdatesPill } from '@/components/UpdatesPill';
+import { sectionState, sourceEnabled, PHASE } from '@/lib/config';
+import { metricCell } from '@/lib/sourceFilter';
 
 type AllTeamsViewProps = {
   teams: Team[];
@@ -12,8 +14,12 @@ type AllTeamsViewProps = {
 };
 
 export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeTime }: AllTeamsViewProps) {
-  const [sortField, setSortField] = useState<'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor' | 'resumeAvg' | 'predictiveAvg'>('odds');
-  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
+  // Odds and seed columns are N/A until their sections are switched on (config/site-config.json)
+  const oddsOn = sectionState('rankings.odds') === 'on';
+  const seedOn = sectionState('rankings.seed') === 'on';
+  const anyResumeSource = sourceEnabled('wab') || sourceEnabled('kpi') || sourceEnabled('sor');
+  const [sortField, setSortField] = useState<'odds' | 'name' | 'net' | 'seed' | 'kenpom' | 'torvik' | 'bpi' | 'wab' | 'kpi' | 'sor' | 'resumeAvg' | 'predictiveAvg'>(oddsOn ? 'odds' : 'predictiveAvg');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>(oddsOn ? 'desc' : 'asc');
 
   const calculateAverage = (values: (number | string | null | undefined)[]): number | null => {
     const validValues = values
@@ -148,7 +154,9 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
               Latest rankings
             </h1>
             <p className="text-gray-600 text-lg text-balance">
-              Current NCAA Tournament at-large bid odds, projected seeds and updated metrics for every Division I team.</p>
+              {PHASE === 'preseason'
+                ? 'Preseason ratings for every Division I team. At-large odds, projected seeds and resume metrics will appear here as each is released this season.'
+                : 'Current NCAA Tournament at-large bid odds, projected seeds and updated metrics for every Division I team.'}</p>
           </div>
         </div>
       </div>
@@ -282,37 +290,37 @@ export function AllTeamsView({ teams, onTeamSelect, lastUpdated, formatRelativeT
                       </div>
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'odds' ? 'bg-amber-50' : ''}`}>
-                      {formattedOdds}
+                      {oddsOn ? formattedOdds : 'N/A'}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'seed' ? 'bg-amber-50' : ''}`}>
-                      {seed || '—'}
+                      {seedOn ? (seed || '—') : 'N/A'}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs border-l-2 border-gray-200 ${sortField === 'resumeAvg' ? 'bg-amber-50' : ''}`}>
-                      {(() => { const v = calculateAverage([team.wab, team.kpi, team.sor]); return v !== null ? v.toFixed(1) : '—'; })()}
+                      {(() => { const v = calculateAverage([team.wab, team.kpi, team.sor]); return v !== null ? v.toFixed(1) : (anyResumeSource ? '—' : 'N/A'); })()}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs border-r-2 border-gray-200 ${sortField === 'predictiveAvg' ? 'bg-amber-50' : ''}`}>
                       {(() => { const v = calculateAverage([team.kenpom, team.torvik, team.bpi]); return v !== null ? v.toFixed(1) : '—'; })()}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'net' ? 'bg-amber-50' : ''}`}>
-                      {team.net || '—'}
+                      {metricCell('net', team.net)}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'kenpom' ? 'bg-amber-50' : ''}`}>
-                      {team.kenpom || '—'}
+                      {metricCell('kenpom', team.kenpom)}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'torvik' ? 'bg-amber-50' : ''}`}>
-                      {team.torvik || '—'}
+                      {metricCell('torvik', team.torvik)}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'bpi' ? 'bg-amber-50' : ''}`}>
-                      {team.bpi || '—'}
+                      {metricCell('bpi', team.bpi)}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'wab' ? 'bg-amber-50' : ''}`}>
-                      {team.wab || '—'}
+                      {metricCell('wab', team.wab)}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'kpi' ? 'bg-amber-50' : ''}`}>
-                      {team.kpi || '—'}
+                      {metricCell('kpi', team.kpi)}
                     </td>
                     <td className={`py-2 px-2 md:py-3 md:px-4 text-right text-gray-700 geist-mono text-xs ${sortField === 'sor' ? 'bg-amber-50' : ''}`}>
-                      {team.sor || '—'}
+                      {metricCell('sor', team.sor)}
                     </td>
                   </tr>
                 );

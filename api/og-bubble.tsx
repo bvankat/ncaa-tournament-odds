@@ -1,4 +1,5 @@
 import { ImageResponse } from '@vercel/og';
+import { sectionIsOn, comingSoonImage } from './_comingSoon';
 
 export const config = { runtime: 'edge' };
 
@@ -57,6 +58,8 @@ async function loadFont(): Promise<ArrayBuffer | null> {
 const MAX_PILLS = 12;
 
 export default async function handler(_req: Request): Promise<Response> {
+  if (!sectionIsOn('bubble.dashboard')) return comingSoonImage('Bubble Watch');
+
   const [fontData, data] = await Promise.all([
     loadFont(),
     fetch('https://www.tourneyodds.info/all_teams_rankings.json').then(r => r.json()).catch(() => ({ teams: [] })),

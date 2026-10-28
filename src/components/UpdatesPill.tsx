@@ -1,5 +1,5 @@
 import React from 'react';
-import { IS_OFFSEASON } from '@/lib/config';
+import { IS_OFFSEASON, PHASE_LABEL } from '@/lib/config';
 import { formatRelativeTime } from '@/lib/utils';
 
 type UpdatesPillProps = {
@@ -34,7 +34,7 @@ export function UpdatesPill({ lastUpdated, variant = 'default' }: UpdatesPillPro
         <span className={`absolute inline-flex size-2 rounded-full ${dotBase.solid}`}></span>
       </span>
       <p className={textClass}>
-        {IS_OFFSEASON && <span>OFFSEASON — </span>}
+        {PHASE_LABEL && <span>{PHASE_LABEL} — </span>}
         <span>UPDATED </span>
         <span id="update-relative-time">{formatRelativeTime(lastUpdated)}</span>
       </p>
