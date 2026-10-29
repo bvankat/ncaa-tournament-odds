@@ -183,7 +183,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                     ? `At-large bid chances for ${team.shortName} based on its current team-sheet ranks`
                     : oddsState === 'hidden'
                       ? `${team.shortName} ratings and schedule`
-                      : `${team.shortName} preseason ratings. At-large bid odds appear once team-sheet metrics are released this season.`}
+                      : `${team.shortName} preseason ratings. At-large bid odds appear once team-sheet metrics are published this season.`}
                 </p>
               </div>
               </div>
@@ -201,7 +201,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 <BlurOverlay
                   tone="dark"
                   title="At-large odds"
-                  message={`Coming soon — updates once ${pendingSourcesText('team.odds')} data is released for ${SEASON}.`}
+                  message={`Coming soon — Updates once ${pendingSourcesText('team.odds')} data is published for ${SEASON}.`}
                   className="absolute inset-0 !max-h-none !overflow-visible"
                 >
                   <Speedometer value={55} />
@@ -238,7 +238,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
             {projectionState === 'soon' && (
               <div id="current-status" className="p-6 md:px-14 mx-auto bg-black/10">
                 <p className="text-[11px] text-white/70 font-normal tracking-wide uppercase geist-mono mb-1">Current projection</p>
-                <p className="text-sm text-white/70">Seed and bubble status are coming soon — they update once {pendingSourcesText('team.projection')} data is released.</p>
+                <p className="text-sm text-white/70">Coming soon — Seed and bubble status update when {pendingSourcesText('team.projection')} data is available.</p>
               </div>
             )}
             {projectionOn && (teamStatus.seed || teamStatus.bidType || teamStatus.bubbleStatus || teamStatus.dashboardStatus) && (
@@ -647,10 +647,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
           </div>
 
             <div id="record-details" className="order-1 lg:order-2 lg:col-span-3 lg:col-start-6">
-              {recordsState === 'hidden' ? null : !(team.record || team.home || team.road || team.neutral) ? (
+              {quadsState === 'hidden' ? null : !quadsOn || !(team.record || team.home || team.road || team.neutral) ? (
                 <BlurOverlay
-                  title="Records"
-                  message={`Coming soon — this updates once ${pendingSourcesText('team.records')} data is released for ${SEASON}.`}
+                  title="records"
+                  message={`Coming soon — this updates once ${pendingSourcesText('team.quads')} data is published for ${SEASON}.`}
                   className="mb-6"
                 >
                   <div className="bg-white rounded-lg border border-gray-200 grid grid-cols-4 gap-2">
@@ -693,10 +693,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
             </div>
               )}
             
-            {!(team.quad1 || team.quad2 || team.quad3 || team.quad4) && quadsState === 'soon' && (
+            {quadsState === 'soon' && (
               <BlurOverlay
                 title="Quad records"
-                message={`Coming soon — this updates once ${pendingSourcesText('team.quads')} data is released for ${SEASON}.`}
+                message={`Coming soon — Updates once ${pendingSourcesText('team.quads')} data is published for ${SEASON}.`}
               >
                 <div className="bg-white rounded-lg border border-gray-200 grid grid-cols-4 gap-2">
                   {[1, 2, 3, 4].map(q => (
@@ -708,7 +708,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 </div>
               </BlurOverlay>
             )}
-            {quadsState !== 'hidden' && (team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
+            {quadsOn && (team.quad1 || team.quad2 || team.quad3 || team.quad4) && (
               
               <div className="bg-white rounded-lg shadow-xs border border-gray-200">
 

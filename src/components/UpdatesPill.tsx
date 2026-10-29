@@ -1,5 +1,5 @@
 import React from 'react';
-import { IS_OFFSEASON, PHASE_LABEL } from '@/lib/config';
+import { IS_OFFSEASON, PHASE, PHASE_LABEL } from '@/lib/config';
 import { formatRelativeTime } from '@/lib/utils';
 
 type UpdatesPillProps = {
@@ -11,9 +11,12 @@ type UpdatesPillProps = {
 export function UpdatesPill({ lastUpdated, variant = 'default' }: UpdatesPillProps) {
   if (!lastUpdated) return null;
 
-  const dotBase = IS_OFFSEASON
-    ? { ping: 'bg-red-200', solid: 'bg-red-500' }
-    : { ping: 'bg-green-200', solid: 'bg-green-500' };
+  const dotBase =
+    PHASE === 'preseason'
+      ? { ping: 'bg-yellow-200', solid: 'bg-yellow-400' }
+      : IS_OFFSEASON
+        ? { ping: 'bg-red-200', solid: 'bg-red-500' }
+        : { ping: 'bg-green-200', solid: 'bg-green-500' };
 
   const containerClass =
     variant === 'teamview'
@@ -28,7 +31,7 @@ export function UpdatesPill({ lastUpdated, variant = 'default' }: UpdatesPillPro
   return (
     <div id="updates-pill" className={containerClass}>
       <span className="relative size-2">
-        {!IS_OFFSEASON && (
+        {(!IS_OFFSEASON || PHASE === 'preseason') && (
           <span className={`absolute inline-flex h-full w-full animate-ping rounded-full ${dotBase.ping} opacity-80`}></span>
         )}
         <span className={`absolute inline-flex size-2 rounded-full ${dotBase.solid}`}></span>

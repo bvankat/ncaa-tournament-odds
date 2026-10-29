@@ -12,7 +12,7 @@ type SectionGateProps = {
   children: React.ReactNode;
 };
 
-/** Names the data sources a section is waiting on, e.g. "NCAA NET and Records, quads and standings". */
+/** Names the data sources a section is waiting on, e.g. "NCAA NET and records, quads and standings". */
 export function pendingSourcesText(id: SectionId): string {
   const labels = SECTION_REQUIRES[id].map(s => SOURCE_LABELS[s]);
   if (labels.length <= 1) return labels[0] ?? 'more ratings';
@@ -20,7 +20,7 @@ export function pendingSourcesText(id: SectionId): string {
 }
 
 function comingSoonText(id: SectionId): string {
-  return `Coming soon — this updates once ${pendingSourcesText(id)} data is released for ${SEASON}.`;
+  return `Coming soon — Updates when ${pendingSourcesText(id)} data is released for ${SEASON}.`;
 }
 
 /** Slim notice for places where there is no layout to blur (e.g. a page-level banner). */
