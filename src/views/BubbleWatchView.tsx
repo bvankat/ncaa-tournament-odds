@@ -28,8 +28,8 @@ export function BubbleWatchView({
 }: BubbleWatchViewProps) {
   // Calculate bracket projection for sidebar data
   const {
-    lastFourInList,
-    lastFourByesList,
+    openingRoundAtLargeList,
+    lastEightByesList,
     bubbleTeams,
     teamSeedMap
   } = useMemo(() => calculateBracket(teams), [teams]);
@@ -73,8 +73,8 @@ export function BubbleWatchView({
                 <p className="text-gray-600 mb-6 text-sm">Which bubble teams are currently in the field?</p>
                 <SectionGate id="bubble.projection" title="Bubble projection">
                   <BubbleSidebar
-                  lastFourByesList={lastFourByesList}
-                  lastFourInList={lastFourInList}
+                  lastByesList={lastEightByesList}
+                  openingRoundList={openingRoundAtLargeList}
                   firstFourOut={bubbleTeams.slice(0, 4)}
                   nextFourOut={bubbleTeams.slice(4, 8)}
                   onTeamSelect={onTeamSelect}

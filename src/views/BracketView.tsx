@@ -21,9 +21,9 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
     autoBidTeams,
     openingRoundTeams,
     lastFourIn,
-    lastFourByes,
-    lastFourInList,
-    lastFourByesList,
+    lastEightByes,
+    openingRoundAtLargeList,
+    lastEightByesList,
     bubbleTeams
   } = useMemo(() => calculateBracket(teams), [teams]);
 
@@ -53,11 +53,11 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
   };
 
   // Get bid type and special indicators
-  const getBidTypeInfo = (team: Team): { bidType: string; indicator: string | null; isOpeningRound: boolean; isLastFourByes: boolean } => {
+  const getBidTypeInfo = (team: Team): { bidType: string; indicator: string | null; isOpeningRound: boolean; isLastEightByes: boolean } => {
     const teamId = team.espnId || team.slug;
     const isAutoBid = autoBidTeams.has(teamId);
     const isOpeningRound = openingRoundTeams.has(teamId);
-    const isLastFourByes = lastFourByes.has(teamId);
+    const isLastEightByes = lastEightByes.has(teamId);
     
     let bidType = isAutoBid ? 'Auto bid' : 'At-Large';
     
@@ -66,11 +66,11 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
       indicator = 'Opening Round Game';
     } else if (lastFourIn.has(teamId)) {
       indicator = 'Last Four In';
-    } else if (isLastFourByes) {
-      indicator = 'Last 4 Byes';
+    } else if (isLastEightByes) {
+      indicator = 'Last 8 Byes';
     }
     
-    return { bidType, indicator, isOpeningRound, isLastFourByes };
+    return { bidType, indicator, isOpeningRound, isLastEightByes };
   };
 
   return (
@@ -147,14 +147,14 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                     ['WAB', 'KPI', 'SOR'],
                     [team.wab, team.kpi, team.sor]
                   );
-                  const { bidType, indicator, isOpeningRound, isLastFourByes } = getBidTypeInfo(team);
+                  const { bidType, indicator, isOpeningRound, isLastEightByes } = getBidTypeInfo(team);
                   const addSeparator = shouldAddSeparator(seedByIndex, index);
                   
                   // Determine row background color
                   let rowBgClass = 'bg-white';
                   if (isOpeningRound) {
                     rowBgClass = 'bg-purple-50';
-                  } else if (isLastFourByes) {
+                  } else if (isLastEightByes) {
                     rowBgClass = 'bg-orange-50';
                   }
                   
@@ -230,7 +230,7 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
                             {indicator && (
                               <span className={`text-[10px] font-medium ${
                                 isOpeningRound ? 'text-purple-800' :
-                                isLastFourByes ? 'text-orange-800' : 'text-orange-600'
+                                isLastEightByes ? 'text-orange-800' : 'text-orange-600'
                               }`}>
                                 {indicator}
                               </span>
@@ -255,8 +255,8 @@ export function BracketView({ teams, onTeamSelect, lastUpdated, formatRelativeTi
             <h2 className="text-2xl font-bold text-gray-900 mb-4 ibm-plex-sans">Bubble Teams</h2>
             <SectionGate id="bracket.bubble" title="Bubble teams">
               <BubbleSidebar
-                lastFourByesList={lastFourByesList}
-                lastFourInList={lastFourInList}
+                lastByesList={lastEightByesList}
+                openingRoundList={openingRoundAtLargeList}
                 firstFourOut={bubbleTeams.slice(0, 4)}
                 nextFourOut={bubbleTeams.slice(4, 8)}
                 onTeamSelect={onTeamSelect}

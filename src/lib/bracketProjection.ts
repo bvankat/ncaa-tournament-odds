@@ -249,10 +249,12 @@ export type BracketProjection = {
   autoBidTeams: Set<string>;
   /** All 24 Opening Round participants: 12 at-large + 12 automatic qualifiers. */
   openingRoundTeams: Set<string>;
+  /** The 12 at-large Opening Round teams in seeding order (11 line, then 12 line). */
+  openingRoundAtLargeList: Team[];
   lastFourIn: Set<string>;
-  lastFourByes: Set<string>;
+  lastEightByes: Set<string>;
   lastFourInList: Team[];
-  lastFourByesList: Team[];
+  lastEightByesList: Team[];
   bubbleTeams: Team[];
   autoBidList: Team[];
 };
@@ -262,6 +264,9 @@ const AT_LARGE_COUNT = 44;
 
 /** Teams from each side (at-large / auto-bid) that play in the Opening Round. */
 const OPENING_ROUND_PER_SIDE = 12;
+
+/** At-large teams just above the Opening Round that count as bubble byes. */
+const LAST_BYES_COUNT = 8;
 
 /**
  * Calculate projected NCAA tournament bracket with seeds
@@ -290,6 +295,24 @@ export function calculateBracket(teams: Team[]): BracketProjection {
     const existing = conferenceLeaders.get(team.conference);
     if (!existing || calculateSelectionRanking(team) < calculateSelectionRanking(existing)) {
       conferenceLeaders.set(team.conference, team);
+    }
+  });
+
+  // Step 3: Early in the season, before any standings are posted, project each
+  // conference's auto bid as its best team by selection ranking. Without this,
+  // conferences with neither a confirmed winner nor standings data contribute
+  // no automatic qualifier, starving the Opening Round / low-seed lines that
+  // assume a full 32-team auto-bid side.
+  const conferences = new Set(teams.map(t => t.conference).filter((c): c is string => !!c));
+  conferences.forEach(conf => {
+    if (conferenceLeaders.has(conf)) return;
+
+    const best = teams
+      .filter(team => team.conference === conf)
+      .sort((a, b) => calculateSelectionRanking(a) - calculateSelectionRanking(b))[0];
+
+    if (best) {
+      conferenceLeaders.set(conf, best);
     }
   });
 
@@ -330,11 +353,9 @@ export function calculateBracket(teams: Team[]): BracketProjection {
   // and the 12 lowest automatic qualifiers — so membership uses the SEEDING
   // ranking, not the selection ranking that decided who got in.
   //
-  // Membership has to be resolved before lines are assigned. Reading it off
-  // the line boundaries instead does not work: the boundaries are global
-  // indices into the merged field, where the two categories interleave, so
-  // Opening Round teams would scatter onto lines that play no Opening Round
-  // game (observed: one at-large on the 13 line).
+  // Membership has to be resolved before lines are assigned: the two
+  // categories interleave on the S-curve, so it can't be read off line
+  // boundaries. The lines the games land on are then left to the S-curve.
   const atLargeBySeed = [...atLargeTeams].sort(bySeeding);
   const autoBidsBySeed = [...autoBidList].sort(bySeeding);
 
@@ -346,51 +367,41 @@ export function calculateBracket(teams: Team[]): BracketProjection {
     [...openingRoundAtLarge, ...openingRoundAutoBids].map(t => t.espnId || t.slug)
   );
 
-  // Everyone else fills the remaining slots in seeding order.
-  const remainingBySeed = [
-    ...atLargeBySeed.slice(0, -OPENING_ROUND_PER_SIDE),
-    ...autoBidsBySeed.slice(0, -OPENING_ROUND_PER_SIDE),
-  ].sort(bySeeding);
+  // The bracket is 16 lines x 4 slots. A slot is either one team with a bye
+  // or one Opening Round game (adjacent pair within a category), ranked by the
+  // average true seed of the teams in it. Games therefore land on whichever
+  // lines their teams' S-curve positions dictate.
+  const trueSeed = (team: Team) => trueSeedMap.get(team.espnId || team.slug) ?? Infinity;
+  const pairUp = (group: Team[]): Team[][] =>
+    Array.from({ length: Math.ceil(group.length / 2) }, (_, i) => group.slice(i * 2, i * 2 + 2));
 
-  // Which Opening Round teams are pinned to which seed line. Within each
-  // group the stronger teams take the higher line (11 before 12, 15 before 16).
-  const OPENING_ROUND_UPPER_LINE = 4;
-  const pinnedByLine = new Map<number, Team[]>([
-    [11, openingRoundAtLarge.slice(0, OPENING_ROUND_UPPER_LINE)],
-    [12, openingRoundAtLarge.slice(OPENING_ROUND_UPPER_LINE)],
-    [15, openingRoundAutoBids.slice(0, OPENING_ROUND_UPPER_LINE)],
-    [16, openingRoundAutoBids.slice(OPENING_ROUND_UPPER_LINE)],
-  ]);
+  const slots: Team[][] = [
+    ...atLargeBySeed.slice(0, -OPENING_ROUND_PER_SIDE).map(team => [team]),
+    ...autoBidsBySeed.slice(0, -OPENING_ROUND_PER_SIDE).map(team => [team]),
+    ...pairUp(openingRoundAtLarge),
+    ...pairUp(openingRoundAutoBids),
+  ];
+  const slotKey = (slot: Team[]) =>
+    slot.reduce((sum, team) => sum + trueSeed(team), 0) / slot.length;
+  slots.sort((a, b) => slotKey(a) - slotKey(b));
 
-  // Lay the field out line by line, filling each line's unreserved slots from
-  // the seeding-ordered pool. If the field is short (e.g. a conference has no
-  // automatic qualifier yet), the pool simply runs out and trailing lines are
-  // smaller rather than every seed shifting.
   const teamSeedMap = new Map<string, number>();
   const bracketTeams: Team[] = [];
-  const pool = [...remainingBySeed];
 
-  SEED_LINE_SIZES.forEach((lineSize, lineIndex) => {
-    const seed = lineIndex + 1;
-    const pinned = pinnedByLine.get(seed) ?? [];
-    const line = [...pool.splice(0, Math.max(0, lineSize - pinned.length)), ...pinned];
-    line.sort(bySeeding);
+  for (let seed = 1; seed <= SEED_LINES; seed++) {
+    // The last line also absorbs any slots beyond 64.
+    const end = seed === SEED_LINES ? slots.length : seed * SLOTS_PER_LINE;
+    const line = slots.slice((seed - 1) * SLOTS_PER_LINE, end).flat().sort(bySeeding);
     line.forEach(team => {
       teamSeedMap.set(team.espnId || team.slug, seed);
       bracketTeams.push(team);
     });
-  });
-
-  // Anything left over (field larger than the 76 slots) sits on the last line.
-  pool.forEach(team => {
-    teamSeedMap.set(team.espnId || team.slug, SEED_LINE_SIZES.length);
-    bracketTeams.push(team);
-  });
+  }
 
   // Seed line for each row of the bracket table, so the view never has to
   // infer a seed from a row index.
   const seedByIndex = bracketTeams.map(
-    team => teamSeedMap.get(team.espnId || team.slug) ?? SEED_LINE_SIZES.length
+    team => teamSeedMap.get(team.espnId || team.slug) ?? SEED_LINES
   );
 
   // "Last Four In": the weakest 4 of the at-large teams playing in the
@@ -398,14 +409,13 @@ export function calculateBracket(teams: Team[]): BracketProjection {
   const lastFourInList = openingRoundAtLarge.slice(-4);
   const lastFourIn = new Set(lastFourInList.map(t => t.espnId || t.slug));
 
-  // "Last Four Byes": the last four at-large teams that do NOT play in the
-  // Opening Round — i.e. the 4 immediately above the 12-team at-large Opening
-  // Round group, going straight to the Round of 64.
-  const lastFourByesList = atLargeBySeed.slice(
-    -(OPENING_ROUND_PER_SIDE + 4),
+  // "Last Eight Byes": the 8 at-large teams immediately above the 12-team
+  // at-large Opening Round group, going straight to the Round of 64.
+  const lastEightByesList = atLargeBySeed.slice(
+    -(OPENING_ROUND_PER_SIDE + LAST_BYES_COUNT),
     -OPENING_ROUND_PER_SIDE
   );
-  const lastFourByes = new Set(lastFourByesList.map(t => t.espnId || t.slug));
+  const lastEightByes = new Set(lastEightByesList.map(t => t.espnId || t.slug));
 
   return {
     bracketTeams,
@@ -415,39 +425,24 @@ export function calculateBracket(teams: Team[]): BracketProjection {
     seedByIndex,
     autoBidTeams,
     openingRoundTeams,
+    openingRoundAtLargeList: openingRoundAtLarge,
     lastFourIn,
-    lastFourByes,
+    lastEightByes,
     lastFourInList,
-    lastFourByesList,
+    lastEightByesList,
     bubbleTeams,
     autoBidList
   };
 }
 
-/**
- * Seed-line sizes for the 76-team field, indexed by seed - 1.
- *
- * Each Opening Round game puts 2 teams on a line that would normally hold 1
- * slot, so a line gains one extra team per game played on it: 2 games at the
- * 11 line, 4 at the 12 line, 2 at the 15 line, 4 at the 16 line.
- * Total: 40 + 6 + 8 + 4 + 4 + 6 + 8 = 76.
- */
-const SEED_LINE_SIZES = [
-  4, 4, 4, 4, 4, 4, 4, 4, 4, 4, // seeds 1-10
-  6,                            // seed 11 (4 + 2 Opening Round games)
-  8,                            // seed 12 (4 + 4 Opening Round games)
-  4,                            // seed 13
-  4,                            // seed 14
-  6,                            // seed 15 (4 + 2 Opening Round games)
-  8,                            // seed 16 (4 + 4 Opening Round games)
-];
+const SEED_LINES = 16;
+const SLOTS_PER_LINE = 4;
 
 /**
  * Get seed display string for a bracket row.
  *
  * Takes the projection's `seedByIndex` rather than deriving a seed from the
- * row index: Opening Round teams are pinned to their seed lines, so a short
- * field leaves a line under-filled instead of shifting every seed after it.
+ * row index: lines holding Opening Round games have more than 4 teams.
  */
 export function getSeedDisplay(seedByIndex: number[], index: number): string {
   const seed = seedByIndex[index];

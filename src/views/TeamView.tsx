@@ -55,10 +55,12 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
     
     // Determine bubble status
     let bubbleStatus: string | null = null;
-    if (projection.lastFourByes.has(teamId)) {
-      bubbleStatus = 'Last Four Byes';
+    if (projection.lastEightByes.has(teamId)) {
+      bubbleStatus = 'Last Eight Byes';
     } else if (projection.lastFourIn.has(teamId)) {
       bubbleStatus = 'Last Four In';
+    } else if (projection.openingRoundTeams.has(teamId) && !isAutoBid) {
+      bubbleStatus = 'Opening Round';
     } else {
       // Check if team is in First Four Out or Next Four Out
       const bubbleIndex = projection.bubbleTeams.findIndex(t => (t.espnId || t.slug) === teamId);
@@ -267,8 +269,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                     
                     {teamStatus.bubbleStatus && (
                       <a href="/bracket" className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-medium hover:opacity-70 transition-opacity ${
-                        teamStatus.bubbleStatus === 'Last Four Byes' ? 'bg-orange-500/20 text-orange-100 border border-orange-400/30' :
-                        teamStatus.bubbleStatus === 'Last Four In' ? 'bg-purple-500/20 text-purple-100 border border-purple-400/30' :
+                        teamStatus.bubbleStatus === 'Last Eight Byes' ? 'bg-orange-500/20 text-orange-100 border border-orange-400/30' :
+                        teamStatus.bubbleStatus === 'Last Four In' || teamStatus.bubbleStatus === 'Opening Round' ? 'bg-purple-500/20 text-purple-100 border border-purple-400/30' :
                         'bg-red-500/20 text-red-100 border border-red-400/30'
                       }`}>
                         {teamStatus.bubbleStatus}

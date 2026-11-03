@@ -3,8 +3,8 @@ import type { Team } from '@/types/team';
 import { calculateCompositeRanking } from '@/lib/bracketProjection';
 
 type BubbleSidebarProps = {
-  lastFourByesList: Team[];
-  lastFourInList: Team[];
+  lastByesList: Team[];
+  openingRoundList: Team[];
   firstFourOut: Team[];
   nextFourOut: Team[];
   onTeamSelect: (slug: string) => void;
@@ -13,8 +13,8 @@ type BubbleSidebarProps = {
 };
 
 export function BubbleSidebar({
-  lastFourByesList,
-  lastFourInList,
+  lastByesList,
+  openingRoundList,
   firstFourOut,
   nextFourOut,
   onTeamSelect,
@@ -73,8 +73,8 @@ export function BubbleSidebar({
     // Combine all teams with their status
     type TeamWithStatus = Team & { status: string; bgClass: string };
     const allTeams: TeamWithStatus[] = [
-      ...lastFourByesList.map(team => ({ ...team, status: 'Last Four Byes', bgClass: 'bg-orange-50' })),
-      ...lastFourInList.map(team => ({ ...team, status: 'Opening Round Game', bgClass: 'bg-purple-50' })),
+      ...lastByesList.map(team => ({ ...team, status: 'Last Eight Byes', bgClass: 'bg-orange-50' })),
+      ...openingRoundList.map(team => ({ ...team, status: 'Opening Round Game', bgClass: 'bg-purple-50' })),
       ...firstFourOut.map(team => ({ ...team, status: 'First Four Out', bgClass: 'bg-white' })),
       ...nextFourOut.map(team => ({ ...team, status: 'Next Four Out', bgClass: 'bg-white' }))
     ];
@@ -136,7 +136,7 @@ export function BubbleSidebar({
               const seed = teamSeedMap?.get(teamId);
               
               const getStatusColor = (status: string) => {
-                if (status === 'Last Four Byes') return 'text-orange-800';
+                if (status === 'Last Eight Byes') return 'text-orange-800';
                 if (status === 'Opening Round Game') return 'text-purple-800';
                 return 'text-gray-600';
               };
@@ -202,20 +202,20 @@ export function BubbleSidebar({
 
   return (
     <div className={spacing}>
-      {/* Last Four Byes */}
+      {/* Last Eight Byes */}
       <div>
         <h3 className="text-sm font-semibold text-gray-900 mb-3 geist-mono uppercase">
-          Last Four Byes
+          Last Eight Byes
         </h3>
-        {renderTeamsPills(lastFourByesList, 'border-orange-200', 'bg-orange-50/25 hover:bg-orange-50')}
+        {renderTeamsPills(lastByesList, 'border-orange-200', 'bg-orange-50/25 hover:bg-orange-50')}
       </div>
 
-      {/* Last Four In */}
+      {/* Opening Round */}
       <div>
         <h3 className="text-sm font-semibold text-gray-900 mb-3 geist-mono uppercase">
-          Last Four In
+          Opening Round
         </h3>
-        {renderTeamsPills(lastFourInList, 'border-purple-200', 'bg-purple-50/25 hover:bg-purple-50')}
+        {renderTeamsPills(openingRoundList, 'border-purple-200', 'bg-purple-50/25 hover:bg-purple-50')}
       </div>
 
       {/* First Four Out */}

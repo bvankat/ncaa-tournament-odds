@@ -45,8 +45,8 @@ export function LandingView({
 }: LandingViewProps) {
   // Calculate bracket projection for bubble teams
   const {
-    lastFourByesList,
-    lastFourInList,
+    lastEightByesList,
+    openingRoundAtLargeList,
     bubbleTeams,
     teamSeedMap
   } = useMemo(() => calculateBracket(teams), [teams]);
@@ -219,8 +219,8 @@ export function LandingView({
           <div className="md:col-span-8" id="bubble-projection">
             <SectionGate id="landing.bubble" title="Bubble projection">
               <BubbleSidebar
-                lastFourByesList={lastFourByesList}
-                lastFourInList={lastFourInList}
+                lastByesList={lastEightByesList}
+                openingRoundList={openingRoundAtLargeList}
                 firstFourOut={firstFourOut}
                 nextFourOut={nextFourOut}
                 onTeamSelect={onTeamSelect}
