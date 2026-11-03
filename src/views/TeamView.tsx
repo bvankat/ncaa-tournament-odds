@@ -27,7 +27,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
   const projectionState = sectionState('team.projection');
   const recordsState = sectionState('team.records');
   const quadsState = sectionState('team.quads');
-  const oddsOn = oddsState === 'on';
+  // A scrape without NET leaves odds null; show "coming soon" rather than a 0% gauge.
+  const oddsOn = oddsState === 'on' && (team.tournamentOdds != null || team.autoBid === true);
   const projectionOn = projectionState === 'on';
   const recordsOn = recordsState === 'on';
   const quadsOn = quadsState === 'on';
@@ -427,20 +428,12 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
             {recordsState !== 'hidden' && (
             <div className="bg-white flex flex-row rounded-lg shadow-xs border border-gray-200 mb-6">
               <div className="border-r border-gray-200 px-6 py-6 text-center flex-1">
-                {(recordsOn ? team.record : 'N/A') && (
-                  <div>
-                    <div className={`text-2xl font-bold ${recordsOn ? 'text-gray-900' : 'text-gray-300'}`}>{recordsOn ? team.record : 'N/A'}</div>
-                  </div>
-                )}
+                <div className={`text-2xl font-bold ${recordsOn ? 'text-gray-900' : 'text-gray-300'}`}>{recordsOn ? team.record ?? '0-0' : 'N/A'}</div>
                 <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">OVERALL</h3>
               </div>
               <a href={`/conferences#${(team.conference || '').toLowerCase().replace(/\s+/g, '-')}`} className="py-6 px-6 text-center flex-1 hover:bg-gray-50 transition-colors">
-                {(recordsOn ? team.confRecord : 'N/A') && (
-                  <div>
-                    <div className={`text-2xl font-bold ${recordsOn ? 'text-gray-900' : 'text-gray-300'}`}>{recordsOn ? team.confRecord : 'N/A'}</div>
-                  </div>
-                )}
-                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{recordsOn ? team.confStandingsPosition : team.conference}</h3>
+                <div className={`text-2xl font-bold ${recordsOn ? 'text-gray-900' : 'text-gray-300'}`}>{recordsOn ? team.confRecord ?? '0-0' : 'N/A'}</div>
+                <h3 className="text-xs geist-mono text-gray-400 uppercase mt-1">{recordsOn ? team.confStandingsPosition ?? team.conference : team.conference}</h3>
               </a>
             </div>
             )}
@@ -649,7 +642,7 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
           </div>
 
             <div id="record-details" className="order-1 lg:order-2 lg:col-span-3 lg:col-start-6">
-              {quadsState === 'hidden' ? null : !quadsOn || !(team.record || team.home || team.road || team.neutral) ? (
+              {quadsState === 'hidden' ? null : !quadsOn || !(team.home || team.road || team.neutral || team.quad1) ? (
                 <BlurOverlay
                   title="records"
                   message={`Coming soon — this updates once ${pendingSourcesText('team.quads')} data is published for ${SEASON}.`}

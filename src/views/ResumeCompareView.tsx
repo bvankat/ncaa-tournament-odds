@@ -408,22 +408,22 @@ export function ResumeCompareView({ teams, onTeamSelect, lastUpdated, formatRela
                       {(() => { const v = getPredAvg(team); return v !== null ? v.toFixed(1) : '—'; })()}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestQuad1.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {quadsOn ? metricCell('records', team.quad1) : 'N/A'}
+                      {quadsOn ? metricCell('quads', team.quad1) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad2.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {quadsOn ? metricCell('records', team.quad2) : 'N/A'}
+                      {quadsOn ? metricCell('quads', team.quad2) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad3.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {quadsOn ? metricCell('records', team.quad3) : 'N/A'}
+                      {quadsOn ? metricCell('quads', team.quad3) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestQuad4.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {quadsOn ? metricCell('records', team.quad4) : 'N/A'}
+                      {quadsOn ? metricCell('quads', team.quad4) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs border-l-2 border-gray-300 ${bestSos.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {quadsOn ? metricCell('records', team.sos) : 'N/A'}
+                      {quadsOn ? metricCell('quads', team.sos) : 'N/A'}
                     </td>
                     <td className={`py-3 px-3 text-center geist-mono text-xs ${bestNonconSos.has(team.slug) ? 'bg-green-50 font-semibold text-green-900' : 'text-gray-700'}`}>
-                      {quadsOn ? metricCell('records', team.nonconsos) : 'N/A'}
+                      {quadsOn ? metricCell('quads', team.nonconsos) : 'N/A'}
                     </td>
                   </tr>
                 ))}

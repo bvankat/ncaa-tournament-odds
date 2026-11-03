@@ -67,11 +67,18 @@
     },
     {
       "id": "records",
-      "label": "records, quads and standings",
+      "label": "records and standings",
       "fields": [
         "record",
         "confRecord",
-        "confStandingsPosition",
+        "confStandingsPosition"
+      ],
+      "note": "ESPN team endpoint"
+    },
+    {
+      "id": "quads",
+      "label": "quads and splits",
+      "fields": [
         "road",
         "neutral",
         "home",
@@ -219,7 +226,7 @@
       "page": "Compare Resumes",
       "label": "Quad and record rows",
       "requires": [
-        "records"
+        "quads"
       ],
       "kind": "column"
     },
@@ -254,7 +261,7 @@
       "page": "Team",
       "label": "Quad records and splits",
       "requires": [
-        "records"
+        "quads"
       ]
     }
   ],
