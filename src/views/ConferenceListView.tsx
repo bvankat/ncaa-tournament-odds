@@ -57,7 +57,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
 
   // Calculate bracket projection for seed assignments and bubble teams
   const bracketData = useMemo(() => calculateBracket(teams), [teams]);
-  const { teamSeedMap, bracketTeams, bubbleTeams } = bracketData;
+  const { teamSeedMap, trueSeedMap, bracketTeams, bubbleTeams } = bracketData;
 
   // Multi-bid conferences grid data
   const multiBidGrid = useMemo(() => {
@@ -65,6 +65,12 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
     const firstFourOut = bubbleTeams.slice(0, 4);
     const nextFourOut = bubbleTeams.slice(4, 8);
     const bubbleTeamIds = new Set([...firstFourOut, ...nextFourOut].map(t => t.espnId || t.slug));
+    const idOf = (t: Team) => t.espnId || t.slug;
+    const bubbleOrder = new Map(bubbleTeams.map((t, i) => [idOf(t), i]));
+    // Same order as the bracket: seed line, then true seed within the line.
+    const bySeed = (a: Team, b: Team) =>
+      (teamSeedMap.get(idOf(a)) ?? 99) - (teamSeedMap.get(idOf(b)) ?? 99) ||
+      (trueSeedMap.get(idOf(a)) ?? 999) - (trueSeedMap.get(idOf(b)) ?? 999);
     
     type ConferenceData = {
       conference: string;
@@ -81,11 +87,11 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
       // Separate tournament teams from bubble teams
       const tournamentTeams = confTeams
         .filter(t => bracketTeamIds.has(t.espnId || t.slug))
-        .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+        .sort(bySeed);
       
       const bubble = confTeams
         .filter(t => bubbleTeamIds.has(t.espnId || t.slug))
-        .sort((a, b) => (b.tournamentOdds ?? 0) - (a.tournamentOdds ?? 0));
+        .sort((a, b) => (bubbleOrder.get(idOf(a)) ?? 0) - (bubbleOrder.get(idOf(b)) ?? 0));
       
       // Only include conferences with at least 2 teams total (tournament + bubble)
       const totalTeams = tournamentTeams.length + bubble.length;
@@ -107,7 +113,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
     const maxBubbleDepth = Math.max(...conferencesByBids.map(c => c.bubbleTeams.length), 0);
     
     return { conferences: conferencesByBids, maxTournamentDepth, maxBubbleDepth };
-  }, [conferenceGroups, bracketTeams, bubbleTeams]);
+  }, [conferenceGroups, bracketTeams, bubbleTeams, teamSeedMap, trueSeedMap]);
 
   return (
     <div className="min-h-screen">
@@ -440,7 +446,7 @@ export function ConferenceListView({ teams, onTeamSelect, lastUpdated, formatRel
                       <tbody>
                         {teams.map((team, index) => {
                           const position = team.confStandingsPosition?.match(/^\d+/)?.[0] || (index + 1).toString();
-                          const formattedOdds = formatPercent(team.tournamentOdds ?? 0, { decimals: 0 });
+                          const formattedOdds = formatPercent(team.tournamentOdds, { decimals: 0 });
                           
                           return (
                             <tr

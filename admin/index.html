@@ -103,7 +103,7 @@ function render() {
         const names = missing.map(m => registry.sources.find(x => x.id === m).label).join(', ');
         left.append(el('div', 'hint', `On, but waiting on disabled source(s): ${names}`));
       } else {
-        left.append(el('div', 'note', 'Needs: ' + s.requires.map(r => registry.sources.find(x => x.id === r).label).join(', ')));
+        left.append(el('div', 'note', 'Needs: ' + (s.requires.map(r => registry.sources.find(x => x.id === r).label).join(', ') || 'any rating')));
       }
       const opts = s.kind === 'column' ? [['on','On'],['soon','N/A']] : [['on','On'],['soon','Soon'],['hidden','Hidden']];
       row.append(left, seg(opts, state === 'hidden' && s.kind === 'column' ? 'soon' : state, v => { config.sections[s.id] = v; render(); dirty(); }));

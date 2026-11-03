@@ -53,7 +53,7 @@
         "net",
         "previousNet"
       ],
-      "note": "Starts once games are played"
+      "note": "Expected in December"
     },
     {
       "id": "wab",
@@ -63,7 +63,7 @@
         "wabRaw",
         "previousWab"
       ],
-      "note": "Starts once games are played"
+      "note": "Expected in December"
     },
     {
       "id": "records",
@@ -125,10 +125,7 @@
       "id": "rankings.odds",
       "page": "Latest Rankings",
       "label": "At-Large odds column",
-      "requires": [
-        "net",
-        "records"
-      ],
+      "requires": [],
       "kind": "column"
     },
     {
@@ -234,10 +231,7 @@
       "id": "team.odds",
       "page": "Team",
       "label": "Odds gauge and daily change",
-      "requires": [
-        "net",
-        "records"
-      ]
+      "requires": []
     },
     {
       "id": "team.projection",
