@@ -9,11 +9,15 @@ import { BubbleWatchView } from '@/views/BubbleWatchView';
 import { ResumeCompareView } from '@/views/ResumeCompareView';
 import { formatRelativeTime } from '@/lib/utils';
 import { applySourceFilter } from '@/lib/sourceFilter';
+import { getPageMeta } from '@/lib/seo';
+import { SEASON, PHASE, SOURCES, SECTIONS } from '@/lib/config';
 import type { Team, OddsMovers } from '@/types/team';
 
 function App() {
   const [allTeams, setAllTeams] = useState<Team[]>([]);
-  const [selectedSlugs, setSelectedSlugs] = useState<string[]>([]);
+  const [selectedSlugs, setSelectedSlugs] = useState<string[]>(() =>
+    window.location.pathname.split('/').filter((s) => s)
+  );
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<number | string | null>(null);
   const [landingGauge, setLandingGauge] = useState(0);
@@ -56,26 +60,38 @@ function App() {
   useEffect(() => {
     loadData();
 
-    const path = window.location.pathname;
-    const slugs = path.split('/').filter((s) => s);
-
-    if (slugs.length > 0) {
-      setSelectedSlugs(slugs);
-    }
-
-    // Track initial page load
-    trackPageView(window.location.pathname + window.location.search + window.location.hash);
-
     // Handle back/forward navigation
     const onPopState = () => {
-      const currentPath = window.location.pathname;
-      const newSlugs = currentPath.split('/').filter((s) => s);
-      setSelectedSlugs(newSlugs);
-      trackPageView(currentPath + window.location.search + window.location.hash);
+      setSelectedSlugs(window.location.pathname.split('/').filter((s) => s));
     };
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
+
+  const routePath = '/' + selectedSlugs.join('/');
+
+  // Client-side navigation keeps the prerendered <head>, so refresh it per route.
+  // Skipped until data loads: the static HTML already has the right tags.
+  useEffect(() => {
+    if (allTeams.length === 0) return;
+    const meta = getPageMeta(routePath, allTeams, { season: SEASON, phase: PHASE, sources: SOURCES, sections: SECTIONS });
+    document.title = meta.title;
+    const setContent = (selector: string, value: string) =>
+      document.querySelector(selector)?.setAttribute('content', value);
+    setContent('meta[name="description"]', meta.description);
+    setContent('meta[property="og:title"]', meta.title);
+    setContent('meta[property="og:description"]', meta.description);
+    setContent('meta[property="og:url"]', meta.url);
+    setContent('meta[name="twitter:title"]', meta.title);
+    setContent('meta[name="twitter:description"]', meta.description);
+    setContent('meta[property="twitter:url"]', meta.url);
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', meta.url);
+  }, [routePath, allTeams]);
+
+  // Declared after the meta effect so GA sees the updated document.title.
+  useEffect(() => {
+    trackPageView(window.location.pathname + window.location.search + window.location.hash);
+  }, [routePath]);
 
   const loadData = async () => {
     try {
@@ -119,7 +135,6 @@ function App() {
     window.history.pushState({}, '', '/');
     setSelectedSlugs([]);
     window.scrollTo(0, 0);
-    trackPageView('/');
   };
 
   const goAllTeams = () => {
@@ -127,7 +142,6 @@ function App() {
     window.history.pushState({}, '', newPath);
     setSelectedSlugs(['latest-rankings']);
     window.scrollTo(0, 0);
-    trackPageView(newPath);
   };
 
   const goConferences = () => {
@@ -135,7 +149,6 @@ function App() {
     window.history.pushState({}, '', newPath);
     setSelectedSlugs(['conferences']);
     window.scrollTo(0, 0);
-    trackPageView(newPath);
   };
 
   const goBracket = () => {
@@ -143,7 +156,6 @@ function App() {
     window.history.pushState({}, '', newPath);
     setSelectedSlugs(['bracket']);
     window.scrollTo(0, 0);
-    trackPageView(newPath);
   };
 
   const goBubbleWatch = () => {
@@ -151,7 +163,6 @@ function App() {
     window.history.pushState({}, '', newPath);
     setSelectedSlugs(['bubble-watch']);
     window.scrollTo(0, 0);
-    trackPageView(newPath);
   };
 
   const goCompareResumes = () => {
@@ -159,7 +170,6 @@ function App() {
     window.history.pushState({}, '', newPath);
     setSelectedSlugs(['compare-resumes']);
     window.scrollTo(0, 0);
-    trackPageView(newPath);
   };
 
   const handleTeamSelect = (slug: string) => {
@@ -168,7 +178,6 @@ function App() {
       window.history.pushState({}, '', newPath);
       setSelectedSlugs([slug]);
       window.scrollTo(0, 0);
-      trackPageView(newPath);
     }
   };
 

@@ -5,13 +5,12 @@ import { fileURLToPath } from 'url'
 import fs from 'fs'
 import prerender from '@prerenderer/rollup-plugin'
 import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
+import { getPageMeta } from './src/lib/seo.ts'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Site config (config/site-config.json): which sections/sources are live
 const siteConfig = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'config/site-config.json'), 'utf8'))
-const PRESEASON = siteConfig.phase === 'preseason'
-const sectionOn = (id) => siteConfig.sections?.[id] === 'on'
 
 // Detect if running on Vercel
 const isVercel = process.env.VERCEL === '1'
@@ -73,106 +72,12 @@ function getOgImage(route) {
   return `${baseUrl}/open-graph-image.png`
 }
 
-// Generate SEO meta tags for a route
+const escapeHtml = (value) =>
+  String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
 function getSeoMetaTags(route) {
-  const baseUrl = 'https://www.tourneyodds.info'
-  const data = loadTeamData()
-  
-  // Default/homepage meta
-  if (route === '/') {
-    return {
-      title: 'NCAA Basketball Tournament Odds Machine',
-      description: PRESEASON
-        ? `${siteConfig.season} preseason ratings for all 360+ Division I teams. Bubble chances and projected seeds arrive as the season's ratings are released.`
-        : "Latest rankings, bubble chances and projected seeds for all 360+ Division I teams. Updated daily.",
-      url: baseUrl
-    }
-  }
-  
-  // Latest rankings page
-  if (route === '/latest-rankings') {
-    return {
-      title: 'Latest Rankings — NCAA Basketball Tournament Odds Machine',
-      description: PRESEASON
-        ? `${siteConfig.season} preseason ratings for all 360+ Division I basketball teams; tournament odds and team-sheet metrics are added as they are released.`
-        : 'View tournament odds and team-sheet metrics for all 360+ Division I basketball teams.',
-      url: `${baseUrl}/latest-rankings`
-    }
-  }
-  
-  // Bracket page
-  if (route === '/bracket') {
-    return {
-      title: 'Projected Bracket — NCAA Basketball Tournament Odds Machine',
-      description: sectionOn('bracket.table')
-        ? 'Tournament seed projections based on current team-sheet metrics'
-        : 'Projected NCAA Tournament bracket — coming soon as team-sheet metrics are released this season.',
-      url: `${baseUrl}/bracket`
-    }
-  }
-  
-  // Bubble watch page
-  if (route === '/bubble-watch') {
-    return {
-      title: 'Bubble Watch — NCAA Basketball Tournament Odds Machine',
-      description: sectionOn('bubble.dashboard')
-        ? 'Updated projections and critical upcoming games for teams chasing at-large bids'
-        : 'Bubble Watch — coming soon as team-sheet metrics are released this season.',
-      url: `${baseUrl}/bubble-watch`
-    }
-  }
-  
-  // Conferences page
-  if (route === '/conferences') {
-    return {
-      title: 'Conference Breakdown — NCAA Basketball Tournament Odds Machine',
-      description: sectionOn('conf.standings')
-        ? 'Updated tournament projections and current standings for all 32 Division I conferences.'
-        : `Every Division I conference for ${siteConfig.season}. Standings and bid projections are coming soon.`,
-      url: `${baseUrl}/conferences`
-    }
-  }
-  
-  // Compare resumes page
-  if (route === '/compare-resumes') {
-    return {
-      title: 'Compare Resumes — NCAA Basketball Tournament Odds Machine',
-      description: 'Side-by-side team resumes. Compare rankings, metrics, quadrant records, and tournament odds for up to 8 teams.',
-      url: `${baseUrl}/compare-resumes`
-    }
-  }
-  
-  // Team page
-  const slug = route.replace('/', '')
-  const team = data.teams?.find(t => t.slug === slug)
-  
-  if (team) {
-    const hasOdds = team.tournamentOdds !== null && team.tournamentOdds !== undefined && sectionOn('team.odds')
-    const odds = hasOdds ? team.tournamentOdds.toFixed(1) : null
-    const net = team.net || '—'
-    const kenpom = team.kenpomRank || '—'
-    const bpi = team.bpi || '—'
-    const torvik = team.torvikRank || '—'
-    const sor = team.sor || '—'
-    const kpi = team.kpi || '—'
-    const wab = team.wab || '—'
-    return {
-      title: `${team.displayName} — NCAA Basketball Tournament Odds`,
-      description: hasOdds
-        ? `Current odds for ${team.displayName}: ${odds}% chance to make the NCAA Tournament as an at-large team. NET ${net} | Kenpom ${kenpom} | BPI ${bpi} | Torvik ${torvik} | SOR ${sor} | KPI ${kpi} | WAB ${wab}`
-        : `${team.displayName} ${siteConfig.season} preseason ratings: Kenpom ${kenpom} | Torvik ${torvik}. NCAA Tournament odds and the remaining team-sheet metrics are coming soon.`,
-      url: `${baseUrl}/${team.slug}`
-    }
-  }
-  
-  // Fallback
-  return {
-    title: 'NCAA Basketball Tournament Odds Machine',
-    description: PRESEASON
-      ? `${siteConfig.season} preseason ratings for all 360+ Division I teams.`
-      : "Latest rankings, bubble chances and projected seeds for all 360+ Division I teams. Updated daily.",
-    url: baseUrl + route
-  }
+  const meta = getPageMeta(route, loadTeamData().teams || [], siteConfig)
+  return { title: escapeHtml(meta.title), description: escapeHtml(meta.description), url: escapeHtml(meta.url) }
 }
 
 export default defineConfig(async () => {
