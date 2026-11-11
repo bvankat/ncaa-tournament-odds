@@ -815,17 +815,6 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                       </td>
                     </tr>
                   )}
-                  {(team as any).sports_reference?.srs_rank && (
-                    <tr className="border-b border-gray-200">
-                      <td className="py-3 pr-4 text-gray-900 font-semibold">Sports Reference SRS</td>
-                      <td className="py-3 px-4 flex justify-center">
-                        <RankingSparkline rank={(team as any).sports_reference.srs_rank} color={primaryColor} />
-                      </td>
-                      <td className="py-3 pl-4 text-right">
-                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).sports_reference.srs_rank}</span>
-                      </td>
-                    </tr>
-                  )}
                   {(team as any).massey_ratings?.massey_rank && (
                     <tr className="border-b border-gray-200">
                       <td className="py-3 pr-4 text-gray-900 font-semibold">Massey Composite</td>
@@ -856,6 +845,17 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                       </td>
                       <td className="py-3 pl-4 text-right">
                         <span className="text-gray-800 font-semibold geist-mono">{(team as any).teamrankings.rank}</span>
+                      </td>
+                    </tr>
+                  )}
+                  {(team as any).sports_reference?.SRS_rank && (
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 text-gray-900 font-semibold">Sports Reference SRS</td>
+                      <td className="py-3 px-4 flex justify-center">
+                        <RankingSparkline rank={(team as any).sports_reference.SRS_rank} color={primaryColor} />
+                      </td>
+                      <td className="py-3 pl-4 text-right">
+                        <span className="text-gray-800 font-semibold geist-mono">{(team as any).sports_reference.SRS_rank}</span>
                       </td>
                     </tr>
                   )}
@@ -961,9 +961,15 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                         </tr>
                       )}
                       {(team as any).evanmiya?.miya_resume_category && (
-                        <tr>
+                        <tr className="border-b border-gray-100">
                           <td className="py-3 px-4 text-gray-900 text-sm">Evan Miyakawa</td>
                           <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).evanmiya.miya_resume_category}</td>
+                        </tr>
+                      )}
+                      {(team as any).grantley_cbb?.proj_seed && (
+                        <tr>
+                          <td className="py-3 px-4 text-gray-900 text-sm">Grantley CBB</td>
+                          <td className="py-3 px-4 text-right text-gray-900 font-semibold geist-mono text-sm">{(team as any).grantley_cbb.proj_seed}</td>
                         </tr>
                       )}
                     </tbody>
