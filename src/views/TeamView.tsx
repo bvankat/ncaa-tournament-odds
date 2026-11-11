@@ -183,10 +183,10 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
                 </h1>
                 <p className="hidden lg:block text-md lg:text-md opacity-90 text-balance font-normal text-gray-200">
                   {oddsOn
-                    ? `At-large bid chances for ${team.shortName} based on its current team-sheet ranks`
+                    ? `Tournament chances for ${team.shortName} based on current team-sheet ranks`
                     : oddsState === 'hidden'
                       ? `${team.shortName} ratings and schedule`
-                      : `${team.shortName} preseason ratings. At-large bid odds appear once team-sheet metrics are published this season.`}
+                      : `${team.shortName} preseason ratings. Tournament odds appear once team-sheet metrics are published this season.`}
                 </p>
               </div>
               </div>
@@ -203,8 +203,8 @@ export function TeamView({ team, schedule, lastUpdated, formatRelativeTime, allT
               ) : (
                 <BlurOverlay
                   tone="dark"
-                  title="At-large odds"
-                  message={`Coming soon — Updates once ${pendingSourcesText('team.odds')} data is published for ${SEASON}.`}
+                  title="Bid odds"
+                  message={`Updates once ${pendingSourcesText('team.odds')} data is published for ${SEASON}.`}
                   className="absolute inset-0 !max-h-none !overflow-visible"
                 >
                   <Speedometer value={55} />
