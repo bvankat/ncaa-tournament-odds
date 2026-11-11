@@ -9,6 +9,7 @@ import { calculateBracket } from '@/lib/bracketProjection';
 import type { Team, OddsMovers as OddsMoversType } from '@/types/team';
 import { UpdatesPill } from '@/components/UpdatesPill';
 import { SectionGate } from '@/components/SectionGate';
+import { sectionState } from '@/lib/config';
 
 type LandingViewProps = {
   teams?: Team[];
@@ -53,6 +54,11 @@ export function LandingView({
 
   const firstFourOut = bubbleTeams.slice(0, 4);
   const nextFourOut = bubbleTeams.slice(4, 8);
+
+  // Hidden sections drop their headings, subheads and links along with the content.
+  const showGlance = sectionState('landing.glance') !== 'hidden';
+  const showBubble = sectionState('landing.bubble') !== 'hidden';
+  const showMovers = sectionState('landing.movers') !== 'hidden';
 
   return (
     <div className="max-w-screen bg-gray-50 mx-auto pt-12 lg:pt-24 overflow-x-hidden relative" style={{
@@ -184,8 +190,10 @@ export function LandingView({
       </div>
 
 
+      {(showGlance || showBubble || showMovers) && (
       <div className="bg-white pt-12 lg:pt-16 pb-4 lg:pb-6">
-        
+
+        {showGlance && (
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-6 ibm-plex-sans">
             At A Glance
@@ -205,7 +213,9 @@ export function LandingView({
           </div>
 
         </div>
+        )}
 
+        {showBubble && (
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12 my-8 md:my-20">
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -232,15 +242,19 @@ export function LandingView({
         </div>
 
         </div>
+        )}
 
+        {showMovers && (
         <div className="py-12 lg:py-16 px-6 lg:px-12 max-w-screen-xl mx-auto">
             <SectionGate id="landing.movers" title="Odds movers">
               <OddsMovers moversData={oddsMovers} onTeamSelect={onTeamSelect} />
             </SectionGate>
         </div>
+        )}
 
 
       </div>
+      )}
     </div>
   );
 }

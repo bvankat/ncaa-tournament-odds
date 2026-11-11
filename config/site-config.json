@@ -13,9 +13,9 @@
     "quads": false
   },
   "sections": {
-    "landing.glance": "soon",
-    "landing.bubble": "on",
-    "landing.movers": "soon",
+    "landing.glance": "hidden",
+    "landing.bubble": "hidden",
+    "landing.movers": "hidden",
     "rankings.odds": "on",
     "rankings.seed": "on",
     "bracket.table": "soon",
@@ -28,9 +28,9 @@
     "conf.standings": "on",
     "compare.presets": "on",
     "compare.quads": "on",
-    "team.odds": "soon",
-    "team.projection": "on",
+    "team.odds": "on",
+    "team.projection": "hidden",
     "team.records": "on",
-    "team.quads": "on"
+    "team.quads": "hidden"
   }
 }
